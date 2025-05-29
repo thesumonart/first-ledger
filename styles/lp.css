@@ -1,325 +1,3 @@
-/* Font */
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
-/* Root Variables */
-:root {
-  --fontInter: "Inter", serif;
-  --bg-primary: #17171f;
-  --bg-secondary: #1e1f2a;
-  --text-primary: #ffffff;
-  --text-secondary: #d0deff;
-  --text-neutral: #f3f3f3;
-  --text-neutral-tertiary: #cdcdcd;
-  --border-primary: #2f303e;
-  --border-secondary: #3e4051;
-  --color-darkSky: #6f93fe;
-  --white-70p: rgba(255, 255, 255, 0.7);
-  --white-40p: rgba(255, 255, 255, 0.4);
-  --white-2p: rgba(255, 255, 255, 0.02);
-  --text-positive: #aff4c6;
-  --text-danger: #fcb3ad;
-  --bg-positive: #008043;
-  --bg-danger: #f03330;
-  --border-positive: #14ae5c;
-  --border-danger: #ff7d6f;
-  --brand: #456eeb;
-}
-
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  font-family: var(--fontInter);
-  background: var(--bg-primary);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-/* Reset CSS */
-
-/* Global styles */
-
-.container {
-  max-width: 1420px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-figure {
-  display: flex;
-}
-
-body {
-  height: 100vh;
-  overflow: hidden;
-}
-
-::-webkit-scrollbar {
-  color: var(--color-darkSky);
-  width: 0px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-darkSky);
-  border-radius: 8px;
-}
-
-/* Global styles */
-
-/* Navbar CSS starts here */
-.navbar {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 16px 0;
-  border-bottom: 0.5px solid var(--border-primary);
-
-  .logo-wrapper {
-    display: flex;
-
-    .logo {
-      width: 48px;
-      height: auto;
-    }
-  }
-
-  .nav-items-wrapper {
-    max-width: 1420px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    justify-content: space-between;
-  }
-
-  .nav-menu-items-wrapper {
-    display: flex;
-    align-items: center;
-
-    .nav-link {
-      padding: 4px 12px;
-      color: var(--text-neutral-tertiary);
-      font-size: 16px;
-      word-break: keep-all;
-    }
-
-    .nav-link.active {
-      color: var(--text-neutral);
-      border-bottom: 1px solid var(--text-neutral);
-    }
-  }
-
-  .search-box {
-    display: flex;
-    flex-grow: 1;
-    position: relative;
-    border-radius: 9999px;
-    overflow: hidden;
-
-    .search-input-box {
-      padding: 12px 48px 12px 16px;
-      border-radius: 9999px;
-      width: 100%;
-      border: 1px solid var(--border-primary);
-      background: var(--bg-primary);
-      outline: none;
-      font-size: 16px;
-      color: var(--white-40p);
-    }
-
-    .search-button {
-      background: transparent;
-      border: none;
-      outline: none;
-      position: absolute;
-      top: 50%;
-      right: 0px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0px 16px;
-      transform: translateY(-50%);
-      cursor: pointer;
-      height: 100%;
-      border-top-right-radius: 9999px;
-      border-bottom-right-radius: 9999px;
-    }
-  }
-
-  .account-link p {
-    font-size: 16px;
-    color: #f3f3f3;
-  }
-}
-
-@media (max-width: 1420px) {
-  .navbar {
-    padding: 16px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .large-screen-nav {
-    display: none;
-  }
-}
-
-@media (max-width: 1240px) {
-  .nav-items-wrapper {
-    gap: 16px !important;
-  }
-}
-
-/* small screen nav start here */
-.small-nav {
-  width: 100%;
-  height: 64px;
-}
-
-.sm-nav-main {
-  width: 100%;
-  height: 100%;
-  padding: 0px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 0.5px solid var(--border-primary);
-}
-
-.sm-logo-part {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.portfolio-text {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.search-and-berger {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.berger-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-/* menu small screen */
-
-/* Sidebar Overlay */
-.sidebar-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease-in-out;
-}
-
-/* Sidebar Menu */
-.sidebar-menu {
-  position: fixed;
-  top: 0;
-  left: -80%;
-  width: 80%;
-  height: 100%;
-  background: var(--bg-secondary);
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-  transition: left 0.3s ease-in-out;
-  padding: 20px;
-  z-index: 999;
-}
-
-/* Close Button */
-.close-btn {
-  cursor: pointer;
-  position: absolute;
-  right: 15px;
-  top: 15px;
-}
-
-/* Sidebar Active */
-.sidebar-menu.active {
-  left: 0;
-}
-
-.sidebar-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Sidebar Items */
-.sidebar-menu ul {
-  list-style: none;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.sidebar-menu ul li {
-  padding: 10px 15px;
-  color: var(--text-primary);
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.sidebar-menu ul li:hover {
-  border: 1px solid var(--white-70p);
-}
-
-.account-sm-menu {
-  width: 100%;
-  margin-top: 24px;
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--white-70p);
-  padding: 8px;
-  gap: 8px;
-  justify-content: center;
-  border-radius: 12px;
-}
-
-.account-sm-menu p {
-  color: var(--text-primary);
-}
-
-@media (min-width: 1201px) {
-  .small-screen-nav {
-    display: none;
-  }
-}
-
-/* Navbar CSS ends here */
-
 /* Portfolio Header CSS starts here */
 
 .portfolio-header-content-wrapper {
@@ -363,7 +41,7 @@ body {
 
   .changes {
     font-size: 16px;
-    color: var(--white-40p);
+    color: var(--bgUtilitiesHighlight3);
 
     .percentage-change {
       color: var(--text-primary);
@@ -403,7 +81,7 @@ body {
     display: inline-block !important;
     font-size: 14px;
     line-height: 1.4em;
-    color: var(--text-neutral-tertiary);
+    color: var(--textNeutralTertiary);
   }
 }
 
@@ -561,7 +239,7 @@ body {
       gap: 4px;
 
       &.add-liquidity-button {
-        background-color: var(--brand);
+        background-color: var(--bgBrandDefault);
         max-height: 32px;
         outline: none;
       }
@@ -677,7 +355,7 @@ body {
       }
 
       .wallet-address {
-        color: var(--white-70p);
+        color: var(--bgUtilitiesHighlight4);
       }
 
       .option input[type="checkbox"] {
@@ -692,7 +370,7 @@ body {
       }
 
       .option input[type="checkbox"]:checked {
-        background-color: var(--brand);
+        background-color: var(--bgBrandDefault);
         border: none;
       }
 
@@ -779,7 +457,7 @@ body {
       }
 
       .wallet-address {
-        color: var(--white-70p);
+        color: var(--bgUtilitiesHighlight4);
       }
 
       .option input[type="checkbox"] {
@@ -794,7 +472,7 @@ body {
       }
 
       .option input[type="checkbox"]:checked {
-        background-color: var(--brand);
+        background-color: var(--bgBrandDefault);
         border: none;
       }
 
@@ -838,7 +516,7 @@ body {
       background: var(--bg-primary);
       outline: none;
       font-size: 16px;
-      color: var(--white-40p);
+      color: var(--bgUtilitiesHighlight3);
     }
 
     .search-button {
@@ -970,7 +648,7 @@ body {
     th {
       text-align: start;
       font-size: 14px;
-      color: var(--white-70p);
+      color: var(--bgUtilitiesHighlight4);
       font-weight: 300;
       background: transparent;
 
@@ -1020,11 +698,11 @@ body {
     }
 
     &:nth-child(even) {
-      background: var(--white-2p);
+      background: var(--bgUtilitiesHighlight2);
     }
   }
 
-  tbody>tr:last-child {
+  tbody > tr:last-child {
     border-bottom: 0;
   }
 
@@ -1053,7 +731,7 @@ body {
 
   .multi-wallet {
     font-size: 16px;
-    color: var(--color-darkSky);
+    color: var(--textBrandDefault);
     cursor: pointer;
     width: fit-content;
     display: flex;
@@ -1078,7 +756,7 @@ body {
 
     span {
       &:last-child {
-        color: var(--text-secondary);
+        color: var(--textOnBrandSecondary);
         font-size: 14px;
       }
     }
@@ -1098,7 +776,7 @@ body {
   }
 
   .trade-button {
-    color: var(--color-darkSky);
+    color: var(--textBrandDefault);
     font-size: 16px;
     background: none;
     border: 0.5px solid transparent;
@@ -1171,7 +849,7 @@ body {
   }
 
   .wallet-address {
-    color: var(--text-secondary);
+    color: var(--textOnBrandSecondary);
     font-size: 14px;
   }
 }

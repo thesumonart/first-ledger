@@ -115,7 +115,7 @@
   cursor: pointer;
   border: none;
   background: transparent;
-  color: var(--text-secondary);
+  color: var(--textOnBrandSecondary);
   width: 100%;
   height: 40px;
   font-size: 16px;
@@ -152,7 +152,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px; */
-    color: var(--text-secondary);
+    color: var(--textOnBrandSecondary);
     /* background-color: #161721; */
     background-color: #1d1e2a;
     transition: background-color 0.3s ease-in-out;
@@ -265,7 +265,7 @@
   align-items: center;
   gap: 4px;
   list-style: none;
-  color: var(--text-secondary);
+  color: var(--textOnBrandSecondary);
 
   img {
     cursor: pointer;
@@ -303,7 +303,7 @@ button.review {
   padding: 12px;
   border: none;
   border-radius: 10px;
-  background: var(--brand);
+  background: var(--bgBrandDefault);
   color: var(--text-primary);
   font-size: 1rem;
   font-weight: 500;
@@ -348,7 +348,7 @@ button.review:hover {
 .deposit-amount-content p,
 .recive p {
   font-size: 1rem;
-  color: var(--text-secondary);
+  color: var(--textOnBrandSecondary);
 }
 
 .deposit-amount .f-logo {
@@ -392,7 +392,7 @@ button.review:hover {
     width: 100%;
     padding: 12px;
     border-radius: 10px;
-    background-color: var(--brand);
+    background-color: var(--bgBrandDefault);
     color: var(--text-primary);
     font-size: 1rem;
     font-weight: 500;
@@ -713,7 +713,7 @@ button.review:hover {
   }
 
   button.active {
-    background-color: var(--brand);
+    background-color: var(--bgBrandDefault);
     color: var(--text-primary);
   }
 }
@@ -807,7 +807,7 @@ button.review:hover {
 }
 
 .modal-option input[type="checkbox"]:checked {
-  background-color: var(--brand);
+  background-color: var(--bgBrandDefault);
   border: none;
 }
 

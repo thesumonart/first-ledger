@@ -4,99 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FL - Liquidity Pools</title>
+    <link rel="stylesheet" href="./styles/root.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/lp.css" />
     <link rel="stylesheet" href="./styles/modal.css" />
   </head>
 
   <body>
-    <!-- Navbar starts here -->
-    <nav class="navbar large-screen-nav">
-      <div class="nav-items-wrapper">
-        <figure class="logo-wrapper">
-          <img class="logo" src="./public/images/fl-logo.svg" alt="FL-Logo" />
-        </figure>
-        <ul class="nav-menu-items-wrapper">
-          <li class="nav-item">
-            <a class="nav-link" href="#">New</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Referral</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pools</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Leaderboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Launch Token</a>
-          </li>
-        </ul>
-        <div class="search-box">
-          <input
-            class="search-input-box"
-            type="text"
-            placeholder="Search Token"
-          />
-          <button type="submit" class="search-button">
-            <img src="./public/images/search-icon.svg" alt="Search-icon" />
-          </button>
-        </div>
-        <a href="#" class="account-link">
-          <p>Account</p>
-        </a>
-      </div>
-    </nav>
+    <div id="main-navbar"></div>
 
-    <!-- small screen nav  -->
-    <nav class="small-nav small-screen-nav">
-      <div class="sm-nav-main">
-        <div class="sm-logo-part">
-          <a href="#">
-            <img src="./public/images/logo-sm.svg" alt="sm-logo" />
-          </a>
-          <h4 class="portfolio-text">Portfolio</h4>
-        </div>
-        <div class="search-and-berger">
-          <a href="#">
-            <img src="./public/images/search-sm.svg" alt="sm-logo" />
-          </a>
-          <button class="berger-button">
-            <img src="./public/images/menu-sm.svg" alt="menu-logo" />
-          </button>
-
-          <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-          <div class="sidebar-menu" id="sidebarMenu">
-            <div class="close-div close-btn" id="closeMenu">
-              <img
-                src="./public/images/cross-icon.svg"
-                alt="close-icon"
-                class="clo-img-sm"
-              />
-            </div>
-
-            <ul>
-              <li><a href="#">New Tokens</a></li>
-              <li><a href="#">Trending</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Referral</a></li>
-              <li><a href="#">Leaderboard</a></li>
-              <li><a href="#">Launch Token</a></li>
-            </ul>
-            <a href="#" class="account-sm-menu">
-              <img src="./public/images/user-icon.svg" alt="User-icon" />
-              <p>Account</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Navbar ends here -->
     <main>
       <!-- Portfolio Header starts here -->
 
@@ -2396,6 +2312,7 @@
     </main>
 
     <!-- Main section ends here -->
+    <script src="./js/loadNavbar.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/lp.js"></script>

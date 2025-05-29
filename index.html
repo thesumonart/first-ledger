@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./public/images/fl-logo.svg" />
     <title>FL - Portfolio</title>
-    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/root.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -17,98 +19,7 @@
   </head>
 
   <body>
-    <!-- Navbar starts here -->
-    <nav class="navbar large-screen-nav">
-      <div class="nav-items-wrapper">
-        <a class="logo-wrapper" href="#">
-          <img class="logo" src="./public/images/fl-logo.svg" alt="FL-Logo" />
-        </a>
-        <ul class="nav-menu-items-wrapper">
-          <li class="nav-item"><a class="nav-link active" href="#">New</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Portfolio</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">Referral</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Pools</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Leaderboard</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Launch Token</a>
-          </li>
-        </ul>
-        <div class="search-box">
-          <input
-            class="search-input-box"
-            type="text"
-            placeholder="Search Token"
-          />
-          <button type="submit" class="search-button">
-            <img src="./public/images/search-icon.svg" alt="Search-icon" />
-          </button>
-        </div>
-        <a href="#" class="wallet-link">
-          <p>wallet 1</p>
-        </a>
-      </div>
-    </nav>
-
-    <!-- small screen nav  -->
-    <nav class="small-nav small-screen-nav">
-      <div class="sm-nav-main">
-        <div class="sm-logo-part">
-          <a href="#">
-            <img
-              class="logo-sm"
-              src="./public/images/fl-logo.svg"
-              alt="sm-logo"
-            />
-          </a>
-          <button class="berger-button">
-            <img src="./public/images/menu-sm.svg" alt="menu-logo" />
-          </button>
-
-          <!-- sidebar -->
-          <div class="sidebar-overlay" id="sidebarOverlay"></div>
-
-          <div class="sidebar-menu" id="sidebarMenu">
-            <div class="close-div close-btn" id="closeMenu">
-              <img
-                src="./public/images/cross-icon.svg"
-                alt="close-icon"
-                class="clo-img-sm"
-              />
-            </div>
-
-            <ul>
-              <li><a href="#">New</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Referral</a></li>
-              <li><a href="#">Pools</a></li>
-              <li><a href="#">Leaderboard</a></li>
-              <li><a href="#">Launch Token</a></li>
-            </ul>
-          </div>
-          <!-- sidebar -->
-        </div>
-        <div class="search-and-account">
-          <a href="#">
-            <img
-              class="search-icon"
-              src="./public/images/search-sm.svg"
-              alt="sm-logo"
-            />
-          </a>
-          <a href="#">
-            <img
-              class="user-icon"
-              src="./public/images/user-icon.svg"
-              alt="User-icon"
-            />
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Navbar ends here -->
+    <div id="main-navbar"></div>
 
     <main>
       <!-- watchlist bar starts here -->
@@ -2750,6 +2661,7 @@
 
     <!-- Slick JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./js/loadNavbar.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
