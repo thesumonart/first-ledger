@@ -1,0 +1,2192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles/new-tokens.css" />
+    <title>New Tokens</title>
+  </head>
+
+  <body>
+    <!-- Navbar starts here -->
+    <nav class="navbar large-screen-nav">
+      <div class="nav-items-wrapper">
+        <a class="logo-wrapper" href="#">
+          <img class="logo" src="./public/images/fl-logo.svg" alt="FL-Logo" />
+        </a>
+        <ul class="nav-menu-items-wrapper">
+          <li class="nav-item"><a class="nav-link active" href="#">New</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Referral</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pools</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Leaderboard</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Launch Token</a>
+          </li>
+        </ul>
+        <div class="search-box">
+          <input
+            class="search-input-box"
+            type="text"
+            placeholder="Search Token"
+          />
+          <button type="submit" class="search-button">
+            <img src="./public/images/search-icon.svg" alt="Search-icon" />
+          </button>
+        </div>
+        <a href="#" class="account-link">
+          <p>Account</p>
+        </a>
+      </div>
+    </nav>
+
+    <!-- small screen nav  -->
+    <nav class="small-nav small-screen-nav">
+      <div class="sm-nav-main">
+        <div class="sm-logo-part">
+          <a href="/index.html">
+            <img
+              class="logo-sm"
+              src="./public/images/fl-logo.svg"
+              alt="sm-logo"
+            />
+          </a>
+          <button class="berger-button">
+            <img src="./public/images/menu-sm.svg" alt="menu-logo" />
+          </button>
+
+          <!-- sidebar -->
+          <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+          <div class="sidebar-menu" id="sidebarMenu">
+            <div class="close-div close-btn" id="closeMenu">
+              <img
+                src="./public/images/cross-icon.svg"
+                alt="close-icon"
+                class="clo-img-sm"
+              />
+            </div>
+
+            <ul>
+              <li><a href="new-tokens.html">New</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Referral</a></li>
+              <li><a href="#">Pools</a></li>
+              <li><a href="#">Leaderboard</a></li>
+              <li><a href="#">Launch Token</a></li>
+            </ul>
+          </div>
+          <!-- sidebar -->
+        </div>
+        <div class="search-and-account">
+          <a href="#">
+            <img
+              class="search-icon"
+              src="./public/images/search-sm.svg"
+              alt="sm-logo"
+            />
+          </a>
+          <a href="#">
+            <img
+              class="user-icon"
+              src="./public/images/user-icon.svg"
+              alt="User-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Navbar ends here -->
+
+    <main>
+      <!-- watchlist bar starts here -->
+
+      <section class="watchlist-bar">
+        <div class="container">
+          <div class="watchlist-bar-contents-wrapper">
+            <div class="icon-switch-wrapper">
+              <button class="switch-btn star-btn">
+                <img
+                  src="./public/images/star-icon.svg"
+                  alt="Star-icon"
+                  class=""
+                />
+              </button>
+
+              <button class="switch-btn wallet-btn active">
+                <img
+                  src="./public/images/wallet-icon.svg"
+                  alt="Wallet-icon"
+                  class=""
+                />
+              </button>
+            </div>
+
+            <marquee direction="left" loop="">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </marquee>
+          </div>
+        </div>
+      </section>
+
+      <!-- watchlist bar ends here -->
+
+      <!-- Hero section starts here -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-contents-wrapper">
+            <figure class="hero-image">
+              <img src="./public/images/hero-image.webp" alt="Hero-image" />
+            </figure>
+            <div class="hero-texts-wrapper">
+              <h1 class="hero-title">New Tokens</h1>
+              <p class="hero-desc">
+                Discover the latest tokens launched on the XRPL, updated in
+                real-time
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero section ends here -->
+      <!-- Table Controls section starts here -->
+      <section class="table-controls">
+        <div class="container">
+          <div class="table-controls-content-wrapper">
+            <div class="controls">
+              <button id="customizeBtn" class="customize-btn">
+                <img
+                  class="customize-icon"
+                  src="./public/images/customize-icon.svg"
+                  alt="Customize-icon"
+                /><span>Customise</span>
+              </button>
+
+              <!-- Timeframe filter -->
+
+              <div class="time-filters">
+                <button class="time-filter-btn">5m</button>
+                <button class="time-filter-btn">30m</button>
+                <button class="time-filter-btn">1h</button>
+                <button class="time-filter-btn">6h</button>
+                <button class="time-filter-btn active">24h</button>
+              </div>
+
+              <!-- Timeframe filter -->
+
+              <!-- Quick Buy Button -->
+
+              <div class="quick-buy-btn-wrapper">
+                <p class="quick-buy-text">Quick Buy</p>
+                <img
+                  src="./public/images/zap-icon.svg"
+                  alt="Zap-icon"
+                  class="quick-buy-icon"
+                />
+                <input
+                  type="text"
+                  id="quick-buy-btn"
+                  class="quick-buy-btn"
+                  placeholder="10 XRP"
+                  value="10 XRP"
+                  autocomplete="off"
+                />
+                <!-- <button class="quick-buy-btn">10 XRP</button> -->
+              </div>
+
+              <!-- Quick Buy Button -->
+
+              <!-- Refresh button -->
+
+              <button class="refresh-btn">
+                <img
+                  src="./public/images/refresh-icon.svg"
+                  alt="Refresh-icon"
+                />
+              </button>
+            </div>
+            <div class="table-search">
+              <input
+                id="searchInput"
+                class="search-input-box"
+                type="text"
+                placeholder="Search New Tokens (24h)"
+              />
+              <button type="submit" id="tableSearch" class="search-button">
+                <img src="./public/images/search-icon.svg" alt="Search-icon" />
+              </button>
+            </div>
+          </div>
+
+          <!-- Customize Modal Starts Here -->
+
+          <div class="customize-modal">
+            <div class="modal_con_wrapper">
+              <div class="cust_mod_pop_con">
+                <div class="customize-modal-div">
+                  <div class="cus-modal-header">
+                    <h6 class="cust-heading">Customize</h6>
+                    <button class="cust-modal-close-btn">
+                      <svg
+                        width="12"
+                        height="12"
+                        viewBox="0 0 12 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11 1L1 11M1 1L11 11"
+                          stroke="#F5F5F5"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="cust-btn-header">
+                    <div
+                      data-target="view"
+                      class="cust-header-btns cus-modal-header-active"
+                    >
+                      <p>View</p>
+                    </div>
+                    <div data-target="metrics" class="cust-header-btns">
+                      <p>Metrics</p>
+                    </div>
+                    <div data-target="audit" class="cust-header-btns">
+                      <p>Audit</p>
+                    </div>
+                  </div>
+                  <div class="modal-contents-wrapper">
+                    <div id="view" class="modal-content">
+                      <ul class="checkbox_inp">
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Age</p>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Price</p>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Market Cap</p>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Liquidity</p>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Initial Liquidity</p>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Volume</p>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Holders</p>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Transactions</p>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Audit</p>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Quick Buy</p>
+                          </label>
+                        </li>
+                      </ul>
+                      <p class="selected_message">(7 max)</p>
+                    </div>
+                    <ul id="metrics" class="modal-content">
+                      <li class="metrics-input-list-item">
+                        <label class="cust-metrics-label">Liquidity ($)</label>
+                        <div class="cust-metrics-input-div">
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Min"
+                          />
+                          <span class="input-separator">to</span>
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Max"
+                          />
+                        </div>
+                      </li>
+                      <li class="metrics-input-list-item">
+                        <label class="cust-metrics-label">Volume ($)</label>
+                        <div class="cust-metrics-input-div">
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Min"
+                          />
+                          <span class="input-separator">to</span>
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Max"
+                          />
+                        </div>
+                      </li>
+                      <li class="metrics-input-list-item">
+                        <label class="cust-metrics-label">Market Cap ($)</label>
+                        <div class="cust-metrics-input-div">
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Min"
+                          />
+                          <span class="input-separator">to</span>
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Max"
+                          />
+                        </div>
+                      </li>
+                      <li class="metrics-input-list-item">
+                        <label class="cust-metrics-label"
+                          >24h Transactions</label
+                        >
+                        <div class="cust-metrics-input-div">
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Min"
+                          />
+                          <span class="input-separator">to</span>
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Max"
+                          />
+                        </div>
+                      </li>
+                      <li class="metrics-input-list-item">
+                        <label class="cust-metrics-label"
+                          >6h Transactions</label
+                        >
+                        <div class="cust-metrics-input-div">
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Min"
+                          />
+                          <span class="input-separator">to</span>
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Max"
+                          />
+                        </div>
+                      </li>
+                      <li class="metrics-input-list-item">
+                        <label class="cust-metrics-label"
+                          >1h Transactions</label
+                        >
+                        <div class="cust-metrics-input-div">
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Min"
+                          />
+                          <span class="input-separator">to</span>
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Max"
+                          />
+                        </div>
+                      </li>
+                      <li class="metrics-input-list-item">
+                        <label class="cust-metrics-label"
+                          >30min Transactions</label
+                        >
+                        <div class="cust-metrics-input-div">
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Min"
+                          />
+                          <span class="input-separator">to</span>
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Max"
+                          />
+                        </div>
+                      </li>
+                      <li class="metrics-input-list-item">
+                        <label class="cust-metrics-label"
+                          >5min Transactions</label
+                        >
+                        <div class="cust-metrics-input-div">
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Min"
+                          />
+                          <span class="input-separator">to</span>
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Max"
+                          />
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div id="audit" class="modal-content">
+                      <ul class="checkbox_inp audit">
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Launched with Anti-Sniper™</p>
+
+                            <div class="audit_text_ico">
+                              <div class="tooltip">
+                                <svg
+                                  width="16"
+                                  height="15"
+                                  viewBox="0 0 16 15"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M7.99998 10.1667V7.50001M7.99998 4.83334H8.00665M14.6666 7.50001C14.6666 11.1819 11.6819 14.1667 7.99998 14.1667C4.31808 14.1667 1.33331 11.1819 1.33331 7.50001C1.33331 3.81811 4.31808 0.833344 7.99998 0.833344C11.6819 0.833344 14.6666 3.81811 14.6666 7.50001Z"
+                                    stroke="#F5F5F5"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                                <span>Launched with Anti-Sniper™</span>
+                              </div>
+                            </div>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Blackholed</p>
+                            <div class="audit_text_ico">
+                              <div class="tooltip">
+                                <svg
+                                  width="16"
+                                  height="15"
+                                  viewBox="0 0 16 15"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M7.99998 10.1667V7.50001M7.99998 4.83334H8.00665M14.6666 7.50001C14.6666 11.1819 11.6819 14.1667 7.99998 14.1667C4.31808 14.1667 1.33331 11.1819 1.33331 7.50001C1.33331 3.81811 4.31808 0.833344 7.99998 0.833344C11.6819 0.833344 14.6666 3.81811 14.6666 7.50001Z"
+                                    stroke="#F5F5F5"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                                <span>Blackholed</span>
+                              </div>
+                            </div>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>LP Burned</p>
+                            <div class="audit_text_ico">
+                              <div class="tooltip">
+                                <svg
+                                  width="16"
+                                  height="15"
+                                  viewBox="0 0 16 15"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M7.99998 10.1667V7.50001M7.99998 4.83334H8.00665M14.6666 7.50001C14.6666 11.1819 11.6819 14.1667 7.99998 14.1667C4.31808 14.1667 1.33331 11.1819 1.33331 7.50001C1.33331 3.81811 4.31808 0.833344 7.99998 0.833344C11.6819 0.833344 14.6666 3.81811 14.6666 7.50001Z"
+                                    stroke="#F5F5F5"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                                <span>LP Burned</span>
+                              </div>
+                            </div>
+                          </label>
+                        </li>
+                        <li class="view-input-list-item">
+                          <label class="cust-view-input">
+                            <div class="cust-view-input-div">
+                              <input
+                                type="checkbox"
+                                class="view-input"
+                                id="checkbox-id"
+                                hidden
+                              />
+                              <div class="cust-svg-wrapper">
+                                <svg
+                                  width="14"
+                                  height="10"
+                                  viewBox="0 0 14 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M12.3334 1.5L5.00008 8.83333L1.66675 5.5"
+                                    stroke="#FFF"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                            <p>Has at least 1 Social</p>
+                            <div class="audit_text_ico">
+                              <div class="tooltip">
+                                <svg
+                                  width="16"
+                                  height="15"
+                                  viewBox="0 0 16 15"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M7.99998 10.1667V7.50001M7.99998 4.83334H8.00665M14.6666 7.50001C14.6666 11.1819 11.6819 14.1667 7.99998 14.1667C4.31808 14.1667 1.33331 11.1819 1.33331 7.50001C1.33331 3.81811 4.31808 0.833344 7.99998 0.833344C11.6819 0.833344 14.6666 3.81811 14.6666 7.50001Z"
+                                    stroke="#F5F5F5"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  />
+                                </svg>
+                                <span>Has at least 1 Social</span>
+                              </div>
+                            </div>
+                          </label>
+                        </li>
+                      </ul>
+                      <div class="metrics-input-list-item">
+                        <label class="cust-metrics-label"
+                          >Token Name Blacklist (do not show)</label
+                        >
+                        <div class="cust-metrics-input-div">
+                          <input
+                            type="text"
+                            class="metrics-input"
+                            placeholder="Name1, Name2, Name3 (max 3)"
+                          />
+                        </div>
+                      </div>
+                      <ul>
+                        <li class="metrics-input-list-item">
+                          <label class="cust-metrics-label">Age (min)</label>
+                          <div class="cust-metrics-input-div">
+                            <input
+                              type="text"
+                              class="metrics-input"
+                              placeholder="Min"
+                            />
+                            <span class="input-separator">to</span>
+                            <input
+                              type="text"
+                              class="metrics-input"
+                              placeholder="Max"
+                            />
+                          </div>
+                        </li>
+                        <li class="metrics-input-list-item">
+                          <label class="cust-metrics-label">Holders</label>
+                          <div class="cust-metrics-input-div">
+                            <input
+                              type="text"
+                              class="metrics-input"
+                              placeholder="Min"
+                            />
+                            <span class="input-separator">to</span>
+                            <input
+                              type="text"
+                              class="metrics-input"
+                              placeholder="Max"
+                            />
+                          </div>
+                        </li>
+                        <li class="metrics-input-list-item">
+                          <label class="cust-metrics-label"
+                            >Dev Holding %</label
+                          >
+                          <div class="cust-metrics-input-div">
+                            <input
+                              type="text"
+                              class="metrics-input"
+                              placeholder="Min"
+                            />
+                            <span class="input-separator">to</span>
+                            <input
+                              type="text"
+                              class="metrics-input"
+                              placeholder="Max"
+                            />
+                          </div>
+                        </li>
+                        <li class="metrics-input-list-item">
+                          <label class="cust-metrics-label"
+                            >Top 10 Holders %</label
+                          >
+                          <div class="cust-metrics-input-div">
+                            <input
+                              type="text"
+                              class="metrics-input"
+                              placeholder="Min"
+                            />
+                            <span class="input-separator">to</span>
+                            <input
+                              type="text"
+                              class="metrics-input"
+                              placeholder="Max"
+                            />
+                          </div>
+                        </li>
+                        <li class="metrics-input-list-item">
+                          <label class="cust-metrics-label"
+                            >Pro Traders %</label
+                          >
+                          <div class="cust-metrics-input-div">
+                            <input
+                              type="text"
+                              class="metrics-input"
+                              placeholder="Min"
+                            />
+                            <span class="input-separator">to</span>
+                            <input
+                              type="text"
+                              class="metrics-input"
+                              placeholder="Max"
+                            />
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="cust-modal-btns">
+                    <button class="cust-modal-btn">Reset Filters</button>
+                    <button
+                      style="background-color: #456eeb"
+                      class="cust-modal-btn"
+                    >
+                      Apply Filters
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customize Modal Starts Here -->
+        </div>
+      </section>
+
+      <!-- Table Controls section ends here -->
+
+      <!-- Table Section starts here -->
+
+      <section class="new-tokens-table-section">
+        <div class="new-token-table">
+          <div class="table-section">
+            <div class="table-content-wrapper">
+              <div class="table-scroll">
+                <table class="table">
+                  <thead>
+                    <tr class="table-heading">
+                      <th>Token</th>
+                      <th>Created</th>
+                      <th>Market Cap</th>
+                      <th>Liquidity</th>
+                      <th>Vol <span id="clickedTimeDisplay"></span></th>
+                      <th>Transactions</th>
+                      <th>Audit</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Single Row -->
+
+                    <tr>
+                      <td>
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span class="token-name">TOKEN</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-created-time">
+                          <span>00min</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-market-cap-wrapper">
+                          <span class="market-value">$000K</span>
+                          <span class="market-value-increment">+00,0%</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-liquidity-wrapper">
+                          <span class="liquidity-value">$000K</span>
+                          <span class="liquidity-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-volume-wrapper">
+                          <span class="volume-value">$000K</span>
+                          <span class="volume-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-transactions-wrapper">
+                          <div class="buy-token">
+                            <span class="buy-count">000K</span>
+                            <span class="buy-value">$000K</span>
+                          </div>
+                          <div class="sell-token">
+                            <span class="sell-count">000K</span>
+                            <span class="sell-value">$000K</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="audit-cell">
+                          <span class="audit-item developer-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/developer-icon.svg"
+                                alt="Developer-icon"
+                              />
+                            </figure>
+                            <p class="developer-percent">00%</p>
+                            <span class="audit-tooltip">Developer</span>
+                          </span>
+                          <span class="audit-item top-holder-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/top-holder-icon-green.svg"
+                                alt="Top-holder-icon"
+                              />
+                            </figure>
+                            <p class="top-holder-percent">19%</p>
+                            <span class="audit-tooltip">Top Holder</span>
+                          </span>
+                          <span class="audit-item users-audit">
+                            <figure class="users-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/users-icon.svg"
+                                alt="Users-icon"
+                              />
+                            </figure>
+                            <p class="total-users">000K</p>
+                            <span class="audit-tooltip">Total User</span>
+                          </span>
+                          <span class="audit-item anti-snipe-audit">
+                            <figure class="anti-snipe-icon">
+                              <img
+                                class="anti-snipe-icon"
+                                src="./public/images/anti-snipe-icon-green.svg"
+                                alt="Anti-snipe-icon"
+                              />
+                            </figure>
+                            <p class="anti-snipe">YES</p>
+                            <span class="audit-tooltip">Anti Snipe</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="action-cell">
+                          <button class="action-btn">
+                            <img
+                              src="./public/images/zap-icon.svg"
+                              alt="Zap-icon"
+                            />
+                            <span>10 XRP</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Single Row -->
+                    <!-- Single Row -->
+
+                    <tr>
+                      <td>
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span class="token-name">TOKEN</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-created-time">
+                          <span>00h</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-market-cap-wrapper">
+                          <span class="market-value">$000K</span>
+                          <span class="market-value-increment">+00,0%</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-liquidity-wrapper">
+                          <span class="liquidity-value">$000K</span>
+                          <span class="liquidity-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-volume-wrapper">
+                          <span class="volume-value">$000K</span>
+                          <span class="volume-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-transactions-wrapper">
+                          <div class="buy-token">
+                            <span class="buy-count">000K</span>
+                            <span class="buy-value">$000K</span>
+                          </div>
+                          <div class="sell-token">
+                            <span class="sell-count">000K</span>
+                            <span class="sell-value">$000K</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="audit-cell">
+                          <span class="audit-item developer-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/developer-icon.svg"
+                                alt="Developer-icon"
+                              />
+                            </figure>
+                            <p class="developer-percent">00%</p>
+                            <span class="audit-tooltip">Developer</span>
+                          </span>
+                          <span class="audit-item top-holder-audit down">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/top-holder-icon-red.svg"
+                                alt="Top-holder-icon"
+                              />
+                            </figure>
+                            <p class="top-holder-percent">19%</p>
+                            <span class="audit-tooltip">Top Holder</span>
+                          </span>
+                          <span class="audit-item users-audit">
+                            <figure class="users-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/users-icon.svg"
+                                alt="Users-icon"
+                              />
+                            </figure>
+                            <p class="total-users">000K</p>
+                            <span class="audit-tooltip">Total User</span>
+                          </span>
+                          <span class="audit-item anti-snipe-audit down">
+                            <figure class="anti-snipe-icon">
+                              <img
+                                class="anti-snipe-icon"
+                                src="./public/images/anti-snipe-icon-red.svg"
+                                alt="Anti-snipe-icon"
+                              />
+                            </figure>
+                            <p class="anti-snipe">YES</p>
+                            <span class="audit-tooltip">Anti Snipe</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="action-cell">
+                          <button class="action-btn">
+                            <img
+                              src="./public/images/zap-icon.svg"
+                              alt="Zap-icon"
+                            />
+                            <span>10 XRP</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Single Row -->
+                    <!-- Single Row -->
+
+                    <tr>
+                      <td>
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span class="token-name">TOKEN</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-created-time">
+                          <span>00h</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-market-cap-wrapper">
+                          <span class="market-value">$000K</span>
+                          <span class="market-value-increment">+00,0%</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-liquidity-wrapper">
+                          <span class="liquidity-value">$000K</span>
+                          <span class="liquidity-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-volume-wrapper">
+                          <span class="volume-value">$000K</span>
+                          <span class="volume-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-transactions-wrapper">
+                          <div class="buy-token">
+                            <span class="buy-count">000K</span>
+                            <span class="buy-value">$000K</span>
+                          </div>
+                          <div class="sell-token">
+                            <span class="sell-count">000K</span>
+                            <span class="sell-value">$000K</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="audit-cell">
+                          <span class="audit-item developer-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/developer-icon.svg"
+                                alt="Developer-icon"
+                              />
+                            </figure>
+                            <p class="developer-percent">00%</p>
+                            <span class="audit-tooltip">Developer</span>
+                          </span>
+                          <span class="audit-item top-holder-audit down">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/top-holder-icon-red.svg"
+                                alt="Top-holder-icon"
+                              />
+                            </figure>
+                            <p class="top-holder-percent">19%</p>
+                            <span class="audit-tooltip">Top Holder</span>
+                          </span>
+                          <span class="audit-item users-audit">
+                            <figure class="users-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/users-icon.svg"
+                                alt="Users-icon"
+                              />
+                            </figure>
+                            <p class="total-users">000K</p>
+                            <span class="audit-tooltip">Total User</span>
+                          </span>
+                          <span class="audit-item anti-snipe-audit down">
+                            <figure class="anti-snipe-icon">
+                              <img
+                                class="anti-snipe-icon"
+                                src="./public/images/anti-snipe-icon-red.svg"
+                                alt="Anti-snipe-icon"
+                              />
+                            </figure>
+                            <p class="anti-snipe">YES</p>
+                            <span class="audit-tooltip">Anti Snipe</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="action-cell">
+                          <button class="action-btn">
+                            <img
+                              src="./public/images/zap-icon.svg"
+                              alt="Zap-icon"
+                            />
+                            <span>10 XRP</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Single Row -->
+                    <!-- Single Row -->
+
+                    <tr>
+                      <td>
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span class="token-name">TOKEN</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-created-time">
+                          <span>00min</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-market-cap-wrapper">
+                          <span class="market-value">$000K</span>
+                          <span class="market-value-increment">+00,0%</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-liquidity-wrapper">
+                          <span class="liquidity-value">$000K</span>
+                          <span class="liquidity-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-volume-wrapper">
+                          <span class="volume-value">$000K</span>
+                          <span class="volume-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-transactions-wrapper">
+                          <div class="buy-token">
+                            <span class="buy-count">000K</span>
+                            <span class="buy-value">$000K</span>
+                          </div>
+                          <div class="sell-token">
+                            <span class="sell-count">000K</span>
+                            <span class="sell-value">$000K</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="audit-cell">
+                          <span class="audit-item developer-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/developer-icon.svg"
+                                alt="Developer-icon"
+                              />
+                            </figure>
+                            <p class="developer-percent">00%</p>
+                            <span class="audit-tooltip">Developer</span>
+                          </span>
+                          <span class="audit-item top-holder-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/top-holder-icon-green.svg"
+                                alt="Top-holder-icon"
+                              />
+                            </figure>
+                            <p class="top-holder-percent">19%</p>
+                            <span class="audit-tooltip">Top Holder</span>
+                          </span>
+                          <span class="audit-item users-audit">
+                            <figure class="users-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/users-icon.svg"
+                                alt="Users-icon"
+                              />
+                            </figure>
+                            <p class="total-users">000K</p>
+                            <span class="audit-tooltip">Total User</span>
+                          </span>
+                          <span class="audit-item anti-snipe-audit">
+                            <figure class="anti-snipe-icon">
+                              <img
+                                class="anti-snipe-icon"
+                                src="./public/images/anti-snipe-icon-green.svg"
+                                alt="Anti-snipe-icon"
+                              />
+                            </figure>
+                            <p class="anti-snipe">YES</p>
+                            <span class="audit-tooltip">Anti Snipe</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="action-cell">
+                          <button class="action-btn">
+                            <img
+                              src="./public/images/zap-icon.svg"
+                              alt="Zap-icon"
+                            />
+                            <span>10 XRP</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Single Row -->
+                    <!-- Single Row -->
+
+                    <tr>
+                      <td>
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span class="token-name">TOKEN</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-created-time">
+                          <span>00h</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-market-cap-wrapper">
+                          <span class="market-value">$000K</span>
+                          <span class="market-value-increment">+00,0%</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-liquidity-wrapper">
+                          <span class="liquidity-value">$000K</span>
+                          <span class="liquidity-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-volume-wrapper">
+                          <span class="volume-value">$000K</span>
+                          <span class="volume-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-transactions-wrapper">
+                          <div class="buy-token">
+                            <span class="buy-count">000K</span>
+                            <span class="buy-value">$000K</span>
+                          </div>
+                          <div class="sell-token">
+                            <span class="sell-count">000K</span>
+                            <span class="sell-value">$000K</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="audit-cell">
+                          <span class="audit-item developer-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/developer-icon.svg"
+                                alt="Developer-icon"
+                              />
+                            </figure>
+                            <p class="developer-percent">00%</p>
+                            <span class="audit-tooltip">Developer</span>
+                          </span>
+                          <span class="audit-item top-holder-audit down">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/top-holder-icon-red.svg"
+                                alt="Top-holder-icon"
+                              />
+                            </figure>
+                            <p class="top-holder-percent">19%</p>
+                            <span class="audit-tooltip">Top Holder</span>
+                          </span>
+                          <span class="audit-item users-audit">
+                            <figure class="users-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/users-icon.svg"
+                                alt="Users-icon"
+                              />
+                            </figure>
+                            <p class="total-users">000K</p>
+                            <span class="audit-tooltip">Total User</span>
+                          </span>
+                          <span class="audit-item anti-snipe-audit down">
+                            <figure class="anti-snipe-icon">
+                              <img
+                                class="anti-snipe-icon"
+                                src="./public/images/anti-snipe-icon-red.svg"
+                                alt="Anti-snipe-icon"
+                              />
+                            </figure>
+                            <p class="anti-snipe">YES</p>
+                            <span class="audit-tooltip">Anti Snipe</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="action-cell">
+                          <button class="action-btn">
+                            <img
+                              src="./public/images/zap-icon.svg"
+                              alt="Zap-icon"
+                            />
+                            <span>10 XRP</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Single Row -->
+                    <!-- Single Row -->
+
+                    <tr>
+                      <td>
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span class="token-name">TOKEN</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-created-time">
+                          <span>00h</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-market-cap-wrapper">
+                          <span class="market-value">$000K</span>
+                          <span class="market-value-increment">+00,0%</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-liquidity-wrapper">
+                          <span class="liquidity-value">$000K</span>
+                          <span class="liquidity-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-volume-wrapper">
+                          <span class="volume-value">$000K</span>
+                          <span class="volume-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-transactions-wrapper">
+                          <div class="buy-token">
+                            <span class="buy-count">000K</span>
+                            <span class="buy-value">$000K</span>
+                          </div>
+                          <div class="sell-token">
+                            <span class="sell-count">000K</span>
+                            <span class="sell-value">$000K</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="audit-cell">
+                          <span class="audit-item developer-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/developer-icon.svg"
+                                alt="Developer-icon"
+                              />
+                            </figure>
+                            <p class="developer-percent">00%</p>
+                            <span class="audit-tooltip">Developer</span>
+                          </span>
+                          <span class="audit-item top-holder-audit down">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/top-holder-icon-red.svg"
+                                alt="Top-holder-icon"
+                              />
+                            </figure>
+                            <p class="top-holder-percent">19%</p>
+                            <span class="audit-tooltip">Top Holder</span>
+                          </span>
+                          <span class="audit-item users-audit">
+                            <figure class="users-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/users-icon.svg"
+                                alt="Users-icon"
+                              />
+                            </figure>
+                            <p class="total-users">000K</p>
+                            <span class="audit-tooltip">Total User</span>
+                          </span>
+                          <span class="audit-item anti-snipe-audit down">
+                            <figure class="anti-snipe-icon">
+                              <img
+                                class="anti-snipe-icon"
+                                src="./public/images/anti-snipe-icon-red.svg"
+                                alt="Anti-snipe-icon"
+                              />
+                            </figure>
+                            <p class="anti-snipe">YES</p>
+                            <span class="audit-tooltip">Anti Snipe</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="action-cell">
+                          <button class="action-btn">
+                            <img
+                              src="./public/images/zap-icon.svg"
+                              alt="Zap-icon"
+                            />
+                            <span>10 XRP</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Single Row -->
+                    <!-- Single Row -->
+
+                    <tr>
+                      <td>
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span class="token-name">TOKEN</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-created-time">
+                          <span>00min</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-market-cap-wrapper">
+                          <span class="market-value">$000K</span>
+                          <span class="market-value-increment">+00,0%</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-liquidity-wrapper">
+                          <span class="liquidity-value">$000K</span>
+                          <span class="liquidity-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-volume-wrapper">
+                          <span class="volume-value">$000K</span>
+                          <span class="volume-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-transactions-wrapper">
+                          <div class="buy-token">
+                            <span class="buy-count">000K</span>
+                            <span class="buy-value">$000K</span>
+                          </div>
+                          <div class="sell-token">
+                            <span class="sell-count">000K</span>
+                            <span class="sell-value">$000K</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="audit-cell">
+                          <span class="audit-item developer-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/developer-icon.svg"
+                                alt="Developer-icon"
+                              />
+                            </figure>
+                            <p class="developer-percent">00%</p>
+                            <span class="audit-tooltip">Developer</span>
+                          </span>
+                          <span class="audit-item top-holder-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/top-holder-icon-green.svg"
+                                alt="Top-holder-icon"
+                              />
+                            </figure>
+                            <p class="top-holder-percent">19%</p>
+                            <span class="audit-tooltip">Top Holder</span>
+                          </span>
+                          <span class="audit-item users-audit">
+                            <figure class="users-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/users-icon.svg"
+                                alt="Users-icon"
+                              />
+                            </figure>
+                            <p class="total-users">000K</p>
+                            <span class="audit-tooltip">Total User</span>
+                          </span>
+                          <span class="audit-item anti-snipe-audit">
+                            <figure class="anti-snipe-icon">
+                              <img
+                                class="anti-snipe-icon"
+                                src="./public/images/anti-snipe-icon-green.svg"
+                                alt="Anti-snipe-icon"
+                              />
+                            </figure>
+                            <p class="anti-snipe">YES</p>
+                            <span class="audit-tooltip">Anti Snipe</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="action-cell">
+                          <button class="action-btn">
+                            <img
+                              src="./public/images/zap-icon.svg"
+                              alt="Zap-icon"
+                            />
+                            <span>10 XRP</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Single Row -->
+                    <!-- Single Row -->
+
+                    <tr>
+                      <td>
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span class="token-name">TOKEN</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-created-time">
+                          <span>00h</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-market-cap-wrapper">
+                          <span class="market-value">$000K</span>
+                          <span class="market-value-increment">+00,0%</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-liquidity-wrapper">
+                          <span class="liquidity-value">$000K</span>
+                          <span class="liquidity-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-volume-wrapper">
+                          <span class="volume-value">$000K</span>
+                          <span class="volume-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-transactions-wrapper">
+                          <div class="buy-token">
+                            <span class="buy-count">000K</span>
+                            <span class="buy-value">$000K</span>
+                          </div>
+                          <div class="sell-token">
+                            <span class="sell-count">000K</span>
+                            <span class="sell-value">$000K</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="audit-cell">
+                          <span class="audit-item developer-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/developer-icon.svg"
+                                alt="Developer-icon"
+                              />
+                            </figure>
+                            <p class="developer-percent">00%</p>
+                            <span class="audit-tooltip">Developer</span>
+                          </span>
+                          <span class="audit-item top-holder-audit down">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/top-holder-icon-red.svg"
+                                alt="Top-holder-icon"
+                              />
+                            </figure>
+                            <p class="top-holder-percent">19%</p>
+                            <span class="audit-tooltip">Top Holder</span>
+                          </span>
+                          <span class="audit-item users-audit">
+                            <figure class="users-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/users-icon.svg"
+                                alt="Users-icon"
+                              />
+                            </figure>
+                            <p class="total-users">000K</p>
+                            <span class="audit-tooltip">Total User</span>
+                          </span>
+                          <span class="audit-item anti-snipe-audit down">
+                            <figure class="anti-snipe-icon">
+                              <img
+                                class="anti-snipe-icon"
+                                src="./public/images/anti-snipe-icon-red.svg"
+                                alt="Anti-snipe-icon"
+                              />
+                            </figure>
+                            <p class="anti-snipe">YES</p>
+                            <span class="audit-tooltip">Anti Snipe</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="action-cell">
+                          <button class="action-btn">
+                            <img
+                              src="./public/images/zap-icon.svg"
+                              alt="Zap-icon"
+                            />
+                            <span>10 XRP</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Single Row -->
+                    <!-- Single Row -->
+                    <tr>
+                      <td>
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span class="token-name">TOKEN</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-created-time">
+                          <span>00h</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-market-cap-wrapper">
+                          <span class="market-value">$000K</span>
+                          <span class="market-value-increment">+00,0%</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-liquidity-wrapper">
+                          <span class="liquidity-value">$000K</span>
+                          <span class="liquidity-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-volume-wrapper">
+                          <span class="volume-value">$000K</span>
+                          <span class="volume-xrp">0 XRP</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="token-transactions-wrapper">
+                          <div class="buy-token">
+                            <span class="buy-count">000K</span>
+                            <span class="buy-value">$000K</span>
+                          </div>
+                          <div class="sell-token">
+                            <span class="sell-count">000K</span>
+                            <span class="sell-value">$000K</span>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="audit-cell">
+                          <span class="audit-item developer-audit">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/developer-icon.svg"
+                                alt="Developer-icon"
+                              />
+                            </figure>
+                            <p class="developer-percent">00%</p>
+                            <span class="audit-tooltip">Developer</span>
+                          </span>
+                          <span class="audit-item top-holder-audit down">
+                            <figure class="developer-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/top-holder-icon-red.svg"
+                                alt="Top-holder-icon"
+                              />
+                            </figure>
+                            <p class="top-holder-percent">19%</p>
+                            <span class="audit-tooltip">Top Holder</span>
+                          </span>
+                          <span class="audit-item users-audit">
+                            <figure class="users-icon">
+                              <img
+                                class="audit-icon"
+                                src="./public/images/users-icon.svg"
+                                alt="Users-icon"
+                              />
+                            </figure>
+                            <p class="total-users">000K</p>
+                            <span class="audit-tooltip">Total User</span>
+                          </span>
+                          <span class="audit-item anti-snipe-audit down">
+                            <figure class="anti-snipe-icon">
+                              <img
+                                class="anti-snipe-icon"
+                                src="./public/images/anti-snipe-icon-red.svg"
+                                alt="Anti-snipe-icon"
+                              />
+                            </figure>
+                            <p class="anti-snipe">YES</p>
+                            <span class="audit-tooltip">Anti Snipe</span>
+                          </span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="action-cell">
+                          <button class="action-btn">
+                            <img
+                              src="./public/images/zap-icon.svg"
+                              alt="Zap-icon"
+                            />
+                            <span>10 XRP</span>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <!-- Single Row -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Table Section ends here -->
+    </main>
+
+    <!-- JavaScript -->
+    <script src="./js/new-tokens.js"></script>
+    <!-- JavaScript -->
+  </body>
+</html>

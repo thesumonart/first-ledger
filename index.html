@@ -1,0 +1,2755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./public/images/fl-logo.svg" />
+    <title>FL - Portfolio</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar starts here -->
+    <nav class="navbar large-screen-nav">
+      <div class="nav-items-wrapper">
+        <a class="logo-wrapper" href="#">
+          <img class="logo" src="./public/images/fl-logo.svg" alt="FL-Logo" />
+        </a>
+        <ul class="nav-menu-items-wrapper">
+          <li class="nav-item"><a class="nav-link active" href="#">New</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Referral</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pools</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Leaderboard</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Launch Token</a>
+          </li>
+        </ul>
+        <div class="search-box">
+          <input
+            class="search-input-box"
+            type="text"
+            placeholder="Search Token"
+          />
+          <button type="submit" class="search-button">
+            <img src="./public/images/search-icon.svg" alt="Search-icon" />
+          </button>
+        </div>
+        <a href="#" class="wallet-link">
+          <p>wallet 1</p>
+        </a>
+      </div>
+    </nav>
+
+    <!-- small screen nav  -->
+    <nav class="small-nav small-screen-nav">
+      <div class="sm-nav-main">
+        <div class="sm-logo-part">
+          <a href="#">
+            <img
+              class="logo-sm"
+              src="./public/images/fl-logo.svg"
+              alt="sm-logo"
+            />
+          </a>
+          <button class="berger-button">
+            <img src="./public/images/menu-sm.svg" alt="menu-logo" />
+          </button>
+
+          <!-- sidebar -->
+          <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+          <div class="sidebar-menu" id="sidebarMenu">
+            <div class="close-div close-btn" id="closeMenu">
+              <img
+                src="./public/images/cross-icon.svg"
+                alt="close-icon"
+                class="clo-img-sm"
+              />
+            </div>
+
+            <ul>
+              <li><a href="#">New</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Referral</a></li>
+              <li><a href="#">Pools</a></li>
+              <li><a href="#">Leaderboard</a></li>
+              <li><a href="#">Launch Token</a></li>
+            </ul>
+          </div>
+          <!-- sidebar -->
+        </div>
+        <div class="search-and-account">
+          <a href="#">
+            <img
+              class="search-icon"
+              src="./public/images/search-sm.svg"
+              alt="sm-logo"
+            />
+          </a>
+          <a href="#">
+            <img
+              class="user-icon"
+              src="./public/images/user-icon.svg"
+              alt="User-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Navbar ends here -->
+
+    <main>
+      <!-- watchlist bar starts here -->
+
+      <section class="watchlist-bar">
+        <div class="container">
+          <div class="watchlist-bar-contents-wrapper">
+            <div class="icon-switch-wrapper">
+              <button class="switch-btn star-btn">
+                <img
+                  src="./public/images/star-icon.svg"
+                  alt="Star-icon"
+                  class=""
+                />
+              </button>
+
+              <button class="switch-btn wallet-btn active">
+                <img
+                  src="./public/images/wallet-icon.svg"
+                  alt="Wallet-icon"
+                  class=""
+                />
+              </button>
+            </div>
+
+            <div class="watchlist-items-wrapper watchlist-slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+
+                <div class="swiper-slide watchlist-item">
+                  <div class="watchlist-item-content">
+                    <figure class="token-icon">
+                      <img
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <p class="token-name">Token</p>
+                    <p class="token-price">$00.00K</p>
+                    <p class="token-increment">+000.0%</p>
+                  </div>
+                  <figure class="close-icon-wrapper">
+                    <img
+                      class="close-icon"
+                      src="./public/images/close-icon-red.svg"
+                      alt="Close-icon"
+                    />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- watchlist bar ends here -->
+      <!-- Portfolio Header starts here -->
+
+      <section class="portfolio-header">
+        <div class="container">
+          <div class="portfolio-header-content-wrapper">
+            <div class="portfolio-heading-wrapper">
+              <h1 class="portfolio-heading">
+                Portfolio
+                <figure class="portfolio-vectors">
+                  <img
+                    src="./public/images/portfolio-vector-1.svg"
+                    alt="Vector"
+                  />
+                  <img
+                    src="./public/images/portfolio-vector-2.svg"
+                    alt="Vector"
+                  />
+                  <img
+                    src="./public/images/portfolio-vector-3.svg"
+                    alt="Vector"
+                  />
+                  <img
+                    src="./public/images/portfolio-vector-4.svg"
+                    alt="Vector"
+                  />
+                  <img
+                    src="./public/images/portfolio-vector-5.svg"
+                    alt="Vector"
+                  />
+                </figure>
+              </h1>
+              <p class="portfolio-header-desc">
+                Monitor your holdings, performance, and real-time PnL
+              </p>
+            </div>
+
+            <div class="portfolio-stats">
+              <div class="stats-cards-wrapper">
+                <div class="stats-card">
+                  <p class="card-heading">Bought</p>
+                  <p class="price">$000K</p>
+                  <p class="token-amount">000k XRP</p>
+                </div>
+                <div class="stats-card">
+                  <p class="card-heading">Bought</p>
+                  <p class="price">$000K</p>
+                  <p class="token-amount">000k XRP</p>
+                </div>
+                <div class="stats-card">
+                  <p class="card-heading">Bought</p>
+                  <p class="price">$000K</p>
+                  <p class="token-amount">000k XRP</p>
+                </div>
+                <div class="stats-card">
+                  <p class="card-heading">Bought</p>
+                  <p class="price">$000K</p>
+                  <p class="token-amount">000k XRP</p>
+                </div>
+                <div class="stats-card">
+                  <p class="card-heading">Bought</p>
+                  <p class="price">$000K</p>
+                  <p class="token-amount">000k XRP</p>
+                </div>
+                <div class="stats-card">
+                  <p class="card-heading">Net Worth</p>
+                  <p class="price net-worth">$0000,00</p>
+                </div>
+              </div>
+              <div class="second-col-cards">
+                <div class="stats-card">
+                  <p class="card-heading">Net Worth</p>
+                  <p class="price net-worth">$0000,00</p>
+                </div>
+                <div class="stats-card">
+                  <p class="card-heading">24h Change</p>
+                  <p class="price">+$000K</p>
+                  <p class="token-amount">+000k XRP</p>
+                </div>
+              </div>
+            </div>
+            <!-- Wallets Dropdown button on header -->
+
+            <div
+              class="wallet-dropdown header-wallet-btn"
+              id="portfolioWalletDropdown"
+            >
+              <div class="wallet-icon-wrapper">
+                <span class="wallet-icon"
+                  ><img src="./public/images/wallet-icon.svg" alt="wallet-icon"
+                /></span>
+                <span class="selected-wallet-option">Wallets</span>
+              </div>
+
+              <span id="walletArrow" class="arrow-icon"
+                ><img
+                  src="./public/images/chevron-down-icon.svg"
+                  alt="arrow-icon"
+              /></span>
+
+              <div class="dropdown-options" id="portfolioWalletOptions">
+                <label class="option"
+                  ><input type="checkbox" value="Option 1" />
+                  <div class="wallet-name-address">
+                    <span class="wallet-name">All wallets</span>
+                  </div>
+                </label>
+                <label class="option"
+                  ><input type="checkbox" value="Option 2" />
+                  <div class="wallet-name-address">
+                    <span class="wallet-name">Wallet 1</span
+                    ><span class="wallet-address"
+                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                    >
+                  </div>
+                </label>
+                <label class="option"
+                  ><input type="checkbox" value="Option 2" />
+                  <div class="wallet-name-address">
+                    <span class="wallet-name">Wallet 2</span
+                    ><span class="wallet-address"
+                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                    >
+                  </div>
+                </label>
+                <label class="option"
+                  ><input type="checkbox" value="Option 3" />
+                  <div class="wallet-name-address">
+                    <span class="wallet-name">Wallet 3</span
+                    ><span class="wallet-address"
+                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                    >
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Wallets Dropdown button on header -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Header ends here -->
+
+      <section class="">
+        <!-- Portfolio Table Controls starts here -->
+
+        <div class="table-controls">
+          <div class="container">
+            <div class="table-controls-content-wrapper">
+              <div class="controls">
+                <!-- Customize Dropdown Button -->
+
+                <div class="portfolio-customize-btn">
+                  <span class="settings-icon"
+                    ><img
+                      src="./public/images/sliders-icon.svg"
+                      alt="settings-icon"
+                  /></span>
+                  <span id="portfolio-selected-customize-option"
+                    >Customise</span
+                  >
+                  <span id="portfolioCustomizeArrow" class="arrow-icon"
+                    ><img
+                      src="./public/images/chevron-down-icon.svg"
+                      alt="arrow-icon"
+                  /></span>
+                </div>
+
+                <!-- Customize Dropdown Button -->
+
+                <!-- Wallets Dropdown button -->
+
+                <div class="wallet-dropdown" id="portfolioWalletDropdown">
+                  <span class="wallet-icon"
+                    ><img
+                      src="./public/images/wallet-icon.svg"
+                      alt="wallet-icon"
+                  /></span>
+                  <span class="selected-wallet-option">Wallets</span>
+                  <span id="walletArrow" class="arrow-icon"
+                    ><img
+                      src="./public/images/chevron-down-icon.svg"
+                      alt="arrow-icon"
+                  /></span>
+
+                  <div class="dropdown-options" id="portfolioWalletOptions">
+                    <label class="option"
+                      ><input type="checkbox" value="Option 1" />
+                      <div class="wallet-name-address">
+                        <span class="wallet-name">All wallets</span>
+                      </div>
+                    </label>
+                    <label class="option"
+                      ><input type="checkbox" value="Option 2" />
+                      <div class="wallet-name-address">
+                        <span class="wallet-name">Wallet 1</span
+                        ><span class="wallet-address"
+                          >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                        >
+                      </div>
+                    </label>
+                    <label class="option"
+                      ><input type="checkbox" value="Option 2" />
+                      <div class="wallet-name-address">
+                        <span class="wallet-name">Wallet 2</span
+                        ><span class="wallet-address"
+                          >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                        >
+                      </div>
+                    </label>
+                    <label class="option"
+                      ><input type="checkbox" value="Option 3" />
+                      <div class="wallet-name-address">
+                        <span class="wallet-name">Wallet 3</span
+                        ><span class="wallet-address"
+                          >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                        >
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Wallets Dropdown button -->
+
+                <button class="control-button">
+                  <img
+                    class="control-button-left-icon"
+                    src="./public/images/star-icon.svg"
+                    alt="star-icon"
+                  />
+                  Refresh PnL
+                </button>
+                <button class="refresh-button">
+                  <img
+                    class="refresh-button-icon"
+                    src="./public/images/refresh-icon.svg"
+                    alt="refresh-icon"
+                  />
+                </button>
+              </div>
+              <div class="table-search">
+                <input
+                  class="search-input-box"
+                  type="text"
+                  placeholder="Search Inside Portfolio"
+                />
+                <button type="submit" id="tableSearch" class="search-button">
+                  <img
+                    src="./public/images/search-icon.svg"
+                    alt="Search-icon"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio Table Controls ends here -->
+
+        <!-- Tables section starts here -->
+        <div class="main-table-section">
+          <div class="table-section">
+            <div class="table-content-wrapper">
+              <div class="table-scroll">
+                <div class="table">
+                  <div>
+                    <div class="table-heading">
+                      <span>TOKEN</span>
+                      <span>WALLET</span>
+                      <span>BOUGHT</span>
+                      <span>SOLD</span>
+                      <span>REMAINING</span>
+                      <span>PnL</span>
+                      <span>ACTION</span>
+                    </div>
+                  </div>
+                  <div class="table-body">
+                    <!-- Single Row -->
+
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span>TOKEN</span>
+                        </div>
+                        <div class="multi-wallet wallet-name">
+                          Multi (3)
+                          <img
+                            class="down-arrow-icon"
+                            src="./public/images/down-arrow.svg"
+                            alt="Down-arrow-icon"
+                          />
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+
+                      <!-- sub-wallets -->
+                      <div class="sub-wallets-wrapper">
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
+                            </div>
+                            <button class="trade-button">Trade</button>
+                          </div>
+                        </div>
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
+                            </div>
+                            <button class="trade-button">Trade</button>
+                          </div>
+                        </div>
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
+                            </div>
+                            <button class="trade-button">Trade</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- sub-wallets -->
+                    </div>
+
+                    <!-- Single Row -->
+
+                    <!-- Single Row -->
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span>TOKEN</span>
+                        </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Single Row -->
+                    <!-- Single Row -->
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span>TOKEN</span>
+                        </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Single Row -->
+
+                    <!-- Single Row -->
+
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span>TOKEN</span>
+                        </div>
+                        <div class="multi-wallet wallet-name">
+                          Multi (3)
+                          <img
+                            class="down-arrow-icon"
+                            src="./public/images/down-arrow.svg"
+                            alt="Down-arrow-icon"
+                          />
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+
+                      <!-- sub-wallets -->
+                      <div class="sub-wallets-wrapper">
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
+                            </div>
+                            <button class="trade-button">Trade</button>
+                          </div>
+                        </div>
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
+                            </div>
+                            <button class="trade-button">Trade</button>
+                          </div>
+                        </div>
+                        <div class="sub-wallet table-row">
+                          <div class="token-cell"></div>
+                          <div class="wallet-info">
+                            <span class="wallet-name">Wallet 1</span>
+                            <span class="wallet-address">rDFX...ivmN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="token-bought">0 TOKEN</span>
+                          </div>
+                          <div class="table-xrp-token-wrapper">
+                            <span class="xrp-bought">0 XRP</span
+                            ><span class="pnl-percent">+0,0%</span>
+                          </div>
+                          <div class="action-cell">
+                            <div class="action-menu-wrapper">
+                              <span class="action-menu-icon">
+                                <img
+                                  src="./public/images/dot-icon.svg"
+                                  alt="more-icon"
+                                />
+                              </span>
+                            </div>
+                            <button class="trade-button">Trade</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- sub-wallets -->
+                    </div>
+
+                    <!-- Single Row -->
+
+                    <!-- Single Row -->
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span>TOKEN</span>
+                        </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Single Row -->
+
+                    <!-- Single Row -->
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span>TOKEN</span>
+                        </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Single Row -->
+
+                    <!-- Single Row -->
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span>TOKEN</span>
+                        </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Single Row -->
+
+                    <!-- Single Row -->
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
+                        <div class="token-cell">
+                          <img
+                            class="token-icon"
+                            src="./public/images/token-icon.svg"
+                            alt="Token-icon"
+                          />
+                          <span>TOKEN</span>
+                        </div>
+                        <div class="wallet-info">
+                          <span class="wallet-name">Wallet 1</span>
+                          <span class="wallet-address">rDFX...ivmN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="token-bought">0 TOKEN</span>
+                        </div>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought">0 XRP</span
+                          ><span class="pnl-percent">+0,0%</span>
+                        </div>
+                        <div class="action-cell">
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Single Row -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tables section ends here -->
+      </section>
+
+      <!-- Modals -->
+
+      <!-- Trade Modal -->
+
+      <div class="trade-modal-overlay" id="tradeModalOverlay">
+        <div class="modal">
+          <div class="modal-header">
+            <!-- Wallets Dropdown button -->
+
+            <div
+              class="wallet-dropdown portfolioModalWalletDropdown"
+              id="portfolioModalWalletDropdown"
+            >
+              <div class="wallet-name">
+                <span class="wallet-icon"
+                  ><img src="./public/images/wallet-icon.svg" alt="wallet-icon"
+                /></span>
+                <span class="selected-wallet-option">Wallet 1</span>
+              </div>
+              <span class="arrow-icon modalWalletArrow"
+                ><img
+                  src="./public/images/chevron-down-icon.svg"
+                  alt="arrow-icon"
+              /></span>
+
+              <div
+                class="dropdown-options portfolioModalWalletOptions"
+                id="portfolioModalWalletOptions"
+              >
+                <label class="option"
+                  ><input type="checkbox" value="Option 1" checked />
+                  <div class="wallet-name-address">
+                    <span class="wallet-name">Wallet 1</span
+                    ><span class="wallet-address"
+                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                    >
+                  </div>
+                </label>
+                <label class="option"
+                  ><input type="checkbox" value="Option 2" />
+                  <div class="wallet-name-address">
+                    <span class="wallet-name">Wallet 2</span
+                    ><span class="wallet-address"
+                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                    >
+                  </div>
+                </label>
+                <label class="option"
+                  ><input type="checkbox" value="Option 3" />
+                  <div class="wallet-name-address">
+                    <span class="wallet-name">Wallet 3</span
+                    ><span class="wallet-address"
+                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                    >
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Wallets Dropdown button -->
+
+            <button class="history-button tradeHistoryBtn">
+              <img src="./public/images/history-icon.svg" alt="History-icon" />
+            </button>
+            <button class="resize-button">
+              <img src="./public/images/resize-icon.svg" alt="Resize-icon" />
+            </button>
+            <button class="close-button" onclick="closeModal()">
+              <img src="./public/images/cross-icon.svg" alt="Close-icon" />
+            </button>
+          </div>
+          <div class="trade-modal-inner-contents-wrapper">
+            <div class="first-inner-content">
+              <div class="token-info">
+                <figure>
+                  <img
+                    class="token-icon"
+                    src="./public/images/token-icon.svg"
+                  />
+                </figure>
+                <div class="token-details">
+                  <div class="token-name">Token</div>
+                  <div class="token-change">
+                    <span class="percentage-change">+00,0%</span>
+                    <span class="change-pnl">24H Change</span>
+                    <figure class="change-pnl-icon">
+                      <img
+                        src="./public/images/repeat-icon.svg"
+                        alt="Repeat-icon"
+                      />
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stats-grid">
+                <div class="stat-box">
+                  <div class="stat-label">price</div>
+                  <div class="stat-xrp">0 XRP</div>
+                  <div class="stat-token">0 TOKEN</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">liquidity</div>
+                  <div class="stat-xrp">0 XRP</div>
+                  <div class="stat-token">0 TOKEN</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">markee cap</div>
+                  <div class="stat-xrp">0 XRP</div>
+                  <div class="stat-token">0 TOKEN</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">bought</div>
+                  <div class="stat-xrp">0 XRP</div>
+                  <div class="stat-token">0 TOKEN</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">sold</div>
+                  <div class="stat-xrp">0 XRP</div>
+                  <div class="stat-token">0 TOKEN</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-label">remaining</div>
+                  <div class="stat-xrp">0 XRP</div>
+                  <div class="stat-token">0 TOKEN</div>
+                </div>
+              </div>
+
+              <div class="action-buttons">
+                <button
+                  class="action-button buy-active"
+                  onclick="setMode('buy')"
+                  id="buyButton"
+                >
+                  Buy
+                </button>
+                <button
+                  class="action-button button-inactive"
+                  onclick="setMode('sell')"
+                  id="sellButton"
+                >
+                  Sell
+                </button>
+              </div>
+
+              <div class="amount-input-container">
+                <div class="input-n-preset">
+                  <input
+                    type="text"
+                    class="amount-input"
+                    placeholder="Amount to Buy (XRP)"
+                    id="amountInput"
+                  />
+                  <div class="preset-btns">
+                    <div class="preset-btn-wrapper">
+                      <input
+                        readonly
+                        type="text"
+                        placeholder="10"
+                        class="preset-btn"
+                      /><span>XRP</span>
+                    </div>
+                    <div class="preset-btn-wrapper">
+                      <input
+                        readonly
+                        type="text"
+                        placeholder="20"
+                        class="preset-btn"
+                      /><span>XRP</span>
+                    </div>
+                    <div class="preset-btn-wrapper">
+                      <input
+                        readonly
+                        type="text"
+                        placeholder="50"
+                        class="preset-btn"
+                      /><span>XRP</span>
+                    </div>
+
+                    <button class="preset-customize-btn">
+                      <img
+                        src="./public/images/edit-icon.svg"
+                        alt="Edit-icon"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="amount-details">
+                  <div class="token-n-price-impact">
+                    <div>=0 TOKEN</div>
+                    <div class="price-impact-wrapper">
+                      &#40;Price Impact ≈
+                      <span class="price-impact">6%&#41;</span>
+                      <span class="price-impact-icon">
+                        <span class="price-impact-tooltip">Price Impact</span>
+                        <img
+                          src="./public/images/Info-icon.svg"
+                          alt="info-icon"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                  <div class="quick-buy-n-slippage">
+                    <label for="quickBuyToggleBtn">
+                      <div class="quick-buy-toggle-btn">
+                        <input
+                          type="checkbox"
+                          name="quickBuyToggle"
+                          id="quickBuyToggleBtn"
+                          hidden
+                          checked
+                        />
+                        <span class="quick-buy-icon-wrapper">
+                          <img
+                            class="zap-icon"
+                            src="./public/images/zap-icon.svg"
+                            alt="zap-icon"
+                          />
+                          <img
+                            class="zap-icon-off"
+                            src="./public/images/zap-off-icon.svg"
+                            alt="zap-icon"
+                          />
+                        </span>
+                      </div>
+                    </label>
+                    <div class="slippage-input-wrapper">
+                      <figure class="slippage-icon">
+                        <img
+                          src="./public/images/slippage-icon.svg"
+                          alt="Slippage-icon"
+                        />
+                      </figure>
+                      <input
+                        type="text"
+                        class="slippage-input"
+                        placeholder="20%"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="second-inner-content">
+              <p class="sending-label">You're Sending</p>
+              <div class="sending-amount">
+                <h3 class="sending-xrp"><span>0.0</span>XRP</h3>
+                <p class="sending-value">$0.0</p>
+              </div>
+              <p class="receiving-label">To Receive</p>
+              <div class="receiving-amount">
+                <figure class="token-icon">
+                  <img src="./public/images/token-icon.svg" alt="Token-icon" />
+                </figure>
+                <div class="receiving-token-name-price">
+                  <h3 class="receiving-token"><span>0.0</span>TOKEN</h3>
+                  <p class="receiving-value">$0.0</p>
+                </div>
+              </div>
+              <p class="price-impact">
+                Price Impact
+                <span class="info-icon price-impact-icon">
+                  <span class="price-impact-tooltip">Price Impact</span>
+                  <img src="./public/images/Info-icon.svg" alt="Info-icon" />
+                </span>
+                <span class="impact-percent">0 XRP (0.0%)</span>
+              </p>
+              <a href="#" class="see-transaction">
+                See Transaction
+                <span class="link-icon">
+                  <img
+                    src="./public/images/external-link-icon.svg"
+                    alt="Link-icon"
+                  />
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="quick-action-btn-wrapper">
+            <button
+              class="quick-action-button buy-active"
+              id="quickActionButton"
+            >
+              <figure>
+                <img src="./public/images/zap-icon.svg" alt="zap-icon" />
+              </figure>
+              Quick Buy TOKEN
+            </button>
+            <div class="cancel-confirm-btn-wrapper">
+              <button class="cancel-btn">Cancel</button>
+              <button class="confirm-btn">
+                Confirm
+                <figure class="loading-icon">
+                  <img src="./public/images/loading.svg" alt="loading-icon" />
+                </figure>
+              </button>
+            </div>
+            <button class="done-btn">Done</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trade Modal -->
+
+      <!-- Share Modal -->
+
+      <div id="modal-share" class="share-your-pnl">
+        <div class="modal-share-content">
+          <div class="modal-share-heading">
+            <div class="space-div"></div>
+            <h3 class="share-title">SHARE YOUR PnL CARD</h3>
+            <div class="close-div close-share-modal">
+              <img
+                src="./public/images/cross-icon.svg"
+                alt="close-icon"
+                class="clo-img-sm"
+              />
+            </div>
+          </div>
+          <img src="./public/images/pnl-share-modal.svg" alt="share-des" />
+          <div class="tweet-and-download">
+            <button class="tweet-download-button">
+              <div class="tweet-icon-div">
+                <img
+                  src="./public/images/twitter-icon.svg"
+                  alt="tweet-icon"
+                  class="tweet-img-sm"
+                />
+              </div>
+              <span class="tweet-text">Tweet</span>
+            </button>
+            <button class="tweet-download-button">
+              <div class="download-icon-div">
+                <img
+                  src="./public/images/download-icon.svg"
+                  alt="download-icon"
+                  class="download-img-sm"
+                />
+              </div>
+              <span class="tweet-text">Download</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Share Modal -->
+
+      <!-- History Modal -->
+
+      <div class="history-modal-overlay">
+        <div class="modal">
+          <div class="modal-header">
+            <!-- Wallets Dropdown button -->
+
+            <div class="wallet-dropdown portfolioModalWalletDropdown">
+              <div class="wallet-name">
+                <span class="wallet-icon"
+                  ><img src="./public/images/wallet-icon.svg" alt="wallet-icon"
+                /></span>
+                <span class="selected-wallet-option">Wallet 1</span>
+              </div>
+              <span class="arrow-icon modalWalletArrow"
+                ><img
+                  src="./public/images/chevron-down-icon.svg"
+                  alt="arrow-icon"
+              /></span>
+
+              <div class="dropdown-options portfolioModalWalletOptions">
+                <label class="option"
+                  ><input type="checkbox" value="Option 1" checked />
+                  <div class="wallet-name-address">
+                    <span class="wallet-name">Wallet 1</span
+                    ><span class="wallet-address"
+                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                    >
+                  </div>
+                </label>
+                <label class="option"
+                  ><input type="checkbox" value="Option 2" />
+                  <div class="wallet-name-address">
+                    <span class="wallet-name">Wallet 2</span
+                    ><span class="wallet-address"
+                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                    >
+                  </div>
+                </label>
+                <label class="option"
+                  ><input type="checkbox" value="Option 3" />
+                  <div class="wallet-name-address">
+                    <span class="wallet-name">Wallet 3</span
+                    ><span class="wallet-address"
+                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                    >
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Wallets Dropdown button -->
+
+            <button class="back-button history-modal-back-btn">
+              <img
+                src="./public/images/chevron-down-icon.svg"
+                alt="Arrow-icon"
+              />
+            </button>
+            <button class="close-button history-modal-close-btn">
+              <img src="./public/images/cross-icon.svg" alt="Close-icon" />
+            </button>
+          </div>
+          <div class="token-info">
+            <figure>
+              <img class="token-icon" src="./public/images/token-icon.svg" />
+            </figure>
+            <div class="token-details">
+              <div class="token-name">Token</div>
+              <div class="token-change">
+                <span class="percentage-change">+00,0%</span>
+                <span class="change-pnl">24H Change</span>
+                <figure class="change-pnl-icon">
+                  <img
+                    src="./public/images/repeat-icon.svg"
+                    alt="Repeat-icon"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <div class="modal-table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>PRICE</th>
+                    <th>BUY</th>
+                    <th>SELL</th>
+                    <th>WALLET</th>
+                    <th>TIME</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="buy">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0</span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span>
+                        Feb 4 02:31
+                        <a href="#" class="icon">
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon"
+                        /></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="buy">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0</span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span>
+                        Feb 4 02:31
+                        <a href="#" class="icon">
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon"
+                        /></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="buy">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0</span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span>
+                        Feb 4 02:31
+                        <a href="#" class="icon">
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon"
+                        /></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="sell">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0 </span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span
+                        >Feb 4 02:31
+                        <a href="#" class="icon"
+                          ><img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon" /></a
+                      ></span>
+                    </td>
+                  </tr>
+                  <tr class="buy">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0</span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span>
+                        Feb 4 02:31
+                        <a href="#" class="icon">
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon"
+                        /></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="sell">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0 </span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span
+                        >Feb 4 02:31
+                        <a href="#" class="icon"
+                          ><img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon" /></a
+                      ></span>
+                    </td>
+                  </tr>
+                  <tr class="sell">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0 </span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span
+                        >Feb 4 02:31
+                        <a href="#" class="icon"
+                          ><img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon" /></a
+                      ></span>
+                    </td>
+                  </tr>
+                  <tr class="sell">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0 </span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span
+                        >Feb 4 02:31
+                        <a href="#" class="icon"
+                          ><img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon" /></a
+                      ></span>
+                    </td>
+                  </tr>
+                  <tr class="buy">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0</span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span>
+                        Feb 4 02:31
+                        <a href="#" class="icon">
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon"
+                        /></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="buy">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0</span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span>
+                        Feb 4 02:31
+                        <a href="#" class="icon">
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon"
+                        /></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="buy">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0</span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span>
+                        Feb 4 02:31
+                        <a href="#" class="icon">
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon"
+                        /></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="buy">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0</span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span>
+                        Feb 4 02:31
+                        <a href="#" class="icon">
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon"
+                        /></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="sell">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0 </span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span
+                        >Feb 4 02:31
+                        <a href="#" class="icon"
+                          ><img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon" /></a
+                      ></span>
+                    </td>
+                  </tr>
+                  <tr class="sell">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0 </span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span
+                        >Feb 4 02:31
+                        <a href="#" class="icon"
+                          ><img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon" /></a
+                      ></span>
+                    </td>
+                  </tr>
+                  <tr class="buy">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0</span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span>
+                        Feb 4 02:31
+                        <a href="#" class="icon">
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon"
+                        /></a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr class="buy">
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0</span>
+                    </td>
+                    <td>
+                      <span
+                        >0
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>Wallet 1</td>
+                    <td>
+                      <span>
+                        Feb 4 02:31
+                        <a href="#" class="icon">
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/link-icon.svg"
+                            alt="Link-icon"
+                        /></a>
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- History Modal -->
+
+      <!-- Customize Modal -->
+
+      <div class="customize-modal-overlay">
+        <div class="customize-modal">
+          <div class="modal-header">
+            <p class="modal-heading">Customize</p>
+            <figure class="close-icon customize-modal-close">
+              <img src="./public//images/close-icon.svg" alt="close-icon" />
+            </figure>
+          </div>
+          <div class="modal-contents-wrapper">
+            <div class="wallets-options">
+              <p class="heading">Wallets</p>
+              <div class="wallets-wrapper">
+                <label class="wallet-option all-wallet">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden checked />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <p>All Wallets</p>
+                </label>
+                <label class="wallet-option">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="wallet-name-n-icon"
+                    ><figure>
+                      <img
+                        src="./public/images/wallet-1.svg"
+                        alt="Wallet-icon"
+                        class="wallet-icon"
+                      />
+                    </figure>
+                    Wallet 1</span
+                  >
+                </label>
+                <label class="wallet-option">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="wallet-name-n-icon"
+                    ><figure>
+                      <img
+                        src="./public/images/wallet-2.svg"
+                        alt="Wallet-icon"
+                        class="wallet-icon"
+                      />
+                    </figure>
+                    Wallet 2</span
+                  >
+                </label>
+                <label class="wallet-option">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="wallet-name-n-icon"
+                    ><figure>
+                      <img
+                        src="./public/images/wallet-3.svg"
+                        alt="Wallet-icon"
+                        class="wallet-icon"
+                      />
+                    </figure>
+                    Wallet 3</span
+                  >
+                </label>
+                <label class="wallet-option">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="wallet-name-n-icon"
+                    ><figure>
+                      <img
+                        src="./public/images/wallet-4.svg"
+                        alt="Wallet-icon"
+                        class="wallet-icon"
+                      />
+                    </figure>
+                    Wallet 4</span
+                  >
+                </label>
+                <label class="wallet-option">
+                  <div class="wallet-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="wallet-name-n-icon"
+                    ><figure>
+                      <img
+                        src="./public/images/wallet-5.svg"
+                        alt="Wallet-icon"
+                        class="wallet-icon"
+                      />
+                    </figure>
+                    Wallet 5</span
+                  >
+                </label>
+              </div>
+            </div>
+            <div class="filter-options">
+              <p class="heading">Filters</p>
+              <div class="filters-wrapper">
+                <label class="filter-option">
+                  <div class="filter-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="filter-name"> Hide Dust</span>
+                </label>
+                <label class="filter-option">
+                  <div class="filter-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="filter-name"> Show Hidden</span>
+                </label>
+                <label class="filter-option">
+                  <div class="filter-inner-contents">
+                    <input type="checkbox" class="view-input" hidden />
+                    <div class="check-icon-wrapper">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.3334 4L6.00008 11.3333L2.66675 8"
+                          stroke="#F3F3F3"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="filter-name"> Price in USD</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customize Modal -->
+
+      <!-- Modals -->
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

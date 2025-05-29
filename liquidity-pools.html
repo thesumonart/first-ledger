@@ -1,0 +1,2403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FL - Liquidity Pools</title>
+    <link rel="stylesheet" href="./styles/lp.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
+  </head>
+
+  <body>
+    <!-- Navbar starts here -->
+    <nav class="navbar large-screen-nav">
+      <div class="nav-items-wrapper">
+        <figure class="logo-wrapper">
+          <img class="logo" src="./public/images/fl-logo.svg" alt="FL-Logo" />
+        </figure>
+        <ul class="nav-menu-items-wrapper">
+          <li class="nav-item">
+            <a class="nav-link" href="#">New</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Referral</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pools</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Leaderboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Launch Token</a>
+          </li>
+        </ul>
+        <div class="search-box">
+          <input
+            class="search-input-box"
+            type="text"
+            placeholder="Search Token"
+          />
+          <button type="submit" class="search-button">
+            <img src="./public/images/search-icon.svg" alt="Search-icon" />
+          </button>
+        </div>
+        <a href="#" class="account-link">
+          <p>Account</p>
+        </a>
+      </div>
+    </nav>
+
+    <!-- small screen nav  -->
+    <nav class="small-nav small-screen-nav">
+      <div class="sm-nav-main">
+        <div class="sm-logo-part">
+          <a href="#">
+            <img src="./public/images/logo-sm.svg" alt="sm-logo" />
+          </a>
+          <h4 class="portfolio-text">Portfolio</h4>
+        </div>
+        <div class="search-and-berger">
+          <a href="#">
+            <img src="./public/images/search-sm.svg" alt="sm-logo" />
+          </a>
+          <button class="berger-button">
+            <img src="./public/images/menu-sm.svg" alt="menu-logo" />
+          </button>
+
+          <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+          <div class="sidebar-menu" id="sidebarMenu">
+            <div class="close-div close-btn" id="closeMenu">
+              <img
+                src="./public/images/cross-icon.svg"
+                alt="close-icon"
+                class="clo-img-sm"
+              />
+            </div>
+
+            <ul>
+              <li><a href="#">New Tokens</a></li>
+              <li><a href="#">Trending</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Referral</a></li>
+              <li><a href="#">Leaderboard</a></li>
+              <li><a href="#">Launch Token</a></li>
+            </ul>
+            <a href="#" class="account-sm-menu">
+              <img src="./public/images/user-icon.svg" alt="User-icon" />
+              <p>Account</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Navbar ends here -->
+    <main>
+      <!-- Portfolio Header starts here -->
+
+      <section class="portfolio-header">
+        <div class="container">
+          <div class="portfolio-header-content-wrapper">
+            <div class="avatar-username">
+              <div class="name-wallets">
+                <h2 class="user-name">Liquidity Pools</h2>
+                <p class="wallets">
+                  Add liquidity to a pool and manage your positions here
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Header ends here -->
+
+      <!-- Portfolio Table Controls starts here -->
+      <section class="table-controls">
+        <div class="container">
+          <div class="table-controls-content-wrapper">
+            <div class="controls">
+              <!-- Filter Button -->
+              <div class="filters-button">
+                <img
+                  src="./public/images/sliders-icon.svg"
+                  alt="filter-icon"
+                /><span>Filters</span>
+              </div>
+              <!-- Filter Button -->
+
+              <!-- Filter inner buttons -->
+
+              <div class="filter-sidebar-overlay">
+                <div class="filter-sidebar">
+                  <div class="close-sidebar-btn">
+                    <img
+                      src="./public/images/close-icon.svg"
+                      alt="close-icon"
+                    />
+                  </div>
+                  <!-- Customize Dropdown Button -->
+
+                  <div class="customize-dropdown" id="customizeDropdown">
+                    <span class="settings-icon"
+                      ><img
+                        src="./public/images/sliders-icon.svg"
+                        alt="settings-icon"
+                    /></span>
+                    <span id="selected-customize-option">Customise</span>
+                    <span id="customize-arrow" class="arrow-icon"
+                      ><img
+                        src="./public/images/chevron-down-icon.svg"
+                        alt="arrow-icon"
+                    /></span>
+
+                    <div class="dropdown-options" id="customize-options">
+                      <label class="option"
+                        ><input type="checkbox" value="Values in USD" />Values
+                        in USD</label
+                      >
+                      <label class="option"
+                        ><input type="checkbox" value="Show Best Pools" />Show
+                        Best Pools</label
+                      >
+                      <label class="option"
+                        ><input
+                          type="checkbox"
+                          value="Show Eligible Pools"
+                        />Show Eligible Pools</label
+                      >
+                      <label class="option"
+                        ><input
+                          type="checkbox"
+                          value="Show Closed Positions"
+                        />Show Closed Positions</label
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Customize Dropdown Button -->
+
+                  <!-- Wallets Dropdown button -->
+
+                  <div class="wallet-dropdown" id="walletDropdown">
+                    <span class="wallet-icon"
+                      ><img
+                        src="./public/images/wallet-icon.svg"
+                        alt="wallet-icon"
+                    /></span>
+                    <span id="selected-option">Wallets</span>
+                    <span id="arrow" class="arrow-icon"
+                      ><img
+                        src="./public/images/chevron-down-icon.svg"
+                        alt="arrow-icon"
+                    /></span>
+
+                    <div class="dropdown-options" id="options">
+                      <label class="option"
+                        ><input type="checkbox" value="Option 1" />
+                        <div class="wallet-name-address">
+                          <span class="wallet-name">All wallets</span>
+                        </div>
+                      </label>
+                      <label class="option"
+                        ><input type="checkbox" value="Option 2" />
+                        <div class="wallet-name-address">
+                          <span class="wallet-name">Wallet 1</span
+                          ><span class="wallet-address"
+                            >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                          >
+                        </div>
+                      </label>
+                      <label class="option"
+                        ><input type="checkbox" value="Option 2" />
+                        <div class="wallet-name-address">
+                          <span class="wallet-name">Wallet 2</span
+                          ><span class="wallet-address"
+                            >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                          >
+                        </div>
+                      </label>
+                      <label class="option"
+                        ><input type="checkbox" value="Option 3" />
+                        <div class="wallet-name-address">
+                          <span class="wallet-name">Wallet 3</span
+                          ><span class="wallet-address"
+                            >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                          >
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Wallets Dropdown button -->
+                </div>
+              </div>
+
+              <!-- Filter inner buttons -->
+
+              <button
+                class="control-button add-liquidity-button action-add-icon"
+              >
+                <img
+                  class="control-button-left-icon"
+                  src="./public/images/plus-icon.svg"
+                  alt="star-icon"
+                />
+                Add Liquidity
+              </button>
+
+              <button
+                class="control-button add-liquidity-button add-liquidity-button-mobile action-add-icon"
+              >
+                <img
+                  class="control-button-left-icon"
+                  src="./public/images/plus-icon.svg"
+                  alt="star-icon"
+                />
+                Add
+              </button>
+            </div>
+            <div class="table-search">
+              <input
+                class="search-input-box"
+                type="text"
+                placeholder="Search Pools"
+              />
+              <button type="submit" id="tableSearch" class="search-button">
+                <img src="./public/images/search-icon.svg" alt="Search-icon" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Table Controls ends here -->
+      <div class="tow-table-in-one">
+        <section class="my-pools-main">
+          <div>
+            <div class="container">
+              <p class="table-section-title">
+                My Pools (<span id="rowCount"></span>)
+              </p>
+            </div>
+            <div class="my-pools-table">
+              <div class="table-section">
+                <div class="table-content-wrapper">
+                  <div class="table-scroll">
+                    <table id="my-pools-table" class="table">
+                      <thead>
+                        <tr class="table-heading">
+                          <th>POOL</th>
+                          <th>WALLET</th>
+                          <th>TVL</th>
+                          <th>24H FEES</th>
+                          <th>PnL</th>
+                          <th>APR</th>
+                          <th style="text-align: right">ACTION</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Single Row -->
+
+                        <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="multi-wallet wallet-name">
+                                  Multi (3)
+                                  <img
+                                    class="down-arrow-icon"
+                                    src="./public/images/down-arrow.svg"
+                                    alt="Down-arrow-icon"
+                                  />
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <div class="lp-action-menu-wrapper">
+                                    <span class="action-menu-icon">
+                                      <img
+                                        src="./public/images/cell-dots.svg"
+                                        alt="more-icon"
+                                      />
+                                    </span>
+                                    <div class="action-menu">
+                                      <button
+                                        class="add-liquidity-button action-add-icon"
+                                      >
+                                        Add Liquiditys
+                                      </button>
+                                      <button
+                                        class="remove-liquidity-button action-remove-icon"
+                                      >
+                                        Remove Liquidity
+                                      </button>
+                                      <button
+                                        class="vote-for-fees-button action-vote-icon"
+                                      >
+                                        Vote for Fees
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="sub-wallets-wrapper">
+                                <div class="sub-wallet">
+                                  <div class="row-content">
+                                    <div class="wallet-info">
+                                      <span class="wallet-name">Wallet 1</span>
+                                      <span class="wallet-address"
+                                        >rDFX...ivmN</span
+                                      >
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0 XRP</span>
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0 XRP</span>
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0%</span>
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0%</span>
+                                    </div>
+                                    <div class="action-cell">
+                                      <div class="lp-action-menu-wrapper">
+                                        <span class="action-menu-icon">
+                                          <img
+                                            src="./public/images/cell-dots.svg"
+                                            alt="more-icon"
+                                          />
+                                        </span>
+                                        <div class="action-menu">
+                                          <button
+                                            class="add-liquidity-button action-add-icon"
+                                          >
+                                            Add Liquidity
+                                          </button>
+                                          <button
+                                            class="remove-liquidity-button action-remove-icon"
+                                          >
+                                            Remove Liquidity
+                                          </button>
+                                          <button
+                                            class="vote-for-fees-button action-vote-icon"
+                                          >
+                                            Vote for Fees
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="sub-wallet">
+                                  <div class="row-content">
+                                    <div class="wallet-info">
+                                      <span class="wallet-name">Wallet 1</span>
+                                      <span class="wallet-address"
+                                        >rDFX...ivmN</span
+                                      >
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0 XRP</span>
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0 XRP</span>
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0%</span>
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0%</span>
+                                    </div>
+                                    <div class="action-cell">
+                                      <div class="lp-action-menu-wrapper">
+                                        <span class="action-menu-icon">
+                                          <img
+                                            src="./public/images/cell-dots.svg"
+                                            alt="more-icon"
+                                          />
+                                        </span>
+                                        <div class="action-menu">
+                                          <button
+                                            class="add-liquidity-button action-add-icon"
+                                          >
+                                            Add Liquidity
+                                          </button>
+                                          <button
+                                            class="remove-liquidity-button action-remove-icon"
+                                          >
+                                            Remove Liquidity
+                                          </button>
+                                          <button
+                                            class="vote-for-fees-button action-vote-icon"
+                                          >
+                                            Vote for Fees
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="sub-wallet">
+                                  <div class="row-content">
+                                    <div class="wallet-info">
+                                      <span class="wallet-name">Wallet 1</span>
+                                      <span class="wallet-address"
+                                        >rDFX...ivmN</span
+                                      >
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0 XRP</span>
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0 XRP</span>
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0%</span>
+                                    </div>
+                                    <div class="table-xrp-token-wrapper">
+                                      <span class="xrp-bought">0%</span>
+                                    </div>
+                                    <div class="action-cell">
+                                      <div class="lp-action-menu-wrapper">
+                                        <span class="action-menu-icon">
+                                          <img
+                                            src="./public/images/cell-dots.svg"
+                                            alt="more-icon"
+                                          />
+                                        </span>
+                                        <div class="action-menu">
+                                          <button
+                                            class="add-liquidity-button action-add-icon"
+                                          >
+                                            Add Liquidity
+                                          </button>
+                                          <button
+                                            class="remove-liquidity-button action-remove-icon"
+                                          >
+                                            Remove Liquidity
+                                          </button>
+                                          <button
+                                            class="vote-for-fees-button action-vote-icon"
+                                          >
+                                            Vote for Fees
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <!-- Single Row -->
+
+                        <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="wallet-info">
+                                  <span class="wallet-name">Wallet 1</span>
+                                  <span class="wallet-address"
+                                    >rDFX...ivmN</span
+                                  >
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <div class="lp-action-menu-wrapper">
+                                    <span class="action-menu-icon">
+                                      <img
+                                        src="./public/images/cell-dots.svg"
+                                        alt="more-icon"
+                                      />
+                                    </span>
+                                    <div class="action-menu">
+                                      <button
+                                        class="add-liquidity-button action-add-icon"
+                                      >
+                                        Add Liquidity
+                                      </button>
+                                      <button
+                                        class="remove-liquidity-button action-remove-icon"
+                                      >
+                                        Remove Liquidity
+                                      </button>
+                                      <button
+                                        class="vote-for-fees-button action-vote-icon"
+                                      >
+                                        Vote for Fees
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <!-- Single Row -->
+
+                        <!-- Single Row -->
+
+                        <!-- Single Row -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Best Pools Table Start -->
+        <section class="best-pools-main">
+          <div>
+            <div class="container">
+              <p class="table-section-title">Best Pools</p>
+            </div>
+            <div class="my-pools-table-two">
+              <div class="table-section">
+                <div class="table-content-wrapper">
+                  <div class="table-scroll">
+                    <table class="table">
+                      <thead>
+                        <tr class="table-heading">
+                          <th>POOL</th>
+                          <th>TVL</th>
+                          <th>7D VOLUME</th>
+                          <th>24H VOLUME</th>
+                          <th>FEE %</th>
+                          <th>APR</th>
+                          <th style="text-align: right">ACTION</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Single Row -->
+
+                        <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <button
+                                    class="action-add-icon"
+                                    style="
+                                      background-color: transparent;
+                                      border: none;
+                                      cursor: pointer;
+                                    "
+                                  >
+                                    <img
+                                      src="./public/images/plus-icon.svg"
+                                      alt="more-icon"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <!-- Single Row -->
+                        <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <button
+                                    class="action-add-icon"
+                                    style="
+                                      background-color: transparent;
+                                      border: none;
+                                      cursor: pointer;
+                                    "
+                                  >
+                                    <img
+                                      src="./public/images/plus-icon.svg"
+                                      alt="more-icon"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <!-- Single Row -->
+
+                        <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <button
+                                    class="action-add-icon"
+                                    style="
+                                      background-color: transparent;
+                                      border: none;
+                                      cursor: pointer;
+                                    "
+                                  >
+                                    <img
+                                      src="./public/images/plus-icon.svg"
+                                      alt="more-icon"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <!-- Single Row -->
+                        <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <button
+                                    class="action-add-icon"
+                                    style="
+                                      background-color: transparent;
+                                      border: none;
+                                      cursor: pointer;
+                                    "
+                                  >
+                                    <img
+                                      src="./public/images/plus-icon.svg"
+                                      alt="more-icon"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <!-- Single Row -->
+
+                        <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <button
+                                    class="action-add-icon"
+                                    style="
+                                      background-color: transparent;
+                                      border: none;
+                                      cursor: pointer;
+                                    "
+                                  >
+                                    <img
+                                      src="./public/images/plus-icon.svg"
+                                      alt="more-icon"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <!-- Single Row -->
+                        <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <button
+                                    class="action-add-icon"
+                                    style="
+                                      background-color: transparent;
+                                      border: none;
+                                      cursor: pointer;
+                                    "
+                                  >
+                                    <img
+                                      src="./public/images/plus-icon.svg"
+                                      alt="more-icon"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <!-- Single Row -->
+
+                        <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <button
+                                    class="action-add-icon"
+                                    style="
+                                      background-color: transparent;
+                                      border: none;
+                                      cursor: pointer;
+                                    "
+                                  >
+                                    <img
+                                      src="./public/images/plus-icon.svg"
+                                      alt="more-icon"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <!-- Single Row -->
+                        <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0 XRP</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <button
+                                    class="action-add-icon"
+                                    style="
+                                      background-color: transparent;
+                                      border: none;
+                                      cursor: pointer;
+                                    "
+                                  >
+                                    <img
+                                      src="./public/images/plus-icon.svg"
+                                      alt="more-icon"
+                                    />
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Tables section ends here -->
+      <!-- Modal Structure -->
+      <div class="modal" id="add-liquidity-modal">
+        <div class="modal-content">
+          <div>
+            <div class="wallet-name-dropdown_wrapper">
+              <div class="modal-wallet-dropdown">
+                <span class="modal-wallet-icon"
+                  ><img src="./public/images/wallet-icon.svg" alt="wallet-icon"
+                /></span>
+                <span id="modal-selected-option">Wallet 1</span>
+                <span id="modal-arrow" class="modal-arrow-icon"
+                  ><img
+                    src="./public/images/chevron-down-icon.svg"
+                    alt="arrow-icon"
+                /></span>
+
+                <div class="modal-dropdown-options" id="modal-options">
+                  <label class="modal-option"
+                    ><input type="checkbox" value="Option 1" />
+                    <div class="modal-wallet-name-address">
+                      <span class="modal-wallet-name">All wallets</span>
+                    </div>
+                  </label>
+                  <label class="modal-option"
+                    ><input type="checkbox" value="Option 2" />
+                    <div class="modal-wallet-name-address">
+                      <span class="modal-wallet-name">Wallet 1</span
+                      ><span class="modal-wallet-address"
+                        >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                      >
+                    </div>
+                  </label>
+                  <label class="modal-option"
+                    ><input type="checkbox" value="Option 2" />
+                    <div class="modal-wallet-name-address">
+                      <span class="modal-wallet-name">Wallet 2</span
+                      ><span class="modal-wallet-address"
+                        >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                      >
+                    </div>
+                  </label>
+                  <label class="modal-option"
+                    ><input type="checkbox" value="Option 3" />
+                    <div class="modal-wallet-name-address">
+                      <span class="modal-wallet-name">Wallet 3</span
+                      ><span class="modal-wallet-address"
+                        >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                      >
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <span class="close-modal">
+                <img src="./public/images/close-icon.svg" alt="close icon" />
+              </span>
+            </div>
+          </div>
+          <div id="step-review">
+            <div class="modal-title">
+              <h2>Add Liquidity</h2>
+              <p>Enter token amounts for your liquidity deposit</p>
+            </div>
+            <div class="modal-tabs">
+              <button class="tab-btn active" data-tab="numeric">50/50</button>
+              <button class="tab-btn" data-tab="single-sided">
+                Single Sided
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="tab-content active" id="numeric">
+                <div>
+                  <div class="token-amount-list">
+                    <div class="xrp">
+                      <div class="xrp-top-part">
+                        <input
+                          type="number"
+                          placeholder="0"
+                          class="xrp-input-payment"
+                        />
+                        <div role="button" class="xrp-btn">
+                          <span class="f-logo">F</span>
+                          <span class="xrp-text">XRP</span>
+                        </div>
+                      </div>
+                      <div class="xrp-input-part">
+                        <input
+                          type="text"
+                          placeholder="$0"
+                          class="wallet-input"
+                        />
+                        <button class="xrp-wallet">
+                          XRP
+                          <img
+                            src="./public/images/wallet-dark-icon.svg"
+                            alt="wallet"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="xrp token">
+                      <div class="xrp-top-part">
+                        <input
+                          type="number"
+                          placeholder="0"
+                          class="xrp-input-payment"
+                        />
+                        <div class="token-btn change-token-btn">
+                          <span class="f-logo">F</span>
+                          <span class="xrp-text token-btn-txt">TOKEN</span>
+                          <img
+                            src="./public/images/chevron-down-icon.svg"
+                            alt="down-arrow"
+                          />
+                        </div>
+                      </div>
+                      <div class="xrp-input-part">
+                        <input
+                          type="text"
+                          placeholder="$0,0"
+                          class="wallet-input"
+                        />
+                        <button class="xrp-wallet">
+                          0
+                          <img
+                            src="./public/images/wallet-dark-icon.svg"
+                            alt="wallet"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul class="amount-list-content">
+                    <li class="list-item">
+                      Price Impact
+                      <div class="info-tooltip" id="tooltip-1">
+                        <img
+                          src="./public/images/info-icon-dark.svg"
+                          alt="info-icon-dark"
+                          class="info-icon"
+                          data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                        />
+                      </div>
+                      <span class="list-value">0 XRP (0%)</span>
+                    </li>
+                    <li class="list-item">
+                      <span>Share of Pool</span>
+                      <span class="list-value">≈ 0% → 0%</span>
+                    </li>
+                    <li class="list-item">
+                      Voting Threshold
+                      <div class="info-tooltip" id="tooltip-2">
+                        <img
+                          src="./public/images/info-icon-dark.svg"
+                          alt="info-icon-dark"
+                          class="info-icon"
+                          data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                        />
+                      </div>
+                      <span class="list-value"
+                        >0K LP Tokens (0% of the Pool)</span
+                      >
+                    </li>
+                  </ul>
+                  <div class="modal-footer">
+                    <div class="btn">
+                      <button id="review-amount" class="review">Review</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-content" id="single-sided">
+                <div>
+                  <div class="token-amount-list">
+                    <div class="xrp single-sided">
+                      <div class="xrp-top-part">
+                        <h3>0</h3>
+                        <div role="button" class="xrp-btn">
+                          <span class="f-logo">F</span>
+                          <span class="xrp-text">XRP</span>
+                        </div>
+                      </div>
+                      <div class="xrp-input-part">
+                        <input
+                          type="text"
+                          disabled
+                          placeholder="$0"
+                          class="wallet-input"
+                        />
+                        <button class="xrp-wallet">
+                          XRP
+                          <img
+                            src="./public/images/wallet-dark-icon.svg"
+                            alt="wallet"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                    <div class="xrp token">
+                      <div class="xrp-top-part">
+                        <input
+                          type="number"
+                          placeholder="0"
+                          class="xrp-input-payment"
+                        />
+                        <div class="token-btn change-token-btn">
+                          <span class="f-logo">F</span>
+                          <span class="xrp-text token-btn-txt-single"
+                            >TOKEN</span
+                          >
+                          <img
+                            src="./public/images/chevron-down-icon.svg"
+                            alt="down-arrow"
+                          />
+                        </div>
+                      </div>
+                      <div class="xrp-input-part">
+                        <input
+                          type="text"
+                          placeholder="$0,0"
+                          class="wallet-input"
+                        />
+                        <button class="xrp-wallet">
+                          0
+                          <img
+                            src="./public/images/wallet-dark-icon.svg"
+                            alt="wallet"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <ul class="amount-list-content">
+                    <li class="list-item">
+                      Price Impact
+                      <div class="info-tooltip" id="tooltip-1">
+                        <img
+                          src="./public/images/info-icon-dark.svg"
+                          alt="info-icon-dark"
+                          class="info-icon"
+                          data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                        />
+                      </div>
+                      <span class="list-value">0 XRP (0%)</span>
+                    </li>
+                    <li class="list-item">
+                      <span>Share of Pool</span>
+                      <span class="list-value">≈ 0% → 0%</span>
+                    </li>
+                    <li class="list-item">
+                      Voting Threshold
+                      <div class="info-tooltip" id="tooltip-2">
+                        <img
+                          src="./public/images/info-icon-dark.svg"
+                          alt="info-icon-dark"
+                          class="info-icon"
+                          data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                        />
+                      </div>
+                      <span class="list-value"
+                        >0K LP Tokens (0% of the Pool)</span
+                      >
+                    </li>
+                  </ul>
+                  <div class="modal-footer">
+                    <div class="btn">
+                      <button
+                        id="review-single-sided"
+                        class="review review-single-sided"
+                      >
+                        Review
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="step-confirm">
+            <label class="label" for="diposit">You’re Depositing</label>
+            <div class="is-confirmation">
+              <div class="deposit">
+                <div class="deposit-amount">
+                  <span class="f-logo">F</span>
+                  <div class="deposit-amount-content">
+                    <h6>0.0 TOKEN</h6>
+                    <p>$0.0</p>
+                  </div>
+                </div>
+              </div>
+              <div class="recive">
+                <h6>0.0 XRP</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <label class="label" for="diposit">You’re Receiving</label>
+            <div class="is-confirmation">
+              <div class="recive">
+                <h6>0.0 TOKEN/XRP LP Tokens</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <div class="amount-list">
+              <ul class="amount-list-content">
+                <li class="list-item">
+                  Price Impact
+                  <div class="info-tooltip" id="tooltip-1">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0 XRP (0%)</span>
+                </li>
+                <li class="list-item">
+                  <span>Share of Pool</span>
+                  <span class="list-value">≈ 0% → 0%</span>
+                </li>
+                <li class="list-item">
+                  Voting Threshold
+                  <div class="info-tooltip" id="tooltip-2">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0K LP Tokens (0% of the Pool)</span>
+                </li>
+              </ul>
+            </div>
+            <div class="confirm-footer">
+              <button class="cancel-btn" id="step-cancel">Cancel</button>
+              <button class="confirm-btn" id="numeric-confirm">
+                Confirm
+                <span>
+                  <img
+                    class="loading-icon"
+                    src="./public/images/loading.svg"
+                    alt="loading"
+                  />
+                </span>
+              </button>
+            </div>
+          </div>
+          <div id="step-confirm-single-sided">
+            <label class="label" for="diposit">You’re Depositing</label>
+            <div class="is-confirmation">
+              <div class="deposit">
+                <div class="deposit-amount">
+                  <span class="f-logo">F</span>
+                  <div class="deposit-amount-content">
+                    <h6>0.0 TOKEN</h6>
+                    <p>$0.0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label class="label" for="diposit">You’re Receiving</label>
+            <div class="is-confirmation">
+              <div class="recive">
+                <h6>0.0 TOKEN/XRP LP Tokens</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <div class="amount-list">
+              <ul class="amount-list-content">
+                <li class="list-item">
+                  Price Impact
+                  <div class="info-tooltip" id="tooltip-1">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0 XRP (0%)</span>
+                </li>
+                <li class="list-item">
+                  <span>Share of Pool</span>
+                  <span class="list-value">≈ 0% → 0%</span>
+                </li>
+                <li class="list-item">
+                  Voting Threshold
+                  <div class="info-tooltip" id="tooltip-2">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0K LP Tokens (0% of the Pool)</span>
+                </li>
+              </ul>
+            </div>
+            <div class="confirm-footer">
+              <button class="cancel-btn" id="step-cancel">Cancel</button>
+              <button class="confirm-btn" id="single-sided-confirm">
+                Confirm
+                <span>
+                  <img
+                    class="loading-icon-single-sided"
+                    src="./public/images/loading.svg"
+                    alt="loading"
+                  />
+                </span>
+              </button>
+            </div>
+          </div>
+          <div id="step-vote-done-numeric">
+            <label class="label checked" for="diposit"
+              >You Deposited
+              <img src="./public/images/check-mark-icon.svg" alt="check" />
+            </label>
+            <div class="is-confirmation">
+              <div class="deposit">
+                <div class="deposit-amount">
+                  <span class="f-logo">F</span>
+                  <div class="deposit-amount-content">
+                    <h6>0.0 TOKEN</h6>
+                    <p>$0.0</p>
+                  </div>
+                </div>
+              </div>
+              <div class="recive">
+                <h6>0.0 XRP</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <label class="label checked" for="diposit"
+              >You Received
+              <img src="./public/images/check-mark-icon.svg" alt="check" />
+            </label>
+            <div class="is-confirmation">
+              <div class="recive">
+                <h6>0.0 TOKEN/XRP LP Tokens</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <div class="amount-list">
+              <ul class="amount-list-content">
+                <li class="list-item">
+                  Price Impact
+                  <div class="info-tooltip" id="tooltip-1">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0 XRP (0%)</span>
+                </li>
+                <li class="list-item">
+                  <span>Share of Pool</span>
+                  <span class="list-value">≈ 0% → 0%</span>
+                </li>
+                <li class="list-item">
+                  Voting Threshold
+                  <div class="info-tooltip" id="tooltip-2">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0K LP Tokens (0% of the Pool)</span>
+                </li>
+                <li class="list-item green">You are eligible to vote</li>
+              </ul>
+            </div>
+            <div class="confirm-footer">
+              <button class="done-btn" id="step-numeric-done">Done</button>
+              <button class="vote-btn" id="numeric-vote">
+                Vote
+                <span
+                  ><img
+                    class="loading-icon-vote"
+                    src="./public/images/loading.svg"
+                    alt="loading"
+                /></span>
+              </button>
+            </div>
+          </div>
+          <div id="step-done-single-sided">
+            <label class="label checked" for="diposit"
+              >You Deposited
+              <img src="./public/images/check-mark-icon.svg" alt="check" />
+            </label>
+            <div class="is-confirmation">
+              <div class="deposit">
+                <div class="deposit-amount">
+                  <span class="f-logo">F</span>
+                  <div class="deposit-amount-content">
+                    <h6>0.0 TOKEN</h6>
+                    <p>$0.0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label class="label checked" for="diposit"
+              >You Received
+              <img src="./public/images/check-mark-icon.svg" alt="check" />
+            </label>
+            <div class="is-confirmation">
+              <div class="recive">
+                <h6>0.0 TOKEN/XRP LP Tokens</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <div class="amount-list">
+              <ul class="amount-list-content">
+                <li class="list-item">
+                  Price Impact
+                  <div class="info-tooltip" id="tooltip-1">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0 XRP (0%)</span>
+                </li>
+                <li class="list-item">
+                  <span>Share of Pool</span>
+                  <span class="list-value">≈ 0% → 0%</span>
+                </li>
+                <li class="list-item">
+                  Voting Threshold
+                  <div class="info-tooltip" id="tooltip-2">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0K LP Tokens (0% of the Pool)</span>
+                </li>
+                <li class="list-item green">You are eligible to vote</li>
+              </ul>
+            </div>
+            <div class="confirm-footer">
+              <button class="done-btn" id="step-done-single-sided-btn">
+                Done
+              </button>
+            </div>
+          </div>
+          <div id="step-voting">
+            <div class="vote-full-container">
+              <!-- vote table -->
+              <div>
+                <div class="heading-vote">
+                  <p class="vote-title">Current Vote Slots</p>
+                  <div class="info-tooltip" id="tooltip-1">
+                    <img
+                      src="./public/images/info-vote.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip."
+                    />
+                  </div>
+                </div>
+                <div class="vote-table">
+                  <table class="custom-table">
+                    <thead class="custom-thead">
+                      <tr class="custom-tr">
+                        <th class="custom-th">Address</th>
+                        <th class="custom-th">Weight</th>
+                        <th class="custom-th right-align">Vote</th>
+                      </tr>
+                    </thead>
+                    <tbody class="custom-tbody">
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- vote ranger -->
+              <div>
+                <p class="vote-fee-text">
+                  Vote for the Fee % <span class="vote-fee-span"> (0-1%)</span>
+                </p>
+                <div class="vote-ranger-con">
+                  <div class="range-container">
+                    <span class="fee-percentage"
+                      >Fee %: <span id="feeValue">0</span></span
+                    >
+                    <input
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="0"
+                      class="range-slider"
+                      id="feeRange"
+                    />
+                  </div>
+                  <div class="pool-fee-container">
+                    <p class="pool-fee-text">Pool Fee Change</p>
+                    <p class="pool-fee-value">0.0% → 0.0%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="confirm-footer">
+              <button class="vote-btn" id="numeric-voting">
+                Vote
+                <span
+                  ><img
+                    class="loading-icon-voting"
+                    src="./public/images/loading.svg"
+                    alt="loading"
+                /></span>
+              </button>
+            </div>
+          </div>
+          <div id="step-complete">
+            <div class="vote-full-container">
+              <!-- vote table -->
+              <div>
+                <div class="heading-vote">
+                  <p class="your-vote-title">You Voted for LP Fees</p>
+                  <img src="./public/images/tick-green.svg" alt="ok-mark" />
+                </div>
+                <div class="vote-table">
+                  <table class="custom-table">
+                    <thead class="custom-thead">
+                      <tr class="custom-tr">
+                        <th class="custom-th">Address</th>
+                        <th class="custom-th">Weight</th>
+                        <th class="custom-th right-align">Vote</th>
+                      </tr>
+                    </thead>
+                    <tbody class="custom-tbody">
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                      <tr class="your-custom-tr">
+                        <td class="your-data your-vote-row">
+                          rABc...deFg
+                          <img
+                            src="./public/images/user-green.svg"
+                            alt="user-green"
+                          />
+                        </td>
+                        <td class="your-data">0%</td>
+                        <td class="your-data right-align">0%</td>
+                      </tr>
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                      <tr class="custom-tr">
+                        <td class="custom-td">rABc...deFg</td>
+                        <td class="custom-td">0%</td>
+                        <td class="custom-td right-align">0%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- vote ranger -->
+
+              <div>
+                <div class="your-pool-fee-container">
+                  <p class="pool-fee-text">Pool Fee Change</p>
+                  <p class="pool-fee-value">0.0% → 0.0%</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="confirm-footer">
+              <button class="done-btn" id="step-complete-done">Done</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- remove  liquidity modal -->
+      <div class="modal" id="remove-liquidity-modal">
+        <div class="modal-content">
+          <div>
+            <div class="wallet-name-dropdown_wrapper">
+              <div class="modal-wallet-dropdown">
+                <span class="modal-wallet-icon"
+                  ><img src="./public/images/wallet-icon.svg" alt="wallet-icon"
+                /></span>
+                <span id="modal-selected-option">Wallet 1</span>
+                <span id="modal-arrow" class="modal-arrow-icon"
+                  ><img
+                    src="./public/images/chevron-down-icon.svg"
+                    alt="arrow-icon"
+                /></span>
+
+                <div class="modal-dropdown-options" id="modal-options">
+                  <label class="modal-option"
+                    ><input type="checkbox" value="Option 1" />
+                    <div class="modal-wallet-name-address">
+                      <span class="modal-wallet-name">All wallets</span>
+                    </div>
+                  </label>
+                  <label class="modal-option"
+                    ><input type="checkbox" value="Option 2" />
+                    <div class="modal-wallet-name-address">
+                      <span class="modal-wallet-name">Wallet 1</span
+                      ><span class="modal-wallet-address"
+                        >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                      >
+                    </div>
+                  </label>
+                  <label class="modal-option"
+                    ><input type="checkbox" value="Option 2" />
+                    <div class="modal-wallet-name-address">
+                      <span class="modal-wallet-name">Wallet 2</span
+                      ><span class="modal-wallet-address"
+                        >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                      >
+                    </div>
+                  </label>
+                  <label class="modal-option"
+                    ><input type="checkbox" value="Option 3" />
+                    <div class="modal-wallet-name-address">
+                      <span class="modal-wallet-name">Wallet 3</span
+                      ><span class="modal-wallet-address"
+                        >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
+                      >
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <span class="close-modal">
+                <img src="./public/images/close-icon.svg" alt="close icon" />
+              </span>
+            </div>
+          </div>
+          <div id="rm-step-review">
+            <div class="modal-title">
+              <h2>Remove Liquidity</h2>
+            </div>
+            <div class="modal-tabs">
+              <button class="tab-btn active" data-tab="rm-numeric">
+                50/50
+              </button>
+              <button class="tab-btn" data-tab="rm-single-sided">
+                Single Sided
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="tab-content active" id="rm-numeric">
+                <div>
+                  <div class="withdrawal-amount-main">
+                    <p class="withdrawal-text">Withdrawal Amount</p>
+                    <p class="withdraw-amount-text">0%</p>
+                    <div class="percentage-all-button">
+                      <button type="button" class="each-percentage-button">
+                        25%
+                      </button>
+                      <button type="button" class="each-percentage-button">
+                        50%
+                      </button>
+                      <button type="button" class="each-percentage-button">
+                        75%
+                      </button>
+                      <button type="button" class="each-percentage-button">
+                        100%
+                      </button>
+                    </div>
+                  </div>
+                  <div class="all-transition-info">
+                    <div class="double-impact">
+                      <div class="single-in-double-impact">
+                        <p class="info-subject-text">Price Impact</p>
+                        <div class="info-tooltip" id="tooltip-1">
+                          <img
+                            src="./public/images/info-icon-dark.svg"
+                            alt="info-icon-dark"
+                            class="info-icon"
+                            data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                          />
+                        </div>
+                      </div>
+                      <p class="info-value-text">0 XRP (0%)</p>
+                    </div>
+                    <div class="double-impact">
+                      <p class="info-subject-text">Expected TOKEN</p>
+                      <p class="info-value-text">0 (0 → 0)</p>
+                    </div>
+                    <div class="double-impact">
+                      <p class="info-subject-text">Expected XRP</p>
+                      <p class="info-value-text">0 (0 → 0)</p>
+                    </div>
+                    <div class="double-impact">
+                      <p class="info-subject-text">Share of Pool</p>
+                      <p class="info-value-text">≈ 0% → 0%</p>
+                    </div>
+                    <div class="double-impact">
+                      <div class="single-in-double-impact">
+                        <p class="info-subject-text">Voting Threshold</p>
+                        <div class="info-tooltip" id="tooltip-2">
+                          <img
+                            src="./public/images/info-icon-dark.svg"
+                            alt="info-icon-dark"
+                            class="info-icon"
+                            data-tooltip="This is the Voting Threshold"
+                          />
+                        </div>
+                      </div>
+                      <p class="info-value-text">
+                        0K LP Tokens (0% of the Pool)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <div class="btn">
+                      <button id="rm-review-amount" class="review">
+                        Review
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-content" id="rm-single-sided">
+                <div>
+                  <div class="withdrawal-amount-main">
+                    <p class="withdrawal-text">Withdrawal Amount</p>
+                    <p class="withdraw-amount-text">0%</p>
+                    <div class="percentage-all-button">
+                      <button type="button" class="each-percentage-button">
+                        25%
+                      </button>
+                      <button type="button" class="each-percentage-button">
+                        50%
+                      </button>
+                      <button type="button" class="each-percentage-button">
+                        75%
+                      </button>
+                      <button type="button" class="each-percentage-button">
+                        100%
+                      </button>
+                    </div>
+                    <div class="rm-xrp-token">
+                      <button class="xrp-toggle active">XRP</button>
+                      <button class="token-toggle">TOKEN</button>
+                    </div>
+                  </div>
+                  <div class="all-transition-info">
+                    <div class="double-impact">
+                      <div class="single-in-double-impact">
+                        <p class="info-subject-text">Price Impact</p>
+                        <div class="info-tooltip" id="tooltip-1">
+                          <img
+                            src="./public/images/info-icon-dark.svg"
+                            alt="info-icon-dark"
+                            class="info-icon"
+                            data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                          />
+                        </div>
+                      </div>
+                      <p class="info-value-text">0 XRP (0%)</p>
+                    </div>
+                    <div class="double-impact">
+                      <p class="info-subject-text">Expected TOKEN</p>
+                      <p class="info-value-text">0 (0 → 0)</p>
+                    </div>
+                    <div class="double-impact">
+                      <p class="info-subject-text">Expected XRP</p>
+                      <p class="info-value-text">0 (0 → 0)</p>
+                    </div>
+                    <div class="double-impact">
+                      <p class="info-subject-text">Share of Pool</p>
+                      <p class="info-value-text">≈ 0% → 0%</p>
+                    </div>
+                    <div class="double-impact">
+                      <div class="single-in-double-impact">
+                        <p class="info-subject-text">Voting Threshold</p>
+                        <div class="info-tooltip" id="tooltip-2">
+                          <img
+                            src="./public/images/info-icon-dark.svg"
+                            alt="info-icon-dark"
+                            class="info-icon"
+                            data-tooltip="This is the Voting Threshold"
+                          />
+                        </div>
+                      </div>
+                      <p class="info-value-text">
+                        0K LP Tokens (0% of the Pool)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <div class="btn">
+                      <button
+                        id="rm-single-slided-review"
+                        class="review rm-review-single-sided"
+                      >
+                        Review
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="rm-step-confirm">
+            <label class="label" for="diposit">You’re Withdrawing</label>
+            <div class="is-confirmation">
+              <div class="recive">
+                <h6>0.0 TOKEN/XRP LP Tokens</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <label class="label" for="diposit">You’re Receiving</label>
+            <div class="is-confirmation">
+              <div class="deposit">
+                <div class="deposit-amount">
+                  <span class="f-logo">F</span>
+                  <div class="deposit-amount-content">
+                    <h6>0.0 TOKEN</h6>
+                    <p>$0.0</p>
+                  </div>
+                </div>
+              </div>
+              <div class="recive">
+                <h6>0.0 XRP</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+
+            <div class="amount-list">
+              <ul class="amount-list-content">
+                <li class="list-item">
+                  Price Impact
+                  <div class="info-tooltip" id="tooltip-1">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0 XRP (0%)</span>
+                </li>
+                <li class="list-item">
+                  <span>Share of Pool</span>
+                  <span class="list-value">≈ 0% → 0%</span>
+                </li>
+                <li class="list-item">
+                  Voting Threshold
+                  <div class="info-tooltip" id="tooltip-2">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0K LP Tokens (0% of the Pool)</span>
+                </li>
+              </ul>
+            </div>
+            <div class="confirm-footer">
+              <button class="cancel-btn" id="step-cancel">Cancel</button>
+              <button class="confirm-btn" id="rm-numeric-confirm">
+                Confirm
+                <span>
+                  <img
+                    class="loading-icon"
+                    src="./public/images/loading.svg"
+                    alt="loading"
+                  />
+                </span>
+              </button>
+            </div>
+          </div>
+          <div id="rm-step-confirm-single-sided">
+            <label class="label" for="diposit">You’re Withdrawing</label>
+            <div class="is-confirmation">
+              <div class="recive">
+                <h6>0.0 TOKEN/XRP LP Tokens</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+
+            <label class="label" for="diposit">You’re Receiving</label>
+            <div class="is-confirmation">
+              <div class="recive">
+                <h6>0.0 XRP</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <div class="amount-list">
+              <ul class="amount-list-content">
+                <li class="list-item">
+                  Price Impact
+                  <div class="info-tooltip" id="tooltip-1">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0 XRP (0%)</span>
+                </li>
+                <li class="list-item">
+                  <span>Share of Pool</span>
+                  <span class="list-value">≈ 0% → 0%</span>
+                </li>
+                <li class="list-item">
+                  Voting Threshold
+                  <div class="info-tooltip" id="tooltip-2">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0K LP Tokens (0% of the Pool)</span>
+                </li>
+              </ul>
+            </div>
+            <div class="confirm-footer">
+              <button class="cancel-btn" id="step-cancel">Cancel</button>
+              <button class="confirm-btn" id="rm-single-sided-confirm">
+                Confirm
+                <span>
+                  <img
+                    class="loading-icon-single-sided"
+                    src="./public/images/loading.svg"
+                    alt="loading"
+                  />
+                </span>
+              </button>
+            </div>
+          </div>
+          <div id="rm-step-done-numeric">
+            <label class="label checked" for="diposit"
+              >You Withdrew
+              <img src="./public/images/check-mark-icon.svg" alt="check" />
+            </label>
+
+            <div class="is-confirmation">
+              <div class="recive">
+                <h6>0.0 TOKEN/XRP LP Tokens</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <label class="label checked" for="diposit"
+              >You Received
+              <img src="./public/images/check-mark-icon.svg" alt="check" />
+            </label>
+            <div class="is-confirmation">
+              <div class="deposit">
+                <div class="deposit-amount">
+                  <span class="f-logo">F</span>
+                  <div class="deposit-amount-content">
+                    <h6>0.0 TOKEN</h6>
+                    <p>$0.0</p>
+                  </div>
+                </div>
+              </div>
+              <div class="recive">
+                <h6>0.0 XRP</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <div class="amount-list">
+              <ul class="amount-list-content">
+                <li class="list-item">
+                  Price Impact
+                  <div class="info-tooltip" id="tooltip-1">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0 XRP (0%)</span>
+                </li>
+                <li class="list-item">
+                  <span>Share of Pool</span>
+                  <span class="list-value">≈ 0% → 0%</span>
+                </li>
+                <li class="list-item">
+                  Voting Threshold
+                  <div class="info-tooltip" id="tooltip-2">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0K LP Tokens (0% of the Pool)</span>
+                </li>
+                <li class="list-item green">You are eligible to vote</li>
+              </ul>
+            </div>
+            <div class="confirm-footer">
+              <button class="done-btn" id="rm-step-numeric-done">Done</button>
+            </div>
+          </div>
+          <div id="rm-step-done-single-sided">
+            <label class="label checked" for="diposit"
+              >You Withdrew
+              <img src="./public/images/check-mark-icon.svg" alt="check" />
+            </label>
+            <div class="is-confirmation">
+              <div class="recive">
+                <h6>0.0 TOKEN/XRP LP Tokens</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <label class="label checked" for="diposit"
+              >You Received
+              <img src="./public/images/check-mark-icon.svg" alt="check" />
+            </label>
+            <div class="is-confirmation">
+              <div class="recive">
+                <h6>0.0 XRP</h6>
+                <p>$0.0</p>
+              </div>
+            </div>
+            <div class="amount-list">
+              <ul class="amount-list-content">
+                <li class="list-item">
+                  Price Impact
+                  <div class="info-tooltip" id="tooltip-1">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0 XRP (0%)</span>
+                </li>
+                <li class="list-item">
+                  <span>Share of Pool</span>
+                  <span class="list-value">≈ 0% → 0%</span>
+                </li>
+                <li class="list-item">
+                  Voting Threshold
+                  <div class="info-tooltip" id="tooltip-2">
+                    <img
+                      src="./public/images/info-icon-dark.svg"
+                      alt="info-icon-dark"
+                      class="info-icon"
+                      data-tooltip="This is the price impact tooltip. This is the price impact tooltip."
+                    />
+                  </div>
+                  <span class="list-value">0K LP Tokens (0% of the Pool)</span>
+                </li>
+                <li class="list-item green">You are eligible to vote</li>
+              </ul>
+            </div>
+            <div class="confirm-footer">
+              <button class="done-btn" id="rm-step-done-single-sided-btn">
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- select token list modal -->
+
+      <div class="select-token-list-modal-overlay">
+        <div class="select-token-list-modal">
+          <div class="modal-header">
+            <h2 class="modal-title">Select a token</h2>
+            <button class="token-list-modal-close-btn">
+              <img src="./public/images/close-icon.svg" alt="close-icon" />
+            </button>
+          </div>
+          <div class="token-lists">
+            <div class="my-token-list">
+              <h4 class="list-title">
+                <img
+                  src="./public/images/wallet-icon.svg"
+                  alt="wallet-icon"
+                /><span>My Tokens</span>
+              </h4>
+              <div class="token-item">
+                <div class="token-icon">
+                  <img src="./public/images/avatar-icon.svg" alt="toke-icon" />
+                </div>
+                <div class="token-details">
+                  <p class="token-name">TOKEN1</p>
+                  <p class="token-issuer">Issuer</p>
+                </div>
+                <div class="token-values">
+                  <p class="total-token">0.0</p>
+                  <p class="token-price">$0.0</p>
+                </div>
+              </div>
+              <div class="token-item">
+                <div class="token-icon">
+                  <img src="./public/images/avatar-icon.svg" alt="toke-icon" />
+                </div>
+                <div class="token-details">
+                  <p class="token-name">TOKEN3</p>
+                  <p class="token-issuer">Issuer</p>
+                </div>
+                <div class="token-values">
+                  <p class="total-token">0.0</p>
+                  <p class="token-price">$0.0</p>
+                </div>
+              </div>
+              <div class="token-item">
+                <div class="token-icon">
+                  <img src="./public/images/avatar-icon.svg" alt="toke-icon" />
+                </div>
+                <div class="token-details">
+                  <p class="token-name">TOKEN2</p>
+                  <p class="token-issuer">Issuer</p>
+                </div>
+                <div class="token-values">
+                  <p class="total-token">0.0</p>
+                  <p class="token-price">$0.0</p>
+                </div>
+              </div>
+            </div>
+            <div class="top-token-list">
+              <h4 class="list-title">
+                <img
+                  src="./public/images/star-icon.svg"
+                  alt="wallet-icon"
+                /><span>Top Tokens (24H)</span>
+              </h4>
+              <div class="token-item">
+                <div class="token-icon">
+                  <img src="./public/images/avatar-icon.svg" alt="toke-icon" />
+                </div>
+                <div class="token-details">
+                  <p class="token-name">TOKEN4</p>
+                  <p class="token-issuer">Issuer</p>
+                </div>
+                <div class="token-values">
+                  <p class="total-token">0.0</p>
+                  <p class="token-price">$0.0</p>
+                </div>
+              </div>
+              <div class="token-item">
+                <div class="token-icon">
+                  <img src="./public/images/avatar-icon.svg" alt="toke-icon" />
+                </div>
+                <div class="token-details">
+                  <p class="token-name">TOKEN5</p>
+                  <p class="token-issuer">Issuer</p>
+                </div>
+                <div class="token-values">
+                  <p class="total-token">0.0</p>
+                  <p class="token-price">$0.0</p>
+                </div>
+              </div>
+              <div class="token-item">
+                <div class="token-icon">
+                  <img src="./public/images/avatar-icon.svg" alt="toke-icon" />
+                </div>
+                <div class="token-details">
+                  <p class="token-name">TOKEN6</p>
+                  <p class="token-issuer">Issuer</p>
+                </div>
+                <div class="token-values">
+                  <p class="total-token">0.0</p>
+                  <p class="token-price">$0.0</p>
+                </div>
+              </div>
+              <div class="token-item">
+                <div class="token-icon">
+                  <img src="./public/images/avatar-icon.svg" alt="toke-icon" />
+                </div>
+                <div class="token-details">
+                  <p class="token-name">TOKEN7</p>
+                  <p class="token-issuer">Issuer</p>
+                </div>
+                <div class="token-values">
+                  <p class="total-token">0.0</p>
+                  <p class="token-price">$0.0</p>
+                </div>
+              </div>
+              <div class="token-item">
+                <div class="token-icon">
+                  <img src="./public/images/avatar-icon.svg" alt="toke-icon" />
+                </div>
+                <div class="token-details">
+                  <p class="token-name">TOKEN8</p>
+                  <p class="token-issuer">Issuer</p>
+                </div>
+                <div class="token-values">
+                  <p class="total-token">0.0</p>
+                  <p class="token-price">$0.0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Main section ends here -->
+    <script src="./js/main.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/lp.js"></script>
+  </body>
+</html>
