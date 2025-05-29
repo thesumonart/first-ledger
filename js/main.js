@@ -1,11 +1,15 @@
 // Watchlist slider
 
-const watchlistSwiper = new Swiper(".watchlist-slider", {
-  slidesPerView: "auto",
-  grabCursor: true,
-  loop: true,
-  freeMode: true,
-  mousewheel: true,
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const watchlistSwiper = new Swiper(".watchlist-slider", {
+      slidesPerView: "auto",
+      grabCursor: true,
+      loop: true,
+      freeMode: true,
+      mousewheel: true,
+    });
+  }, 300);
 });
 
 // Watchlist slider
