@@ -247,34 +247,51 @@
 
                 <!-- Wallets Dropdown button -->
 
-                <button class="control-button">
+                <button class="control-button refresh-pnl-btn">
                   <img
                     class="control-button-left-icon"
-                    src="./public/images/star-icon.svg"
+                    src="./public/images/refresh-icon.svg"
                     alt="star-icon"
                   />
                   Refresh PnL
                 </button>
-                <button class="refresh-button">
-                  <img
-                    class="refresh-button-icon"
-                    src="./public/images/refresh-icon.svg"
-                    alt="refresh-icon"
-                  />
-                </button>
               </div>
-              <div class="table-search">
-                <input
-                  class="search-input-box"
-                  type="text"
-                  placeholder="Search Inside Portfolio"
-                />
-                <button type="submit" id="tableSearch" class="search-button">
-                  <img
-                    src="./public/images/search-icon.svg"
-                    alt="Search-icon"
+              <div class="table-search-n-toggle-btn">
+                <label for="tableToggleSwitch">
+                  <div class="table-toggle-switch">
+                    <input
+                      type="checkbox"
+                      name="tableToggleSwitch"
+                      id="tableToggleSwitch"
+                      hidden
+                    />
+                    <span class="table-toggle-icon-wrapper">
+                      <img
+                        class="zap-icon"
+                        src="./public/images/dollar-icon.svg"
+                        alt="zap-icon"
+                      />
+                      <img
+                        class="zap-icon-off"
+                        src="./public/images/xrp-logo.svg"
+                        alt="zap-icon"
+                      />
+                    </span>
+                  </div>
+                </label>
+                <div class="table-search">
+                  <input
+                    class="search-input-box"
+                    type="text"
+                    placeholder="Search Inside Portfolio"
                   />
-                </button>
+                  <button type="submit" id="tableSearch" class="search-button">
+                    <img
+                      src="./public/images/search-icon.svg"
+                      alt="Search-icon"
+                    />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
