@@ -31,7 +31,7 @@
             <div class="portfolio-heading-wrapper">
               <h1 class="portfolio-heading">
                 Portfolio
-                <figure class="portfolio-vectors">
+                <!-- <figure class="portfolio-vectors">
                   <img
                     src="./public/images/portfolio-vector-1.svg"
                     alt="Vector"
@@ -52,7 +52,7 @@
                     src="./public/images/portfolio-vector-5.svg"
                     alt="Vector"
                   />
-                </figure>
+                </figure> -->
               </h1>
               <p class="portfolio-header-desc">
                 Monitor your holdings, performance, and real-time PnL
@@ -63,101 +63,31 @@
               <div class="stats-cards-wrapper">
                 <div class="stats-card">
                   <p class="card-heading">Bought</p>
-                  <p class="price">$000K</p>
-                  <p class="token-amount">000k XRP</p>
+                  <p class="token-amount bought">0 XRP</p>
                 </div>
                 <div class="stats-card">
-                  <p class="card-heading">Bought</p>
-                  <p class="price">$000K</p>
-                  <p class="token-amount">000k XRP</p>
+                  <p class="card-heading">Sold</p>
+                  <p class="token-amount sold">0 XRP</p>
                 </div>
                 <div class="stats-card">
-                  <p class="card-heading">Bought</p>
-                  <p class="price">$000K</p>
-                  <p class="token-amount">000k XRP</p>
+                  <p class="card-heading">Remaining</p>
+                  <p class="token-amount remaining">0 XRP</p>
                 </div>
                 <div class="stats-card">
-                  <p class="card-heading">Bought</p>
-                  <p class="price">$000K</p>
-                  <p class="token-amount">000k XRP</p>
-                </div>
-                <div class="stats-card">
-                  <p class="card-heading">Bought</p>
-                  <p class="price">$000K</p>
-                  <p class="token-amount">000k XRP</p>
-                </div>
-                <div class="stats-card">
-                  <p class="card-heading">Net Worth</p>
-                  <p class="price net-worth">$0000,00</p>
-                </div>
-              </div>
-              <div class="second-col-cards">
-                <div class="stats-card">
-                  <p class="card-heading">Net Worth</p>
-                  <p class="price net-worth">$0000,00</p>
+                  <p class="card-heading">PnL</p>
+                  <p class="token-amount pnl">0 XRP (+0%)</p>
                 </div>
                 <div class="stats-card">
                   <p class="card-heading">24h Change</p>
-                  <p class="price">+$000K</p>
-                  <p class="token-amount">+000k XRP</p>
+                  <p class="token-amount change">0 XRP (+0%)</p>
+                </div>
+                <div class="stats-card">
+                  <p class="card-heading">Net Worth</p>
+                  <p class="token-amount net-worth">0 XRP</p>
                 </div>
               </div>
             </div>
             <!-- Wallets Dropdown button on header -->
-
-            <div
-              class="wallet-dropdown header-wallet-btn"
-              id="portfolioWalletDropdown"
-            >
-              <div class="wallet-icon-wrapper">
-                <span class="wallet-icon"
-                  ><img src="./public/images/wallet-icon.svg" alt="wallet-icon"
-                /></span>
-                <span class="selected-wallet-option">Wallets</span>
-              </div>
-
-              <span id="walletArrow" class="arrow-icon"
-                ><img
-                  src="./public/images/chevron-down-icon.svg"
-                  alt="arrow-icon"
-              /></span>
-
-              <div class="dropdown-options" id="portfolioWalletOptions">
-                <label class="option"
-                  ><input type="checkbox" value="Option 1" />
-                  <div class="wallet-name-address">
-                    <span class="wallet-name">All wallets</span>
-                  </div>
-                </label>
-                <label class="option"
-                  ><input type="checkbox" value="Option 2" />
-                  <div class="wallet-name-address">
-                    <span class="wallet-name">Wallet 1</span
-                    ><span class="wallet-address"
-                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
-                    >
-                  </div>
-                </label>
-                <label class="option"
-                  ><input type="checkbox" value="Option 2" />
-                  <div class="wallet-name-address">
-                    <span class="wallet-name">Wallet 2</span
-                    ><span class="wallet-address"
-                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
-                    >
-                  </div>
-                </label>
-                <label class="option"
-                  ><input type="checkbox" value="Option 3" />
-                  <div class="wallet-name-address">
-                    <span class="wallet-name">Wallet 3</span
-                    ><span class="wallet-address"
-                      >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
-                    >
-                  </div>
-                </label>
-              </div>
-            </div>
 
             <!-- Wallets Dropdown button on header -->
           </div>
@@ -321,11 +251,24 @@
                     <div class="table-row-wrapper">
                       <div class="table-row">
                         <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
+                          <div class="token-icon-wrapper">
+                            <img
+                              class="token-icon"
+                              src="./public/images/token-icon.svg"
+                              alt="Token-icon"
+                            />
+                            <div class="anti-snipe-n-check-wrapper">
+                              <img
+                                src="./public/images/anti-snipe-icon.svg"
+                                alt="anti-snipe"
+                                class="token-verify-icon"
+                              /><img
+                                src="./public/images/check-mark-icon.svg"
+                                alt="check-mark"
+                                class="token-verify-icon"
+                              />
+                            </div>
+                          </div>
                           <span>TOKEN</span>
                         </div>
                         <div class="multi-wallet wallet-name">
@@ -481,11 +424,24 @@
                     <div class="table-row-wrapper">
                       <div class="table-row">
                         <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
+                          <div class="token-icon-wrapper">
+                            <img
+                              class="token-icon"
+                              src="./public/images/token-icon.svg"
+                              alt="Token-icon"
+                            />
+                            <div class="anti-snipe-n-check-wrapper">
+                              <img
+                                src="./public/images/anti-snipe-icon.svg"
+                                alt="anti-snipe"
+                                class="token-verify-icon"
+                              /><img
+                                src="./public/images/check-mark-icon.svg"
+                                alt="check-mark"
+                                class="token-verify-icon"
+                              />
+                            </div>
+                          </div>
                           <span>TOKEN</span>
                         </div>
                         <div class="wallet-info">
@@ -526,11 +482,24 @@
                     <div class="table-row-wrapper">
                       <div class="table-row">
                         <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
+                          <div class="token-icon-wrapper">
+                            <img
+                              class="token-icon"
+                              src="./public/images/token-icon.svg"
+                              alt="Token-icon"
+                            />
+                            <div class="anti-snipe-n-check-wrapper">
+                              <img
+                                src="./public/images/anti-snipe-icon.svg"
+                                alt="anti-snipe"
+                                class="token-verify-icon"
+                              /><img
+                                src="./public/images/check-mark-icon.svg"
+                                alt="check-mark"
+                                class="token-verify-icon"
+                              />
+                            </div>
+                          </div>
                           <span>TOKEN</span>
                         </div>
                         <div class="wallet-info">
@@ -573,11 +542,24 @@
                     <div class="table-row-wrapper">
                       <div class="table-row">
                         <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
+                          <div class="token-icon-wrapper">
+                            <img
+                              class="token-icon"
+                              src="./public/images/token-icon.svg"
+                              alt="Token-icon"
+                            />
+                            <div class="anti-snipe-n-check-wrapper">
+                              <img
+                                src="./public/images/anti-snipe-icon.svg"
+                                alt="anti-snipe"
+                                class="token-verify-icon"
+                              /><img
+                                src="./public/images/check-mark-icon.svg"
+                                alt="check-mark"
+                                class="token-verify-icon"
+                              />
+                            </div>
+                          </div>
                           <span>TOKEN</span>
                         </div>
                         <div class="multi-wallet wallet-name">
@@ -733,11 +715,24 @@
                     <div class="table-row-wrapper">
                       <div class="table-row">
                         <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
+                          <div class="token-icon-wrapper">
+                            <img
+                              class="token-icon"
+                              src="./public/images/token-icon.svg"
+                              alt="Token-icon"
+                            />
+                            <div class="anti-snipe-n-check-wrapper">
+                              <img
+                                src="./public/images/anti-snipe-icon.svg"
+                                alt="anti-snipe"
+                                class="token-verify-icon"
+                              /><img
+                                src="./public/images/check-mark-icon.svg"
+                                alt="check-mark"
+                                class="token-verify-icon"
+                              />
+                            </div>
+                          </div>
                           <span>TOKEN</span>
                         </div>
                         <div class="wallet-info">
@@ -779,11 +774,24 @@
                     <div class="table-row-wrapper">
                       <div class="table-row">
                         <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
+                          <div class="token-icon-wrapper">
+                            <img
+                              class="token-icon"
+                              src="./public/images/token-icon.svg"
+                              alt="Token-icon"
+                            />
+                            <div class="anti-snipe-n-check-wrapper">
+                              <img
+                                src="./public/images/anti-snipe-icon.svg"
+                                alt="anti-snipe"
+                                class="token-verify-icon"
+                              /><img
+                                src="./public/images/check-mark-icon.svg"
+                                alt="check-mark"
+                                class="token-verify-icon"
+                              />
+                            </div>
+                          </div>
                           <span>TOKEN</span>
                         </div>
                         <div class="wallet-info">
@@ -825,11 +833,24 @@
                     <div class="table-row-wrapper">
                       <div class="table-row">
                         <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
+                          <div class="token-icon-wrapper">
+                            <img
+                              class="token-icon"
+                              src="./public/images/token-icon.svg"
+                              alt="Token-icon"
+                            />
+                            <div class="anti-snipe-n-check-wrapper">
+                              <img
+                                src="./public/images/anti-snipe-icon.svg"
+                                alt="anti-snipe"
+                                class="token-verify-icon"
+                              /><img
+                                src="./public/images/check-mark-icon.svg"
+                                alt="check-mark"
+                                class="token-verify-icon"
+                              />
+                            </div>
+                          </div>
                           <span>TOKEN</span>
                         </div>
                         <div class="wallet-info">
@@ -871,11 +892,24 @@
                     <div class="table-row-wrapper">
                       <div class="table-row">
                         <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
+                          <div class="token-icon-wrapper">
+                            <img
+                              class="token-icon"
+                              src="./public/images/token-icon.svg"
+                              alt="Token-icon"
+                            />
+                            <div class="anti-snipe-n-check-wrapper">
+                              <img
+                                src="./public/images/anti-snipe-icon.svg"
+                                alt="anti-snipe"
+                                class="token-verify-icon"
+                              /><img
+                                src="./public/images/check-mark-icon.svg"
+                                alt="check-mark"
+                                class="token-verify-icon"
+                              />
+                            </div>
+                          </div>
                           <span>TOKEN</span>
                         </div>
                         <div class="wallet-info">

@@ -76,183 +76,24 @@
         color: var(--textDefaultTertiary);
         font-size: 14px;
       }
-      .price {
+
+      .token-amount {
         color: var(--textDefaultPrimary);
         font-size: 16px;
         line-height: 1.2em;
-      }
-      .token-amount {
-        color: var(--textOnBrandSecondary);
-        font-size: 14px;
-        line-height: 1.2em;
-      }
-      .net-worth {
-        font-size: 32px;
-        font-weight: 600;
-        line-height: 1.2em;
-
-        @media (max-width: 767px) {
-          font-size: 28px;
-        }
-      }
-    }
-
-    @media (max-width: 768px) {
-      .stats-cards-wrapper {
-        .stats-card:last-child,
-        .stats-card:nth-last-child(2) {
-          display: none;
-        }
-      }
-      .stats-cards-wrapper {
-        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+        font-weight: normal;
       }
     }
 
     .stats-cards-wrapper {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
+      grid-template-columns: repeat(6, 1fr);
       gap: 8px;
       width: -webkit-fill-available;
-    }
 
-    .second-col-cards {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 8px;
-      width: 100%;
-      height: auto;
-
-      @media (min-width: 769px) {
-        display: none;
+      @media (max-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
       }
-    }
-  }
-
-  .wallet-dropdown {
-    position: relative;
-    height: 32px;
-    width: 100%;
-    border: 1px solid var(--borderDefaultPrimary);
-    border-radius: 12px;
-    padding: 6px 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    user-select: none;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    background: var(--bgDefaultPrimaryHov);
-    font-size: 14px;
-    color: var(--textDefaultPrimary);
-    gap: 8px;
-    display: none;
-    margin-top: 8px;
-
-    @media (min-width: 421px) and (max-width: 768px) {
-      display: flex !important;
-    }
-
-    .wallet-icon-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .wallet-name {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .arrow-icon {
-      display: flex;
-    }
-
-    .wallet-icon {
-      display: flex;
-
-      img {
-        width: 18px;
-        aspect-ratio: 1;
-      }
-    }
-
-    .arrow-icon.open {
-      transform: rotate(180deg);
-    }
-
-    .dropdown-options {
-      display: none;
-      position: absolute;
-      top: calc(100% + 4px);
-      left: 0;
-      width: auto;
-      border: 1px solid var(--borderDefaultSecondary);
-      border-radius: 12px;
-      background: var(--bgDefaultSecondary);
-      flex-direction: column;
-      z-index: 999;
-    }
-
-    .dropdown-options.show {
-      display: flex;
-    }
-
-    .option {
-      padding: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .wallet-name-address {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .wallet-address {
-      color: var(--textDefaultTertiary);
-    }
-
-    .option input[type="checkbox"] {
-      appearance: none;
-      width: 16px;
-      height: 16px;
-      border: 1px solid #1f3ccd;
-      border-radius: 4px;
-      position: relative;
-      margin-right: 5px;
-      cursor: pointer;
-    }
-
-    .option input[type="checkbox"]:checked {
-      background-color: var(--bgBrandDefault);
-      border: none;
-    }
-
-    .option input[type="checkbox"]:checked::after {
-      content: "";
-      background: url("../public/images/check-mark.svg");
-      background-size: 75%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      font-size: 12px;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-
-    #selected-option {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      flex-grow: 1;
-    }
-
-    @media (max-width: 768px) {
-      display: none;
     }
   }
 }
@@ -295,7 +136,6 @@
     align-items: center;
     gap: 16px;
     width: 100%;
-    white-space: nowrap;
 
     .control-button {
       height: 32px;
@@ -500,7 +340,9 @@
   .table-search-n-toggle-btn {
     display: flex;
     align-items: center;
+    justify-content: end;
     gap: 16px;
+    width: 100%;
 
     .table-toggle-switch {
       width: 44px;
@@ -632,23 +474,23 @@
 /* Table section CSS starts here */
 
 .main-table-section {
-  height: calc(100vh - 390px);
+  height: calc(100vh - 360px);
   overflow-y: auto;
 
   @media (max-width: 390px) {
-    height: calc(100vh - 470px);
+    height: calc(100vh - 430px);
   }
   @media (min-width: 391px) and (max-width: 420px) {
-    height: calc(100vh - 435px);
+    height: calc(100vh - 395px);
   }
   @media (min-width: 421px) and (max-width: 599px) {
-    height: calc(100vh - 475px);
+    height: calc(100vh - 395px);
   }
   @media (min-width: 600px) and (max-width: 767px) {
-    height: calc(100vh - 485px);
+    height: calc(100vh - 402px);
   }
   @media (min-width: 768px) and (max-width: 1023px) {
-    height: calc(100vh - 385px);
+    height: calc(100vh - 361px);
   }
 
   &::-webkit-scrollbar {
@@ -788,26 +630,45 @@
   .token-cell {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     width: 100%;
     font-size: 16px;
     font-weight: 400;
     color: var(--textDefaultPrimary);
     min-width: 155px;
+    cursor: pointer;
 
     @media (max-width: 592px) {
       min-width: 108px;
     }
   }
+  .token-icon-wrapper {
+    position: relative;
 
-  .token-icon {
-    width: 40px;
-    aspect-ratio: 1;
-    border-radius: 10px;
-    object-fit: cover;
-
-    @media (max-width: 767px) {
+    .token-icon {
       width: 32px;
+      aspect-ratio: 1;
+      border-radius: 10px;
+      object-fit: cover;
+
+      @media (max-width: 767px) {
+        width: 32px;
+      }
+    }
+
+    .anti-snipe-n-check-wrapper {
+      position: absolute;
+      top: -2px;
+      right: -4px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .token-verify-icon {
+        width: 12px;
+        aspect-ratio: 1/1;
+        border-radius: 999px;
+      }
     }
   }
 
@@ -972,6 +833,7 @@
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
   display: none;
   align-items: center;
   justify-content: center;
@@ -1810,6 +1672,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -1987,6 +1850,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
   display: none;
   justify-content: center;
   align-items: center;
@@ -2434,6 +2298,7 @@
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
   z-index: 99;
   align-items: center;
   justify-content: center;

@@ -392,6 +392,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function setupInteractions() {
     const isMobile = window.innerWidth < 768;
 
+    // Table Row Wrapper Click Logic (for mobile)
     if (isMobile) {
       document.querySelectorAll(".table-row-wrapper").forEach((tr) => {
         tr.addEventListener("click", function (event) {
@@ -404,11 +405,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     } else {
-      document.querySelectorAll("tr").forEach((tr) => {
+      document.querySelectorAll(".table-row-wrapper").forEach((tr) => {
         tr.removeEventListener("click", function () {});
       });
     }
 
+    // Multi-wallet Logic (for mobile and desktop)
     document.querySelectorAll(".multi-wallet").forEach((multiWallet) => {
       multiWallet.addEventListener("click", function (event) {
         event.stopPropagation();
@@ -424,6 +426,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     }
+
+    // Handle Click for .token-cell
+    document.querySelectorAll(".token-cell").forEach((tokenCell) => {
+      tokenCell.addEventListener("click", (event) => {
+        // Stop the click event from propagating to .table-row-wrapper
+        event.stopPropagation();
+        // Redirect to the token chart page
+        window.location.href = "./token-chart.html";
+      });
+    });
   }
 
   setupInteractions();
