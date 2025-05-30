@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/root.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/new-tokens.css" />
+    <link rel="stylesheet" href="./styles/watchlistBar.css" />
     <title>New Tokens</title>
   </head>
 
@@ -19,160 +20,7 @@
     <main>
       <!-- watchlist bar starts here -->
 
-      <section class="watchlist-bar">
-        <div class="container">
-          <div class="watchlist-bar-contents-wrapper">
-            <div class="icon-switch-wrapper">
-              <button class="switch-btn star-btn">
-                <img
-                  src="./public/images/star-icon.svg"
-                  alt="Star-icon"
-                  class=""
-                />
-              </button>
-
-              <button class="switch-btn wallet-btn active">
-                <img
-                  src="./public/images/wallet-icon.svg"
-                  alt="Wallet-icon"
-                  class=""
-                />
-              </button>
-            </div>
-
-            <marquee direction="left" loop="">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
-                    <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
-                    />
-                  </figure>
-                </div>
-
-                <div class="swiper-slide watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
-                    <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
-                    />
-                  </figure>
-                </div>
-
-                <div class="swiper-slide watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
-                    <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
-                    />
-                  </figure>
-                </div>
-
-                <div class="swiper-slide watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
-                    <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
-                    />
-                  </figure>
-                </div>
-
-                <div class="swiper-slide watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
-                    <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
-                    />
-                  </figure>
-                </div>
-
-                <div class="swiper-slide watchlist-item">
-                  <div class="watchlist-item-content">
-                    <figure class="token-icon">
-                      <img
-                        src="./public/images/token-icon.svg"
-                        alt="Token-icon"
-                      />
-                    </figure>
-                    <p class="token-name">Token</p>
-                    <p class="token-price">$00.00K</p>
-                    <p class="token-increment">+000.0%</p>
-                  </div>
-                  <figure class="close-icon-wrapper">
-                    <img
-                      class="close-icon"
-                      src="./public/images/close-icon-red.svg"
-                      alt="Close-icon"
-                    />
-                  </figure>
-                </div>
-              </div>
-            </marquee>
-          </div>
-        </div>
-      </section>
-
+      <div id="watchlist-bar"></div>
       <!-- watchlist bar ends here -->
 
       <!-- Hero section starts here -->
@@ -2098,7 +1946,10 @@
 
     <!-- JavaScript -->
     <script src="./js/loadNavbar.js"></script>
+    <script src="./js/loadWatchlist.js"></script>
     <script src="./js/new-tokens.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- JavaScript -->
   </body>
 </html>

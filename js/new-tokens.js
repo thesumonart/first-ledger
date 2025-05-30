@@ -24,37 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // NavBar
 
-// watchlist switch button toggle
-
-document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".switch-btn");
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      // Remove 'active' class from all buttons
-      buttons.forEach((btn) => btn.classList.remove("active"));
-
-      // Add 'active' class to the clicked button
-      button.classList.add("active");
-    });
-  });
-});
-
-// Watchlist items
-document.addEventListener("DOMContentLoaded", function () {
-  const marquee = document.querySelector("marquee");
-
-  // Stop marquee on mouse enter
-  marquee.addEventListener("mouseenter", function () {
-    this.stop();
-  });
-
-  // Resume marquee on mouse leave
-  marquee.addEventListener("mouseleave", function () {
-    this.start();
-  });
-});
-
 // Timeframe filter control
 
 const timeButtons = document.querySelectorAll(".time-filters button");

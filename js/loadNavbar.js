@@ -4,7 +4,6 @@ let currentPage = "home";
 if (path !== "/" && path !== "") {
   const filename = path.split("/").pop().replace(".html", "");
 
-  // Map URL slug to data-page values (dash-to-camelCase)
   const pageMap = {
     "new-tokens": "newTokens",
     "liquidity-pools": "pools",
@@ -21,11 +20,33 @@ fetch("/components/navbar.html")
   .then((html) => {
     document.getElementById("main-navbar").innerHTML = html;
 
+    // Set active nav link
     document.querySelectorAll(".nav-link").forEach((link) => {
-      if (link.dataset.page === currentPage) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
+      link.classList.toggle("active", link.dataset.page === currentPage);
     });
+
+    // Menu open/close logic
+    const menuButton = document.querySelector(".berger-button");
+    const sidebarMenu = document.getElementById("sidebarMenu");
+    const closeMenu = document.getElementById("closeMenu");
+    const overlay = document.getElementById("sidebarOverlay");
+
+    if (menuButton && sidebarMenu && closeMenu && overlay) {
+      const openMenu = () => {
+        sidebarMenu.classList.add("active");
+        overlay.classList.add("active");
+      };
+
+      const closeSidebar = () => {
+        sidebarMenu.classList.remove("active");
+        overlay.classList.remove("active");
+      };
+
+      menuButton.addEventListener("click", openMenu);
+      closeMenu.addEventListener("click", closeSidebar);
+      overlay.addEventListener("click", closeSidebar);
+    }
+  })
+  .catch((err) => {
+    console.error("Error loading navbar:", err);
   });
