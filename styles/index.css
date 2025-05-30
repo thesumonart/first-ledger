@@ -554,7 +554,7 @@
       > span {
         &:nth-last-of-type(1),
         &:nth-last-of-type(2),
-        &:nth-last-of-type(3) {
+        &:nth-last-of-type(6) {
           display: none;
         }
       }
@@ -609,7 +609,7 @@
       > div {
         &:nth-last-of-type(1),
         &:nth-last-of-type(2),
-        &:nth-last-of-type(3) {
+        &:nth-last-of-type(6) {
           display: none;
         }
       }
@@ -694,6 +694,15 @@
     color: var(--textDefaultPrimary);
 
     span {
+      &:first-child {
+        display: flex;
+        gap: 4px;
+
+        .table-xrp-logo {
+          width: 12px;
+          aspect-ratio: 1/1;
+        }
+      }
       &:last-child {
         color: var(--textOnBrandSecondary);
         font-size: 14px;
