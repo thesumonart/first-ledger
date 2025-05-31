@@ -1728,6 +1728,10 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
+
+  @media (max-width: 767px) {
+    align-items: end;
+  }
 }
 
 .modal-share-content {
@@ -1739,13 +1743,25 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  .pnl-card-image {
+    width: auto;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 767px) {
   .modal-share-content {
-    width: 310px;
-    padding: 12px 12px;
+    width: 100%;
+    padding: 16px;
     gap: 12px;
+    border-radius: 16px 16px 0 0;
+    max-height: 100%;
+    height: auto;
   }
 }
 
@@ -1768,11 +1784,9 @@
 }
 
 .share-title {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
   color: var(--textDefaultPrimary);
-  text-transform: uppercase;
-  text-align: center;
 }
 
 @media (max-width: 640px) {
@@ -1784,7 +1798,6 @@
 .close-div {
   width: 40px;
   height: 40px;
-  border: 1px solid var(--borderDefaultSecondary);
   background-color: var(--bgDefaultSecondary);
   border-radius: 8px;
   display: flex;
@@ -1792,102 +1805,69 @@
   justify-content: center;
   cursor: pointer;
 }
+.action-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 
-@media (max-width: 640px) {
-  .close-div {
-    width: 20px;
-    height: 20px;
-    border-radius: 6px;
+  img {
+    width: 24px;
+    aspect-ratio: 1/1;
   }
+}
+.back-btn {
+  display: none;
+  rotate: 90deg;
 
-  .clo-img-sm {
-    width: 12px;
-    height: 12px;
+  @media (max-width: 768px) {
+    display: flex;
   }
 }
 
 .tweet-and-download {
+  padding-top: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  img {
+    width: 20px;
+    aspect-ratio: 1/1;
+  }
 }
 
-@media (max-width: 640px) {
-  .tweet-and-download {
-    gap: 20px;
-  }
-
-  .tweet-img-sm {
-    width: 22px;
-    height: 22px;
-  }
-
-  .download-img-sm {
-    width: 22px;
-    height: 22px;
-  }
+@media (max-width: 678px) {
 }
 
 .tweet-download-button {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  gap: 6px;
-  background-color: transparent;
-  border: none;
+  justify-content: center;
+  gap: 8px;
+  border: 0.5px solid;
+  border-radius: 10px;
   cursor: pointer;
-}
+  width: 100%;
+  height: 40px;
 
-.tweet-icon-div {
-  width: 60px;
-  height: 60px;
-  border: 1px solid var(--textBrandDefault);
-  background-color: var(--bgBrandDefault);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 640px) {
-  .tweet-icon-div {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-  }
-}
-
-.download-icon-div {
-  width: 60px;
-  height: 60px;
-  border: 1px solid var(--borderDefaultPrimary);
-  background-color: var(--bgDefaultSecondary);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 640px) {
-  .download-icon-div {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-  }
-}
-
-.tweet-text {
   font-size: 16px;
   font-weight: 400;
+  line-height: 1.2em;
   color: var(--textDefaultPrimary);
-}
 
-@media (max-width: 640px) {
-  .tweet-text {
-    font-size: 12px;
-    font-weight: 400;
-    color: var(--textDefaultPrimary);
+  &.download {
+    background: var(--bgDefaultPrimaryHov);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+  &.tweet {
+    background: var(--bgBrandDefault);
+    border-color: var(--borderBrandDefault);
+  }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
   }
 }
 
