@@ -197,12 +197,12 @@
                     />
                     <span class="table-toggle-icon-wrapper">
                       <img
-                        class="zap-icon"
+                        class="dollar-icon"
                         src="./public/images/dollar-icon.svg"
                         alt="zap-icon"
                       />
                       <img
-                        class="zap-icon-off"
+                        class="xrp-icon"
                         src="./public/images/xrp-logo.svg"
                         alt="zap-icon"
                       />
@@ -1355,7 +1355,7 @@
         <div class="modal">
           <div class="modal-header">
             <!-- Wallets Dropdown button -->
-
+            <!-- 
             <div
               class="wallet-dropdown portfolioModalWalletDropdown"
               id="portfolioModalWalletDropdown"
@@ -1404,7 +1404,9 @@
                   </div>
                 </label>
               </div>
-            </div>
+            </div> -->
+
+            <p class="modal-title">Your Position</p>
 
             <!-- Wallets Dropdown button -->
 
@@ -1428,9 +1430,28 @@
                   />
                 </figure>
                 <div class="token-details">
-                  <div class="token-name">Token</div>
+                  <div class="token-name">
+                    TOKEN
+                    <span class="token-verify-icon-wrapper"
+                      ><img
+                        src="./public/images/anti-snipe-icon.svg"
+                        alt="Anti Snipe"
+                        class="verify-icon" /><img
+                        src="./public/images/check-mark-icon.svg"
+                        alt="Check Mark"
+                        class="verify-icon"
+                    /></span>
+                  </div>
                   <div class="token-change">
-                    <span class="percentage-change">+00,0%</span>
+                    <span class="percentage-change"
+                      ><figure class="icon-wrapper">
+                        <img
+                          src="./public/images/triangle-arrow-up.svg"
+                          alt="Up"
+                        />
+                      </figure>
+                      00.0%</span
+                    >
                     <span class="change-pnl">24H Change</span>
                     <figure class="change-pnl-icon">
                       <img
@@ -1445,32 +1466,71 @@
               <div class="stats-grid">
                 <div class="stat-box">
                   <div class="stat-label">price</div>
-                  <div class="stat-xrp">0 XRP</div>
-                  <div class="stat-token">0 TOKEN</div>
+                  <div class="stat-xrp">
+                    00
+                    <img
+                      src="./public/images/xrp-logo.svg"
+                      alt="XRP icon"
+                      class="xrp-logo"
+                    />
+                  </div>
                 </div>
                 <div class="stat-box">
                   <div class="stat-label">liquidity</div>
-                  <div class="stat-xrp">0 XRP</div>
-                  <div class="stat-token">0 TOKEN</div>
+                  <div class="stat-xrp">
+                    00
+                    <img
+                      src="./public/images/xrp-logo.svg"
+                      alt="XRP icon"
+                      class="xrp-logo"
+                    />
+                  </div>
                 </div>
                 <div class="stat-box">
                   <div class="stat-label">markee cap</div>
-                  <div class="stat-xrp">0 XRP</div>
-                  <div class="stat-token">0 TOKEN</div>
+                  <div class="stat-xrp">
+                    00
+                    <img
+                      src="./public/images/xrp-logo.svg"
+                      alt="XRP icon"
+                      class="xrp-logo"
+                    />
+                  </div>
                 </div>
                 <div class="stat-box">
                   <div class="stat-label">bought</div>
-                  <div class="stat-xrp">0 XRP</div>
+                  <div class="stat-xrp">
+                    0
+                    <img
+                      src="./public/images/xrp-logo.svg"
+                      alt="XRP icon"
+                      class="xrp-logo"
+                    />
+                  </div>
                   <div class="stat-token">0 TOKEN</div>
                 </div>
                 <div class="stat-box">
                   <div class="stat-label">sold</div>
-                  <div class="stat-xrp">0 XRP</div>
+                  <div class="stat-xrp">
+                    0
+                    <img
+                      src="./public/images/xrp-logo.svg"
+                      alt="XRP icon"
+                      class="xrp-logo"
+                    />
+                  </div>
                   <div class="stat-token">0 TOKEN</div>
                 </div>
                 <div class="stat-box">
                   <div class="stat-label">remaining</div>
-                  <div class="stat-xrp">0 XRP</div>
+                  <div class="stat-xrp">
+                    0
+                    <img
+                      src="./public/images/xrp-logo.svg"
+                      alt="XRP icon"
+                      class="xrp-logo"
+                    />
+                  </div>
                   <div class="stat-token">0 TOKEN</div>
                 </div>
               </div>
@@ -1507,7 +1567,12 @@
                         type="text"
                         placeholder="10"
                         class="preset-btn"
-                      /><span>XRP</span>
+                      /><span
+                        ><img
+                          src="./public/images/xrp-logo.svg"
+                          alt="XRP icon"
+                          class="xrp-logo"
+                      /></span>
                     </div>
                     <div class="preset-btn-wrapper">
                       <input
@@ -1515,7 +1580,12 @@
                         type="text"
                         placeholder="20"
                         class="preset-btn"
-                      /><span>XRP</span>
+                      /><span
+                        ><img
+                          src="./public/images/xrp-logo.svg"
+                          alt="XRP icon"
+                          class="xrp-logo"
+                      /></span>
                     </div>
                     <div class="preset-btn-wrapper">
                       <input
@@ -1523,7 +1593,12 @@
                         type="text"
                         placeholder="50"
                         class="preset-btn"
-                      /><span>XRP</span>
+                      /><span
+                        ><img
+                          src="./public/images/xrp-logo.svg"
+                          alt="XRP icon"
+                          class="xrp-logo"
+                      /></span>
                     </div>
 
                     <button class="preset-customize-btn">
@@ -1557,7 +1632,6 @@
                           name="quickBuyToggle"
                           id="quickBuyToggleBtn"
                           hidden
-                          checked
                         />
                         <span class="quick-buy-icon-wrapper">
                           <img

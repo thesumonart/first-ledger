@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
       quickActionButton.classList.remove("sell-active");
       quickActionButton.classList.add("buy-active");
 
-      if (isToggleChecked) {
+      if (!isToggleChecked) {
         quickActionButton.innerHTML = `
           <figure>
             <img src="./public/images/arrow-icon.svg" alt="arrow-icon" />
@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
       quickActionButton.classList.remove("buy-active");
       quickActionButton.classList.add("sell-active");
 
-      if (isToggleChecked) {
+      if (!isToggleChecked) {
         quickActionButton.innerHTML = `
           <figure>
             <img src="./public/images/arrow-icon.svg" alt="arrow-icon" />

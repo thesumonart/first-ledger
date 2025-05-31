@@ -373,11 +373,11 @@
       transform: translate(calc(-5%), -50%);
     }
 
-    .table-toggle-switch .table-toggle-icon-wrapper .zap-icon {
+    .table-toggle-switch .table-toggle-icon-wrapper .dollar-icon {
       display: none;
     }
 
-    .quick-buy-toggle-btn .quick-buy-icon-wrapper .zap-icon-off {
+    .quick-buy-toggle-btn .quick-buy-icon-wrapper .xrp-icon {
       display: block;
     }
 
@@ -390,14 +390,14 @@
     .table-toggle-switch
       input[type="checkbox"]:checked
       ~ .table-toggle-icon-wrapper
-      .zap-icon {
+      .dollar-icon {
       display: block;
     }
 
     .table-toggle-switch
       input[type="checkbox"]:checked
       ~ .table-toggle-icon-wrapper
-      .zap-icon-off {
+      .xrp-icon {
       display: none;
     }
 
@@ -644,6 +644,7 @@
   }
   .token-icon-wrapper {
     position: relative;
+    display: flex;
 
     .token-icon {
       width: 32px;
@@ -863,6 +864,13 @@
     align-items: center;
     margin-bottom: 16px;
     gap: 8px;
+
+    .modal-title {
+      flex: 1;
+      color: var(--textDefaultSecondary);
+      font-size: 20px;
+      line-height: 1.2em;
+    }
   }
 
   .wallet-dropdown {
@@ -1015,7 +1023,19 @@
     color: var(--textDefaultPrimary);
     font-size: 32px;
     line-height: 1.2em;
-    font-weight: 700;
+    font-weight: 600;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    .token-verify-icon-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 20px;
+      aspect-ratio: 1 / 1;
+      border-radius: 999px;
+    }
   }
 
   .token-change {
@@ -1054,7 +1074,21 @@
   }
 
   .percentage-change {
-    color: var(--textDefaultPrimary);
+    color: var(--textPositiveSecondary);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 6px;
+        aspect-ratio: 1/1;
+      }
+    }
   }
 
   .stats-grid {
@@ -1086,6 +1120,14 @@
     line-height: 1.15em;
     color: var(--textDefaultPrimary);
     margin: 4px 0;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    .xrp-logo {
+      width: 14px;
+      aspect-ratio: 1/1;
+    }
   }
 
   .stat-token {
@@ -1250,7 +1292,8 @@
 
   .token-n-price-impact {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    flex-direction: column;
     gap: 2px;
     font-size: 14px;
 
