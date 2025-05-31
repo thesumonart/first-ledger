@@ -1777,7 +1777,7 @@
           <div class="modal-header">
             <!-- Wallets Dropdown button -->
 
-            <div class="wallet-dropdown portfolioModalWalletDropdown">
+            <!-- <div class="wallet-dropdown portfolioModalWalletDropdown">
               <div class="wallet-name">
                 <span class="wallet-icon"
                   ><img src="./public/images/wallet-icon.svg" alt="wallet-icon"
@@ -1819,7 +1819,9 @@
                   </div>
                 </label>
               </div>
-            </div>
+            </div> -->
+
+            <p class="modal-title">Transaction History</p>
 
             <!-- Wallets Dropdown button -->
 
@@ -1838,9 +1840,25 @@
               <img class="token-icon" src="./public/images/token-icon.svg" />
             </figure>
             <div class="token-details">
-              <div class="token-name">Token</div>
+              <div class="token-name">
+                TOKEN
+                <span class="token-verify-icon-wrapper"
+                  ><img
+                    src="./public/images/anti-snipe-icon.svg"
+                    alt="Anti Snipe"
+                    class="verify-icon" /><img
+                    src="./public/images/check-mark-icon.svg"
+                    alt="Check Mark"
+                    class="verify-icon"
+                /></span>
+              </div>
               <div class="token-change">
-                <span class="percentage-change">+00,0%</span>
+                <span class="percentage-change"
+                  ><figure class="icon-wrapper">
+                    <img src="./public/images/triangle-arrow-up.svg" alt="Up" />
+                  </figure>
+                  00.0%</span
+                >
                 <span class="change-pnl">24H Change</span>
                 <figure class="change-pnl-icon">
                   <img
@@ -1857,135 +1875,24 @@
               <table>
                 <thead>
                   <tr>
-                    <th>PRICE</th>
-                    <th>BUY</th>
-                    <th>SELL</th>
-                    <th>WALLET</th>
-                    <th>TIME</th>
+                    <th>Time</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Buy</th>
+                    <th>Sell</th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr class="buy">
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>
-                      <span>0</span>
-                    </td>
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span>
-                        Feb 4 02:31
-                        <a href="#" class="icon">
-                          <img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon"
-                        /></a>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr class="buy">
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>
-                      <span>0</span>
-                    </td>
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span>
-                        Feb 4 02:31
-                        <a href="#" class="icon">
-                          <img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon"
-                        /></a>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr class="buy">
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>
-                      <span>0</span>
-                    </td>
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span>
-                        Feb 4 02:31
-                        <a href="#" class="icon">
-                          <img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon"
-                        /></a>
-                      </span>
-                    </td>
-                  </tr>
+                  <!-- Single Row -->
                   <tr class="sell">
                     <td>
+                      <span> Feb 4 02:31:12 </span>
+                    </td>
+                    <td>Sell</td>
+                    <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -1996,7 +1903,7 @@
                     </td>
                     <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2005,25 +1912,27 @@
                           ></image></figure
                       ></span>
                     </td>
+                    <td>0 Token</td>
                     <td>
-                      <span>0 </span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span
-                        >Feb 4 02:31
-                        <a href="#" class="icon"
-                          ><img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon" /></a
-                      ></span>
+                      <a href="#" class="icon">
+                        <img
+                          class="external-link-icon"
+                          src="./public/images/link-icon.svg"
+                          alt="Link-icon"
+                      /></a>
                     </td>
                   </tr>
+                  <!-- Single Row -->
+
+                  <!-- Single Row -->
                   <tr class="buy">
                     <td>
+                      <span> Feb 4 02:31:12</span>
+                    </td>
+                    <td>Buy</td>
+                    <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2033,11 +1942,11 @@
                       ></span>
                     </td>
                     <td>
-                      <span>0</span>
+                      <span>0 Token </span>
                     </td>
                     <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2046,23 +1955,26 @@
                           ></image></figure
                       ></span>
                     </td>
-                    <td>Wallet 1</td>
                     <td>
-                      <span>
-                        Feb 4 02:31
-                        <a href="#" class="icon">
-                          <img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon"
-                        /></a>
-                      </span>
+                      <a href="#" class="icon">
+                        <img
+                          class="external-link-icon"
+                          src="./public/images/link-icon.svg"
+                          alt="Link-icon"
+                      /></a>
                     </td>
                   </tr>
+                  <!-- Single Row -->
+
+                  <!-- Single Row -->
                   <tr class="sell">
                     <td>
+                      <span> Feb 4 02:31:12 </span>
+                    </td>
+                    <td>Sell</td>
+                    <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2073,7 +1985,7 @@
                     </td>
                     <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2082,25 +1994,27 @@
                           ></image></figure
                       ></span>
                     </td>
+                    <td>0 Token</td>
                     <td>
-                      <span>0 </span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span
-                        >Feb 4 02:31
-                        <a href="#" class="icon"
-                          ><img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon" /></a
-                      ></span>
+                      <a href="#" class="icon">
+                        <img
+                          class="external-link-icon"
+                          src="./public/images/link-icon.svg"
+                          alt="Link-icon"
+                      /></a>
                     </td>
                   </tr>
+                  <!-- Single Row -->
+
+                  <!-- Single Row -->
                   <tr class="sell">
                     <td>
+                      <span> Feb 4 02:31:12 </span>
+                    </td>
+                    <td>Sell</td>
+                    <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2111,7 +2025,7 @@
                     </td>
                     <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2120,25 +2034,69 @@
                           ></image></figure
                       ></span>
                     </td>
+                    <td>0 Token</td>
                     <td>
-                      <span>0 </span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span
-                        >Feb 4 02:31
-                        <a href="#" class="icon"
-                          ><img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon" /></a
-                      ></span>
+                      <a href="#" class="icon">
+                        <img
+                          class="external-link-icon"
+                          src="./public/images/link-icon.svg"
+                          alt="Link-icon"
+                      /></a>
                     </td>
                   </tr>
+                  <!-- Single Row -->
+
+                  <!-- Single Row -->
+                  <tr class="buy">
+                    <td>
+                      <span> Feb 4 02:31:12</span>
+                    </td>
+                    <td>Buy</td>
+                    <td>
+                      <span
+                        >00
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <span>0 Token </span>
+                    </td>
+                    <td>
+                      <span
+                        >00
+                        <figure>
+                          <image
+                            src="./public/images/xrp-logo-green.svg"
+                            alt="XRP-logo"
+                            class="table-xrp-logo"
+                          ></image></figure
+                      ></span>
+                    </td>
+                    <td>
+                      <a href="#" class="icon">
+                        <img
+                          class="external-link-icon"
+                          src="./public/images/link-icon.svg"
+                          alt="Link-icon"
+                      /></a>
+                    </td>
+                  </tr>
+                  <!-- Single Row -->
+
+                  <!-- Single Row -->
                   <tr class="sell">
                     <td>
+                      <span> Feb 4 02:31:12 </span>
+                    </td>
+                    <td>Sell</td>
+                    <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2149,7 +2107,7 @@
                     </td>
                     <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2158,25 +2116,27 @@
                           ></image></figure
                       ></span>
                     </td>
+                    <td>0 Token</td>
                     <td>
-                      <span>0 </span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span
-                        >Feb 4 02:31
-                        <a href="#" class="icon"
-                          ><img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon" /></a
-                      ></span>
+                      <a href="#" class="icon">
+                        <img
+                          class="external-link-icon"
+                          src="./public/images/link-icon.svg"
+                          alt="Link-icon"
+                      /></a>
                     </td>
                   </tr>
+                  <!-- Single Row -->
+
+                  <!-- Single Row -->
                   <tr class="buy">
                     <td>
+                      <span> Feb 4 02:31:12</span>
+                    </td>
+                    <td>Buy</td>
+                    <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2186,11 +2146,11 @@
                       ></span>
                     </td>
                     <td>
-                      <span>0</span>
+                      <span>0 Token </span>
                     </td>
                     <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2199,23 +2159,26 @@
                           ></image></figure
                       ></span>
                     </td>
-                    <td>Wallet 1</td>
                     <td>
-                      <span>
-                        Feb 4 02:31
-                        <a href="#" class="icon">
-                          <img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon"
-                        /></a>
-                      </span>
+                      <a href="#" class="icon">
+                        <img
+                          class="external-link-icon"
+                          src="./public/images/link-icon.svg"
+                          alt="Link-icon"
+                      /></a>
                     </td>
                   </tr>
+                  <!-- Single Row -->
+
+                  <!-- Single Row -->
                   <tr class="buy">
                     <td>
+                      <span> Feb 4 02:31:12</span>
+                    </td>
+                    <td>Buy</td>
+                    <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2225,11 +2188,11 @@
                       ></span>
                     </td>
                     <td>
-                      <span>0</span>
+                      <span>0 Token </span>
                     </td>
                     <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2238,23 +2201,26 @@
                           ></image></figure
                       ></span>
                     </td>
-                    <td>Wallet 1</td>
                     <td>
-                      <span>
-                        Feb 4 02:31
-                        <a href="#" class="icon">
-                          <img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon"
-                        /></a>
-                      </span>
+                      <a href="#" class="icon">
+                        <img
+                          class="external-link-icon"
+                          src="./public/images/link-icon.svg"
+                          alt="Link-icon"
+                      /></a>
                     </td>
                   </tr>
+                  <!-- Single Row -->
+
+                  <!-- Single Row -->
                   <tr class="buy">
                     <td>
+                      <span> Feb 4 02:31:12</span>
+                    </td>
+                    <td>Buy</td>
+                    <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2264,11 +2230,11 @@
                       ></span>
                     </td>
                     <td>
-                      <span>0</span>
+                      <span>0 Token </span>
                     </td>
                     <td>
                       <span
-                        >0
+                        >00
                         <figure>
                           <image
                             src="./public/images/xrp-logo-green.svg"
@@ -2277,212 +2243,16 @@
                           ></image></figure
                       ></span>
                     </td>
-                    <td>Wallet 1</td>
                     <td>
-                      <span>
-                        Feb 4 02:31
-                        <a href="#" class="icon">
-                          <img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon"
-                        /></a>
-                      </span>
+                      <a href="#" class="icon">
+                        <img
+                          class="external-link-icon"
+                          src="./public/images/link-icon.svg"
+                          alt="Link-icon"
+                      /></a>
                     </td>
                   </tr>
-                  <tr class="buy">
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>
-                      <span>0</span>
-                    </td>
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span>
-                        Feb 4 02:31
-                        <a href="#" class="icon">
-                          <img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon"
-                        /></a>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr class="sell">
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>
-                      <span>0 </span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span
-                        >Feb 4 02:31
-                        <a href="#" class="icon"
-                          ><img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon" /></a
-                      ></span>
-                    </td>
-                  </tr>
-                  <tr class="sell">
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>
-                      <span>0 </span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span
-                        >Feb 4 02:31
-                        <a href="#" class="icon"
-                          ><img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon" /></a
-                      ></span>
-                    </td>
-                  </tr>
-                  <tr class="buy">
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>
-                      <span>0</span>
-                    </td>
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span>
-                        Feb 4 02:31
-                        <a href="#" class="icon">
-                          <img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon"
-                        /></a>
-                      </span>
-                    </td>
-                  </tr>
-                  <tr class="buy">
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>
-                      <span>0</span>
-                    </td>
-                    <td>
-                      <span
-                        >0
-                        <figure>
-                          <image
-                            src="./public/images/xrp-logo-green.svg"
-                            alt="XRP-logo"
-                            class="table-xrp-logo"
-                          ></image></figure
-                      ></span>
-                    </td>
-                    <td>Wallet 1</td>
-                    <td>
-                      <span>
-                        Feb 4 02:31
-                        <a href="#" class="icon">
-                          <img
-                            class="external-link-icon"
-                            src="./public/images/link-icon.svg"
-                            alt="Link-icon"
-                        /></a>
-                      </span>
-                    </td>
-                  </tr>
+                  <!-- Single Row -->
                 </tbody>
               </table>
             </div>

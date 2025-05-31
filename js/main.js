@@ -507,6 +507,7 @@ document
 
 document.querySelectorAll("tr").forEach((tr) => {
   const logos = tr.querySelectorAll(".table-xrp-logo");
+  const extIcons = tr.querySelectorAll(".external-link-icon");
   logos.forEach((logo) => {
     if (tr.classList.contains("buy")) {
       logo.src = "./public/images/xrp-logo-green.svg";
@@ -514,6 +515,15 @@ document.querySelectorAll("tr").forEach((tr) => {
       logo.src = "./public/images/xrp-logo-red.svg";
     } else {
       logo.src = "./public/images/xrp-logo-green.svg";
+    }
+  });
+  extIcons.forEach((extIcon) => {
+    if (tr.classList.contains("buy")) {
+      extIcon.src = "./public/images/external-link-icon-green.svg";
+    } else if (tr.classList.contains("sell")) {
+      extIcon.src = "./public/images/external-link-icon-red.svg";
+    } else {
+      extIcon.src = "./public/images/external-link-icon-green.svg";
     }
   });
 });
