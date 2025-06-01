@@ -23,7 +23,7 @@
               <div class="name-wallets">
                 <h2 class="user-name">Liquidity Pools</h2>
                 <p class="wallets">
-                  Add liquidity to a pool and manage your positions here
+                  Explore, add liquidity to a pool, and manage your AMM positions
                 </p>
               </div>
             </div>
@@ -34,17 +34,18 @@
       <!-- Portfolio Header ends here -->
 
       <!-- Portfolio Table Controls starts here -->
+       
       <section class="table-controls">
         <div class="container">
           <div class="table-controls-content-wrapper">
             <div class="controls">
               <!-- Filter Button -->
-              <div class="filters-button">
+              <!-- <div class="filters-button">
                 <img
                   src="./public/images/sliders-icon.svg"
                   alt="filter-icon"
                 /><span>Filters</span>
-              </div>
+              </div> -->
               <!-- Filter Button -->
 
               <!-- Filter inner buttons -->
@@ -59,7 +60,7 @@
                   </div>
                   <!-- Customize Dropdown Button -->
 
-                  <div class="customize-dropdown" id="customizeDropdown">
+                  <!-- <div class="customize-dropdown" id="customizeDropdown">
                     <span class="settings-icon"
                       ><img
                         src="./public/images/sliders-icon.svg"
@@ -94,13 +95,13 @@
                         />Show Closed Positions</label
                       >
                     </div>
-                  </div>
+                  </div> -->
 
                   <!-- Customize Dropdown Button -->
 
                   <!-- Wallets Dropdown button -->
 
-                  <div class="wallet-dropdown" id="walletDropdown">
+                  <!-- <div class="wallet-dropdown" id="walletDropdown">
                     <span class="wallet-icon"
                       ><img
                         src="./public/images/wallet-icon.svg"
@@ -148,7 +149,7 @@
                         </div>
                       </label>
                     </div>
-                  </div>
+                  </div> -->
 
                   <!-- Wallets Dropdown button -->
                 </div>
@@ -156,7 +157,7 @@
 
               <!-- Filter inner buttons -->
 
-              <button
+              <!-- <button
                 class="control-button add-liquidity-button action-add-icon"
               >
                 <img
@@ -165,9 +166,9 @@
                   alt="star-icon"
                 />
                 Add Liquidity
-              </button>
+              </button> -->
 
-              <button
+              <!-- <button
                 class="control-button add-liquidity-button add-liquidity-button-mobile action-add-icon"
               >
                 <img
@@ -176,9 +177,9 @@
                   alt="star-icon"
                 />
                 Add
-              </button>
+              </button> -->
             </div>
-            <div class="table-search">
+            <!-- <div class="table-search">
               <input
                 class="search-input-box"
                 type="text"
@@ -187,7 +188,7 @@
               <button type="submit" id="tableSearch" class="search-button">
                 <img src="./public/images/search-icon.svg" alt="Search-icon" />
               </button>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -197,10 +198,47 @@
         <section class="my-pools-main">
           <div>
             <div class="container">
-              <p class="table-section-title">
-                My Pools (<span id="rowCount"></span>)
+             <div class="table-section-set">
+               <div class="table-section-title-text">
+                <p class="table-section-title">
+                My position
               </p>
+              <p class="table-section-title">
+                Explore Pools
+              </p>
+              </div>
+              <div class="table-section-title-content">
+                 <div class="table-controls-content-wrapper">
+            <div class="controls">
+               <button
+                class="control-button add-liquidity-button action-add-icon"
+              >
+                <img
+                  class="control-button-left-icon"
+                  src="./public/images/plus-icon.svg"
+                  alt="star-icon"
+                />
+                Add Liquidity
+              </button>
+              </div>
+
+                  
+
+                <div class="table-search">
+              <input
+                class="search-input-box"
+                type="text"
+                placeholder="Search Pools"
+              />
+              <button type="submit" id="tableSearch" class="search-button">
+                <img src="./public/images/search-icon.svg" alt="Search-icon" />
+              </button>
             </div>
+
+              </div>
+
+            </div>
+             </div>
             <div class="my-pools-table">
               <div class="table-section">
                 <div class="table-content-wrapper">
@@ -209,12 +247,12 @@
                       <thead>
                         <tr class="table-heading">
                           <th>POOL</th>
-                          <th>WALLET</th>
+                          <th>Position Value</th>
                           <th>TVL</th>
-                          <th>24H FEES</th>
+                          <th>Share of Pool</th>
+                          <th>Fees</th>
                           <th>PnL</th>
-                          <th>APR</th>
-                          <th style="text-align: right">ACTION</th>
+                          <th >APR</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -235,21 +273,17 @@
                             <div>
                               <div class="row-content">
                                 <div class="multi-wallet wallet-name">
-                                  Multi (3)
-                                  <img
-                                    class="down-arrow-icon"
-                                    src="./public/images/down-arrow.svg"
-                                    alt="Down-arrow-icon"
-                                  />
+                                  00000
+                                  
                                 </div>
                                 <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span>
+                                  <span class="xrp-bought">00000</span>
                                 </div>
                                 <div class="table-xrp-token-wrapper">
                                   <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">00000</span>
                                 </div>
                                 <div class="table-xrp-token-wrapper">
                                   <span class="xrp-bought">0%</span>
@@ -257,10 +291,7 @@
                                 <div class="action-cell">
                                   <div class="lp-action-menu-wrapper">
                                     <span class="action-menu-icon">
-                                      <img
-                                        src="./public/images/cell-dots.svg"
-                                        alt="more-icon"
-                                      />
+                                      0%
                                     </span>
                                     <div class="action-menu">
                                       <button
@@ -282,7 +313,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="sub-wallets-wrapper">
+                              <!-- <div class="sub-wallets-wrapper">
                                 <div class="sub-wallet">
                                   <div class="row-content">
                                     <div class="wallet-info">
@@ -430,7 +461,7 @@
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </div> -->
                             </div>
                           </td>
                         </tr>
@@ -452,19 +483,19 @@
                             <div>
                               <div class="row-content">
                                 <div class="wallet-info">
-                                  <span class="wallet-name">Wallet 1</span>
-                                  <span class="wallet-address"
+                                  <span class="wallet-name">00000 </span>
+                                  <!-- <span class="wallet-address"
                                     >rDFX...ivmN</span
-                                  >
+                                  > -->
                                 </div>
                                 <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span>
-                                </div>
-                                <div class="table-xrp-token-wrapper">
-                                  <span class="xrp-bought">0 XRP</span>
+                                  <span class="xrp-bought">00000</span>
                                 </div>
                                 <div class="table-xrp-token-wrapper">
                                   <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">00000</span>
                                 </div>
                                 <div class="table-xrp-token-wrapper">
                                   <span class="xrp-bought">0%</span>
@@ -472,10 +503,193 @@
                                 <div class="action-cell">
                                   <div class="lp-action-menu-wrapper">
                                     <span class="action-menu-icon">
-                                      <img
-                                        src="./public/images/cell-dots.svg"
-                                        alt="more-icon"
-                                      />
+                                      0%
+                                    </span>
+                                    <div class="action-menu">
+                                      <button
+                                        class="add-liquidity-button action-add-icon"
+                                      >
+                                        Add Liquidity
+                                      </button>
+                                      <button
+                                        class="remove-liquidity-button action-remove-icon"
+                                      >
+                                        Remove Liquidity
+                                      </button>
+                                      <button
+                                        class="vote-for-fees-button action-vote-icon"
+                                      >
+                                        Vote for Fees
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <!-- Single Row -->
+                           <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="wallet-info">
+                                  <span class="wallet-name">00000 </span>
+                                  <!-- <span class="wallet-address"
+                                    >rDFX...ivmN</span
+                                  > -->
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">00000</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">00000</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <div class="lp-action-menu-wrapper">
+                                    <span class="action-menu-icon">
+                                      0%
+                                    </span>
+                                    <div class="action-menu">
+                                      <button
+                                        class="add-liquidity-button action-add-icon"
+                                      >
+                                        Add Liquidity
+                                      </button>
+                                      <button
+                                        class="remove-liquidity-button action-remove-icon"
+                                      >
+                                        Remove Liquidity
+                                      </button>
+                                      <button
+                                        class="vote-for-fees-button action-vote-icon"
+                                      >
+                                        Vote for Fees
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <!-- Single Row -->
+                           <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="wallet-info">
+                                  <span class="wallet-name">00000 </span>
+                                  <!-- <span class="wallet-address"
+                                    >rDFX...ivmN</span
+                                  > -->
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">00000</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">00000</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <div class="lp-action-menu-wrapper">
+                                    <span class="action-menu-icon">
+                                      0%
+                                    </span>
+                                    <div class="action-menu">
+                                      <button
+                                        class="add-liquidity-button action-add-icon"
+                                      >
+                                        Add Liquidity
+                                      </button>
+                                      <button
+                                        class="remove-liquidity-button action-remove-icon"
+                                      >
+                                        Remove Liquidity
+                                      </button>
+                                      <button
+                                        class="vote-for-fees-button action-vote-icon"
+                                      >
+                                        Vote for Fees
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                          <tr>
+                          <td>
+                            <div class="token-cell">
+                              <img
+                                class="token-icon"
+                                src="./public/images/avatar-icon.svg"
+                                alt="Token-icon"
+                                style="border-radius: 10px;"
+                              />
+                              <span>TOKEN / XRP</span>
+                            </div>
+                          </td>
+                          <td class="col-span">
+                            <div>
+                              <div class="row-content">
+                                <div class="wallet-info">
+                                  <span class="wallet-name">00000 </span>
+                                  <!-- <span class="wallet-address"
+                                    >rDFX...ivmN</span
+                                  > -->
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">00000</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">00000</span>
+                                </div>
+                                <div class="table-xrp-token-wrapper">
+                                  <span class="xrp-bought">0%</span>
+                                </div>
+                                <div class="action-cell">
+                                  <div class="lp-action-menu-wrapper">
+                                    <span class="action-menu-icon">
+                                      0%
                                     </span>
                                     <div class="action-menu">
                                       <button
@@ -503,9 +717,6 @@
 
                         <!-- Single Row -->
 
-                        <!-- Single Row -->
-
-                        <!-- Single Row -->
                       </tbody>
                     </table>
                   </div>
@@ -515,7 +726,7 @@
           </div>
         </section>
         <!-- Best Pools Table Start -->
-        <section class="best-pools-main">
+        <!-- <section class="best-pools-main">
           <div>
             <div class="container">
               <p class="table-section-title">Best Pools</p>
@@ -537,7 +748,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <!-- Single Row -->
+                       
 
                         <tr>
                           <td>
@@ -588,7 +799,7 @@
                           </td>
                         </tr>
 
-                        <!-- Single Row -->
+                        
                         <tr>
                           <td>
                             <div class="token-cell">
@@ -637,7 +848,7 @@
                             </div>
                           </td>
                         </tr>
-                        <!-- Single Row -->
+                       
 
                         <tr>
                           <td>
@@ -688,7 +899,7 @@
                           </td>
                         </tr>
 
-                        <!-- Single Row -->
+                       
                         <tr>
                           <td>
                             <div class="token-cell">
@@ -737,7 +948,7 @@
                             </div>
                           </td>
                         </tr>
-                        <!-- Single Row -->
+                       
 
                         <tr>
                           <td>
@@ -788,7 +999,7 @@
                           </td>
                         </tr>
 
-                        <!-- Single Row -->
+                       
                         <tr>
                           <td>
                             <div class="token-cell">
@@ -837,7 +1048,7 @@
                             </div>
                           </td>
                         </tr>
-                        <!-- Single Row -->
+                        
 
                         <tr>
                           <td>
@@ -888,7 +1099,7 @@
                           </td>
                         </tr>
 
-                        <!-- Single Row -->
+                      
                         <tr>
                           <td>
                             <div class="token-cell">
@@ -944,7 +1155,7 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
       </div>
 
       <!-- Tables section ends here -->
@@ -953,53 +1164,7 @@
         <div class="modal-content">
           <div>
             <div class="wallet-name-dropdown_wrapper">
-              <div class="modal-wallet-dropdown">
-                <span class="modal-wallet-icon"
-                  ><img src="./public/images/wallet-icon.svg" alt="wallet-icon"
-                /></span>
-                <span id="modal-selected-option">Wallet 1</span>
-                <span id="modal-arrow" class="modal-arrow-icon"
-                  ><img
-                    src="./public/images/chevron-down-icon.svg"
-                    alt="arrow-icon"
-                /></span>
-
-                <div class="modal-dropdown-options" id="modal-options">
-                  <label class="modal-option"
-                    ><input type="checkbox" value="Option 1" />
-                    <div class="modal-wallet-name-address">
-                      <span class="modal-wallet-name">All wallets</span>
-                    </div>
-                  </label>
-                  <label class="modal-option"
-                    ><input type="checkbox" value="Option 2" />
-                    <div class="modal-wallet-name-address">
-                      <span class="modal-wallet-name">Wallet 1</span
-                      ><span class="modal-wallet-address"
-                        >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
-                      >
-                    </div>
-                  </label>
-                  <label class="modal-option"
-                    ><input type="checkbox" value="Option 2" />
-                    <div class="modal-wallet-name-address">
-                      <span class="modal-wallet-name">Wallet 2</span
-                      ><span class="modal-wallet-address"
-                        >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
-                      >
-                    </div>
-                  </label>
-                  <label class="modal-option"
-                    ><input type="checkbox" value="Option 3" />
-                    <div class="modal-wallet-name-address">
-                      <span class="modal-wallet-name">Wallet 3</span
-                      ><span class="modal-wallet-address"
-                        >rLMkKDZqig5nc4wq3StAWnMxeZ1kMjsQo</span
-                      >
-                    </div>
-                  </label>
-                </div>
-              </div>
+              
               <span class="close-modal">
                 <img src="./public/images/close-icon.svg" alt="close icon" />
               </span>
@@ -1008,7 +1173,7 @@
           <div id="step-review">
             <div class="modal-title">
               <h2>Add Liquidity</h2>
-              <p>Enter token amounts for your liquidity deposit</p>
+              
             </div>
             <div class="modal-tabs">
               <button class="tab-btn active" data-tab="numeric">50/50</button>
