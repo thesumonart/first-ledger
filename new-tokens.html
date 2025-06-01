@@ -936,1011 +936,113 @@
           <div class="table-section">
             <div class="table-content-wrapper">
               <div class="table-scroll">
-                <table class="table">
-                  <thead>
-                    <tr class="table-heading">
-                      <th>Token</th>
-                      <th>Created</th>
-                      <th>Market Cap</th>
-                      <th>Liquidity</th>
-                      <th>Vol <span id="clickedTimeDisplay"></span></th>
-                      <th>Transactions</th>
-                      <th>Audit</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+                <div class="table">
+                  <div>
+                    <div class="table-heading">
+                      <span>Token</span>
+                      <span>Market Cap</span>
+                      <span>Liquidity</span>
+                      <span>Vol 24h</span>
+                      <span>Transactions</span>
+                      <span>Audit</span>
+                      <span>Quick Buy</span>
+                    </div>
+                  </div>
+                  <div class="table-body">
                     <!-- Single Row -->
 
-                    <tr>
-                      <td>
+                    <div class="table-row-wrapper">
+                      <div class="table-row">
                         <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
-                          <span class="token-name">TOKEN</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-created-time">
-                          <span>00min</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-market-cap-wrapper">
-                          <span class="market-value">$000K</span>
-                          <span class="market-value-increment">+00,0%</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-liquidity-wrapper">
-                          <span class="liquidity-value">$000K</span>
-                          <span class="liquidity-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-volume-wrapper">
-                          <span class="volume-value">$000K</span>
-                          <span class="volume-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-transactions-wrapper">
-                          <div class="buy-token">
-                            <span class="buy-count">000K</span>
-                            <span class="buy-value">$000K</span>
-                          </div>
-                          <div class="sell-token">
-                            <span class="sell-count">000K</span>
-                            <span class="sell-value">$000K</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="audit-cell">
-                          <span class="audit-item developer-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/developer-icon.svg"
-                                alt="Developer-icon"
-                              />
-                            </figure>
-                            <p class="developer-percent">00%</p>
-                            <span class="audit-tooltip">Developer</span>
-                          </span>
-                          <span class="audit-item top-holder-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/top-holder-icon-green.svg"
-                                alt="Top-holder-icon"
-                              />
-                            </figure>
-                            <p class="top-holder-percent">19%</p>
-                            <span class="audit-tooltip">Top Holder</span>
-                          </span>
-                          <span class="audit-item users-audit">
-                            <figure class="users-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/users-icon.svg"
-                                alt="Users-icon"
-                              />
-                            </figure>
-                            <p class="total-users">000K</p>
-                            <span class="audit-tooltip">Total User</span>
-                          </span>
-                          <span class="audit-item anti-snipe-audit">
-                            <figure class="anti-snipe-icon">
-                              <img
-                                class="anti-snipe-icon"
-                                src="./public/images/anti-snipe-icon-green.svg"
-                                alt="Anti-snipe-icon"
-                              />
-                            </figure>
-                            <p class="anti-snipe">YES</p>
-                            <span class="audit-tooltip">Anti Snipe</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="action-cell">
-                          <button class="action-btn">
+                          <div class="token-icon-wrapper">
                             <img
-                              src="./public/images/zap-icon.svg"
-                              alt="Zap-icon"
+                              class="token-icon"
+                              src="./public/images/token-icon.svg"
+                              alt="Token-icon"
                             />
-                            <span>10 XRP</span>
-                          </button>
+                            <div class="anti-snipe-n-check-wrapper">
+                              <img
+                                src="./public/images/anti-snipe-icon.svg"
+                                alt="anti-snipe"
+                                class="token-verify-icon"
+                              /><img
+                                src="./public/images/check-mark-icon.svg"
+                                alt="check-mark"
+                                class="token-verify-icon"
+                              />
+                            </div>
+                          </div>
+                          <span>TOKEN</span>
                         </div>
-                      </td>
-                    </tr>
-
-                    <!-- Single Row -->
-                    <!-- Single Row -->
-
-                    <tr>
-                      <td>
-                        <div class="token-cell">
+                        <div class="multi-wallet wallet-name">
+                          Multi (3)
                           <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
+                            class="down-arrow-icon"
+                            src="./public/images/down-arrow.svg"
+                            alt="Down-arrow-icon"
                           />
-                          <span class="token-name">TOKEN</span>
                         </div>
-                      </td>
-                      <td>
-                        <div class="token-created-time">
-                          <span>00h</span>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought"
+                            >00000
+                            <figure>
+                              <image
+                                src="./public/images/xrp-logo.svg"
+                                alt="XRP-logo"
+                                class="table-xrp-logo"
+                              ></image></figure></span
+                          ><span class="token-bought">0 TOKEN</span>
                         </div>
-                      </td>
-                      <td>
-                        <div class="token-market-cap-wrapper">
-                          <span class="market-value">$000K</span>
-                          <span class="market-value-increment">+00,0%</span>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought"
+                            >00000
+                            <figure>
+                              <image
+                                src="./public/images/xrp-logo.svg"
+                                alt="XRP-logo"
+                                class="table-xrp-logo"
+                              ></image></figure></span
+                          ><span class="token-bought">0 TOKEN</span>
                         </div>
-                      </td>
-                      <td>
-                        <div class="token-liquidity-wrapper">
-                          <span class="liquidity-value">$000K</span>
-                          <span class="liquidity-xrp">0 XRP</span>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought"
+                            >00000
+                            <figure>
+                              <image
+                                src="./public/images/xrp-logo.svg"
+                                alt="XRP-logo"
+                                class="table-xrp-logo"
+                              ></image></figure></span
+                          ><span class="token-bought">0 TOKEN</span>
                         </div>
-                      </td>
-                      <td>
-                        <div class="token-volume-wrapper">
-                          <span class="volume-value">$000K</span>
-                          <span class="volume-xrp">0 XRP</span>
+                        <div class="table-xrp-token-wrapper">
+                          <span class="xrp-bought"
+                            >+00000
+                            <figure>
+                              <image
+                                src="./public/images/xrp-logo.svg"
+                                alt="XRP-logo"
+                                class="table-xrp-logo"
+                              ></image></figure></span
+                          ><span class="pnl-percent">+0,0%</span>
                         </div>
-                      </td>
-                      <td>
-                        <div class="token-transactions-wrapper">
-                          <div class="buy-token">
-                            <span class="buy-count">000K</span>
-                            <span class="buy-value">$000K</span>
-                          </div>
-                          <div class="sell-token">
-                            <span class="sell-count">000K</span>
-                            <span class="sell-value">$000K</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="audit-cell">
-                          <span class="audit-item developer-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/developer-icon.svg"
-                                alt="Developer-icon"
-                              />
-                            </figure>
-                            <p class="developer-percent">00%</p>
-                            <span class="audit-tooltip">Developer</span>
-                          </span>
-                          <span class="audit-item top-holder-audit down">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/top-holder-icon-red.svg"
-                                alt="Top-holder-icon"
-                              />
-                            </figure>
-                            <p class="top-holder-percent">19%</p>
-                            <span class="audit-tooltip">Top Holder</span>
-                          </span>
-                          <span class="audit-item users-audit">
-                            <figure class="users-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/users-icon.svg"
-                                alt="Users-icon"
-                              />
-                            </figure>
-                            <p class="total-users">000K</p>
-                            <span class="audit-tooltip">Total User</span>
-                          </span>
-                          <span class="audit-item anti-snipe-audit down">
-                            <figure class="anti-snipe-icon">
-                              <img
-                                class="anti-snipe-icon"
-                                src="./public/images/anti-snipe-icon-red.svg"
-                                alt="Anti-snipe-icon"
-                              />
-                            </figure>
-                            <p class="anti-snipe">YES</p>
-                            <span class="audit-tooltip">Anti Snipe</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td>
                         <div class="action-cell">
-                          <button class="action-btn">
-                            <img
-                              src="./public/images/zap-icon.svg"
-                              alt="Zap-icon"
-                            />
-                            <span>10 XRP</span>
-                          </button>
+                          <div class="action-menu-wrapper">
+                            <span class="action-menu-icon">
+                              <img
+                                src="./public/images/dot-icon.svg"
+                                alt="more-icon"
+                              />
+                            </span>
+                          </div>
+                          <button class="trade-button">Trade</button>
                         </div>
-                      </td>
-                    </tr>
+                      </div>
+                    </div>
 
                     <!-- Single Row -->
-                    <!-- Single Row -->
-
-                    <tr>
-                      <td>
-                        <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
-                          <span class="token-name">TOKEN</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-created-time">
-                          <span>00h</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-market-cap-wrapper">
-                          <span class="market-value">$000K</span>
-                          <span class="market-value-increment">+00,0%</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-liquidity-wrapper">
-                          <span class="liquidity-value">$000K</span>
-                          <span class="liquidity-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-volume-wrapper">
-                          <span class="volume-value">$000K</span>
-                          <span class="volume-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-transactions-wrapper">
-                          <div class="buy-token">
-                            <span class="buy-count">000K</span>
-                            <span class="buy-value">$000K</span>
-                          </div>
-                          <div class="sell-token">
-                            <span class="sell-count">000K</span>
-                            <span class="sell-value">$000K</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="audit-cell">
-                          <span class="audit-item developer-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/developer-icon.svg"
-                                alt="Developer-icon"
-                              />
-                            </figure>
-                            <p class="developer-percent">00%</p>
-                            <span class="audit-tooltip">Developer</span>
-                          </span>
-                          <span class="audit-item top-holder-audit down">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/top-holder-icon-red.svg"
-                                alt="Top-holder-icon"
-                              />
-                            </figure>
-                            <p class="top-holder-percent">19%</p>
-                            <span class="audit-tooltip">Top Holder</span>
-                          </span>
-                          <span class="audit-item users-audit">
-                            <figure class="users-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/users-icon.svg"
-                                alt="Users-icon"
-                              />
-                            </figure>
-                            <p class="total-users">000K</p>
-                            <span class="audit-tooltip">Total User</span>
-                          </span>
-                          <span class="audit-item anti-snipe-audit down">
-                            <figure class="anti-snipe-icon">
-                              <img
-                                class="anti-snipe-icon"
-                                src="./public/images/anti-snipe-icon-red.svg"
-                                alt="Anti-snipe-icon"
-                              />
-                            </figure>
-                            <p class="anti-snipe">YES</p>
-                            <span class="audit-tooltip">Anti Snipe</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="action-cell">
-                          <button class="action-btn">
-                            <img
-                              src="./public/images/zap-icon.svg"
-                              alt="Zap-icon"
-                            />
-                            <span>10 XRP</span>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- Single Row -->
-                    <!-- Single Row -->
-
-                    <tr>
-                      <td>
-                        <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
-                          <span class="token-name">TOKEN</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-created-time">
-                          <span>00min</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-market-cap-wrapper">
-                          <span class="market-value">$000K</span>
-                          <span class="market-value-increment">+00,0%</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-liquidity-wrapper">
-                          <span class="liquidity-value">$000K</span>
-                          <span class="liquidity-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-volume-wrapper">
-                          <span class="volume-value">$000K</span>
-                          <span class="volume-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-transactions-wrapper">
-                          <div class="buy-token">
-                            <span class="buy-count">000K</span>
-                            <span class="buy-value">$000K</span>
-                          </div>
-                          <div class="sell-token">
-                            <span class="sell-count">000K</span>
-                            <span class="sell-value">$000K</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="audit-cell">
-                          <span class="audit-item developer-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/developer-icon.svg"
-                                alt="Developer-icon"
-                              />
-                            </figure>
-                            <p class="developer-percent">00%</p>
-                            <span class="audit-tooltip">Developer</span>
-                          </span>
-                          <span class="audit-item top-holder-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/top-holder-icon-green.svg"
-                                alt="Top-holder-icon"
-                              />
-                            </figure>
-                            <p class="top-holder-percent">19%</p>
-                            <span class="audit-tooltip">Top Holder</span>
-                          </span>
-                          <span class="audit-item users-audit">
-                            <figure class="users-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/users-icon.svg"
-                                alt="Users-icon"
-                              />
-                            </figure>
-                            <p class="total-users">000K</p>
-                            <span class="audit-tooltip">Total User</span>
-                          </span>
-                          <span class="audit-item anti-snipe-audit">
-                            <figure class="anti-snipe-icon">
-                              <img
-                                class="anti-snipe-icon"
-                                src="./public/images/anti-snipe-icon-green.svg"
-                                alt="Anti-snipe-icon"
-                              />
-                            </figure>
-                            <p class="anti-snipe">YES</p>
-                            <span class="audit-tooltip">Anti Snipe</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="action-cell">
-                          <button class="action-btn">
-                            <img
-                              src="./public/images/zap-icon.svg"
-                              alt="Zap-icon"
-                            />
-                            <span>10 XRP</span>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- Single Row -->
-                    <!-- Single Row -->
-
-                    <tr>
-                      <td>
-                        <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
-                          <span class="token-name">TOKEN</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-created-time">
-                          <span>00h</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-market-cap-wrapper">
-                          <span class="market-value">$000K</span>
-                          <span class="market-value-increment">+00,0%</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-liquidity-wrapper">
-                          <span class="liquidity-value">$000K</span>
-                          <span class="liquidity-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-volume-wrapper">
-                          <span class="volume-value">$000K</span>
-                          <span class="volume-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-transactions-wrapper">
-                          <div class="buy-token">
-                            <span class="buy-count">000K</span>
-                            <span class="buy-value">$000K</span>
-                          </div>
-                          <div class="sell-token">
-                            <span class="sell-count">000K</span>
-                            <span class="sell-value">$000K</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="audit-cell">
-                          <span class="audit-item developer-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/developer-icon.svg"
-                                alt="Developer-icon"
-                              />
-                            </figure>
-                            <p class="developer-percent">00%</p>
-                            <span class="audit-tooltip">Developer</span>
-                          </span>
-                          <span class="audit-item top-holder-audit down">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/top-holder-icon-red.svg"
-                                alt="Top-holder-icon"
-                              />
-                            </figure>
-                            <p class="top-holder-percent">19%</p>
-                            <span class="audit-tooltip">Top Holder</span>
-                          </span>
-                          <span class="audit-item users-audit">
-                            <figure class="users-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/users-icon.svg"
-                                alt="Users-icon"
-                              />
-                            </figure>
-                            <p class="total-users">000K</p>
-                            <span class="audit-tooltip">Total User</span>
-                          </span>
-                          <span class="audit-item anti-snipe-audit down">
-                            <figure class="anti-snipe-icon">
-                              <img
-                                class="anti-snipe-icon"
-                                src="./public/images/anti-snipe-icon-red.svg"
-                                alt="Anti-snipe-icon"
-                              />
-                            </figure>
-                            <p class="anti-snipe">YES</p>
-                            <span class="audit-tooltip">Anti Snipe</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="action-cell">
-                          <button class="action-btn">
-                            <img
-                              src="./public/images/zap-icon.svg"
-                              alt="Zap-icon"
-                            />
-                            <span>10 XRP</span>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- Single Row -->
-                    <!-- Single Row -->
-
-                    <tr>
-                      <td>
-                        <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
-                          <span class="token-name">TOKEN</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-created-time">
-                          <span>00h</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-market-cap-wrapper">
-                          <span class="market-value">$000K</span>
-                          <span class="market-value-increment">+00,0%</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-liquidity-wrapper">
-                          <span class="liquidity-value">$000K</span>
-                          <span class="liquidity-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-volume-wrapper">
-                          <span class="volume-value">$000K</span>
-                          <span class="volume-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-transactions-wrapper">
-                          <div class="buy-token">
-                            <span class="buy-count">000K</span>
-                            <span class="buy-value">$000K</span>
-                          </div>
-                          <div class="sell-token">
-                            <span class="sell-count">000K</span>
-                            <span class="sell-value">$000K</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="audit-cell">
-                          <span class="audit-item developer-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/developer-icon.svg"
-                                alt="Developer-icon"
-                              />
-                            </figure>
-                            <p class="developer-percent">00%</p>
-                            <span class="audit-tooltip">Developer</span>
-                          </span>
-                          <span class="audit-item top-holder-audit down">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/top-holder-icon-red.svg"
-                                alt="Top-holder-icon"
-                              />
-                            </figure>
-                            <p class="top-holder-percent">19%</p>
-                            <span class="audit-tooltip">Top Holder</span>
-                          </span>
-                          <span class="audit-item users-audit">
-                            <figure class="users-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/users-icon.svg"
-                                alt="Users-icon"
-                              />
-                            </figure>
-                            <p class="total-users">000K</p>
-                            <span class="audit-tooltip">Total User</span>
-                          </span>
-                          <span class="audit-item anti-snipe-audit down">
-                            <figure class="anti-snipe-icon">
-                              <img
-                                class="anti-snipe-icon"
-                                src="./public/images/anti-snipe-icon-red.svg"
-                                alt="Anti-snipe-icon"
-                              />
-                            </figure>
-                            <p class="anti-snipe">YES</p>
-                            <span class="audit-tooltip">Anti Snipe</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="action-cell">
-                          <button class="action-btn">
-                            <img
-                              src="./public/images/zap-icon.svg"
-                              alt="Zap-icon"
-                            />
-                            <span>10 XRP</span>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- Single Row -->
-                    <!-- Single Row -->
-
-                    <tr>
-                      <td>
-                        <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
-                          <span class="token-name">TOKEN</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-created-time">
-                          <span>00min</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-market-cap-wrapper">
-                          <span class="market-value">$000K</span>
-                          <span class="market-value-increment">+00,0%</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-liquidity-wrapper">
-                          <span class="liquidity-value">$000K</span>
-                          <span class="liquidity-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-volume-wrapper">
-                          <span class="volume-value">$000K</span>
-                          <span class="volume-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-transactions-wrapper">
-                          <div class="buy-token">
-                            <span class="buy-count">000K</span>
-                            <span class="buy-value">$000K</span>
-                          </div>
-                          <div class="sell-token">
-                            <span class="sell-count">000K</span>
-                            <span class="sell-value">$000K</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="audit-cell">
-                          <span class="audit-item developer-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/developer-icon.svg"
-                                alt="Developer-icon"
-                              />
-                            </figure>
-                            <p class="developer-percent">00%</p>
-                            <span class="audit-tooltip">Developer</span>
-                          </span>
-                          <span class="audit-item top-holder-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/top-holder-icon-green.svg"
-                                alt="Top-holder-icon"
-                              />
-                            </figure>
-                            <p class="top-holder-percent">19%</p>
-                            <span class="audit-tooltip">Top Holder</span>
-                          </span>
-                          <span class="audit-item users-audit">
-                            <figure class="users-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/users-icon.svg"
-                                alt="Users-icon"
-                              />
-                            </figure>
-                            <p class="total-users">000K</p>
-                            <span class="audit-tooltip">Total User</span>
-                          </span>
-                          <span class="audit-item anti-snipe-audit">
-                            <figure class="anti-snipe-icon">
-                              <img
-                                class="anti-snipe-icon"
-                                src="./public/images/anti-snipe-icon-green.svg"
-                                alt="Anti-snipe-icon"
-                              />
-                            </figure>
-                            <p class="anti-snipe">YES</p>
-                            <span class="audit-tooltip">Anti Snipe</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="action-cell">
-                          <button class="action-btn">
-                            <img
-                              src="./public/images/zap-icon.svg"
-                              alt="Zap-icon"
-                            />
-                            <span>10 XRP</span>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- Single Row -->
-                    <!-- Single Row -->
-
-                    <tr>
-                      <td>
-                        <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
-                          <span class="token-name">TOKEN</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-created-time">
-                          <span>00h</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-market-cap-wrapper">
-                          <span class="market-value">$000K</span>
-                          <span class="market-value-increment">+00,0%</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-liquidity-wrapper">
-                          <span class="liquidity-value">$000K</span>
-                          <span class="liquidity-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-volume-wrapper">
-                          <span class="volume-value">$000K</span>
-                          <span class="volume-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-transactions-wrapper">
-                          <div class="buy-token">
-                            <span class="buy-count">000K</span>
-                            <span class="buy-value">$000K</span>
-                          </div>
-                          <div class="sell-token">
-                            <span class="sell-count">000K</span>
-                            <span class="sell-value">$000K</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="audit-cell">
-                          <span class="audit-item developer-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/developer-icon.svg"
-                                alt="Developer-icon"
-                              />
-                            </figure>
-                            <p class="developer-percent">00%</p>
-                            <span class="audit-tooltip">Developer</span>
-                          </span>
-                          <span class="audit-item top-holder-audit down">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/top-holder-icon-red.svg"
-                                alt="Top-holder-icon"
-                              />
-                            </figure>
-                            <p class="top-holder-percent">19%</p>
-                            <span class="audit-tooltip">Top Holder</span>
-                          </span>
-                          <span class="audit-item users-audit">
-                            <figure class="users-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/users-icon.svg"
-                                alt="Users-icon"
-                              />
-                            </figure>
-                            <p class="total-users">000K</p>
-                            <span class="audit-tooltip">Total User</span>
-                          </span>
-                          <span class="audit-item anti-snipe-audit down">
-                            <figure class="anti-snipe-icon">
-                              <img
-                                class="anti-snipe-icon"
-                                src="./public/images/anti-snipe-icon-red.svg"
-                                alt="Anti-snipe-icon"
-                              />
-                            </figure>
-                            <p class="anti-snipe">YES</p>
-                            <span class="audit-tooltip">Anti Snipe</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="action-cell">
-                          <button class="action-btn">
-                            <img
-                              src="./public/images/zap-icon.svg"
-                              alt="Zap-icon"
-                            />
-                            <span>10 XRP</span>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- Single Row -->
-                    <!-- Single Row -->
-                    <tr>
-                      <td>
-                        <div class="token-cell">
-                          <img
-                            class="token-icon"
-                            src="./public/images/token-icon.svg"
-                            alt="Token-icon"
-                          />
-                          <span class="token-name">TOKEN</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-created-time">
-                          <span>00h</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-market-cap-wrapper">
-                          <span class="market-value">$000K</span>
-                          <span class="market-value-increment">+00,0%</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-liquidity-wrapper">
-                          <span class="liquidity-value">$000K</span>
-                          <span class="liquidity-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-volume-wrapper">
-                          <span class="volume-value">$000K</span>
-                          <span class="volume-xrp">0 XRP</span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="token-transactions-wrapper">
-                          <div class="buy-token">
-                            <span class="buy-count">000K</span>
-                            <span class="buy-value">$000K</span>
-                          </div>
-                          <div class="sell-token">
-                            <span class="sell-count">000K</span>
-                            <span class="sell-value">$000K</span>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="audit-cell">
-                          <span class="audit-item developer-audit">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/developer-icon.svg"
-                                alt="Developer-icon"
-                              />
-                            </figure>
-                            <p class="developer-percent">00%</p>
-                            <span class="audit-tooltip">Developer</span>
-                          </span>
-                          <span class="audit-item top-holder-audit down">
-                            <figure class="developer-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/top-holder-icon-red.svg"
-                                alt="Top-holder-icon"
-                              />
-                            </figure>
-                            <p class="top-holder-percent">19%</p>
-                            <span class="audit-tooltip">Top Holder</span>
-                          </span>
-                          <span class="audit-item users-audit">
-                            <figure class="users-icon">
-                              <img
-                                class="audit-icon"
-                                src="./public/images/users-icon.svg"
-                                alt="Users-icon"
-                              />
-                            </figure>
-                            <p class="total-users">000K</p>
-                            <span class="audit-tooltip">Total User</span>
-                          </span>
-                          <span class="audit-item anti-snipe-audit down">
-                            <figure class="anti-snipe-icon">
-                              <img
-                                class="anti-snipe-icon"
-                                src="./public/images/anti-snipe-icon-red.svg"
-                                alt="Anti-snipe-icon"
-                              />
-                            </figure>
-                            <p class="anti-snipe">YES</p>
-                            <span class="audit-tooltip">Anti Snipe</span>
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="action-cell">
-                          <button class="action-btn">
-                            <img
-                              src="./public/images/zap-icon.svg"
-                              alt="Zap-icon"
-                            />
-                            <span>10 XRP</span>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- Single Row -->
-                  </tbody>
-                </table>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
