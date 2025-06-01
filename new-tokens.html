@@ -52,25 +52,13 @@
                   class="customize-icon"
                   src="./public/images/customize-icon.svg"
                   alt="Customize-icon"
-                /><span>Customise</span>
+                /><span class="customize-text">Customise</span>
               </button>
-
-              <!-- Timeframe filter -->
-
-              <div class="time-filters">
-                <button class="time-filter-btn">5m</button>
-                <button class="time-filter-btn">30m</button>
-                <button class="time-filter-btn">1h</button>
-                <button class="time-filter-btn">6h</button>
-                <button class="time-filter-btn active">24h</button>
-              </div>
-
-              <!-- Timeframe filter -->
 
               <!-- Quick Buy Button -->
 
               <div class="quick-buy-btn-wrapper">
-                <p class="quick-buy-text">Quick Buy</p>
+                <p class="quick-buy-text"><span>Quick</span> Buy</p>
                 <img
                   src="./public/images/zap-icon.svg"
                   alt="Zap-icon"
@@ -81,33 +69,50 @@
                   id="quick-buy-btn"
                   class="quick-buy-btn"
                   placeholder="10 XRP"
-                  value="10 XRP"
+                  value="10"
                   autocomplete="off"
                 />
-                <!-- <button class="quick-buy-btn">10 XRP</button> -->
               </div>
 
               <!-- Quick Buy Button -->
-
-              <!-- Refresh button -->
-
-              <button class="refresh-btn">
-                <img
-                  src="./public/images/refresh-icon.svg"
-                  alt="Refresh-icon"
-                />
-              </button>
             </div>
-            <div class="table-search">
-              <input
-                id="searchInput"
-                class="search-input-box"
-                type="text"
-                placeholder="Search New Tokens (24h)"
-              />
-              <button type="submit" id="tableSearch" class="search-button">
-                <img src="./public/images/search-icon.svg" alt="Search-icon" />
-              </button>
+            <div class="table-search-n-toggle-btn">
+              <label for="tableToggleSwitch">
+                <div class="table-toggle-switch">
+                  <input
+                    type="checkbox"
+                    name="tableToggleSwitch"
+                    id="tableToggleSwitch"
+                    hidden
+                  />
+                  <span class="table-toggle-icon-wrapper">
+                    <img
+                      class="dollar-icon"
+                      src="./public/images/dollar-icon.svg"
+                      alt="zap-icon"
+                    />
+                    <img
+                      class="xrp-icon"
+                      src="./public/images/xrp-logo.svg"
+                      alt="zap-icon"
+                    />
+                  </span>
+                </div>
+              </label>
+              <div class="table-search">
+                <input
+                  id="searchInput"
+                  class="search-input-box"
+                  type="text"
+                  placeholder="Search New Tokens (24h)"
+                />
+                <button type="submit" id="tableSearch" class="search-button">
+                  <img
+                    src="./public/images/search-icon.svg"
+                    alt="Search-icon"
+                  />
+                </button>
+              </div>
             </div>
           </div>
 

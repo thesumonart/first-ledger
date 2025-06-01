@@ -59,18 +59,10 @@ timeButtons.forEach((button) => {
 const quickBuyInput = document.getElementById("quick-buy-btn");
 
 quickBuyInput.addEventListener("focus", () => {
-  if (quickBuyInput.value.endsWith(" XRP")) {
-    quickBuyInput.value = quickBuyInput.value.replace(" XRP", ""); // Remove XRP when focusing
-  }
+  quickBuyInput.style.backgroundImage = "none";
 });
-
 quickBuyInput.addEventListener("blur", () => {
-  let value = quickBuyInput.value.replace(/[^\d]/g, ""); // Remove non-numeric characters
-  if (value) {
-    quickBuyInput.value = value + " XRP";
-  } else {
-    quickBuyInput.value = ""; // Allow full clearing
-  }
+  quickBuyInput.style.backgroundImage = 'url("../public/images/xrp-logo.svg") ';
 });
 
 // customize-Modal
