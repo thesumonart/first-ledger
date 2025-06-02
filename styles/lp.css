@@ -18,7 +18,7 @@
 
   .wallets {
     font-size: 16px;
-    color: var(--text-primary);
+    color: #1E1E1E;
   }
 }
 
@@ -60,6 +60,21 @@
     padding: 0 12px;
   }
 
+  .table {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      border: 0.5px solid var(--borderDefaultPrimary);
+      border-radius: 10px;
+
+      @media (max-width: 768px) {
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+    }
   .table-section {
     tr {
       padding-left: 12px !important;
@@ -581,7 +596,7 @@
 .my-pools-main {
   padding: 20px 0px;
   border-top: 1px solid #3f4258;
-  border-bottom: 1px solid #3f4258;
+  
 }
 
 .best-pools-main {
@@ -626,24 +641,32 @@
 .table-section {
   .table-scroll {
     width: 100%;
-    /* overflow-x: auto; */
+      padding: 0 5px;
+       @media (max-width: 1024px) {
+        padding: 0 24px;
+      }
+      @media (max-width: 767px) {
+        padding: 0;
+      }
   }
 
-  .table-scroll::-webkit-scrollbar {
-    display: none;
-  }
+   .table-scroll::-webkit-scrollbar {
+      display: none;
+    }
 
-  .table-scroll table {
-    min-width: 900px;
-    width: 100%;
-    border-collapse: collapse;
-  }
 
-  .table-content-wrapper {
-    /* overflow-x: auto !important; */
-  }
+  .table-scroll .table {
+      width: 100%;
+      border-collapse: collapse;
 
-  table {
+      @media (max-width: 767px) {
+        min-width: unset;
+      }
+    }
+
+
+
+  .table {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -658,7 +681,7 @@
   .table-heading {
     display: grid;
     padding: 16px calc((100vw - 1420px) / 2);
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 0fr;
 
     th {
       text-align: start;
@@ -687,16 +710,14 @@
     column-span: 6;
   }
 
-  thead tr {
-    border-top: 0.5px solid var(--border-primary);
-  }
+  
 
   tr {
     border-bottom: 0.5px solid var(--border-primary);
     padding: 7px calc((100% - 1420px) / 2);
     display: grid;
-    grid-template-columns: 1fr 6fr;
-    /* align-items: center; */
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
 
     td {
       .action-cell {
@@ -737,11 +758,13 @@
     
   }
 
-  .row-content {
+.row-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
-  }
+    display: flex;
+    justify-content: space-between;
+}
   .xrp-bought{ 
     color: white!important;
   }
@@ -769,9 +792,19 @@
     display: flex;
     flex-direction: column;
     font-size: 16px;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
 
     span {
+      &:first-child {
+        display: flex;
+        gap: 4px;
+
+        .table-xrp-logo {
+          width: 12px;
+          aspect-ratio: 1/1;
+          color: white!important;
+        }
+      }
       &:last-child {
         color: var(--textOnBrandSecondary);
         font-size: 14px;
@@ -883,6 +916,61 @@
     scrollbar-width: none;
   }
 }
+ .table-toggle-switch {
+      width: 44px;
+      height: 18px;
+      border-radius: 10px;
+      background: transparent;
+      border: 1px solid var(--borderDefaultSecondary);
+      position: relative;
+      cursor: pointer;
+    }
+    .table-toggle-switch * {
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    .table-toggle-switch .table-toggle-icon-wrapper {
+      height: 26px;
+      aspect-ratio: 1/1;
+      background: var(--bgDefaultPrimaryHov);
+      border: 1px solid var(--borderDefaultPrimary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translate(calc(-5%), -50%);
+    }
+    .table-toggle-switch .table-toggle-icon-wrapper .dollar-icon {
+      display: none;
+    }
+
+    .quick-buy-toggle-btn .quick-buy-icon-wrapper .xrp-icon {
+      display: block;
+    }
+
+    .table-toggle-switch
+      input[type="checkbox"]:checked
+      ~ .table-toggle-icon-wrapper {
+      transform: translate(calc(44px - 100%), -50%);
+    }
+
+    .table-toggle-switch
+      input[type="checkbox"]:checked
+      ~ .table-toggle-icon-wrapper
+      .dollar-icon {
+      display: block;
+    }
+
+    .table-toggle-switch
+      input[type="checkbox"]:checked
+      ~ .table-toggle-icon-wrapper
+      .xrp-icon {
+      display: none;
+    }
+
 
 /* Table section CSS ends here */
 
