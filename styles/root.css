@@ -23,6 +23,7 @@
   --textPositiveDefault: #c6f5cb;
   --textPositiveSecondary: #85e0a3;
   --textPositiveOnPositive: #e3ffe7;
+  --textPositiveOnPositiveTertiary: #e3ffe7;
   --textDefaultSecondary: #d9d9d9;
   --textDangerDefault: #fcb3ad;
   --textDangerSecondary: #ff7d6f;
@@ -30,6 +31,7 @@
   --textNeutralDefault: #f3f3f3;
   --textNeutralTertiary: #cdcdcd;
   --textDisabledDefault: #757575;
+  --textDisabledOnDisabled: #b3b3b3;
 
   /* Background Colors */
 
@@ -44,6 +46,7 @@
   --bgNeutralSecondary: #434343;
   --bgPositiveDefault: #008043;
   --bgPositiveSecondary: #02542d;
+  --bgPositiveTertiary: #024023;
   --bgDangerDefault: #f03330;
   --bgDisabledDefault: #34374a;
   --bgUtilitiesHighlight: rgba(255, 255, 255, 0.02);
@@ -59,6 +62,7 @@
   --borderBrandDefault: #354ed8;
   --borderBrandTertiary: #161e69;
   --borderPositiveSecondary: #14ae5c;
+  --borderPositiveTertiary: #009951;
   --borderDangerSecondary: #ff7d6f;
   --borderDisabledDefault: #383838;
 
@@ -126,3 +130,93 @@ a {
 }
 
 /* Global styles */
+
+/* Keyframes */
+
+@keyframes loading-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.quick-buy-notification {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  padding: 16px 8px 16px 16px;
+  left: 38px;
+  bottom: 38px;
+  color: var(--textDefaultPrimary);
+  background: var(--bgDefaultSecondary);
+  border: 0.5px solid var(--borderDefaultSecondary);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: 592px) {
+    left: 40px;
+    right: 40px;
+  }
+
+  .xrp-logo-wrapper {
+    display: inline-flex;
+    vertical-align: middle;
+  }
+  img {
+    width: 16px;
+    aspect-ratio: 1/1;
+  }
+
+  .status-wrapper {
+    position: relative;
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .load {
+        animation: loading-rotate 0.5s linear infinite;
+      }
+
+      .success {
+        display: none;
+      }
+    }
+
+    .close-icon-wrapper {
+      cursor: pointer;
+      position: absolute;
+      top: -8px;
+      right: 0;
+      padding: 8px;
+    }
+  }
+
+  .status-message,
+  .message {
+    line-height: 1.2em;
+    font-size: 16px;
+    padding-right: 40px;
+  }
+
+  .status-message {
+    font-weight: 600;
+  }
+
+  &.success-notification {
+    background: var(--bgPositiveTertiary);
+    border-color: var(--borderPositiveTertiary);
+    color: var(--textPositiveOnPositiveTertiary);
+
+    .load {
+      display: none;
+    }
+    .success {
+      display: flex !important;
+    }
+  }
+}
