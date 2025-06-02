@@ -28,6 +28,8 @@ async function handleQuickBuyClick(e) {
   notification.style.display = "flex";
   notification.querySelector(".status-message").textContent =
     "Quick Buy Pending";
+  loadIcon.style.animationPlayState = "running";
+
   loadIcon.style.display = "inline-block";
   notification.querySelector(".success").style.display = "none";
   notification.style.bottom = "38px";
@@ -63,6 +65,8 @@ async function handleQuickBuyClick(e) {
     successNotification.querySelector(".load").style.display = "none";
     successNotification.querySelector(".success").style.display =
       "inline-block";
+
+    loadIcon.style.animationPlayState = "paused";
 
     // Style success notification position
     successNotification.style.bottom = "38px";
