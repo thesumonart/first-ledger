@@ -42,9 +42,7 @@
 
 .wallet-name-dropdown_wrapper {
   position: relative;
-  display: flex;
-  gap: 12px;
-  justify-items: space-between;
+ float: right;
   margin-bottom: 16px;
 }
 
@@ -90,13 +88,12 @@
 .modal-title {
   margin-bottom: 20px;
   h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    opacity: 70%;
   }
-  p {
-    font-size: 1rem;
-    font-weight: 300;
-  }
+
 }
 
 .modal-tabs {
@@ -104,7 +101,7 @@
   align-items: center;
   margin-bottom: 10px;
   width: 100%;
-  border-radius: 32px;
+  border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--border-primary);
   margin-bottom: 16px;
@@ -125,7 +122,7 @@
 .tab-btn.active {
   background: #456eeb;
   color: var(--text-primary);
-  border-radius: 32px;
+  border-radius: 10px;
 }
 /* .tab-btn.active:hover {
   background: green;
@@ -172,7 +169,7 @@
       padding: 6.5px;
       width: 32px;
       border-radius: 50%;
-      background-color: #5a5a5a;
+      background-color: #365ED8CC;
       color: #0e0f43;
       display: inline-flex;
       justify-content: center;
@@ -185,8 +182,10 @@
       margin-bottom: 16px;
     }
     .xrp-text {
-      font-size: 1.25rem;
-      font-weight: 500;
+      font-size: 20px;
+      font-weight: 400;
+      color: gray;
+
     }
 
     img {
@@ -265,7 +264,7 @@
   align-items: center;
   gap: 4px;
   list-style: none;
-  color: var(--textOnBrandSecondary);
+  color: gray;
 
   img {
     cursor: pointer;
