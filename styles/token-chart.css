@@ -1263,11 +1263,21 @@ a {
   }
 }
 .inner-contents-n-btns {
-  padding: 16px;
+  padding: 16px 16px;
   border-radius: 10px;
   background: var(--bgDefaultPrimaryHov);
   border: 1px solid var(--borderDefaultPrimary);
 }
+
+@media (max-width: 1023px) {
+  .inner-contents-n-btns {
+    padding: 12px 16px;
+    border-radius: none;
+    background: none;
+    border: none;
+  }
+}
+
 .inner-contents-wrapper {
   .first-inner-content {
     display: block;
