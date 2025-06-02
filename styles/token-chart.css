@@ -731,7 +731,7 @@ a {
 .token-vol-n-price-changes-wrapper {
   background: var(--bgDefaultPrimaryHov);
   border-radius: 10px;
-  padding: 16px;
+  padding: 16px 16px 16px 16px;
   border: 1px solid var(--borderDefaultPrimary);
   color: var(--textDefaultPrimary);
   display: flex;
@@ -819,6 +819,21 @@ a {
         background: var(--bgDangerDefault);
       }
     }
+  }
+}
+@media (max-width: 1023px) {
+  .border-top {
+    border-top: 1px solid var(--borderDefaultPrimary);
+  }
+  .token-vol-n-price-changes-wrapper {
+    background: none;
+    border-radius: 10px;
+    padding: 8px 16px 16px 16px;
+
+    display: flex;
+    border: none;
+    flex-direction: column;
+    gap: 12px;
   }
 }
 
@@ -1479,6 +1494,18 @@ a {
         background: var(--bgDefaultSecondary);
         border-color: var(--borderDefaultSecondary);
       }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .about-token-n-social-links-wrapper {
+    background: none;
+    border: none;
+  }
+  .token-social-btns-wrapper {
+    .social-btn {
+      background-color: #181924 !important;
     }
   }
 }
