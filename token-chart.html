@@ -1006,9 +1006,319 @@
             </div>
           </div>
         </div>
+        <!-- ################# small screen start ################### -->
+        <div class="small-container">
+          <div>
+            <div class="tab-all-button">
+              <span class="active">Trades</span>
+              <span>Info</span>
+              <span>Transactions</span>
+            </div>
+
+            <div class="all-tab-content">
+              <!-- All trades -->
+              <div class="active">
+                <div class="token-name-n-action-wrapper">
+                  <div class="token-name-n-icon-wrapper">
+                    <figure class="token-icon-wrapper">
+                      <img
+                        class="token-icon"
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <div class="token-name-desc-n-icons">
+                      <span class="token-name-icons">
+                        <h1 class="token-name">TOKEN</h1>
+                        <span class="token-audit-icons">
+                          <figure>
+                            <img
+                              src="./public/images/anti-snipe-icon.svg"
+                              alt="anti-snipe-icon"
+                              class="anti-snipe-icon"
+                            />
+                          </figure>
+                          <figure>
+                            <img
+                              src="./public/images/check-mark-icon.svg"
+                              alt="check-mark-icon"
+                              class="verified-icon"
+                            />
+                          </figure>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="token-action-icons-wrapper">
+                    <div class="price-toggle-btn">
+                      <label for="priceToggleBtn">
+                        <div class="priceToggleBtn">
+                          <input
+                            type="checkbox"
+                            name="priceToggle"
+                            id="priceToggleBtn"
+                            hidden
+                            checked
+                          />
+                          <span class="price-icon-wrapper">
+                            <img
+                              class="xrp-icon"
+                              src="./public/images/xrp-logo.svg"
+                              alt="xrp-icon"
+                            />
+                            <img
+                              class="dollar-icon"
+                              src="./public/images/dollar-icon.svg"
+                              alt="dollar-icon"
+                            />
+                          </span>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="token-action-btns-wrapper">
+                      <span class="star-btn token-action-btn">
+                        <figure>
+                          <img
+                            class="star-icon"
+                            src="./public/images/star-icon.svg"
+                            alt="star-icon"
+                          />
+                        </figure>
+                      </span>
+                      <span class="copy-btn token-action-btn">
+                        <figure>
+                          <img
+                            class="copy-icon"
+                            src="./public/images/copy-icon.svg"
+                            alt="copy-icon"
+                          />
+                        </figure>
+                      </span>
+                      <span class="external-link-btn token-action-btn">
+                        <figure>
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/external-link-icon-tertiary-color.svg"
+                            alt="External-link-icon"
+                          />
+                        </figure>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="./public/images/chart-ss-sm.svg"
+                    alt="chart-ss-sm"
+                    style="width: 100%; height: auto"
+                  />
+                </div>
+                <div>
+                  <div class="side-quick-trade">
+                    <div class="inner-contents-n-btns">
+                      <div class="inner-contents-wrapper">
+                        <div class="first-inner-content">
+                          <div class="action-buttons">
+                            <button
+                              class="action-button buy-active"
+                              onclick="setMode('buy')"
+                              id="buyButton"
+                            >
+                              Buy
+                            </button>
+                            <button
+                              class="action-button button-inactive"
+                              onclick="setMode('sell')"
+                              id="sellButton"
+                            >
+                              Sell
+                            </button>
+                          </div>
+
+                          <div class="amount-input-container">
+                            <div class="input-n-preset">
+                              <input
+                                type="text"
+                                class="amount-input"
+                                placeholder="Amount to Buy (XRP)"
+                                id="amountInput"
+                              />
+                              <div class="preset-btns">
+                                <div class="preset-btn-wrapper">
+                                  <input
+                                    readonly
+                                    type="text"
+                                    placeholder="10"
+                                    class="preset-btn"
+                                  /><span>XRP</span>
+                                </div>
+                                <div class="preset-btn-wrapper">
+                                  <input
+                                    readonly
+                                    type="text"
+                                    placeholder="20"
+                                    class="preset-btn"
+                                  /><span>XRP</span>
+                                </div>
+                                <div class="preset-btn-wrapper">
+                                  <input
+                                    readonly
+                                    type="text"
+                                    placeholder="50"
+                                    class="preset-btn"
+                                  /><span>XRP</span>
+                                </div>
+
+                                <button class="preset-customize-btn">
+                                  <img
+                                    src="./public/images/edit-icon.svg"
+                                    alt="Edit-icon"
+                                  />
+                                </button>
+                              </div>
+                            </div>
+                            <div class="amount-details">
+                              <div class="token-n-price-impact">
+                                <div>=0 TOKEN</div>
+                                <div class="price-impact-wrapper">
+                                  &#40;Price Impact ≈
+                                  <span class="price-impact">6%&#41;</span>
+                                  <span class="price-impact-icon">
+                                    <span class="price-impact-tooltip"
+                                      >Price Impact</span
+                                    >
+                                    <img
+                                      src="./public/images/Info-icon.svg"
+                                      alt="info-icon"
+                                    />
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="quick-buy-n-slippage">
+                                <label for="quickBuyToggleBtn">
+                                  <div class="quick-buy-toggle-btn">
+                                    <input
+                                      type="checkbox"
+                                      name="quickBuyToggle"
+                                      id="quickBuyToggleBtn"
+                                      hidden
+                                      checked
+                                    />
+                                    <span class="quick-buy-icon-wrapper">
+                                      <img
+                                        class="zap-icon"
+                                        src="./public/images/zap-icon.svg"
+                                        alt="zap-icon"
+                                      />
+                                      <img
+                                        class="zap-icon-off"
+                                        src="./public/images/zap-off-icon.svg"
+                                        alt="zap-icon"
+                                      />
+                                    </span>
+                                  </div>
+                                </label>
+                                <div class="slippage-input-wrapper">
+                                  <figure class="slippage-icon">
+                                    <img
+                                      src="./public/images/slippage-icon.svg"
+                                      alt="Slippage-icon"
+                                    />
+                                  </figure>
+                                  <input
+                                    type="text"
+                                    class="slippage-input"
+                                    placeholder="20%"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="second-inner-content">
+                          <p class="sending-label">You're Sending</p>
+                          <div class="sending-amount">
+                            <h3 class="sending-xrp"><span>0.0</span>XRP</h3>
+                            <p class="sending-value">$0.0</p>
+                          </div>
+                          <p class="receiving-label">To Receive</p>
+                          <div class="receiving-amount">
+                            <figure class="token-icon">
+                              <img
+                                src="./public/images/token-icon.svg"
+                                alt="Token-icon"
+                              />
+                            </figure>
+                            <div class="receiving-token-name-price">
+                              <h3 class="receiving-token">
+                                <span>0.0</span>TOKEN
+                              </h3>
+                              <p class="receiving-value">$0.0</p>
+                            </div>
+                          </div>
+                          <p class="price-impact">
+                            Price Impact
+                            <span class="info-icon price-impact-icon">
+                              <span class="price-impact-tooltip"
+                                >Price Impact</span
+                              >
+                              <img
+                                src="./public/images/Info-icon.svg"
+                                alt="Info-icon"
+                              />
+                            </span>
+                            <span class="impact-percent">0 XRP (0.0%)</span>
+                          </p>
+                          <a href="#" class="see-transaction">
+                            See Transaction
+                            <span class="link-icon">
+                              <img
+                                src="./public/images/external-link-icon.svg"
+                                alt="Link-icon"
+                              />
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="quick-action-btn-wrapper">
+                        <button class="quick-action-button buy-active">
+                          <figure>
+                            <img
+                              src="./public/images/zap-icon.svg"
+                              alt="zap-icon"
+                            />
+                          </figure>
+                          Quick Buy TOKEN
+                        </button>
+                        <div class="cancel-confirm-btn-wrapper">
+                          <button class="cancel-btn">Cancel</button>
+                          <button class="confirm-btn">
+                            Confirm
+                            <figure class="loading-icon">
+                              <img
+                                src="./public/images/loading.svg"
+                                alt="loading-icon"
+                              />
+                            </figure>
+                          </button>
+                        </div>
+                        <button class="done-btn">Done</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>Content for My Trades</div>
+              <div>Content for Top Traders</div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <script src="./js/token-chart.js"></script>
+    <script src="./js/token-tab-sm.js"></script>
   </body>
 </html>
