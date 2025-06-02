@@ -563,6 +563,7 @@ a {
     align-items: center;
     padding: 8px 16px;
     justify-content: space-between;
+    border-bottom: 0.5px solid var(--borderDefaultPrimary);
   }
   .token-name-n-icon-wrapper {
     align-items: center;
@@ -834,6 +835,17 @@ a {
   background: var(--bgDefaultPrimaryHov);
 }
 
+@media (max-width: 1023px) {
+  .stats-grid {
+    gap: 12px 8px;
+    padding-bottom: 16px;
+    padding: 16px;
+    border: none;
+    border-radius: none;
+    background: none;
+  }
+}
+
 .stat-box {
   background: var(--bgUtilitiesHighlight2);
   padding: 8px;
@@ -847,7 +859,12 @@ a {
   line-height: 1.15em;
   text-transform: capitalize;
 }
-
+@media (max-width: 1023px) {
+  .stat-label {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
 .stat-xrp {
   font-size: 16px;
   font-weight: 400;
@@ -855,10 +872,20 @@ a {
   color: var(--textDefaultPrimary);
   margin: 4px 0;
 }
-
+@media (max-width: 1023px) {
+  .stat-xrp {
+    font-size: 14px;
+  }
+}
 .stat-token {
   color: var(--textOnBrandSecondary);
   font-size: 14px;
+}
+
+@media (max-width: 1023px) {
+  .stat-token {
+    font-size: 12px;
+  }
 }
 
 .side-quick-trade {
