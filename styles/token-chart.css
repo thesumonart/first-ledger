@@ -1580,6 +1580,14 @@ a {
     }
   }
 }
+@media (max-width: 1023px) {
+  .token-detailed-info-wrapper {
+    background: none;
+    border: none;
+    font-size: 14px;
+    gap: 12px;
+  }
+}
 /* Right side css ends */
 /* ################ small screen design start ############### */
 
