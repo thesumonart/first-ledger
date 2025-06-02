@@ -1006,9 +1006,116 @@
             </div>
           </div>
         </div>
+        <!-- small screen start -->
+        <div class="small-container">
+          <div>
+            <div class="tab-all-button">
+              <span class="active">Trades</span>
+              <span>Info</span>
+              <span>Transactions</span>
+            </div>
+
+            <div class="all-tab-content">
+              <!-- All trades -->
+              <div class="active">
+                <div class="token-name-n-action-wrapper">
+                  <div class="token-name-n-icon-wrapper">
+                    <figure class="token-icon-wrapper">
+                      <img
+                        class="token-icon"
+                        src="./public/images/token-icon.svg"
+                        alt="Token-icon"
+                      />
+                    </figure>
+                    <div class="token-name-desc-n-icons">
+                      <span class="token-name-icons">
+                        <h1 class="token-name">TOKEN</h1>
+                        <span class="token-audit-icons">
+                          <figure>
+                            <img
+                              src="./public/images/anti-snipe-icon.svg"
+                              alt="anti-snipe-icon"
+                              class="anti-snipe-icon"
+                            />
+                          </figure>
+                          <figure>
+                            <img
+                              src="./public/images/check-mark-icon.svg"
+                              alt="check-mark-icon"
+                              class="verified-icon"
+                            />
+                          </figure>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="token-action-icons-wrapper">
+                    <div class="price-toggle-btn">
+                      <label for="priceToggleBtn">
+                        <div class="priceToggleBtn">
+                          <input
+                            type="checkbox"
+                            name="priceToggle"
+                            id="priceToggleBtn"
+                            hidden
+                            checked
+                          />
+                          <span class="price-icon-wrapper">
+                            <img
+                              class="xrp-icon"
+                              src="./public/images/xrp-logo.svg"
+                              alt="xrp-icon"
+                            />
+                            <img
+                              class="dollar-icon"
+                              src="./public/images/dollar-icon.svg"
+                              alt="dollar-icon"
+                            />
+                          </span>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="token-action-btns-wrapper">
+                      <span class="star-btn token-action-btn">
+                        <figure>
+                          <img
+                            class="star-icon"
+                            src="./public/images/star-icon.svg"
+                            alt="star-icon"
+                          />
+                        </figure>
+                      </span>
+                      <span class="copy-btn token-action-btn">
+                        <figure>
+                          <img
+                            class="copy-icon"
+                            src="./public/images/copy-icon.svg"
+                            alt="copy-icon"
+                          />
+                        </figure>
+                      </span>
+                      <span class="external-link-btn token-action-btn">
+                        <figure>
+                          <img
+                            class="external-link-icon"
+                            src="./public/images/external-link-icon-tertiary-color.svg"
+                            alt="External-link-icon"
+                          />
+                        </figure>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>Content for My Trades</div>
+              <div>Content for Top Traders</div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <script src="./js/token-chart.js"></script>
+    <script src="./js/token-tab-sm.js"></script>
   </body>
 </html>
