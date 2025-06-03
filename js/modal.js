@@ -8,12 +8,41 @@ document.addEventListener("DOMContentLoaded", function () {
     ".action-remove-icon"
   );
 
+  // Function to add click-outside-to-close functionality to any modal
+  function addClickOutsideToClose(modalClone) {
+    // Close modal when clicking outside of modal content
+    modalClone.addEventListener('click', function(event) {
+      // Check if the clicked target is the modal overlay (not the modal content)
+      if (event.target === modalClone) {
+        modalClone.remove();
+      }
+    });
+
+    // Prevent modal from closing when clicking inside the modal content
+    const modalContent = modalClone.querySelector('.modal-content');
+    if (modalContent) {
+      modalContent.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+    }
+
+    // Close modal with Escape key
+    const escapeKeyHandler = function(event) {
+      if (event.key === 'Escape' && modalClone.style.display !== 'none') {
+        modalClone.remove();
+        document.removeEventListener('keydown', escapeKeyHandler);
+      }
+    };
+    document.addEventListener('keydown', escapeKeyHandler);
+  }
+
   actionButtons.forEach((button, index) => {
     button.addEventListener("click", function () {
       let modalClone = addLiquidity.cloneNode(true);
       modalClone.id = `modal-${index}`;
       document.body.appendChild(modalClone);
       modalClone.style.display = "flex";
+      addClickOutsideToClose(modalClone);
 
       // xrp background color changed
       const inputs = modalClone.querySelectorAll(
@@ -376,6 +405,7 @@ document.addEventListener("DOMContentLoaded", function () {
       modalClone.id = `rm-modal-${index}`;
       document.body.appendChild(modalClone);
       modalClone.style.display = "flex";
+      addClickOutsideToClose(modalClone);
 
       // Hide steps initially
       modalClone.querySelector("#rm-step-confirm").style.display = "none";
@@ -590,4 +620,5 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+  
 });
