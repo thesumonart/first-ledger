@@ -40,6 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // Initialize other functions after DOM is loaded
+  displayRowCount();
+  handleDropdownTransform();
 });
 
 // Table row count
@@ -67,8 +71,6 @@ const displayRowCount = () => {
     rowCountElement.textContent = `${count}`;
   }
 };
-
-window.onload = displayRowCount;
 
 // Customize Dropdown
 const customizeDropdown = document.getElementById("customizeDropdown");
@@ -340,3 +342,56 @@ window.getCurrentActiveTab = function() {
   }
   return null;
 };
+
+// ===== TOKEN DETAILS MODAL FUNCTIONALITY =====
+function openTokenModal(token1, token2) {
+  const modal = document.getElementById('token-details-modal');
+  const tokenName = document.getElementById('modal-token-name');
+  const tokenPair = document.getElementById('modal-token-pair');
+  
+  // Update modal content with token information
+  tokenName.textContent = `${token1} / ${token2}`;
+  tokenPair.textContent = '';
+  
+  // You can add more dynamic content here based on the token parameters
+  // For example, fetch real token data and update the modal
+  
+  modal.classList.add('show');
+  document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeTokenModal() {
+  const modal = document.getElementById('token-details-modal');
+  modal.classList.remove('show');
+  document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+function buyToken() {
+  alert('Buy token functionality would be implemented here');
+  // Add your buy token logic here
+}
+
+function sellToken() {
+  alert('Sell token functionality would be implemented here');
+  // Add your sell token logic here
+}
+
+function addToWatchlist() {
+  alert('Add to watchlist functionality would be implemented here');
+  // Add your watchlist logic here
+}
+
+// Close modal when clicking outside of it
+document.getElementById('token-details-modal').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeTokenModal();
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeTokenModal();
+  }
+});
+

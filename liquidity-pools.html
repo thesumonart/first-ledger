@@ -8,32 +8,7 @@
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/lp.css" />
     <link rel="stylesheet" href="./styles/modal.css" />
-    <style>
-      /* Additional styles for tab functionality */
-      .table-section-title-text p {
-        cursor: pointer;
-        position: relative;
-        transition: color 0.3s ease;
-      }
-      
-      .table-section-title-text p.active {
-        color: #6F93FE;
-      }
-      
-      .table-section-title-text p.active::after {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #6F93FE;
-      }
-      
-      .hidden-section {
-        display: none;
-      }
-    </style>
+    
   </head>
 
   <body>
@@ -165,7 +140,7 @@
                           <!-- Single Row -->
                           <tr>
                             <td>
-                              <div class="token-cell">
+                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
                                 <img
                                   class="token-icon"
                                   src="./public/images/avatar-icon.svg"
@@ -237,10 +212,10 @@
                             </td>
                           </tr>
 
-                          <!-- Single Row -->
+                          <!-- Repeat similar structure for other rows with onclick handlers -->
                           <tr>
                             <td>
-                              <div class="token-cell">
+                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
                                 <img
                                   class="token-icon"
                                   src="./public/images/avatar-icon.svg"
@@ -312,10 +287,10 @@
                             </td>
                           </tr>
 
-                          <!-- Single Row -->
-                           <tr>
+                          <!-- Continue with remaining rows... -->
+                          <tr>
                             <td>
-                              <div class="token-cell">
+                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
                                 <img
                                   class="token-icon"
                                   src="./public/images/avatar-icon.svg"
@@ -387,11 +362,9 @@
                             </td>
                           </tr>
 
-
-                          <!-- Single Row -->
-                           <tr>
+                          <tr>
                             <td>
-                              <div class="token-cell">
+                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
                                 <img
                                   class="token-icon"
                                   src="./public/images/avatar-icon.svg"
@@ -463,10 +436,9 @@
                             </td>
                           </tr>
 
-                          <!-- Single Row -->
-                           <tr>
+                          <tr>
                             <td>
-                              <div class="token-cell">
+                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
                                 <img
                                   class="token-icon"
                                   src="./public/images/avatar-icon.svg"
@@ -567,7 +539,7 @@
                         <tbody>
                           <tr>
                             <td>
-                              <div class="token-cell">
+                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
                                 <img
                                   class="token-icon"
                                   src="./public/images/avatar-icon.svg"
@@ -637,9 +609,10 @@
                             </td>
                           </tr>
                           
+                          <!-- Continue with other explore pools rows... -->
                           <tr>
                             <td>
-                              <div class="token-cell">
+                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
                                 <img
                                   class="token-icon"
                                   src="./public/images/avatar-icon.svg"
@@ -712,7 +685,7 @@
 
                           <tr>
                             <td>
-                              <div class="token-cell">
+                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
                                 <img
                                   class="token-icon"
                                   src="./public/images/avatar-icon.svg"
@@ -783,11 +756,9 @@
                             </td>
                           </tr>
 
-
-
                           <tr>
                             <td>
-                              <div class="token-cell">
+                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
                                 <img
                                   class="token-icon"
                                   src="./public/images/avatar-icon.svg"
@@ -870,7 +841,71 @@
         </section>
       </div>
 
-      <!-- Modals section -->
+      <!-- Token Details Modal -->
+       <div id="token-details-modal" class="token-details-modal">
+    <div class="token-details-content">
+      <div class="modal-title">
+            <h2>Your Position</h2>
+            
+          </div>
+      <div class="token-details-header">
+        <div class="token-details-title">
+          <img id="modal-token-icon" class="token-details-icon" src="./public/images/token-icon.svg" alt="Token Icon" />
+          <div class="token-details-info" >
+            <h2 id="modal-token-name">Your Position</h2>
+            <p id="modal-token-pair" >TOKEN / XRP</p>
+          </div>
+          
+        </div>
+        <button class="close-token-modal" onclick="closeTokenModal()">
+          <img src="./public/images/close-icon.svg" alt="Close" />
+        </button>
+      </div>
+
+      <div class="token-position-details">
+        <div class="position-item">
+          <p class="position-label">Current Position Value</p>
+          <p class="position-value" id="modal-position-value">$0000.0</p>
+        </div>
+        <div class="position-item">
+          <p class="position-label">Pool Tokens Amount <span class="info-icon">ⓘ</span></p>
+          <p class="position-value" id="modal-lp-tokens">0 LP TOKENS</p>
+        </div>
+        <div class="position-item">
+          <p class="position-label">Deposited XRP</p>
+          <p class="position-value" id="modal-deposited-xrp">0 XRP</p>
+        </div>
+        <div class="position-item">
+          <p class="position-label">Deposited TOKEN</p>
+          <p class="position-value" id="modal-deposited-token">0 TOKEN</p>
+        </div>
+        <div class="position-item">
+          <p class="position-label">Voting Threshold <span class="info-icon">ⓘ</span></p>
+          <p class="position-value" id="modal-voting-threshold">0K LP Tokens (0% of the Pool)</p>
+        </div>
+        <div class="position-item">
+          <p class="position-label">Voted</p>
+          <p class="position-value" id="modal-voted">No</p>
+        </div>
+        <div class="position-item">
+          <p class="position-label">APY</p>
+          <p class="position-value" id="modal-apy">0%</p>
+        </div>
+        <div class="position-item">
+          <p class="position-label">Total Fees Accrued</p>
+          <p class="position-value" id="modal-fees-accrued">0 XRP</p>
+        </div>
+      </div>
+
+      <div class="token-actions">
+        <button class="token-action-btn primary" onclick="voteToken()">Vote</button>
+        <button class="token-action-btn secondary" onclick="addLiquidity()">Add Liquidity</button>
+        <button class="token-action-btn secondary" onclick="removePosition()">Remove</button>
+      </div>
+    </div>
+  </div>
+
+      <!-- Existing modals continue here... -->
       <!-- Add Liquidity Modal -->
      <div class="modal" id="add-liquidity-modal">
         <div class="modal-content">
@@ -1110,7 +1145,7 @@
               
             </div>
 
-            <label class="label" for="diposit">You’re Depositing</label>
+            <label class="label" for="diposit">You're Depositing</label>
             <div class="is-confirmation">
               <div class="deposit">
                 <div class="deposit-amount">
@@ -1126,7 +1161,7 @@
                 <p>$0.0</p>
               </div>
             </div>
-            <label class="label" for="diposit">You’re Receiving</label>
+            <label class="label" for="diposit">You're Receiving</label>
             <div class="is-confirmation">
               <div class="recive">
                 <h6>0.0 TOKEN/XRP LP Tokens</h6>
@@ -1180,7 +1215,7 @@
             </div>
           </div>
           <div id="step-confirm-single-sided">
-            <label class="label" for="diposit">You’re Depositing</label>
+            <label class="label" for="diposit">You're Depositing</label>
             <div class="is-confirmation">
               <div class="deposit">
                 <div class="deposit-amount">
@@ -1192,7 +1227,7 @@
                 </div>
               </div>
             </div>
-            <label class="label" for="diposit">You’re Receiving</label>
+            <label class="label" for="diposit">You're Receiving</label>
             <div class="is-confirmation">
               <div class="recive">
                 <h6>0.0 TOKEN/XRP LP Tokens</h6>
@@ -1572,8 +1607,6 @@
         </div>
       </div>
 
-
-
       <!-- Remove Liquidity Modal -->
        <div class="modal" id="remove-liquidity-modal">
         <div class="modal-content">
@@ -1800,14 +1833,14 @@
             </div>
           </div>
           <div id="rm-step-confirm">
-            <label class="label" for="diposit">You’re Withdrawing</label>
+            <label class="label" for="diposit">You're Withdrawing</label>
             <div class="is-confirmation">
               <div class="recive">
                 <h6>0.0 TOKEN/XRP LP Tokens</h6>
                 <p>$0.0</p>
               </div>
             </div>
-            <label class="label" for="diposit">You’re Receiving</label>
+            <label class="label" for="diposit">You're Receiving</label>
             <div class="is-confirmation">
               <div class="deposit">
                 <div class="deposit-amount">
@@ -1871,7 +1904,7 @@
             </div>
           </div>
           <div id="rm-step-confirm-single-sided">
-            <label class="label" for="diposit">You’re Withdrawing</label>
+            <label class="label" for="diposit">You're Withdrawing</label>
             <div class="is-confirmation">
               <div class="recive">
                 <h6>0.0 TOKEN/XRP LP Tokens</h6>
@@ -1879,7 +1912,7 @@
               </div>
             </div>
 
-            <label class="label" for="diposit">You’re Receiving</label>
+            <label class="label" for="diposit">You're Receiving</label>
             <div class="is-confirmation">
               <div class="recive">
                 <h6>0.0 XRP</h6>
@@ -2063,8 +2096,6 @@
         </div>
       </div>
 
-
-
       <!-- Select Token List Modal -->
       <div class="select-token-list-modal-overlay">
         <div class="select-token-list-modal">
@@ -2202,11 +2233,11 @@
     </main>
 
     <!-- Main section ends here -->
-     <script src="./js/loadNavbar.js"></script>
+    <script src="./js/loadNavbar.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/lp.js"></script>
-   
-     
+    
+    
   </body>
 </html>
