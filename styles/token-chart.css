@@ -613,8 +613,8 @@ a {
     display: flex;
     flex: 1;
     text-align: center;
-    justify-content: center;
-    padding: 12px 0 6px 0;
+    justify-content: start;
+    padding: 12px 16px 6px 16px;
     border-bottom: 0.5px solid var(--borderDefaultPrimary);
     transition: all 0.3s ease-in-out;
     background: transparent;
@@ -630,13 +630,19 @@ a {
   }
 
   .tab-btn.active {
-    color: var(--textBrandDefault);
-    border-bottom: 1px solid var(--borderBrandDefault);
+    color: #f5f5f5 !important;
+    border-bottom: none !important;
+    border-top: 0.5px solid #ffffff0d !important;
+    border-right: 0.5px solid #ffffff0d !important;
+    border-left: 0.5px solid #ffffff0d !important;
+    background-color: #181924 !important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 
   .tab-content {
     display: none;
-    padding: 0 16px 16px 16px;
+    padding: 0;
     margin-top: 8px;
   }
 
@@ -666,6 +672,7 @@ a {
           align-items: center;
           gap: 4px;
           white-space: nowrap;
+          font-weight: 400;
         }
       }
 
