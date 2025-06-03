@@ -18,7 +18,7 @@
 
   .wallets {
     font-size: 16px;
-    color: var(--text-primary);
+    color: #1E1E1E;
   }
 }
 
@@ -780,7 +780,7 @@
 
         .table-xrp-logo {
           width: 12px;
-          
+          aspect-ratio: 1/1;
           color: white!important;
         }
       }
@@ -895,6 +895,61 @@
     scrollbar-width: none;
   }
 }
+ .table-toggle-switch {
+      width: 44px;
+      height: 18px;
+      border-radius: 10px;
+      background: transparent;
+      border: 1px solid var(--borderDefaultSecondary);
+      position: relative;
+      cursor: pointer;
+    }
+    .table-toggle-switch * {
+      transition: all 0.3s ease;
+      user-select: none;
+    }
+
+    .table-toggle-switch .table-toggle-icon-wrapper {
+      height: 26px;
+      aspect-ratio: 1/1;
+      background: var(--bgDefaultPrimaryHov);
+      border: 1px solid var(--borderDefaultPrimary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translate(calc(-5%), -50%);
+    }
+    .table-toggle-switch .table-toggle-icon-wrapper .dollar-icon {
+      display: none;
+    }
+
+    .quick-buy-toggle-btn .quick-buy-icon-wrapper .xrp-icon {
+      display: block;
+    }
+
+    .table-toggle-switch
+      input[type="checkbox"]:checked
+      ~ .table-toggle-icon-wrapper {
+      transform: translate(calc(44px - 100%), -50%);
+    }
+
+    .table-toggle-switch
+      input[type="checkbox"]:checked
+      ~ .table-toggle-icon-wrapper
+      .dollar-icon {
+      display: block;
+    }
+
+    .table-toggle-switch
+      input[type="checkbox"]:checked
+      ~ .table-toggle-icon-wrapper
+      .xrp-icon {
+      display: none;
+    }
+
 
 /* Table section CSS ends here */
 
