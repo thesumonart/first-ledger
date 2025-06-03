@@ -40,228 +40,198 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Sidebar quick trade
 
-const resetTradeState = () => {
-  firstInnerContent.style.display = "block";
-  secondInnerContent.style.display = "none";
+// Refactored Quick Trade Script for Multiple Instances
 
-  SBquickBuyBtn.style.display = "flex";
-  cancelConfirmWrapper.style.display = "none";
-  doneButton.style.display = "none";
+document.querySelectorAll(".side-quick-trade").forEach((tradeBlock) => {
+  const buyButton = tradeBlock.querySelector(".action-button#buyButton");
+  const sellButton = tradeBlock.querySelector(".action-button#sellButton");
+  const amountInput = tradeBlock.querySelector(".amount-input");
+  const firstInnerContent = tradeBlock.querySelector(".first-inner-content");
+  const secondInnerContent = tradeBlock.querySelector(".second-inner-content");
+  const seeTransactionText = tradeBlock.querySelector(".see-transaction");
+  const sendingLabelText = tradeBlock.querySelector(".sending-label");
+  const receivingLabelText = tradeBlock.querySelector(".receiving-label");
+  const cancelButton = tradeBlock.querySelector(".cancel-btn");
+  const confirmButton = tradeBlock.querySelector(".confirm-btn");
+  const doneButton = tradeBlock.querySelector(".done-btn");
+  const cancelConfirmWrapper = tradeBlock.querySelector(
+    ".cancel-confirm-btn-wrapper"
+  );
+  const SBquickBuyBtn = tradeBlock.querySelector(".quick-action-button");
+  const slippageInput = tradeBlock.querySelector(".slippage-input");
 
-  seeTransactionText.style.display = "none";
+  const presetCustomizeButton = tradeBlock.querySelector(
+    ".preset-customize-btn"
+  );
+  const presetInputs = tradeBlock.querySelectorAll(".preset-btn");
+  const mainAmountInput = amountInput;
+  const quickBuyToggleBtn = tradeBlock.querySelector("#quickBuyToggleBtn");
 
-  sendingLabelText.innerHTML = "You're Sending";
-  sendingLabelText.style.color = "";
+  let currentMode = "buy";
+  let isEditMode = false;
+  let originalIcon = presetCustomizeButton.querySelector("img").src;
 
-  receivingLabelText.innerHTML = "To Receive";
-  receivingLabelText.style.color = "";
+  const resetTradeState = () => {
+    firstInnerContent.style.display = "block";
+    secondInnerContent.style.display = "none";
 
-  slippageInput.value = "";
-};
-
-const SBquickBuyBtn = document.querySelector(".quick-action-button");
-
-const buyButton = document.getElementById("buyButton");
-const sellButton = document.getElementById("sellButton");
-const amountInput = document.getElementById("amountInput");
-const firstInnerContent = document.querySelector(".first-inner-content");
-const secondInnerContent = document.querySelector(".second-inner-content");
-const seeTransactionText = document.querySelector(".see-transaction");
-const sendingLabelText = document.querySelector(".sending-label");
-const receivingLabelText = document.querySelector(".receiving-label");
-const cancelButton = document.querySelector(".cancel-btn");
-const confirmButton = document.querySelector(".confirm-btn");
-const doneButton = document.querySelector(".done-btn");
-const cancelConfirmWrapper = document.querySelector(
-  ".cancel-confirm-btn-wrapper"
-);
-
-let currentMode = "buy";
-
-const updateButtonDisplay = (mode) => {
-  const quickBuyToggleBtn = document.getElementById("quickBuyToggleBtn");
-  const isToggleChecked = quickBuyToggleBtn && quickBuyToggleBtn.checked;
-
-  if (mode === "buy") {
-    buyButton.classList.remove("button-inactive");
-    buyButton.classList.add("buy-active");
-    sellButton.classList.remove("sell-active");
-    sellButton.classList.add("button-inactive");
-    SBquickBuyBtn.classList.remove("sell-active");
-    SBquickBuyBtn.classList.add("buy-active");
-
-    if (isToggleChecked) {
-      SBquickBuyBtn.innerHTML = `
-        <figure>
-          <img src="./public/images/arrow-icon.svg" alt="arrow-icon" />
-        </figure>
-        Review Buy TOKEN
-      `;
-    } else {
-      SBquickBuyBtn.innerHTML = `
-        <figure>
-          <img src="./public/images/zap-icon.svg" alt="zap-icon" />
-        </figure>
-        Quick Buy TOKEN
-      `;
-    }
-
-    amountInput.placeholder = "Amount to Buy (XRP)";
-  } else {
-    sellButton.classList.remove("button-inactive");
-    sellButton.classList.add("sell-active");
-    buyButton.classList.remove("buy-active");
-    buyButton.classList.add("button-inactive");
-    SBquickBuyBtn.classList.remove("buy-active");
-    SBquickBuyBtn.classList.add("sell-active");
-
-    if (isToggleChecked) {
-      SBquickBuyBtn.innerHTML = `
-        <figure>
-          <img src="./public/images/arrow-icon.svg" alt="arrow-icon" />
-        </figure>
-        Review Sell TOKEN
-      `;
-    } else {
-      SBquickBuyBtn.innerHTML = `
-        <figure>
-          <img src="./public/images/zap-icon.svg" alt="zap-icon" />
-        </figure>
-        Quick Sell TOKEN
-      `;
-    }
-
-    amountInput.placeholder = "Amount to Sell (XRP)";
-  }
-};
-
-const setMode = (mode) => {
-  currentMode = mode;
-  updateButtonDisplay(mode);
-};
-
-setMode("buy");
-
-const setAmount = (xrp) => {
-  amountInput.value = xrp;
-};
-
-const quickBuyToggleBtn = document.getElementById("quickBuyToggleBtn");
-if (quickBuyToggleBtn) {
-  quickBuyToggleBtn.addEventListener("change", () => {
-    updateButtonDisplay(currentMode);
-  });
-}
-
-SBquickBuyBtn.addEventListener("click", () => {
-  firstInnerContent.style.display = "none";
-  secondInnerContent.style.display = "block";
-
-  SBquickBuyBtn.style.display = "none";
-  cancelConfirmWrapper.style.display = "flex";
-});
-
-cancelButton.addEventListener("click", () => {
-  resetTradeState();
-});
-
-confirmButton.addEventListener("click", () => {
-  cancelButton.setAttribute("disabled", true);
-  confirmButton.setAttribute("disabled", true);
-  cancelButton.classList.add("disabled");
-  confirmButton.classList.add("disabled");
-  setTimeout(() => {
+    SBquickBuyBtn.style.display = "flex";
     cancelConfirmWrapper.style.display = "none";
-    doneButton.style.display = "block";
-    cancelButton.removeAttribute("disabled", true);
-    confirmButton.removeAttribute("disabled", true);
-    cancelButton.classList.remove("disabled");
-    confirmButton.classList.remove("disabled");
-    seeTransactionText.style.display = "Flex";
+    doneButton.style.display = "none";
 
-    sendingLabelText.innerHTML = `You Sent <span><img src="../public/images/check-mark-round.svg" alt="Check-mark-icon" /></span>`;
-    sendingLabelText.style.color = "var(--textPositiveSecondary)";
+    seeTransactionText.style.display = "none";
 
-    receivingLabelText.innerHTML = `You Received <span><img src="../public/images/check-mark-round.svg" alt="Check-mark-icon" /></span>`;
-    receivingLabelText.style.color = "var(--textPositiveSecondary)";
-  }, 2000);
-});
+    sendingLabelText.innerHTML = "You're Sending";
+    sendingLabelText.style.color = "";
 
-doneButton.addEventListener("click", () => {
-  resetTradeState();
-});
+    receivingLabelText.innerHTML = "To Receive";
+    receivingLabelText.style.color = "";
 
-const presetCustomizeButton = document.querySelector(".preset-customize-btn");
-const presetInputs = document.querySelectorAll(".preset-btn");
-const mainAmountInput = document.querySelector(".amount-input");
+    slippageInput.value = "";
+  };
 
-let isEditMode = false;
-let originalIcon = presetCustomizeButton.querySelector("img").src;
+  const updateButtonDisplay = (mode) => {
+    const isToggleChecked = quickBuyToggleBtn && quickBuyToggleBtn.checked;
 
-presetInputs.forEach((input) => {
-  let parentWrapper = input.closest(".preset-btn-wrapper");
-  if (parentWrapper) {
-    let initialValue = input.placeholder || "0";
-    parentWrapper.setAttribute("data-value", initialValue);
+    if (mode === "buy") {
+      buyButton.classList.remove("button-inactive");
+      buyButton.classList.add("buy-active");
+      sellButton.classList.remove("sell-active");
+      sellButton.classList.add("button-inactive");
+      SBquickBuyBtn.classList.remove("sell-active");
+      SBquickBuyBtn.classList.add("buy-active");
+
+      SBquickBuyBtn.innerHTML = isToggleChecked
+        ? `<figure><img src="./public/images/arrow-icon.svg" alt="arrow-icon" /></figure>Review Buy TOKEN`
+        : `<figure><img src="./public/images/zap-icon.svg" alt="zap-icon" /></figure>Quick Buy TOKEN`;
+
+      amountInput.placeholder = "Amount to Buy (XRP)";
+    } else {
+      sellButton.classList.remove("button-inactive");
+      sellButton.classList.add("sell-active");
+      buyButton.classList.remove("buy-active");
+      buyButton.classList.add("button-inactive");
+      SBquickBuyBtn.classList.remove("buy-active");
+      SBquickBuyBtn.classList.add("sell-active");
+
+      SBquickBuyBtn.innerHTML = isToggleChecked
+        ? `<figure><img src="./public/images/arrow-icon.svg" alt="arrow-icon" /></figure>Review Sell TOKEN`
+        : `<figure><img src="./public/images/zap-icon.svg" alt="zap-icon" /></figure>Quick Sell TOKEN`;
+
+      amountInput.placeholder = "Amount to Sell (XRP)";
+    }
+  };
+
+  const setMode = (mode) => {
+    currentMode = mode;
+    updateButtonDisplay(mode);
+  };
+
+  setMode("buy");
+
+  if (quickBuyToggleBtn) {
+    quickBuyToggleBtn.addEventListener("change", () => {
+      updateButtonDisplay(currentMode);
+    });
   }
-});
 
-presetCustomizeButton.addEventListener("click", function () {
-  isEditMode = !isEditMode;
+  SBquickBuyBtn.addEventListener("click", () => {
+    firstInnerContent.style.display = "none";
+    secondInnerContent.style.display = "block";
+    SBquickBuyBtn.style.display = "none";
+    cancelConfirmWrapper.style.display = "flex";
+  });
+
+  cancelButton.addEventListener("click", () => {
+    resetTradeState();
+  });
+
+  confirmButton.addEventListener("click", () => {
+    cancelButton.disabled = true;
+    confirmButton.disabled = true;
+    cancelButton.classList.add("disabled");
+    confirmButton.classList.add("disabled");
+
+    setTimeout(() => {
+      cancelConfirmWrapper.style.display = "none";
+      doneButton.style.display = "block";
+      seeTransactionText.style.display = "flex";
+
+      cancelButton.disabled = false;
+      confirmButton.disabled = false;
+      cancelButton.classList.remove("disabled");
+      confirmButton.classList.remove("disabled");
+
+      sendingLabelText.innerHTML = `You Sent <span><img src="../public/images/check-mark-round.svg" alt="Check-mark-icon" /></span>`;
+      sendingLabelText.style.color = "var(--textPositiveSecondary)";
+
+      receivingLabelText.innerHTML = `You Received <span><img src="../public/images/check-mark-round.svg" alt="Check-mark-icon" /></span>`;
+      receivingLabelText.style.color = "var(--textPositiveSecondary)";
+    }, 2000);
+  });
+
+  doneButton.addEventListener("click", () => {
+    resetTradeState();
+  });
 
   presetInputs.forEach((input) => {
-    if (isEditMode) {
-      input.removeAttribute("readonly");
-      input.classList.add("editable");
-      input.style.backgroundColor = "var(--bgDefaultPrimary)";
-    } else {
-      input.setAttribute("readonly", "true");
-      input.classList.remove("editable");
-      input.style.backgroundColor = "";
-
-      let parentWrapper = input.closest(".preset-btn-wrapper");
-      if (parentWrapper) {
-        parentWrapper.setAttribute(
-          "data-value",
-          input.value || input.placeholder
-        );
-      }
+    const parentWrapper = input.closest(".preset-btn-wrapper");
+    if (parentWrapper) {
+      parentWrapper.setAttribute("data-value", input.placeholder || "0");
     }
   });
 
-  if (isEditMode) {
-    presetCustomizeButton.classList.add("active");
-    presetCustomizeButton.querySelector("img").src =
-      "./public/images/check-mark-white.svg";
-    presetCustomizeButton.style.backgroundColor = "var(--bgBrandDefault)";
-  } else {
-    presetCustomizeButton.classList.remove("active");
-    presetCustomizeButton.querySelector("img").src = originalIcon;
-    presetCustomizeButton.style.backgroundColor = "";
-  }
-});
+  presetCustomizeButton.addEventListener("click", () => {
+    isEditMode = !isEditMode;
 
-document.querySelectorAll(".preset-btn-wrapper").forEach((wrapper) => {
-  wrapper.addEventListener("click", function () {
-    if (!isEditMode) {
-      let storedValue = wrapper.getAttribute("data-value");
-      if (storedValue) {
-        mainAmountInput.value = storedValue;
+    presetInputs.forEach((input) => {
+      if (isEditMode) {
+        input.removeAttribute("readonly");
+        input.classList.add("editable");
+        input.style.backgroundColor = "var(--bgDefaultPrimary)";
+      } else {
+        input.setAttribute("readonly", "true");
+        input.classList.remove("editable");
+        input.style.backgroundColor = "";
+
+        const parentWrapper = input.closest(".preset-btn-wrapper");
+        if (parentWrapper) {
+          parentWrapper.setAttribute(
+            "data-value",
+            input.value || input.placeholder
+          );
+        }
       }
+    });
+
+    presetCustomizeButton.classList.toggle("active", isEditMode);
+    presetCustomizeButton.querySelector("img").src = isEditMode
+      ? "./public/images/check-mark-white.svg"
+      : originalIcon;
+    presetCustomizeButton.style.backgroundColor = isEditMode
+      ? "var(--bgBrandDefault)"
+      : "";
+  });
+
+  tradeBlock.querySelectorAll(".preset-btn-wrapper").forEach((wrapper) => {
+    wrapper.addEventListener("click", () => {
+      if (!isEditMode) {
+        const storedValue = wrapper.getAttribute("data-value");
+        if (storedValue) {
+          mainAmountInput.value = storedValue;
+        }
+      }
+    });
+  });
+
+  slippageInput.addEventListener("blur", function () {
+    const value = this.value.trim();
+    if (value !== "" && !value.includes("%")) {
+      this.value = value + "%";
     }
   });
-});
 
-const slippageInput = document.querySelector(".slippage-input");
-
-slippageInput.addEventListener("blur", function () {
-  let value = this.value.trim();
-
-  if (value !== "" && !value.includes("%")) {
-    this.value = value + "%";
-  }
-});
-
-slippageInput.addEventListener("focus", function () {
-  this.value = this.value.replace("%", "");
+  slippageInput.addEventListener("focus", function () {
+    this.value = this.value.replace("%", "");
+  });
 });
