@@ -694,7 +694,27 @@
       background: var(--bg-secondary) !important;
     }
   }
+.table-headingg {
+    display: grid;
+    padding: 16px calc((100vw - 1420px) / 2);
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
+    th {
+      text-align: start;
+      font-size: 14px;
+      color: var(--bgUtilitiesHighlight4);
+      font-weight: 300;
+      background: transparent;
+
+      &:first-child {
+        padding-left: 16px;
+      }
+
+      &:last-child {
+        text-align: end;
+      }
+    }
+  }
   .table-heading {
     display: grid;
     padding: 16px calc((100vw - 1420px) / 2);
