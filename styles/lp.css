@@ -60,6 +60,21 @@
     padding: 0 12px;
   }
 
+  .table {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      border: 0.5px solid var(--borderDefaultPrimary);
+      border-radius: 10px;
+
+      @media (max-width: 768px) {
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+    }
   .table-section {
     tr {
       padding-left: 12px !important;
@@ -581,7 +596,7 @@
 .my-pools-main {
   padding: 20px 0px;
   border-top: 1px solid #3f4258;
-  border-bottom: 1px solid #3f4258;
+  
 }
 
 .best-pools-main {
@@ -626,24 +641,32 @@
 .table-section {
   .table-scroll {
     width: 100%;
-    /* overflow-x: auto; */
+      padding: 0 5px;
+       @media (max-width: 1024px) {
+        padding: 0 24px;
+      }
+      @media (max-width: 767px) {
+        padding: 0;
+      }
   }
 
-  .table-scroll::-webkit-scrollbar {
-    display: none;
-  }
+   .table-scroll::-webkit-scrollbar {
+      display: none;
+    }
 
-  .table-scroll table {
-    min-width: 900px;
-    width: 100%;
-    border-collapse: collapse;
-  }
 
-  .table-content-wrapper {
-    /* overflow-x: auto !important; */
-  }
+  .table-scroll .table {
+      width: 100%;
+      border-collapse: collapse;
 
-  table {
+      @media (max-width: 767px) {
+        min-width: unset;
+      }
+    }
+
+
+
+  .table {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -687,9 +710,7 @@
     column-span: 6;
   }
 
-  thead tr {
-    border-top: 0.5px solid var(--border-primary);
-  }
+  
 
   tr {
     border-bottom: 0.5px solid var(--border-primary);
