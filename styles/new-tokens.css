@@ -354,8 +354,18 @@
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 420px) {
+  @media (max-width: 767px) {
     align-items: end;
+
+    .modal_con_wrapper {
+      width: 100%;
+    }
+
+    .cust_mod_pop_con {
+      width: 100%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   }
 }
 
@@ -535,11 +545,12 @@
 .view-input-list-item .cust-view-input {
   @media (max-width: 1024px) {
     background-color: #434343;
+    flex-direction: row-reverse;
   }
 }
 
 input[type="checkbox"]:checked + .cust-svg-wrapper {
-  background: var(--bgBrandDefault);
+  background: var(--bgBrandSecondary);
   border-color: none;
 }
 
@@ -578,7 +589,7 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
   border: 1px solid var(--borderDefaultPrimary);
   border-radius: 4px;
   outline: none;
-  background-color: var(--bgDefaultPrimary);
+  background-color: var(--bgUtilitiesHighlight);
   border-radius: 10px;
   width: 100%;
   color: var(--textDefaultTertiary);
@@ -614,22 +625,22 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
   }
 
   .cust-view-input:has(.view-input:checked) {
-    background: var(--bgBrandDefault);
+    background: var(--bgBrandSecondary);
 
     svg {
       path {
-        stroke: #6f93fe;
+        stroke: #f3f3f3;
       }
     }
   }
 
   .checkbox_inp.audit {
     .cust-view-input:has(.view-input:checked) {
-      background: var(--bgAccentTertiary);
+      background: var(--bgBrandSecondary);
     }
 
     .cust-view-input:has(.view-input:checked) .cust-view-input-div {
-      display: none;
+      display: flex;
     }
   }
 
