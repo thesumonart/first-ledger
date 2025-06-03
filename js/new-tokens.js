@@ -40,3 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Clicking token name-icon ref to Token-chart page
+
+document.querySelectorAll(".token-cell").forEach((token) => {
+  token.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "/token-chart.html";
+  });
+});

@@ -95,3 +95,7 @@ async function handleQuickBuyClick(e) {
 quickBuyActBtn.forEach((btn) => {
   btn.addEventListener("click", handleQuickBuyClick);
 });
+
+document.querySelectorAll(".quick-buy-confirm").forEach((btn) => {
+  btn.addEventListener("click", handleQuickBuyClick);
+});

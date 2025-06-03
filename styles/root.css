@@ -72,6 +72,54 @@
   --text-primary: #ffffff;
   --border-primary: #2f303e;
   --border-secondary: #3e4051;
+
+  /* Token chart page */
+
+  /* Text Colors */
+  --textDefaultPrimary: #f5f5f5;
+  --textDefaultTertiary: #757575;
+  --textBrandDefault: #6f93fe;
+  --textOnBrand: #0e0f43;
+  --textOnBrandSecondary: #d0deff;
+  --textPositiveDefault: #c6f5cb;
+  --textPositiveSecondary: #85e0a3;
+  --textPositiveOnPositive: #e3ffe7;
+  --textDefaultSecondary: #d9d9d9;
+  --textDangerDefault: #fcb3ad;
+  --textDangerSecondary: #ff7d6f;
+  --textDangerOnDanger: #fee9e7;
+  --textNeutralDefault: #f3f3f3;
+  --textNeutralTertiary: #cdcdcd;
+  --textDisabledDefault: #757575;
+
+  /* Background Colors */
+
+  --bgBrandDefault: #456eeb;
+  --bgBrandHover: #1f3ccd;
+  --bgBrandSecondary: #253bac;
+  --bgDefaultPrimary: #13131b;
+  --bgDefaultPrimaryHov: #181924;
+  --bgDefaultSecondary: #242534;
+  --bgAccentTertiary: #115e59;
+  --bgPositiveDefault: #008043;
+  --bgPositiveSecondary: #02542d;
+  --bgDangerDefault: #f03330;
+  --bgDisabledDefault: #34374a;
+  --bgUtilitiesHighlight: rgba(255, 255, 255, 0.01);
+  --bgUtilitiesHighlight2: rgba(255, 255, 255, 0.02);
+  --bgUtilitiesHighlight3: rgba(255, 255, 255, 0.05);
+  --bgUtilitiesHighlightBrand: rgba(135, 165, 255, 0.03);
+
+  /* Border Colors */
+
+  --borderDefaultPrimary: #242534;
+  --borderDefaultSecondary: #34374a;
+  --borderBrandDefault: #354ed8;
+  --borderBrandTertiary: #161e69;
+  --borderPositiveSecondary: #14ae5c;
+  --borderDangerSecondary: #ff7d6f;
+  --borderDisabledDefault: #383838;
+  --borderNeutralTertiary: #767676;
 }
 
 /* Reset CSS */
@@ -146,7 +194,7 @@ a {
   display: none;
   flex-direction: column;
   gap: 4px;
-  position: absolute;
+  position: fixed;
   padding: 16px 8px 16px 16px;
   left: 38px;
   bottom: 38px;
