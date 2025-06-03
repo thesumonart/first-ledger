@@ -61,16 +61,20 @@ document.querySelectorAll(".side-quick-trade").forEach((tradeBlock) => {
     presetCustomize: tradeBlock.querySelector(".preset-customize-btn"),
     presetInputs: tradeBlock.querySelectorAll(".preset-btn"),
     presetWrappers: tradeBlock.querySelectorAll(".preset-btn-wrapper"),
-    quickBuyToggle: tradeBlock.querySelector("#quickBuyToggleBtn"),
+    quickBuyToggles: tradeBlock.querySelectorAll(".quickBuyToggleBtn"),
   };
 
   let currentMode = "buy";
   let isEditMode = false;
   const originalIcon = elements.presetCustomize.querySelector("img").src;
 
+  const isQuickBuy = () =>
+    Array.from(elements.quickBuyToggles).some((toggle) => toggle.checked);
+
   const setMode = (mode) => {
     currentMode = mode;
-    const isQuickBuy = elements.quickBuyToggle?.checked;
+
+    const quickBuy = isQuickBuy();
 
     const updateButton = (btn, add, remove) => {
       btn.classList.add(add);
@@ -93,11 +97,11 @@ document.querySelectorAll(".side-quick-trade").forEach((tradeBlock) => {
       mode === "buy" ? "sell-active" : "buy-active"
     );
 
-    const label = isQuickBuy ? "Review" : "Quick";
+    const label = quickBuy ? "Review" : "Quick";
+    const icon = quickBuy ? "arrow-icon" : "zap-icon";
+
     elements.quickActionBtn.innerHTML = `
-      <figure><img src="./public/images/${
-        isQuickBuy ? "arrow-icon" : "zap-icon"
-      }.svg" alt="icon" /></figure>
+      <figure><img src="./public/images/${icon}.svg" alt="icon" /></figure>
       ${label} ${mode === "buy" ? "Buy" : "Sell"} TOKEN
     `;
 
@@ -113,6 +117,7 @@ document.querySelectorAll(".side-quick-trade").forEach((tradeBlock) => {
     elements.cancelConfirm.style.display = "none";
     elements.doneBtn.style.display = "none";
     elements.seeTransaction.style.display = "none";
+
     elements.sendingLabel.innerHTML = "You're Sending";
     elements.sendingLabel.style.color = "";
     elements.receivingLabel.innerHTML = "To Receive";
@@ -122,6 +127,7 @@ document.querySelectorAll(".side-quick-trade").forEach((tradeBlock) => {
 
   const toggleEditMode = () => {
     isEditMode = !isEditMode;
+
     elements.presetCustomize.classList.toggle("active", isEditMode);
     elements.presetCustomize.querySelector("img").src = isEditMode
       ? "./public/images/check-mark-white.svg"
@@ -137,8 +143,9 @@ document.querySelectorAll(".side-quick-trade").forEach((tradeBlock) => {
 
       if (!isEditMode) {
         const wrapper = input.closest(".preset-btn-wrapper");
-        if (wrapper)
+        if (wrapper) {
           wrapper.setAttribute("data-value", input.value || input.placeholder);
+        }
       }
     });
   };
@@ -181,8 +188,10 @@ document.querySelectorAll(".side-quick-trade").forEach((tradeBlock) => {
     setMode("sell");
   });
 
-  elements.quickBuyToggle?.addEventListener("change", () => {
-    setMode(currentMode);
+  elements.quickBuyToggles.forEach((toggle) => {
+    toggle.addEventListener("change", () => {
+      setMode(currentMode);
+    });
   });
 
   elements.quickActionBtn.addEventListener("click", () => {
@@ -195,7 +204,6 @@ document.querySelectorAll(".side-quick-trade").forEach((tradeBlock) => {
   elements.cancelBtn.addEventListener("click", resetTradeState);
   elements.doneBtn.addEventListener("click", resetTradeState);
   elements.confirmBtn.addEventListener("click", handleConfirm);
-
   elements.presetCustomize.addEventListener("click", toggleEditMode);
 
   elements.presetWrappers.forEach((wrapper) => {
