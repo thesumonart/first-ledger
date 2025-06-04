@@ -1122,7 +1122,7 @@
   background: var(--bg-secondary);
   border: 1px solid var(--border-primary);
   border-radius: 16px;
-  padding: 24px;
+  padding: 24px 24px 24px 24px;
   max-width: 500px;
   width: 90%;
   max-height: 80vh;
@@ -1130,13 +1130,30 @@
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .token-details-content {
+    /* margin: 16px; */
+    width: calc(110% - 32px);
+    margin-bottom: -115px;
+    padding: 16px 16px 24px 16px;
+  }
+
+  .token-actions {
+    /* flex-direction: column; */
+  }
+}
 .token-details-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
+  position: relative !important;
 }
-
+@media (max-width: 768px) {
+  .token-details-header {
+    margin-bottom: 16px;
+  }
+}
 .token-details-title {
   display: flex;
   align-items: center;
@@ -1179,7 +1196,11 @@
   font-weight: 600;
   margin: 0;
 }
-
+@media (max-width: 768px) {
+  .token-details-info h2 {
+    font-size: 18px;
+  }
+}
 .token-details-info p {
   color: var(--text-primary);
   font-size: 16px;
@@ -1188,12 +1209,23 @@
 }
 
 .close-token-modal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 8px;
   border-radius: 8px;
   transition: background 0.2s;
+  z-index: 50;
+}
+@media (max-width: 768px) {
+  .close-token-modal {
+    padding: 0px;
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .close-token-modal:hover {
@@ -1215,11 +1247,23 @@
   padding-top: 25px;
 }
 
+@media (max-width: 768px) {
+  .token-position-details {
+    margin-bottom: 16px;
+    padding-top: 8px;
+    padding-bottom: 0px;
+  }
+}
 .position-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .position-item {
+    margin-bottom: 6px;
+  }
 }
 
 .position-label {
@@ -1258,7 +1302,19 @@
   cursor: pointer;
   transition: all 0.2s;
 }
-
+@media (max-width: 768px) {
+  .token-actions {
+    gap: 8px;
+  }
+  .token-action-btn {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
 .token-action-btn.primary {
   background: #181924;
   color: white;
@@ -1273,17 +1329,6 @@
   opacity: 0.8;
 }
 
-@media (max-width: 768px) {
-  .token-details-content {
-    /* margin: 16px; */
-    width: calc(110% - 32px);
-    margin-bottom: -115px;
-  }
-
-  .token-actions {
-    flex-direction: column;
-  }
-}
 /* Table section CSS ends here */
 
 .new-tokens-table-section {
