@@ -1911,8 +1911,8 @@
   .tooltip-icon {
     position: relative;
 
-    .tooltip {
-      display: block;
+    .tooltip-text {
+      display: none;
       position: absolute;
       bottom: calc(100% + 8px);
       background: var(--bgDefaultPrimary);
@@ -1924,6 +1924,10 @@
       font-size: 14px;
       white-space: nowrap;
       z-index: 999;
+
+      span {
+        display: flex;
+      }
     }
   }
 
@@ -1933,7 +1937,7 @@
     height: auto;
 
     &:hover {
-      .tooltip {
+      .tooltip-text {
         display: block;
       }
     }
