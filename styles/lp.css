@@ -780,6 +780,7 @@
   }
 
   .token-cell {
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -1009,6 +1010,230 @@
     }
 
 
+    
+      /* Additional styles for tab functionality */
+      .table-section-title-text p {
+        cursor: pointer;
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      
+      .table-section-title-text p.active {
+        color: #6F93FE;
+      }
+      
+      .table-section-title-text p.active::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #6F93FE;
+      }
+      
+      .hidden-section {
+        display: none;
+      }
+
+      /* Open Modal Button for Demo */
+.open-modal-btn {
+  background: var(--bgBrandDefault);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.open-modal-btn:hover {
+  opacity: 0.9;
+}
+
+/* Token Details Modal Styles */
+.token-details-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.token-details-modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.token-details-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.token-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.token-details-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.token-details-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f97316; /* Orange color from the screenshot */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Creating the token icon design from the screenshot */
+.token-details-icon::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.token-details-icon::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #f97316;
+  border-radius: 50%;
+}
+
+.token-details-info h2 {
+  color: var(--text-primary);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.token-details-info p {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0 0 0;
+}
+
+.close-token-modal {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.close-token-modal:hover {
+  background: var(--bg-primary);
+}
+
+.close-token-modal img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Position Details Styles */
+.token-position-details {
+    margin-bottom: 135px;
+    border-top: 1px solid rgb(86, 86, 86);
+    
+    padding-top: 25px;
+}
+
+.position-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.position-label {
+  font-size: 14px;
+  color: gray;
+  margin: 0;
+}
+
+.info-icon {
+  font-size: 12px;
+  color: var(--textOnBrandSecondary);
+}
+
+.position-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Token Actions */
+.token-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.token-action-btn {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.token-action-btn.primary {
+  background: #181924;
+  color: white;
+}
+
+.token-action-btn.secondary {
+  background: #181924;
+  color: var(--text-primary);
+ 
+}
+
+.token-action-btn:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .token-details-content {
+    margin: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .token-actions {
+    flex-direction: column;
+  }
+}
 /* Table section CSS ends here */
 
 
