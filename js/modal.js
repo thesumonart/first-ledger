@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to add click-outside-to-close functionality to any modal
   function addClickOutsideToClose(modalClone) {
     // Close modal when clicking outside of modal content
-    modalClone.addEventListener('click', function(event) {
+    modalClone.addEventListener("click", function (event) {
       // Check if the clicked target is the modal overlay (not the modal content)
       if (event.target === modalClone) {
         modalClone.remove();
@@ -19,25 +19,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Prevent modal from closing when clicking inside the modal content
-    const modalContent = modalClone.querySelector('.modal-content');
+    const modalContent = modalClone.querySelector(".modal-content");
     if (modalContent) {
-      modalContent.addEventListener('click', function(event) {
+      modalContent.addEventListener("click", function (event) {
         event.stopPropagation();
       });
     }
 
     // Close modal with Escape key
-    const escapeKeyHandler = function(event) {
-      if (event.key === 'Escape' && modalClone.style.display !== 'none') {
+    const escapeKeyHandler = function (event) {
+      if (event.key === "Escape" && modalClone.style.display !== "none") {
         modalClone.remove();
-        document.removeEventListener('keydown', escapeKeyHandler);
+        document.removeEventListener("keydown", escapeKeyHandler);
       }
     };
-    document.addEventListener('keydown', escapeKeyHandler);
+    document.addEventListener("keydown", escapeKeyHandler);
   }
 
   actionButtons.forEach((button, index) => {
     button.addEventListener("click", function () {
+      const tokenDetailsModal = document.querySelector(".token-details-modal");
+      if (tokenDetailsModal && tokenDetailsModal.classList.contains("show")) {
+        tokenDetailsModal.classList.remove("show");
+      }
       let modalClone = addLiquidity.cloneNode(true);
       modalClone.id = `modal-${index}`;
       document.body.appendChild(modalClone);
@@ -401,6 +405,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // remove modal
   removeLiquidityButtons.forEach((button, index) => {
     button.addEventListener("click", function () {
+      const tokenDetailsModal = document.querySelector(".token-details-modal");
+      if (tokenDetailsModal && tokenDetailsModal.classList.contains("show")) {
+        tokenDetailsModal.classList.remove("show");
+      }
       let modalClone = removeLiquidity.cloneNode(true);
       modalClone.id = `rm-modal-${index}`;
       document.body.appendChild(modalClone);
@@ -620,6 +628,4 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-  
-  
 });
