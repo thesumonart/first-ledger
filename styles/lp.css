@@ -281,9 +281,7 @@
         display: flex;
       }
 
-      .add-liquidity-button {
-        display: none;
-      }
+     
 
       .add-liquidity-button.add-liquidity-button-mobile {
         display: flex;
@@ -618,6 +616,13 @@
 .table-section-title-text p{
   color: white;
   opacity: 40%;
+  font-size: 20px;
+}
+@media (max-width: 425px) {
+  .table-section-title-text p {
+    font-size: 10px;
+    width: 78px;
+  }
 }
 .table-section-title-text p.active::after {
     content: '';
@@ -1229,10 +1234,11 @@
 }
 
 @media (max-width: 768px) {
-  .token-details-content {
-    margin: 16px;
-    width: calc(100% - 32px);
-  }
+ .token-details-content {
+    /* margin: 16px; */
+    width: calc(110% - 32px);
+    margin-bottom: -115px;
+}
 
   .token-actions {
     flex-direction: column;
