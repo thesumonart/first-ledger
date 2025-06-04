@@ -927,13 +927,9 @@
       <!-- Add Liquidity Modal -->
       <div class="modal" id="add-liquidity-modal">
         <div class="modal-content">
-          <div>
-            <div class="wallet-name-dropdown_wrapper">
-              <span class="close-modal">
-                <img src="./public/images/close-icon.svg" alt="close icon" />
-              </span>
-            </div>
-          </div>
+          <span class="close-modal">
+            <img src="./public/images/close-icon.svg" alt="close icon" />
+          </span>
           <div id="step-review">
             <div class="modal-title">
               <h2>Add Liquidity</h2>
@@ -1451,18 +1447,19 @@
               <div>
                 <div class="heading-vote">
                   <div class="modal-title">
-              <h2>Vote for the Fee</h2>
-              
-            </div>
-                  <p class="vote-title">Current Vote Slots</p>
-                  <div class="info-tooltip" id="tooltip-1">
-                    <img
-                      src="./public/images/info-vote.svg"
-                      alt="info-icon-dark"
-                      class="info-icon"
-                      data-tooltip="This is the price impact tooltip."
-                    />
+                    <h2>Vote for the Fee</h2>
                   </div>
+                  <p class="vote-title">
+                    Current Vote Slots
+                    <span class="info-tooltip" id="tooltip-1">
+                      <img
+                        src="./public/images/info-vote.svg"
+                        alt="info-icon-dark"
+                        class="info-icon"
+                        data-tooltip="This is the price impact tooltip."
+                      />
+                    </span>
+                  </p>
                 </div>
                 <div class="vote-table">
                   <table class="custom-table">
@@ -1557,11 +1554,14 @@
               <div>
                 <div class="heading-vote">
                   <div class="modal-title">
-              <h2>Vote for the Fee</h2>
-              
-            </div>
-                  <p class="your-vote-title">You Voted for LP Fees</p>
-                  <img src="./public/images/tick-green.svg" style="position: absolute; top: 70px; left: 205px;" alt="ok-mark" />
+                    <h2>Vote for the Fee</h2>
+                  </div>
+                  <p class="your-vote-title">
+                    You Voted for LP Fees
+                    <span
+                      ><img src="./public/images/tick-green.svg" alt="ok-mark"
+                    /></span>
+                  </p>
                 </div>
                 <div class="vote-table">
                   <table class="custom-table">

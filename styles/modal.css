@@ -22,12 +22,22 @@
 
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    align-items: end;
+
+    .modal-content {
+      margin: 0;
+      max-width: unset;
+      width: 100%;
+    }
+  }
 }
 
 .modal-content {
   background: var(--bg-secondary);
   color: var(--text-primary);
-  padding: 24px 32px;
+  padding: 16px 16px 24px 16px;
   margin: 16px;
   max-width: 500px;
   width: 100%;
@@ -74,19 +84,22 @@
 
 .close-modal {
   cursor: pointer;
-  /* border: 1px solid var(--border-primary);
-  border-radius: 8px; */
+  border: 1px solid transparent;
+  position: absolute;
+  top: 8px;
+  right: 16px;
   width: 36px;
   height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9;
 }
 
 .close-modal.is-loading {
   background-color: #34374a;
   border-radius: 8px;
-}
+  border-color: var(--border-primary);
 
 .modal-title {
   margin-bottom: 20px;
@@ -451,13 +464,29 @@ button.review:hover {
   font-weight: 400;
   color: #d9d9d9;
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  span {
+    display: flex;
+  }
+  .info-tooltip {
+    cursor: pointer;
+  }
 }
 .your-vote-title {
   font-size: 16px;
   font-weight: 400;
   color: #85e0a3;
   margin: 0;
-  display: contents;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  span {
+    display: flex;
+  }
 }
 /* table style start */
 .vote-table {
@@ -465,7 +494,6 @@ button.review:hover {
   border: 1px solid #34374a;
   border-radius: 10px;
   margin-top: 8px;
-  width: 435px;
 }
 .custom-table {
   width: 100%;
@@ -522,7 +550,6 @@ button.review:hover {
   border-radius: 10px;
   border: 1px solid #34374a;
   margin-top: 8px;
-  width: 435px;
 }
 .range-container {
   width: 100%;
@@ -659,12 +686,10 @@ button.review:hover {
   margin: 0;
 }
 .info-tooltip {
-    position: relative !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: -17px;
-    left: -45px;
+  position: relative !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tooltip {
@@ -765,10 +790,6 @@ button.review:hover {
 .modal-wallet-icon img {
   width: 18px;
   aspect-ratio: 1;
-}
-
-.modal-arrow-icon.open {
-  /* transform: rotate(180deg); */
 }
 
 .modal-dropdown-options {
@@ -983,4 +1004,5 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
