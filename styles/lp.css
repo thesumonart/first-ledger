@@ -838,7 +838,11 @@
     font-weight: 400;
     color: var(--text-primary);
   }
-
+  @media (max-width: 768px) {
+    .token-cell {
+      font-size: 14px !important;
+    }
+  }
   .token-icon {
     width: 40px;
     aspect-ratio: 1;
@@ -1578,7 +1582,11 @@
         color: var(--textDefaultPrimary);
         font-size: 16px;
       }
-
+      @media (max-width: 768px) {
+        &:only-child {
+          font-size: 14px;
+        }
+      }
       &:last-child:not(:only-child) {
         color: var(--textOnBrandSecondary);
         font-size: 14px;
@@ -1898,3 +1906,5 @@
     justify-content: end;
   }
 }
+
+/* tooltip */
