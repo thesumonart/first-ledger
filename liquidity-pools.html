@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/lp.css" />
     <link rel="stylesheet" href="./styles/modal.css" />
-    
   </head>
 
   <body>
@@ -23,7 +22,8 @@
               <div class="name-wallets">
                 <h2 class="user-name">Liquidity Pools</h2>
                 <p class="wallets">
-                  Explore, add liquidity to a pool, and manage your AMM positions
+                  Explore, add liquidity to a pool, and manage your AMM
+                  positions
                 </p>
               </div>
             </div>
@@ -54,7 +54,7 @@
         </div>
       </section>
       <!-- Portfolio Table Controls ends here -->
-      
+
       <div class="tow-table-in-one">
         <section class="my-pools-main">
           <div>
@@ -111,730 +111,806 @@
                         type="text"
                         placeholder="Search Pools"
                       />
-                      <button type="submit" id="tableSearch" class="search-button">
-                        <img src="./public/images/search-icon.svg" alt="Search-icon" />
+                      <button
+                        type="submit"
+                        id="tableSearch"
+                        class="search-button"
+                      >
+                        <img
+                          src="./public/images/search-icon.svg"
+                          alt="Search-icon"
+                        />
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
-              
+
               <!-- My Positions Table Section -->
               <div id="my-positions-section">
-                <div class="table-section">
-                  <div class="table-scroll">
-                    <div class="table">
-                      <table id="my-pools-table" class="table">
-                        <thead>
-                          <tr class="table-heading">
-                            <th>POOL</th>
-                            <th>Position Value</th>
-                            <th>TVL</th>
-                            <th>Share of Pool</th>
-                            <th>Fees</th>
-                            <th>PnL</th>
-                            <th>APR</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <!-- Single Row -->
-                          <tr>
-                            <td>
-                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
-                                <img
-                                  class="token-icon"
-                                  src="./public/images/avatar-icon.svg"
-                                  alt="Token-icon"
-                                />
-                                <span>TOKEN / XRP</span>
+                <section class="new-tokens-table-section">
+                  <div class="new-token-table">
+                    <div class="table-section">
+                      <div class="table-content-wrapper">
+                        <div class="table-scroll">
+                          <div class="table">
+                            <div>
+                              <div class="table-heading">
+                                <span>Pool</span>
+                                <span>Position Value</span>
+                                <span>TVL</span>
+                                <span>Share of Pool</span>
+                                <span>Fees</span>
+                                <span>PnL</span>
+                                <span>APR</span>
                               </div>
-                            </td>
-                            <td class="col-span">
-                              <div>
-                                <div class="row-content">
+                            </div>
+                            <div class="table-body">
+                              <!-- Single Row -->
+
+                              <div
+                                class="table-row-wrapper"
+                                onclick="openTokenModal('TOKEN', 'XRP')"
+                              >
+                                <div class="table-row">
+                                  <div class="token-cell">
+                                    <div class="token-icon-wrapper">F</div>
+                                    <div class="token-name-n-time">
+                                      <span class="token-name"
+                                        >TOKEN / XRP</span
+                                      >
+                                    </div>
+                                  </div>
+
                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
+                                    <span class="market-cap-xrp">00000  </span>
                                   </div>
                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
+                                    <span class="liquidity-xrp">00000  </span>
+                                  </div>
+
+                                  <div class="table-xrp-token-wrapper">
+                                    <span class="vol-24h">0%</span>
                                   </div>
                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
+                                    <span class="liquidity-xrp">00000  </span>
                                   </div>
                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
+                                    <span class="vol-24h">0%</span>
                                   </div>
                                   <div class="action-cell">
-                                    <div class="lp-action-menu-wrapper">
-                                      <span class="action-menu-icon">0%</span>
-                                      <div class="action-menu">
-                                        <button class="add-liquidity-button action-add-icon">
-                                          Add Liquidity
-                                        </button>
-                                        <button class="remove-liquidity-button action-remove-icon">
-                                          Remove Liquidity
-                                        </button>
-                                        <button class="vote-for-fees-button action-vote-icon">
-                                          Vote for Fees
-                                        </button>
-                                      </div>
-                                    </div>
+                                    <span class="vol-24h">0%</span>
                                   </div>
                                 </div>
                               </div>
-                            </td>
-                          </tr>
 
-                          <!-- Repeat similar structure for other rows with onclick handlers -->
-                          <tr>
-                            <td>
-                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
-                                <img
-                                  class="token-icon"
-                                  src="./public/images/avatar-icon.svg"
-                                  alt="Token-icon"
-                                />
-                                <span>TOKEN / XRP</span>
-                              </div>
-                            </td>
-                            <td class="col-span">
-                              <div>
-                                <div class="row-content">
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="action-cell">
-                                    <div class="lp-action-menu-wrapper">
-                                      <span class="action-menu-icon">0%</span>
-                                      <div class="action-menu">
-                                        <button class="add-liquidity-button action-add-icon">
-                                          Add Liquidity
-                                        </button>
-                                        <button class="remove-liquidity-button action-remove-icon">
-                                          Remove Liquidity
-                                        </button>
-                                        <button class="vote-for-fees-button action-vote-icon">
-                                          Vote for Fees
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <!-- Continue with remaining rows... -->
-                          <tr>
-                            <td>
-                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
-                                <img
-                                  class="token-icon"
-                                  src="./public/images/avatar-icon.svg"
-                                  alt="Token-icon"
-                                />
-                                <span>TOKEN / XRP</span>
-                              </div>
-                            </td>
-                            <td class="col-span">
-                              <div>
-                                <div class="row-content">
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="action-cell">
-                                    <div class="lp-action-menu-wrapper">
-                                      <span class="action-menu-icon">0%</span>
-                                      <div class="action-menu">
-                                        <button class="add-liquidity-button action-add-icon">
-                                          Add Liquidity
-                                        </button>
-                                        <button class="remove-liquidity-button action-remove-icon">
-                                          Remove Liquidity
-                                        </button>
-                                        <button class="vote-for-fees-button action-vote-icon">
-                                          Vote for Fees
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>
-                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
-                                <img
-                                  class="token-icon"
-                                  src="./public/images/avatar-icon.svg"
-                                  alt="Token-icon"
-                                />
-                                <span>TOKEN / XRP</span>
-                              </div>
-                            </td>
-                            <td class="col-span">
-                              <div>
-                                <div class="row-content">
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="action-cell">
-                                    <div class="lp-action-menu-wrapper">
-                                      <span class="action-menu-icon">0%</span>
-                                      <div class="action-menu">
-                                        <button class="add-liquidity-button action-add-icon">
-                                          Add Liquidity
-                                        </button>
-                                        <button class="remove-liquidity-button action-remove-icon">
-                                          Remove Liquidity
-                                        </button>
-                                        <button class="vote-for-fees-button action-vote-icon">
-                                          Vote for Fees
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td>
-                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
-                                <img
-                                  class="token-icon"
-                                  src="./public/images/avatar-icon.svg"
-                                  alt="Token-icon"
-                                />
-                                <span>TOKEN / XRP</span>
-                              </div>
-                            </td>
-                            <td class="col-span">
-                              <div>
-                                <div class="row-content">
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="action-cell">
-                                    <div class="lp-action-menu-wrapper">
-                                      <span class="action-menu-icon">0%</span>
-                                      <div class="action-menu">
-                                        <button class="add-liquidity-button action-add-icon">
-                                          Add Liquidity
-                                        </button>
-                                        <button class="remove-liquidity-button action-remove-icon">
-                                          Remove Liquidity
-                                        </button>
-                                        <button class="vote-for-fees-button action-vote-icon">
-                                          Vote for Fees
-                                        </button>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <!-- Additional rows as needed -->
-                        </tbody>
-                      </table>
+                              <!-- Single Row -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </section>
               </div>
-              
+
               <!-- Explore Pools Table Section -->
               <div id="explore-pools-section" class="hidden-section">
-                <div class="table-section">
-                  <div class="table-scroll">
-                    <div class="table">
-                      <table class="table">
-                        <thead>
-                          <tr class="table-headingg">
-                            <th>POOL</th>
-                            <th>Fee %</th>
-                            <th>TVL</th>
-                            <th>Pool APR</th>
-                            <th>Reward APR</th>
-                            <th>1d Volume</th>
-                            <th>30d Volume</th>
-                            <th>1d Vol / TVL</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
-                                <img
-                                  class="token-icon"
-                                  src="./public/images/avatar-icon.svg"
-                                  alt="Token-icon"
-                                />
-                                <span>TOKEN / XRP</span>
+                <section class="new-tokens-table-section">
+                  <div class="new-token-table">
+                    <div class="table-section">
+                      <div class="table-content-wrapper">
+                        <div class="table-scroll">
+                          <div class="table">
+                            <div>
+                              <div class="table-heading">
+                                <span>Token</span>
+                                <span>Market Cap</span>
+                                <span>Liquidity</span>
+                                <span>Vol 24h</span>
+                                <span>Transactions</span>
+                                <span>Audit</span>
+                                <span
+                                  ><span class="lg-title">Quick Buy</span
+                                  ><span class="sm-title"
+                                    >Buy
+                                    <span class="buy-token-count">
+                                      10
+                                      <span class="xrp-logo-wrapper">
+                                        <image
+                                          src="./public/images/xrp-logo.svg"
+                                          alt="XRP-logo"
+                                          class="table-xrp-logo"
+                                        ></image>
+                                      </span>
+                                    </span> </span
+                                ></span>
                               </div>
-                            </td>
-                            <td class="col-span">
-                              <div>
-                                <div class="row-content">
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
+                            </div>
+                            <div class="table-body">
+                              <!-- Single Row -->
+
+                              <div class="table-row-wrapper">
+                                <div class="table-row">
+                                  <div class="token-cell">
+                                    <div class="token-icon-wrapper">
+                                      <img
+                                        class="token-icon"
+                                        src="./public/images/token-icon.svg"
+                                        alt="Token-icon"
+                                      />
+                                      <div class="anti-snipe-n-check-wrapper">
+                                        <img
+                                          src="./public/images/anti-snipe-icon.svg"
+                                          alt="anti-snipe"
+                                          class="token-verify-icon"
+                                        /><img
+                                          src="./public/images/check-mark-icon.svg"
+                                          alt="check-mark"
+                                          class="token-verify-icon"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="token-name-n-time">
+                                      <span class="token-name">TOKEN</span
+                                      ><span class="token-time">00 min</span>
+                                    </div>
                                   </div>
+
                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
+                                    <span class="market-cap-xrp"
+                                      >00000
                                       <figure>
                                         <image
                                           src="./public/images/xrp-logo.svg"
                                           alt="XRP-logo"
                                           class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
+                                        ></image></figure></span
+                                    ><span class="market-cap-increment"
+                                      >+00.0%</span
+                                    >
                                   </div>
                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
+                                    <span class="liquidity-xrp"
+                                      >00000
                                       <figure>
                                         <image
                                           src="./public/images/xrp-logo.svg"
                                           alt="XRP-logo"
                                           class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
+                                        ></image></figure></span
+                                    ><span class="liquidity-increment"
+                                      >+00.0%</span
+                                    >
+                                  </div>
+
+                                  <div class="table-xrp-token-wrapper">
+                                    <span class="vol-24h"
+                                      >00000
+                                      <figure>
+                                        <image
+                                          src="./public/images/xrp-logo.svg"
+                                          alt="XRP-logo"
+                                          class="table-xrp-logo"
+                                        ></image></figure
+                                    ></span>
                                   </div>
                                   <div class="table-xrp-token-wrapper">
-                          <span class="market-cap-xrp"
-                            >00000
-                            <figure>
-                              <image
-                                src="./public/images/xrp-logo.svg"
-                                alt="XRP-logo"
-                                class="table-xrp-logo"
-                              ></image></figure></span
-                          ><span class="market-cap-increment">+00.0%</span>
-                        </div>
-                        <div class="table-xrp-token-wrapper">
-                          <span class="market-cap-xrp"
-                            >00000
-                            <figure>
-                              <image
-                                src="./public/images/xrp-logo.svg"
-                                alt="XRP-logo"
-                                class="table-xrp-logo"
-                              ></image></figure></span
-                          ><span class="market-cap-increment">+00.0%</span>
-                        </div>
-                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0.00</span>
+                                    <div class="token-transactions-wrapper">
+                                      <div class="buy-token">
+                                        <span class="buy-count">000K</span>
+                                        <span class="buy-value"
+                                          >0
+                                          <figure>
+                                            <image
+                                              src="./public/images/xrp-logo-green.svg"
+                                              alt="XRP-logo"
+                                              class="table-xrp-logo"
+                                            ></image></figure
+                                        ></span>
+                                      </div>
+                                      <div class="sell-token">
+                                        <span class="sell-count">000K</span>
+                                        <span class="sell-value"
+                                          >0
+                                          <figure>
+                                            <image
+                                              src="./public/images/xrp-logo-red.svg"
+                                              alt="XRP-logo"
+                                              class="table-xrp-logo"
+                                            ></image></figure
+                                        ></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="table-xrp-token-wrapper">
+                                    <div class="audit-cell">
+                                      <span class="audit-item developer-audit">
+                                        <figure class="developer-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/developer-icon.svg"
+                                            alt="Developer-icon"
+                                          />
+                                        </figure>
+                                        <p class="developer-percent">00%</p>
+                                        <span class="audit-tooltip"
+                                          >Developer</span
+                                        >
+                                      </span>
+                                      <span class="audit-item top-holder-audit">
+                                        <figure class="developer-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/top-holder-icon.svg"
+                                            alt="Top-holder-icon"
+                                          />
+                                        </figure>
+                                        <p class="top-holder-percent">00%</p>
+                                        <span class="audit-tooltip"
+                                          >Top Holder</span
+                                        >
+                                      </span>
+                                      <span class="audit-item users-audit">
+                                        <figure class="users-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/users-icon.svg"
+                                            alt="Users-icon"
+                                          />
+                                        </figure>
+                                        <p class="total-users">000K</p>
+                                        <span class="audit-tooltip"
+                                          >Total User</span
+                                        >
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="action-cell">
+                                    <button class="quick-buy-action">
+                                      <span
+                                        ><figure class="zap-n-load-icon">
+                                          <img
+                                            src="./public/images/zap-icon.svg"
+                                            alt="Zap"
+                                            class="zap"
+                                          />
+                                          <img
+                                            src="./public/images/loading.svg"
+                                            alt="Load"
+                                            class="load"
+                                          /></figure
+                                      ></span>
+                                      <span class="quick-buy-token-count">
+                                        10
+                                        <figure>
+                                          <image
+                                            src="./public/images/xrp-logo.svg"
+                                            alt="XRP-logo"
+                                            class="table-xrp-logo"
+                                          ></image>
+                                        </figure>
+                                      </span>
+                                    </button>
                                   </div>
                                 </div>
                               </div>
-                            </td>
-                          </tr>
-                          
-                          <!-- Continue with other explore pools rows... -->
-                          <tr>
-                            <td>
-                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
-                                <img
-                                  class="token-icon"
-                                  src="./public/images/avatar-icon.svg"
-                                  alt="Token-icon"
-                                />
-                                <span>TOKEN / XRP</span>
-                              </div>
-                            </td>
-                            <td class="col-span">
-                              <div>
-                                <div class="row-content">
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
-                                      <figure>
-                                        <image
-                                          src="./public/images/xrp-logo.svg"
-                                          alt="XRP-logo"
-                                          class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                          <span class="market-cap-xrp"
-                            >00000
-                            <figure>
-                              <image
-                                src="./public/images/xrp-logo.svg"
-                                alt="XRP-logo"
-                                class="table-xrp-logo"
-                              ></image></figure></span
-                          ><span class="market-cap-increment">+00.0%</span>
-                        </div>
 
-                        <div class="table-xrp-token-wrapper">
-                          <span class="market-cap-xrp"
-                            >00000
-                            <figure>
-                              <image
-                                src="./public/images/xrp-logo.svg"
-                                alt="XRP-logo"
-                                class="table-xrp-logo"
-                              ></image></figure></span
-                          ><span class="market-cap-increment">+00.0%</span>
-                        </div>
-                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0.00</span>
+                              <!-- Single Row -->
+                              <!-- Single Row -->
+
+                              <div class="table-row-wrapper">
+                                <div class="table-row">
+                                  <div class="token-cell">
+                                    <div class="token-icon-wrapper">
+                                      <img
+                                        class="token-icon"
+                                        src="./public/images/token-icon.svg"
+                                        alt="Token-icon"
+                                      />
+                                      <div class="anti-snipe-n-check-wrapper">
+                                        <img
+                                          src="./public/images/anti-snipe-icon.svg"
+                                          alt="anti-snipe"
+                                          class="token-verify-icon"
+                                        /><img
+                                          src="./public/images/check-mark-icon.svg"
+                                          alt="check-mark"
+                                          class="token-verify-icon"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="token-name-n-time">
+                                      <span class="token-name">TOKEN</span
+                                      ><span class="token-time">00 min</span>
+                                    </div>
+                                  </div>
+
+                                  <div class="table-xrp-token-wrapper">
+                                    <span class="market-cap-xrp"
+                                      >00000
+                                      <figure>
+                                        <image
+                                          src="./public/images/xrp-logo.svg"
+                                          alt="XRP-logo"
+                                          class="table-xrp-logo"
+                                        ></image></figure></span
+                                    ><span class="market-cap-increment"
+                                      >+00.0%</span
+                                    >
+                                  </div>
+                                  <div class="table-xrp-token-wrapper">
+                                    <span class="liquidity-xrp"
+                                      >00000
+                                      <figure>
+                                        <image
+                                          src="./public/images/xrp-logo.svg"
+                                          alt="XRP-logo"
+                                          class="table-xrp-logo"
+                                        ></image></figure></span
+                                    ><span class="liquidity-increment"
+                                      >+00.0%</span
+                                    >
+                                  </div>
+
+                                  <div class="table-xrp-token-wrapper">
+                                    <span class="vol-24h"
+                                      >00000
+                                      <figure>
+                                        <image
+                                          src="./public/images/xrp-logo.svg"
+                                          alt="XRP-logo"
+                                          class="table-xrp-logo"
+                                        ></image></figure
+                                    ></span>
+                                  </div>
+                                  <div class="table-xrp-token-wrapper">
+                                    <div class="token-transactions-wrapper">
+                                      <div class="buy-token">
+                                        <span class="buy-count">000K</span>
+                                        <span class="buy-value"
+                                          >0
+                                          <figure>
+                                            <image
+                                              src="./public/images/xrp-logo-green.svg"
+                                              alt="XRP-logo"
+                                              class="table-xrp-logo"
+                                            ></image></figure
+                                        ></span>
+                                      </div>
+                                      <div class="sell-token">
+                                        <span class="sell-count">000K</span>
+                                        <span class="sell-value"
+                                          >0
+                                          <figure>
+                                            <image
+                                              src="./public/images/xrp-logo-red.svg"
+                                              alt="XRP-logo"
+                                              class="table-xrp-logo"
+                                            ></image></figure
+                                        ></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="table-xrp-token-wrapper">
+                                    <div class="audit-cell">
+                                      <span class="audit-item developer-audit">
+                                        <figure class="developer-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/developer-icon.svg"
+                                            alt="Developer-icon"
+                                          />
+                                        </figure>
+                                        <p class="developer-percent">00%</p>
+                                        <span class="audit-tooltip"
+                                          >Developer</span
+                                        >
+                                      </span>
+                                      <span class="audit-item top-holder-audit">
+                                        <figure class="developer-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/top-holder-icon.svg"
+                                            alt="Top-holder-icon"
+                                          />
+                                        </figure>
+                                        <p class="top-holder-percent">00%</p>
+                                        <span class="audit-tooltip"
+                                          >Top Holder</span
+                                        >
+                                      </span>
+                                      <span class="audit-item users-audit">
+                                        <figure class="users-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/users-icon.svg"
+                                            alt="Users-icon"
+                                          />
+                                        </figure>
+                                        <p class="total-users">000K</p>
+                                        <span class="audit-tooltip"
+                                          >Total User</span
+                                        >
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="action-cell">
+                                    <button class="quick-buy-action">
+                                      <span
+                                        ><figure class="zap-n-load-icon">
+                                          <img
+                                            src="./public/images/zap-icon.svg"
+                                            alt="Zap"
+                                            class="zap"
+                                          />
+                                          <img
+                                            src="./public/images/loading.svg"
+                                            alt="Load"
+                                            class="load"
+                                          /></figure
+                                      ></span>
+                                      <span class="quick-buy-token-count">
+                                        10
+                                        <figure>
+                                          <image
+                                            src="./public/images/xrp-logo.svg"
+                                            alt="XRP-logo"
+                                            class="table-xrp-logo"
+                                          ></image>
+                                        </figure>
+                                      </span>
+                                    </button>
                                   </div>
                                 </div>
                               </div>
-                            </td>
-                          </tr>
 
-                          <tr>
-                            <td>
-                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
-                                <img
-                                  class="token-icon"
-                                  src="./public/images/avatar-icon.svg"
-                                  alt="Token-icon"
-                                />
-                                <span>TOKEN / XRP</span>
-                              </div>
-                            </td>
-                            <td class="col-span">
-                              <div>
-                                <div class="row-content">
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
+                              <!-- Single Row -->
+                              <!-- Single Row -->
+
+                              <div class="table-row-wrapper">
+                                <div class="table-row">
+                                  <div class="token-cell">
+                                    <div class="token-icon-wrapper">
+                                      <img
+                                        class="token-icon"
+                                        src="./public/images/token-icon.svg"
+                                        alt="Token-icon"
+                                      />
+                                      <div class="anti-snipe-n-check-wrapper">
+                                        <img
+                                          src="./public/images/anti-snipe-icon.svg"
+                                          alt="anti-snipe"
+                                          class="token-verify-icon"
+                                        /><img
+                                          src="./public/images/check-mark-icon.svg"
+                                          alt="check-mark"
+                                          class="token-verify-icon"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="token-name-n-time">
+                                      <span class="token-name">TOKEN</span
+                                      ><span class="token-time">00 min</span>
+                                    </div>
                                   </div>
+
                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
+                                    <span class="market-cap-xrp"
+                                      >00000
                                       <figure>
                                         <image
                                           src="./public/images/xrp-logo.svg"
                                           alt="XRP-logo"
                                           class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
+                                        ></image></figure></span
+                                    ><span class="market-cap-increment"
+                                      >+00.0%</span
+                                    >
                                   </div>
                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                 <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
+                                    <span class="liquidity-xrp"
+                                      >00000
                                       <figure>
                                         <image
                                           src="./public/images/xrp-logo.svg"
                                           alt="XRP-logo"
                                           class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
+                                        ></image></figure></span
+                                    ><span class="liquidity-increment"
+                                      >+00.0%</span
+                                    >
                                   </div>
-                                 <div class="table-xrp-token-wrapper">
-                          <span class="market-cap-xrp"
-                            >00000
-                            <figure>
-                              <image
-                                src="./public/images/xrp-logo.svg"
-                                alt="XRP-logo"
-                                class="table-xrp-logo"
-                              ></image></figure></span
-                          ><span class="market-cap-increment">+00.0%</span>
-                        </div>
 
-                        <div class="table-xrp-token-wrapper">
-                          <span class="market-cap-xrp"
-                            >00000
-                            <figure>
-                              <image
-                                src="./public/images/xrp-logo.svg"
-                                alt="XRP-logo"
-                                class="table-xrp-logo"
-                              ></image></figure></span
-                          ><span class="market-cap-increment">+00.0%</span>
-                        </div>
-                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0.00</span>
+                                  <div class="table-xrp-token-wrapper">
+                                    <span class="vol-24h"
+                                      >00000
+                                      <figure>
+                                        <image
+                                          src="./public/images/xrp-logo.svg"
+                                          alt="XRP-logo"
+                                          class="table-xrp-logo"
+                                        ></image></figure
+                                    ></span>
+                                  </div>
+                                  <div class="table-xrp-token-wrapper">
+                                    <div class="token-transactions-wrapper">
+                                      <div class="buy-token">
+                                        <span class="buy-count">000K</span>
+                                        <span class="buy-value"
+                                          >0
+                                          <figure>
+                                            <image
+                                              src="./public/images/xrp-logo-green.svg"
+                                              alt="XRP-logo"
+                                              class="table-xrp-logo"
+                                            ></image></figure
+                                        ></span>
+                                      </div>
+                                      <div class="sell-token">
+                                        <span class="sell-count">000K</span>
+                                        <span class="sell-value"
+                                          >0
+                                          <figure>
+                                            <image
+                                              src="./public/images/xrp-logo-red.svg"
+                                              alt="XRP-logo"
+                                              class="table-xrp-logo"
+                                            ></image></figure
+                                        ></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="table-xrp-token-wrapper">
+                                    <div class="audit-cell">
+                                      <span class="audit-item developer-audit">
+                                        <figure class="developer-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/developer-icon.svg"
+                                            alt="Developer-icon"
+                                          />
+                                        </figure>
+                                        <p class="developer-percent">00%</p>
+                                        <span class="audit-tooltip"
+                                          >Developer</span
+                                        >
+                                      </span>
+                                      <span class="audit-item top-holder-audit">
+                                        <figure class="developer-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/top-holder-icon.svg"
+                                            alt="Top-holder-icon"
+                                          />
+                                        </figure>
+                                        <p class="top-holder-percent">00%</p>
+                                        <span class="audit-tooltip"
+                                          >Top Holder</span
+                                        >
+                                      </span>
+                                      <span class="audit-item users-audit">
+                                        <figure class="users-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/users-icon.svg"
+                                            alt="Users-icon"
+                                          />
+                                        </figure>
+                                        <p class="total-users">000K</p>
+                                        <span class="audit-tooltip"
+                                          >Total User</span
+                                        >
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="action-cell">
+                                    <button class="quick-buy-action">
+                                      <span
+                                        ><figure class="zap-n-load-icon">
+                                          <img
+                                            src="./public/images/zap-icon.svg"
+                                            alt="Zap"
+                                            class="zap"
+                                          />
+                                          <img
+                                            src="./public/images/loading.svg"
+                                            alt="Load"
+                                            class="load"
+                                          /></figure
+                                      ></span>
+                                      <span class="quick-buy-token-count">
+                                        10
+                                        <figure>
+                                          <image
+                                            src="./public/images/xrp-logo.svg"
+                                            alt="XRP-logo"
+                                            class="table-xrp-logo"
+                                          ></image>
+                                        </figure>
+                                      </span>
+                                    </button>
                                   </div>
                                 </div>
                               </div>
-                            </td>
-                          </tr>
 
-                          <tr>
-                            <td>
-                              <div class="token-cell" onclick="openTokenModal('TOKEN', 'XRP')">
-                                <img
-                                  class="token-icon"
-                                  src="./public/images/avatar-icon.svg"
-                                  alt="Token-icon"
-                                />
-                                <span>TOKEN / XRP</span>
-                              </div>
-                            </td>
-                            <td class="col-span">
-                              <div>
-                                <div class="row-content">
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
+                              <!-- Single Row -->
+                              <!-- Single Row -->
+
+                              <div class="table-row-wrapper">
+                                <div class="table-row">
+                                  <div class="token-cell">
+                                    <div class="token-icon-wrapper">
+                                      <img
+                                        class="token-icon"
+                                        src="./public/images/token-icon.svg"
+                                        alt="Token-icon"
+                                      />
+                                      <div class="anti-snipe-n-check-wrapper">
+                                        <img
+                                          src="./public/images/anti-snipe-icon.svg"
+                                          alt="anti-snipe"
+                                          class="token-verify-icon"
+                                        /><img
+                                          src="./public/images/check-mark-icon.svg"
+                                          alt="check-mark"
+                                          class="token-verify-icon"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="token-name-n-time">
+                                      <span class="token-name">TOKEN</span
+                                      ><span class="token-time">00 min</span>
+                                    </div>
                                   </div>
-                                 <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
+
+                                  <div class="table-xrp-token-wrapper">
+                                    <span class="market-cap-xrp"
+                                      >00000
                                       <figure>
                                         <image
                                           src="./public/images/xrp-logo.svg"
                                           alt="XRP-logo"
                                           class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
+                                        ></image></figure></span
+                                    ><span class="market-cap-increment"
+                                      >+00.0%</span
+                                    >
                                   </div>
                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0%</span>
-                                  </div>
-                                  <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">00000
+                                    <span class="liquidity-xrp"
+                                      >00000
                                       <figure>
                                         <image
                                           src="./public/images/xrp-logo.svg"
                                           alt="XRP-logo"
                                           class="table-xrp-logo"
-                                        ></image>
-                                      </figure>
-                                    </span>
+                                        ></image></figure></span
+                                    ><span class="liquidity-increment"
+                                      >+00.0%</span
+                                    >
+                                  </div>
+
+                                  <div class="table-xrp-token-wrapper">
+                                    <span class="vol-24h"
+                                      >00000
+                                      <figure>
+                                        <image
+                                          src="./public/images/xrp-logo.svg"
+                                          alt="XRP-logo"
+                                          class="table-xrp-logo"
+                                        ></image></figure
+                                    ></span>
                                   </div>
                                   <div class="table-xrp-token-wrapper">
-                          <span class="market-cap-xrp"
-                            >00000
-                            <figure>
-                              <image
-                                src="./public/images/xrp-logo.svg"
-                                alt="XRP-logo"
-                                class="table-xrp-logo"
-                              ></image></figure></span
-                          ><span class="market-cap-increment">+00.0%</span>
-                        </div>
-
-                        <div class="table-xrp-token-wrapper">
-                          <span class="market-cap-xrp"
-                            >00000
-                            <figure>
-                              <image
-                                src="./public/images/xrp-logo.svg"
-                                alt="XRP-logo"
-                                class="table-xrp-logo"
-                              ></image></figure></span
-                          ><span class="market-cap-increment">+00.0%</span>
-                        </div>
-                                   <div class="table-xrp-token-wrapper">
-                                    <span class="xrp-bought">0.00</span>
+                                    <div class="token-transactions-wrapper">
+                                      <div class="buy-token">
+                                        <span class="buy-count">000K</span>
+                                        <span class="buy-value"
+                                          >0
+                                          <figure>
+                                            <image
+                                              src="./public/images/xrp-logo-green.svg"
+                                              alt="XRP-logo"
+                                              class="table-xrp-logo"
+                                            ></image></figure
+                                        ></span>
+                                      </div>
+                                      <div class="sell-token">
+                                        <span class="sell-count">000K</span>
+                                        <span class="sell-value"
+                                          >0
+                                          <figure>
+                                            <image
+                                              src="./public/images/xrp-logo-red.svg"
+                                              alt="XRP-logo"
+                                              class="table-xrp-logo"
+                                            ></image></figure
+                                        ></span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="table-xrp-token-wrapper">
+                                    <div class="audit-cell">
+                                      <span class="audit-item developer-audit">
+                                        <figure class="developer-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/developer-icon.svg"
+                                            alt="Developer-icon"
+                                          />
+                                        </figure>
+                                        <p class="developer-percent">00%</p>
+                                        <span class="audit-tooltip"
+                                          >Developer</span
+                                        >
+                                      </span>
+                                      <span class="audit-item top-holder-audit">
+                                        <figure class="developer-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/top-holder-icon.svg"
+                                            alt="Top-holder-icon"
+                                          />
+                                        </figure>
+                                        <p class="top-holder-percent">00%</p>
+                                        <span class="audit-tooltip"
+                                          >Top Holder</span
+                                        >
+                                      </span>
+                                      <span class="audit-item users-audit">
+                                        <figure class="users-icon">
+                                          <img
+                                            class="audit-icon"
+                                            src="./public/images/users-icon.svg"
+                                            alt="Users-icon"
+                                          />
+                                        </figure>
+                                        <p class="total-users">000K</p>
+                                        <span class="audit-tooltip"
+                                          >Total User</span
+                                        >
+                                      </span>
+                                    </div>
+                                  </div>
+                                  <div class="action-cell">
+                                    <button class="quick-buy-action">
+                                      <span
+                                        ><figure class="zap-n-load-icon">
+                                          <img
+                                            src="./public/images/zap-icon.svg"
+                                            alt="Zap"
+                                            class="zap"
+                                          />
+                                          <img
+                                            src="./public/images/loading.svg"
+                                            alt="Load"
+                                            class="load"
+                                          /></figure
+                                      ></span>
+                                      <span class="quick-buy-token-count">
+                                        10
+                                        <figure>
+                                          <image
+                                            src="./public/images/xrp-logo.svg"
+                                            alt="XRP-logo"
+                                            class="table-xrp-logo"
+                                          ></image>
+                                        </figure>
+                                      </span>
+                                    </button>
                                   </div>
                                 </div>
                               </div>
-                            </td>
-                          </tr>
-                          
-                          <!-- Additional rows as needed -->
-                        </tbody>
-                      </table>
+
+                              <!-- Single Row -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </section>
               </div>
             </div>
           </div>
@@ -842,76 +918,93 @@
       </div>
 
       <!-- Token Details Modal -->
-       <div id="token-details-modal" class="token-details-modal">
-    <div class="token-details-content">
-      <div class="modal-title">
+      <div id="token-details-modal" class="token-details-modal">
+        <div class="token-details-content">
+          <div class="modal-title">
             <h2>Your Position</h2>
-            
           </div>
-      <div class="token-details-header">
-        <div class="token-details-title">
-          <img id="modal-token-icon" class="token-details-icon" src="./public/images/token-icon.svg" alt="Token Icon" />
-          <div class="token-details-info" >
-            <h2 id="modal-token-name">Your Position</h2>
-            <p id="modal-token-pair" >TOKEN / XRP</p>
+          <div class="token-details-header">
+            <div class="token-details-title">
+              <img
+                id="modal-token-icon"
+                class="token-details-icon"
+                src="./public/images/token-icon.svg"
+                alt="Token Icon"
+              />
+              <div class="token-details-info">
+                <h2 id="modal-token-name">Your Position</h2>
+                <p id="modal-token-pair">TOKEN / XRP</p>
+              </div>
+            </div>
+            <button class="close-token-modal" onclick="closeTokenModal()">
+              <img src="./public/images/close-icon.svg" alt="Close" />
+            </button>
           </div>
-          
-        </div>
-        <button class="close-token-modal" onclick="closeTokenModal()">
-          <img src="./public/images/close-icon.svg" alt="Close" />
-        </button>
-      </div>
 
-      <div class="token-position-details">
-        <div class="position-item">
-          <p class="position-label">Current Position Value</p>
-          <p class="position-value" id="modal-position-value">$0000.0</p>
-        </div>
-        <div class="position-item">
-          <p class="position-label">Pool Tokens Amount <span class="info-icon">ⓘ</span></p>
-          <p class="position-value" id="modal-lp-tokens">0 LP TOKENS</p>
-        </div>
-        <div class="position-item">
-          <p class="position-label">Deposited XRP</p>
-          <p class="position-value" id="modal-deposited-xrp">0 XRP</p>
-        </div>
-        <div class="position-item">
-          <p class="position-label">Deposited TOKEN</p>
-          <p class="position-value" id="modal-deposited-token">0 TOKEN</p>
-        </div>
-        <div class="position-item">
-          <p class="position-label">Voting Threshold <span class="info-icon">ⓘ</span></p>
-          <p class="position-value" id="modal-voting-threshold">0K LP Tokens (0% of the Pool)</p>
-        </div>
-        <div class="position-item">
-          <p class="position-label">Voted</p>
-          <p class="position-value" id="modal-voted">No</p>
-        </div>
-        <div class="position-item">
-          <p class="position-label">APY</p>
-          <p class="position-value" id="modal-apy">0%</p>
-        </div>
-        <div class="position-item">
-          <p class="position-label">Total Fees Accrued</p>
-          <p class="position-value" id="modal-fees-accrued">0 XRP</p>
-        </div>
-      </div>
+          <div class="token-position-details">
+            <div class="position-item">
+              <p class="position-label">Current Position Value</p>
+              <p class="position-value" id="modal-position-value">$0000.0</p>
+            </div>
+            <div class="position-item">
+              <p class="position-label">
+                Pool Tokens Amount <span class="info-icon">ⓘ</span>
+              </p>
+              <p class="position-value" id="modal-lp-tokens">0 LP TOKENS</p>
+            </div>
+            <div class="position-item">
+              <p class="position-label">Deposited XRP</p>
+              <p class="position-value" id="modal-deposited-xrp">0 XRP</p>
+            </div>
+            <div class="position-item">
+              <p class="position-label">Deposited TOKEN</p>
+              <p class="position-value" id="modal-deposited-token">0 TOKEN</p>
+            </div>
+            <div class="position-item">
+              <p class="position-label">
+                Voting Threshold <span class="info-icon">ⓘ</span>
+              </p>
+              <p class="position-value" id="modal-voting-threshold">
+                0K LP Tokens (0% of the Pool)
+              </p>
+            </div>
+            <div class="position-item">
+              <p class="position-label">Voted</p>
+              <p class="position-value" id="modal-voted">No</p>
+            </div>
+            <div class="position-item">
+              <p class="position-label">APY</p>
+              <p class="position-value" id="modal-apy">0%</p>
+            </div>
+            <div class="position-item">
+              <p class="position-label">Total Fees Accrued</p>
+              <p class="position-value" id="modal-fees-accrued">0 XRP</p>
+            </div>
+          </div>
 
-      <div class="token-actions">
-        <button class="token-action-btn primary" onclick="voteToken()">Vote</button>
-        <button class="token-action-btn secondary" onclick="addLiquidity()">Add Liquidity</button>
-        <button class="token-action-btn secondary" onclick="removePosition()">Remove</button>
+          <div class="token-actions">
+            <button class="token-action-btn primary" onclick="voteToken()">
+              Vote
+            </button>
+            <button class="token-action-btn secondary" onclick="addLiquidity()">
+              Add Liquidity
+            </button>
+            <button
+              class="token-action-btn secondary"
+              onclick="removePosition()"
+            >
+              Remove
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
       <!-- Existing modals continue here... -->
       <!-- Add Liquidity Modal -->
-     <div class="modal" id="add-liquidity-modal">
+      <div class="modal" id="add-liquidity-modal">
         <div class="modal-content">
           <div>
             <div class="wallet-name-dropdown_wrapper">
-              
               <span class="close-modal">
                 <img src="./public/images/close-icon.svg" alt="close icon" />
               </span>
@@ -920,7 +1013,6 @@
           <div id="step-review">
             <div class="modal-title">
               <h2>Add Liquidity</h2>
-              
             </div>
             <div class="modal-tabs">
               <button class="tab-btn active" data-tab="numeric">50/50</button>
@@ -1142,7 +1234,6 @@
           <div id="step-confirm">
             <div class="modal-title">
               <h2>Add Liquidity</h2>
-              
             </div>
 
             <label class="label" for="diposit">You're Depositing</label>
@@ -1283,7 +1374,6 @@
           <div id="step-vote-done-numeric">
             <div class="modal-title">
               <h2>Add Liquidity</h2>
-              
             </div>
             <label class="label checked" for="diposit"
               >You Deposited
@@ -1608,7 +1698,7 @@
       </div>
 
       <!-- Remove Liquidity Modal -->
-       <div class="modal" id="remove-liquidity-modal">
+      <div class="modal" id="remove-liquidity-modal">
         <div class="modal-content">
           <div>
             <div class="wallet-name-dropdown_wrapper">
@@ -2229,7 +2319,6 @@
           </div>
         </div>
       </div>
-
     </main>
 
     <!-- Main section ends here -->
@@ -2237,7 +2326,5 @@
     <script src="./js/main.js"></script>
     <script src="./js/modal.js"></script>
     <script src="./js/lp.js"></script>
-    
-    
   </body>
 </html>
