@@ -74,8 +74,8 @@
 
 .close-modal {
   cursor: pointer;
-  border: 1px solid var(--border-primary);
-  border-radius: 8px;
+  /* border: 1px solid var(--border-primary);
+  border-radius: 8px; */
   width: 36px;
   height: 36px;
   display: flex;
@@ -386,7 +386,7 @@ button.review:hover {
     width: 100%;
     padding: 12px;
     border-radius: 10px;
-    background: transparent;
+    background: #181924;
     color: var(--text-primary);
     font-size: 1rem;
     font-weight: 500;
@@ -439,7 +439,7 @@ button.review:hover {
   min-height: 449px;
 }
 .heading-vote {
-  display: flex;
+  display: block;
   align-items: center;
   gap: 6px;
 }
@@ -454,6 +454,7 @@ button.review:hover {
   font-weight: 400;
   color: #85e0a3;
   margin: 0;
+  display: contents;
 }
 /* table style start */
 .vote-table {
@@ -461,6 +462,7 @@ button.review:hover {
   border: 1px solid #34374a;
   border-radius: 10px;
   margin-top: 8px;
+  width: 435px;
 }
 .custom-table {
   width: 100%;
@@ -517,6 +519,7 @@ button.review:hover {
   border-radius: 10px;
   border: 1px solid #34374a;
   margin-top: 8px;
+  width: 435px;
 }
 .range-container {
   width: 100%;
@@ -653,11 +656,12 @@ button.review:hover {
   margin: 0;
 }
 .info-tooltip {
-  position: relative !important;
-  /* padding-top: 4px; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: relative !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -17px;
+    left: -45px;
 }
 
 .tooltip {
