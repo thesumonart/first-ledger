@@ -57,7 +57,7 @@
 
 @media (max-width: 1420px) {
   section:not(.table-section) {
-    padding: 0 12px;
+    padding: 0 0px;
   }
 
   .table {
@@ -619,6 +619,11 @@
 .my-pools-main {
   padding: 20px 0px;
   border-top: 1px solid #3f4258;
+}
+@media (max-width: 768px) {
+  .my-pools-main {
+    padding: 0px 0px !important;
+  }
 }
 
 .best-pools-main {
@@ -1316,7 +1321,7 @@
         padding: 0 24px;
       }
       @media (max-width: 767px) {
-        padding: 0;
+        padding: 0px;
       }
     }
 
