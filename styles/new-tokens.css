@@ -224,7 +224,7 @@
       .table-search {
         display: flex;
         align-items: center;
-        max-width: 206px;
+        max-width: 210px;
         width: 100%;
         position: relative;
         border-radius: 10px;
@@ -236,11 +236,11 @@
           border-radius: 10px;
           width: 100%;
           border: 1px solid var(--borderDefaultPrimary);
-          background: var(--bgUtilitiesHighlight);
+          background: #ffffff05;
           outline: none;
           font-size: 16px;
           line-height: 1.2em;
-          color: var(--textDefaultTertiary);
+          color: white;
           height: 32px;
 
           @media (max-width: 767px) {
@@ -894,18 +894,60 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
         }
       }
     }
+    .market-cap-xrp {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .liquidity-xrp {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .vol-24h {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .buy-count {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .sell-count {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    @media (max-width: 767px) {
+      .token-cell {
+        font-size: 14px;
+      }
+      .market-cap-xrp {
+        font-size: 14px;
+      }
+      .liquidity-xrp {
+        font-size: 14px;
+      }
+      .vol-24h {
+        font-size: 14px;
+      }
+      .buy-count {
+        font-size: 14px;
+      }
+      .sell-count {
+        font-size: 14px;
+      }
+    }
     .token-icon-wrapper {
       position: relative;
       display: flex;
 
       .token-icon {
-        width: 32px;
+        width: 40px;
+        height: 40px;
         aspect-ratio: 1;
         border-radius: 10px;
         object-fit: cover;
 
         @media (max-width: 767px) {
           width: 32px;
+          height: 32px;
         }
       }
 
@@ -958,7 +1000,7 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
         }
         &:only-child {
           color: var(--textDefaultPrimary);
-          font-size: 16px;
+          /* font-size: 16px; */
         }
 
         &:last-child:not(:only-child) {

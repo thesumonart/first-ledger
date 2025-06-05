@@ -532,11 +532,12 @@
       border-radius: 10px;
       width: 100%;
       border: 1px solid var(--borderDefaultPrimary);
-      background: var(--bgUtilitiesHighlight);
+      /* background: var(--bgUtilitiesHighlight); */
+      background: #ffffff05;
       outline: none;
       font-size: 16px;
       line-height: 1.2em;
-      color: var(--textDefaultTertiary);
+      color: white;
       height: 32px;
 
       @media (max-width: 767px) {
@@ -597,10 +598,10 @@
 
 /* Table section CSS starts here */
 
-.tow-table-in-one {
-  height: calc(100vh - 252px);
-  overflow-y: auto;
-  /* @media (max-width: 1420px) {
+/* .tow-table-in-one { */
+/* height: calc(100vh - 252px);
+  overflow-y: auto; */
+/* @media (max-width: 1420px) {
     height: calc(100vh - 335px);
 
     .my-pools-table-two {
@@ -617,7 +618,7 @@
       height: 100% !important;
     }
   } */
-}
+/* } */
 
 .my-pools-main {
   padding: 20px 0px;
@@ -1487,6 +1488,13 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       gap: 6px;
+      height: 60px;
+      align-items: center;
+    }
+    @media (max-width: 767px) {
+      .table-row {
+        height: 50px;
+      }
     }
 
     .table-body > .table-row-wrapper:last-child {
@@ -1526,7 +1534,12 @@
       background-color: #365ed8cc;
       border-radius: 10px;
     }
-
+    @media (max-width: 767px) {
+      .token-icon-wrapper {
+        width: 32px;
+        height: 32px;
+      }
+    }
     .anti-snipe-n-check-wrapper {
       position: absolute;
       top: -2px;
