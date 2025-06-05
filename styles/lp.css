@@ -1526,7 +1526,12 @@
       background-color: #365ed8cc;
       border-radius: 10px;
     }
-
+    @media (max-width: 767px) {
+      .token-icon-wrapper {
+        width: 32px;
+        height: 32px;
+      }
+    }
     .anti-snipe-n-check-wrapper {
       position: absolute;
       top: -2px;
