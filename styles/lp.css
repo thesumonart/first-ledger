@@ -597,10 +597,10 @@
 
 /* Table section CSS starts here */
 
-.tow-table-in-one {
-  height: calc(100vh - 252px);
-  overflow-y: auto;
-  /* @media (max-width: 1420px) {
+/* .tow-table-in-one { */
+/* height: calc(100vh - 252px);
+  overflow-y: auto; */
+/* @media (max-width: 1420px) {
     height: calc(100vh - 335px);
 
     .my-pools-table-two {
@@ -617,7 +617,7 @@
       height: 100% !important;
     }
   } */
-}
+/* } */
 
 .my-pools-main {
   padding: 20px 0px;
