@@ -532,11 +532,12 @@
       border-radius: 10px;
       width: 100%;
       border: 1px solid var(--borderDefaultPrimary);
-      background: var(--bgUtilitiesHighlight);
+      /* background: var(--bgUtilitiesHighlight); */
+      background: #ffffff05;
       outline: none;
       font-size: 16px;
       line-height: 1.2em;
-      color: var(--textDefaultTertiary);
+      color: white;
       height: 32px;
 
       @media (max-width: 767px) {
