@@ -899,13 +899,15 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
       display: flex;
 
       .token-icon {
-        width: 32px;
+        width: 40px;
+        height: 40px;
         aspect-ratio: 1;
         border-radius: 10px;
         object-fit: cover;
 
         @media (max-width: 767px) {
           width: 32px;
+          height: 32px;
         }
       }
 
