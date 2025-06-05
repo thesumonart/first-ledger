@@ -601,10 +601,12 @@
     padding: 9px 32px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 60px;
 
     @media (max-width: 767px) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 4px;
+      height: 50px;
 
       > div {
         &:nth-last-of-type(1),

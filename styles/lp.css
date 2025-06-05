@@ -1487,6 +1487,13 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       gap: 6px;
+      height: 60px;
+      align-items: center;
+    }
+    @media (max-width: 767px) {
+      .table-row {
+        height: 50px;
+      }
     }
 
     .table-body > .table-row-wrapper:last-child {
