@@ -49,3 +49,25 @@ document.querySelectorAll(".token-cell").forEach((token) => {
     window.location.href = "/token-chart.html";
   });
 });
+
+
+//new input value
+document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("quick-buy-btn");
+    const tokenValueSpans = document.querySelectorAll(".quick-buy-token-count .token-value");
+
+    // Update all token value spans
+    const updateTokenValues = (value) => {
+      tokenValueSpans.forEach((span) => {
+        span.textContent = value;
+      });
+    };
+
+    // Initial sync
+    updateTokenValues(input.value);
+
+    // On input change
+    input.addEventListener("input", (e) => {
+      updateTokenValues(e.target.value);
+    });
+  });
