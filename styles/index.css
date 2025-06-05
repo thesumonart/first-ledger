@@ -536,6 +536,7 @@
     .table-row {
       transition: all 160ms ease-in-out;
     }
+
     .table-row:hover {
       background: var(--bgUtilitiesHighlightBrand);
     }
@@ -642,6 +643,20 @@
 
     @media (max-width: 592px) {
       min-width: 108px;
+    }
+  }
+  .xrp-bought {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  @media (max-width: 767px) {
+    .token-cell {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .xrp-bought {
+      font-size: 14px;
+      font-weight: 400;
     }
   }
   .token-icon-wrapper {

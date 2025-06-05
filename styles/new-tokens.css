@@ -894,6 +894,46 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
         }
       }
     }
+    .market-cap-xrp {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .liquidity-xrp {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .vol-24h {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .buy-count {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    .sell-count {
+      font-weight: 400;
+      font-size: 16px;
+    }
+    @media (max-width: 767px) {
+      .token-cell {
+        font-size: 14px;
+      }
+      .market-cap-xrp {
+        font-size: 14px;
+      }
+      .liquidity-xrp {
+        font-size: 14px;
+      }
+      .vol-24h {
+        font-size: 14px;
+      }
+      .buy-count {
+        font-size: 14px;
+      }
+      .sell-count {
+        font-size: 14px;
+      }
+    }
     .token-icon-wrapper {
       position: relative;
       display: flex;
@@ -960,7 +1000,7 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
         }
         &:only-child {
           color: var(--textDefaultPrimary);
-          font-size: 16px;
+          /* font-size: 16px; */
         }
 
         &:last-child:not(:only-child) {
