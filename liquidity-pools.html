@@ -1230,6 +1230,9 @@
             </div>
           </div>
           <div id="step-confirm-single-sided">
+            <div class="modal-title">
+              <h2>Add Liquidity</h2>
+            </div>
             <label class="label" for="diposit">You're Depositing</label>
             <div class="is-confirmation">
               <div class="deposit">
@@ -1375,6 +1378,9 @@
             </div>
           </div>
           <div id="step-done-single-sided">
+            <div class="modal-title">
+              <h2>Add Liquidity</h2>
+            </div>
             <label class="label checked" for="diposit"
               >You Deposited
               <img src="./public/images/check-mark-round.svg" alt="check" />
@@ -1634,7 +1640,7 @@
         <div class="modal-content">
           <div>
             <div class="wallet-name-dropdown_wrapper">
-              <div class="modal-wallet-dropdown">
+              <!-- <div class="modal-wallet-dropdown">
                 <span class="modal-wallet-icon"
                   ><img src="./public/images/wallet-icon.svg" alt="wallet-icon"
                 /></span>
@@ -1680,7 +1686,7 @@
                     </div>
                   </label>
                 </div>
-              </div>
+              </div> -->
               <span class="close-modal">
                 <img src="./public/images/close-icon.svg" alt="close icon" />
               </span>
@@ -1698,25 +1704,74 @@
                 Single Sided
               </button>
             </div>
+            <div class="range-container" style="margin-bottom: 20px;">
+                    <span class="fee-percentage"
+                      >Remove <span id="feeValue">0%</span></span
+                    >
+                    <input
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="0"
+                      class="range-slider"
+                      id="feeRange"
+                    />
+                  </div>
             <div class="modal-body">
               <div class="tab-content active" id="rm-numeric">
                 <div>
-                  <div class="withdrawal-amount-main">
-                    <p class="withdrawal-text">Withdrawal Amount</p>
-                    <p class="withdraw-amount-text">0%</p>
-                    <div class="percentage-all-button">
-                      <button type="button" class="each-percentage-button">
-                        25%
-                      </button>
-                      <button type="button" class="each-percentage-button">
-                        50%
-                      </button>
-                      <button type="button" class="each-percentage-button">
-                        75%
-                      </button>
-                      <button type="button" class="each-percentage-button">
-                        100%
-                      </button>
+                  <div class="token-amount-list">
+                    <div class="xrp">
+                      <div class="xrp-top-part">
+                        <input
+                          type="number"
+                          placeholder="0"
+                          class="xrp-input-payment"
+                        />
+                        <div role="button" class="xrp-btn">
+                          <span class="f-logo">F</span>
+                          <span class="xrp-text">XRP</span>
+                        </div>
+                      </div>
+                      <div class="xrp-input-part">
+                        <input
+                          type="text"
+                          placeholder="$0"
+                          class="wallet-input"
+                        />
+                        <button class="xrp-wallet" style="width: 75px;">
+                          0 (MAX)
+                          
+                        </button>
+                      </div>
+                    </div>
+                    <div class="xrp token">
+                      <div class="xrp-top-part">
+                        <input
+                          type="number"
+                          placeholder="0"
+                          class="xrp-input-payment"
+                        />
+                        <div class="token-btn change-token-btn">
+                          <span class="f-logo">F</span>
+                          <span class="xrp-text token-btn-txt">TOKEN</span>
+                          <img
+                            src="./public/images/chevron-down-icon.svg"
+                            alt="down-arrow"
+                          />
+                        </div>
+                      </div>
+                      <div class="xrp-input-part">
+                        <input
+                          type="text"
+                          placeholder="$0"
+                          class="wallet-input"
+                        />
+                        <button class="xrp-wallet" style="width: 75px;">
+                          0 (MAX)
+                         
+                        </button>
+                      </div>
                     </div>
                   </div>
                   <div class="all-transition-info">
@@ -1855,7 +1910,11 @@
             </div>
           </div>
           <div id="rm-step-confirm">
-            <label class="label" for="diposit">You're Withdrawing</label>
+            <div class="modal-title">
+              <h2>Remove Liquidity</h2>
+              
+            </div>
+            <label class="label" for="diposit">You’re Removing</label>
             <div class="is-confirmation">
               <div class="recive">
                 <h6>0.0 TOKEN/XRP LP Tokens</h6>
@@ -1926,7 +1985,11 @@
             </div>
           </div>
           <div id="rm-step-confirm-single-sided">
-            <label class="label" for="diposit">You're Withdrawing</label>
+            <div class="modal-title">
+              <h2>Remove Liquidity</h2>
+              
+            </div>
+            <label class="label" for="diposit">You’re Removing</label>
             <div class="is-confirmation">
               <div class="recive">
                 <h6>0.0 TOKEN/XRP LP Tokens</h6>
@@ -1988,8 +2051,12 @@
             </div>
           </div>
           <div id="rm-step-done-numeric">
+            <div class="modal-title">
+              <h2>Remove Liquidity</h2>
+              
+            </div>
             <label class="label checked" for="diposit"
-              >You Withdrew
+              >You Removed
               <img src="./public/images/check-mark-round.svg" alt="check" />
             </label>
 
@@ -2056,8 +2123,12 @@
             </div>
           </div>
           <div id="rm-step-done-single-sided">
+            <div class="modal-title">
+              <h2>Remove Liquidity</h2>
+              
+            </div>
             <label class="label checked" for="diposit"
-              >You Withdrew
+              >You’re Removed
               <img src="./public/images/check-mark-round.svg" alt="check" />
             </label>
             <div class="is-confirmation">

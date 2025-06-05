@@ -85,6 +85,7 @@
 
 .close-modal.is-loading {
   background-color: #34374a;
+  border-radius: 8px;
 }
 
 .modal-title {
@@ -327,7 +328,8 @@ button.review:hover {
   font-size: 1rem;
   margin-bottom: 8px;
   display: inline-block;
-  color: #d9d9d9;
+  color: #fff;
+  opacity: 70%;
 }
 .is-confirmation {
   color: var(--text-primary);
@@ -355,15 +357,16 @@ button.review:hover {
 .deposit-amount-content p,
 .recive p {
   font-size: 1rem;
-  color: var(--textOnBrandSecondary);
+  color: #fff;
+  opacity: 40%;
 }
 
 .deposit-amount .f-logo {
   padding: 8px;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background-color: #5a5a5a;
+  border-radius: 10px;
+  background-color: #365ed8cc;
   color: #0e0f43;
   display: inline-flex;
   justify-content: center;
