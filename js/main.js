@@ -342,10 +342,16 @@ document.addEventListener("DOMContentLoaded", function () {
       presetCustomizeButton.querySelector("img").src =
         "./public/images/check-mark-white.svg";
       presetCustomizeButton.style.backgroundColor = "var(--bgBrandDefault)";
+      presetInputs.forEach((input) => {
+        input.style.cursor = "text";
+      });
     } else {
       presetCustomizeButton.classList.remove("active");
       presetCustomizeButton.querySelector("img").src = originalIcon;
       presetCustomizeButton.style.backgroundColor = "";
+      presetInputs.forEach((input) => {
+        input.style.cursor = "pointer";
+      });
     }
   });
 

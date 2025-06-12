@@ -13,7 +13,7 @@
     font-size: 48px;
     line-height: 1.2em;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
     font-style: italic;
   }
 
@@ -37,7 +37,7 @@
     font-size: 48px;
     line-height: 1.2em;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
   }
 
   .changes {
@@ -45,14 +45,14 @@
     color: var(--bgUtilitiesHighlight3);
 
     .percentage-change {
-      color: var(--text-primary);
+      color: var(--textDefaultPrimary);
     }
   }
 }
 
 @media (max-width: 768px) {
   .portfolio-header-content-wrapper {
-    padding: 12px 16px 4px 16px;
+    padding: 12px 16px;
 
     .user-name {
       font-size: 28px !important;
@@ -67,10 +67,6 @@
 }
 
 @media (max-width: 1420px) {
-  section:not(.table-section) {
-    padding: 0 0px;
-  }
-
   .table {
     width: 100%;
     margin: 0 auto;
@@ -154,12 +150,12 @@
       display: flex;
       gap: 8px;
       padding: 10px 8px;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-primary);
+      background: var(--bgDefaultSecondary);
+      border: 1px solid var(--borderDefaultPrimary);
       border-radius: 10px;
       font-size: 16px;
       line-height: 1em;
-      color: var(--text-primary);
+      color: var(--textDefaultPrimary);
       cursor: pointer;
       max-height: 40px;
     }
@@ -195,7 +191,7 @@
           /* Sidebar off-screen */
           width: 75vw;
           height: 100vh;
-          background: var(--bg-secondary);
+          background: var(--bgDefaultSecondary);
           box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
           transition: left 0.3s ease-in-out;
 
@@ -223,7 +219,7 @@
           right: 24px;
           top: 24px;
           cursor: pointer;
-          border: 1px solid var(--border-primary);
+          border: 1px solid var(--borderDefaultPrimary);
           height: 36px;
           width: 36px;
           border-radius: 8px;
@@ -256,11 +252,11 @@
       align-items: center;
       justify-content: center;
       padding: 6.5px 12px;
-      background-color: var(--bg-secondary);
+      background-color: var(--bgDefaultSecondary);
       border-radius: 10px;
-      border: 1px solid var(--border-secondary);
+      border: 1px solid var(--borderDefaultSecondary);
       font-size: 16px;
-      color: var(--text-primary);
+      color: var(--textDefaultPrimary);
       cursor: pointer;
       gap: 4px;
 
@@ -316,7 +312,7 @@
       position: relative;
       max-width: 155px;
       width: 100%;
-      border: 1px solid var(--border-secondary);
+      border: 1px solid var(--borderDefaultSecondary);
       border-radius: 12px;
       padding: 6px 12px;
       display: flex;
@@ -326,7 +322,7 @@
       cursor: pointer;
       user-select: none;
       white-space: nowrap;
-      background: var(--bg-secondary);
+      background: var(--bgDefaultSecondary);
       font-size: 14px;
       color: white;
 
@@ -350,9 +346,9 @@
         top: calc(100% + 4px);
         left: 0;
         width: auto;
-        border: 1px solid var(--border-secondary);
+        border: 1px solid var(--borderDefaultSecondary);
         border-radius: 12px;
-        background: var(--bg-secondary);
+        background: var(--bgDefaultSecondary);
         flex-direction: column;
       }
 
@@ -413,7 +409,7 @@
       position: relative;
       max-width: 131px;
       width: 100%;
-      border: 1px solid var(--border-secondary);
+      border: 1px solid var(--borderDefaultSecondary);
       border-radius: 12px;
       padding: 6px 12px;
       display: flex;
@@ -423,9 +419,9 @@
       user-select: none;
       white-space: nowrap;
       text-overflow: ellipsis;
-      background: var(--bg-secondary);
+      background: var(--bgDefaultSecondary);
       font-size: 14px;
-      color: var(--text-primary);
+      color: var(--textDefaultPrimary);
       gap: 8px;
 
       .arrow-icon {
@@ -448,9 +444,9 @@
         top: calc(100% + 4px);
         left: 0;
         width: auto;
-        border: 1px solid var(--border-secondary);
+        border: 1px solid var(--borderDefaultSecondary);
         border-radius: 12px;
-        background: var(--bg-secondary);
+        background: var(--bgDefaultSecondary);
         flex-direction: column;
       }
 
@@ -532,12 +528,11 @@
       border-radius: 10px;
       width: 100%;
       border: 1px solid var(--borderDefaultPrimary);
-      /* background: var(--bgUtilitiesHighlight); */
-      background: #ffffff05;
+      background: var(--bgUtilitiesHighlight);
       outline: none;
       font-size: 16px;
       line-height: 1.2em;
-      color: white;
+      color: var(--textDefaultPrimary);
       height: 32px;
 
       @media (max-width: 767px) {
@@ -594,39 +589,13 @@
   }
 }
 
-/* Portfolio Table Controls CSS ends here */
-
-/* Table section CSS starts here */
-
-/* .tow-table-in-one { */
-/* height: calc(100vh - 252px);
-  overflow-y: auto; */
-/* @media (max-width: 1420px) {
-    height: calc(100vh - 335px);
-
-    .my-pools-table-two {
-      max-height: calc(100vh - 595px);
-      height: 100% !important;
-    }
-  }
-
-  @media (max-width: 1420px) {
-    height: calc(100vh - 270px);
-
-    .my-pools-table-two {
-      max-height: calc(100vh - 530px);
-      height: 100% !important;
-    }
-  } */
-/* } */
-
 .my-pools-main {
   padding: 20px 0px;
-  border-top: 1px solid #3f4258;
+  border-top: 0.5px solid var(--borderDefaultPrimary);
 }
 @media (max-width: 768px) {
   .my-pools-main {
-    padding: 0px 0px !important;
+    padding: 0;
   }
 }
 
@@ -665,7 +634,6 @@
 @media (max-width: 425px) {
   .table-section-title-text p {
     font-size: 14px;
-    /* width: 78px; */
   }
 }
 .table-section-title-text p.active::after {
@@ -687,16 +655,6 @@
   display: flex;
   gap: 20px;
 }
-
-/* .my-pools-table {
-  height: 165px;
-  overflow-y: auto;
-} */
-
-/* .my-pools-table-two {
-  max-height: calc(100vh - 680px);
-  overflow-y: auto;
-} */
 
 .my-pools-table-two .col-span {
   padding: 12px 0px;
@@ -735,7 +693,7 @@
     align-items: stretch;
 
     tr:hover:not(:has(th)) {
-      background: var(--bg-secondary) !important;
+      background: var(--bgDefaultSecondary) !important;
     }
   }
   .table-headingg {
@@ -783,7 +741,7 @@
 
   td {
     vertical-align: text-top;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
     font-size: 16px;
   }
 
@@ -792,7 +750,7 @@
   }
 
   tr {
-    border-bottom: 0.5px solid var(--border-primary);
+    border-bottom: 0.5px solid var(--borderDefaultPrimary);
     padding: 7px calc((100% - 1420px) / 2);
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -829,7 +787,7 @@
     width: 100%;
     font-size: 16px;
     font-weight: 400;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
   }
   @media (max-width: 768px) {
     .token-cell {
@@ -916,7 +874,7 @@
     outline: none;
 
     &:hover {
-      border-color: var(--border-primary);
+      border-color: var(--borderDefaultPrimary);
     }
   }
 
@@ -941,7 +899,7 @@
     position: absolute;
     top: 30px;
     right: 4px;
-    border: 0.5px solid var(--border-primary);
+    border: 0.5px solid var(--borderDefaultPrimary);
     backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 0;
@@ -955,7 +913,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
     padding: 8px 16px;
     text-decoration: none;
     font-size: 16px;
@@ -1112,8 +1070,8 @@
 }
 
 .token-details-content {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
+  background: var(--bgDefaultSecondary);
+  border: 1px solid var(--borderDefaultPrimary);
   border-radius: 16px;
   padding: 24px 24px 24px 24px;
   max-width: 500px;
@@ -1189,7 +1147,7 @@
 }
 
 .token-details-info h2 {
-  color: var(--text-primary);
+  color: var(--textDefaultPrimary);
   font-size: 20px;
   font-weight: 600;
   margin: 0;
@@ -1200,7 +1158,7 @@
   }
 }
 .token-details-info p {
-  color: var(--text-primary);
+  color: var(--textDefaultPrimary);
   font-size: 16px;
   font-weight: 600;
   margin: 4px 0 0 0;
@@ -1227,7 +1185,7 @@
 }
 
 .close-token-modal:hover {
-  background: var(--bg-primary);
+  background: var(--bgDefaultPrimary);
 }
 
 .close-token-modal img {
@@ -1278,7 +1236,7 @@
 .position-value {
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--textDefaultPrimary);
   margin: 0;
 }
 
@@ -1320,7 +1278,7 @@
 
 .token-action-btn.secondary {
   background: #181924;
-  color: var(--text-primary);
+  color: var(--textDefaultPrimary);
 }
 
 .token-action-btn:hover {

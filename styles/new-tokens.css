@@ -143,6 +143,8 @@
           background-repeat: no-repeat;
           background-position: 80% center;
           background-size: 14px;
+          font-size: 16px;
+          line-height: 1.2em;
 
           &:focus {
             outline: none;
@@ -236,11 +238,11 @@
           border-radius: 10px;
           width: 100%;
           border: 1px solid var(--borderDefaultPrimary);
-          background: #ffffff05;
+          background: var(--bgUtilitiesHighlight);
           outline: none;
           font-size: 16px;
           line-height: 1.2em;
-          color: white;
+          color: var(--textDefaultPrimary);
           height: 32px;
 
           @media (max-width: 767px) {
@@ -309,7 +311,7 @@
 }
 
 .cust_mod_pop_con {
-  background-color: var(--borderDefaultPrimary);
+  background-color: var(--bgDefaultSecondary);
   width: 500px;
   border-radius: 16px;
   box-sizing: border-box;
@@ -441,17 +443,18 @@
     border: 1px solid var(--bgDefaultPrimaryHov);
 
     &:hover {
-      background: transparent;
+      background: var(--bgDefaultSecondary);
       border: 1px solid var(--borderDefaultSecondary);
     }
   }
 
   & > :last-of-type {
+    background: var(--bgBrandDefault);
     transition: all 0.3s ease;
-    border: 1px solid var(--bgBrandDefault);
+    border: 1px solid var(--borderBrandDefault);
 
     &:hover {
-      background: var(--bgBrandSecondary) !important;
+      background: var(--bgBrandHover);
     }
   }
 
@@ -585,7 +588,8 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
 }
 
 .metrics-input {
-  padding: 6px 8px;
+  padding: 0px 12px;
+  height: 26px;
   border: 1px solid var(--borderDefaultPrimary);
   border-radius: 4px;
   outline: none;
@@ -593,6 +597,8 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
   border-radius: 10px;
   width: 100%;
   color: var(--textDefaultTertiary);
+  font-size: 16px;
+  line-height: 1.2em;
 }
 
 @media (max-width: 1024px) {

@@ -9,6 +9,11 @@
 
 /* Font */
 
+@font-face {
+  font-family: "FLInterCustom";
+  src: url("../public/fonts/FLInterCustom.ttf") format("ttf");
+}
+
 /* Root Variables */
 :root {
   --fontGothamUltra: "Gotham Ultra";
@@ -16,11 +21,14 @@
 
   /* Text Colors */
   --textDefaultPrimary: #f5f5f5;
-  --textDefaultTertiary: #757575;
+  --textDefaultSecondary: rgba(255, 255, 255, 0.7);
+  --textDefaultTertiary: rgba(255, 255, 255, 0.4);
   --textBrandDefault: #6f93fe;
+  --textBrandSecondary: #456eeb;
+  --textBrandTertiary: #1f3ccd;
   --textOnBrand: #0e0f43;
   --textOnBrandSecondary: #d0deff;
-  --textPositiveDefault: #c6f5cb;
+  --textPositiveDefault: #a8f0c0;
   --textPositiveSecondary: #85e0a3;
   --textPositiveOnPositive: #e3ffe7;
   --textPositiveOnPositiveTertiary: #e3ffe7;
@@ -35,88 +43,41 @@
 
   /* Background Colors */
 
-  --bgBrandDefault: #456eeb;
+  --bgBrandDefault: #365ed8;
   --bgBrandHover: #1f3ccd;
-  --bgBrandSecondary: #253bac;
+  --bgBrandSecondary: rgba(54, 94, 216, 0.8);
+  --bgBrandSecondaryHover: rgba(54, 94, 216, 0.7);
   --bgDefaultPrimary: #13131b;
   --bgDefaultPrimaryHov: #181924;
   --bgDefaultSecondary: #242534;
+  --bgDefaultSecondaryHov: #34374a;
   --bgAccentDefault: #14b8a6;
   --bgAccentTertiary: #115e59;
   --bgNeutralSecondary: #434343;
   --bgPositiveDefault: #008043;
+  --bgPositiveHover: #02542d;
   --bgPositiveSecondary: #02542d;
+  --bgPositiveSecondaryHover: #024023;
   --bgPositiveTertiary: #024023;
   --bgDangerDefault: #f03330;
+  --bgDangerHover: #d21e1e;
+  --bgDangerSecondary: #9c120f;
+  --bgDangerSecondaryHover: #690807;
   --bgDisabledDefault: #34374a;
   --bgUtilitiesHighlight: rgba(255, 255, 255, 0.02);
-  --bgUtilitiesHighlight2: rgba(255, 255, 255, 0.02);
-  --bgUtilitiesHighlight3: rgba(255, 255, 255, 0.4);
+  --bgUtilitiesHighlight2: rgba(255, 255, 255, 0.05);
+  --bgUtilitiesHighlight3: rgba(19, 8, 8, 0.4);
   --bgUtilitiesHighlight4: rgba(255, 255, 255, 0.7);
   --bgUtilitiesHighlightBrand: rgba(135, 165, 255, 0.03);
 
   /* Border Colors */
 
-  --borderDefaultPrimary: #242534;
+  --borderDefaultPrimary: rgba(255, 255, 255, 0.05);
   --borderDefaultSecondary: #34374a;
   --borderBrandDefault: #354ed8;
   --borderBrandTertiary: #161e69;
   --borderPositiveSecondary: #14ae5c;
   --borderPositiveTertiary: #009951;
-  --borderDangerSecondary: #ff7d6f;
-  --borderDisabledDefault: #383838;
-
-  /* Liquidity Pools */
-  --bg-primary: #17171f;
-  --bg-secondary: #1e1f2a;
-  --text-primary: #ffffff;
-  --border-primary: #2f303e;
-  --border-secondary: #3e4051;
-
-  /* Token chart page */
-
-  /* Text Colors */
-  --textDefaultPrimary: #f5f5f5;
-  --textDefaultTertiary: #757575;
-  --textBrandDefault: #6f93fe;
-  --textOnBrand: #0e0f43;
-  --textOnBrandSecondary: #d0deff;
-  --textPositiveDefault: #c6f5cb;
-  --textPositiveSecondary: #85e0a3;
-  --textPositiveOnPositive: #e3ffe7;
-  --textDefaultSecondary: #d9d9d9;
-  --textDangerDefault: #fcb3ad;
-  --textDangerSecondary: #ff7d6f;
-  --textDangerOnDanger: #fee9e7;
-  --textNeutralDefault: #f3f3f3;
-  --textNeutralTertiary: #cdcdcd;
-  --textDisabledDefault: #757575;
-
-  /* Background Colors */
-
-  --bgBrandDefault: #456eeb;
-  --bgBrandHover: #1f3ccd;
-  --bgBrandSecondary: #253bac;
-  --bgDefaultPrimary: #13131b;
-  --bgDefaultPrimaryHov: #181924;
-  --bgDefaultSecondary: #242534;
-  --bgAccentTertiary: #115e59;
-  --bgPositiveDefault: #008043;
-  --bgPositiveSecondary: #02542d;
-  --bgDangerDefault: #f03330;
-  --bgDisabledDefault: #34374a;
-  --bgUtilitiesHighlight: rgba(255, 255, 255, 0.01);
-  --bgUtilitiesHighlight2: rgba(255, 255, 255, 0.02);
-  --bgUtilitiesHighlight3: rgba(255, 255, 255, 0.05);
-  --bgUtilitiesHighlightBrand: rgba(135, 165, 255, 0.03);
-
-  /* Border Colors */
-
-  --borderDefaultPrimary: #242534;
-  --borderDefaultSecondary: #34374a;
-  --borderBrandDefault: #354ed8;
-  --borderBrandTertiary: #161e69;
-  --borderPositiveSecondary: #14ae5c;
   --borderDangerSecondary: #ff7d6f;
   --borderDisabledDefault: #383838;
   --borderNeutralTertiary: #767676;
@@ -155,7 +116,6 @@ input {
 /* Global styles */
 
 .container {
-  /* max-width: 1420px; */
   width: 100%;
   margin: 0 auto;
 }
@@ -171,10 +131,16 @@ body {
 button,
 a {
   user-select: none;
+  font-family: var(--fontInter);
 }
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.xrp-unique-icon {
+  font-family: "FLInterCustom";
+  color: inherit !important;
 }
 
 /* Global styles */

@@ -220,6 +220,24 @@ document.querySelectorAll(".side-quick-trade").forEach((tradeBlock) => {
     });
   });
 
+  // Set cursor style for preset inputs based on edit mode
+  const updatePresetInputCursors = () => {
+    elements.presetInputs.forEach((input) => {
+      input.style.cursor = isEditMode ? "text" : "pointer";
+    });
+  };
+
+  // Call on toggleEditMode and initial setup
+  updatePresetInputCursors();
+  const originalToggleEditMode = toggleEditMode;
+  // Override toggleEditMode to also update cursor
+  const newToggleEditMode = () => {
+    originalToggleEditMode();
+    updatePresetInputCursors();
+  };
+  elements.presetCustomize.removeEventListener("click", toggleEditMode);
+  elements.presetCustomize.addEventListener("click", newToggleEditMode);
+
   elements.slippageInput.addEventListener("focus", function () {
     this.value = this.value.replace("%", "");
   });

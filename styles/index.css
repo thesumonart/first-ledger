@@ -152,7 +152,7 @@
       transition: all 0.3s ease;
 
       &:not(:last-child) {
-        font-size: 14px;
+        font-size: 16px;
         padding: 8px 12px;
         line-height: 1.15em;
       }
@@ -186,7 +186,7 @@
       user-select: none;
       white-space: nowrap;
       background: var(--bgDefaultPrimaryHov);
-      font-size: 14px;
+      font-size: 16px;
       color: var(--textDefaultPrimary);
 
       &:hover {
@@ -416,12 +416,10 @@
         width: 100%;
         height: 32px;
         border: 1px solid var(--borderDefaultPrimary);
-        /* background: var(--bgDefaultPrimary); */
-        background: #ffffff05;
+        background: var(--bgDefaultPrimary);
         outline: none;
         font-size: 16px;
-        /* color: var(--textDefaultTertiary); */
-        color: white;
+        color: var(--textDefaultPrimary);
       }
 
       .search-button {
@@ -1247,6 +1245,9 @@
         height: 100%;
         color: var(--textDefaultPrimary);
         border-radius: 6px;
+        font-size: 16px;
+        line-height: 1.2em;
+        cursor: pointer;
 
         &:focus {
           outline: none;
@@ -1877,14 +1878,28 @@
   font-weight: 400;
   line-height: 1.2em;
   color: var(--textDefaultPrimary);
+  transition: all 0.16s ease-in-out;
+
+  * {
+    display: flex;
+  }
 
   &.download {
     background: var(--bgDefaultPrimaryHov);
     border-color: rgba(255, 255, 255, 0.05);
+
+    &:hover {
+      background: var(--bgDefaultSecondary);
+      border-color: var(--borderDefaultSecondary);
+    }
   }
   &.tweet {
     background: var(--bgBrandDefault);
     border-color: var(--borderBrandDefault);
+
+    &:hover {
+      background: var(--bgBrandHover);
+    }
   }
 
   @media (max-width: 767px) {

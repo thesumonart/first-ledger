@@ -556,6 +556,7 @@ button.review:hover {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-bottom: 20px;
 }
 .range-slider {
   width: 100%;

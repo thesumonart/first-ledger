@@ -267,12 +267,23 @@ body {
 
         th {
           padding: 6px 0 6.5px 0;
+
+          &:first-child {
+            padding-left: 16px;
+          }
+          &:last-child {
+            padding-right: 16px;
+          }
+
+          &:last-child > span {
+            justify-self: end;
+          }
         }
         .tx-heading-inner {
           display: flex;
+          width: fit-content;
           align-items: center;
           gap: 4px;
-          white-space: nowrap;
           font-weight: 400;
         }
       }
@@ -313,6 +324,15 @@ body {
         }
         td {
           padding: 8px 0;
+
+          &:first-child {
+            padding-left: 16px;
+          }
+
+          &:last-child {
+            text-align: right;
+            padding-right: 16px;
+          }
         }
         .maker-data-wrapper {
           display: flex;
@@ -351,13 +371,12 @@ body {
   }
   .tab-content {
     margin-top: 0px !important;
-    padding: 0 0px 0px 0px !important;
-    border-radius: none !important;
   }
 
   .tx-table-header {
     font-size: 12px !important;
   }
+  .buy-row,
   .sell-row {
     font-size: 14px !important;
   }
@@ -646,6 +665,7 @@ body {
         height: 100%;
         color: var(--textDefaultPrimary);
         border-radius: 6px;
+        font-size: 16px;
 
         &:focus {
           outline: none;
@@ -929,6 +949,8 @@ body {
         width: 50%;
         outline: none;
         cursor: pointer;
+        font-size: 16px;
+        line-height: 1.2em;
 
         &:focus {
           outline: none;
@@ -949,6 +971,8 @@ body {
     width: 100%;
     outline: none;
     cursor: pointer;
+    font-size: 16px;
+    line-height: 1.2em;
   }
 }
 .inner-contents-n-btns {
