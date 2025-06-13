@@ -615,9 +615,10 @@ body {
 }
 
 .stat-box {
-  background: var(--bgUtilitiesHighlight2);
+  background: var(--bgUtilitiesHighlight);
   padding: 8px;
   border-radius: 10px;
+  border: 0.5px solid var(--borderDefaultPrimary);
 }
 
 .stat-label {
@@ -819,7 +820,7 @@ body {
 
   .token-n-price-impact {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 2px;
     font-size: 14px;
 
@@ -1235,7 +1236,7 @@ body {
       align-items: center;
       justify-content: center;
       gap: 8px;
-      background: transparent;
+      background: var(--bgDefaultPrimaryHov);
       border: 1px solid var(--borderDefaultPrimary);
       flex: 1;
       height: 28px;
@@ -1260,11 +1261,6 @@ body {
   .about-token-n-social-links-wrapper {
     background: none;
     border: none;
-  }
-  .token-social-btns-wrapper {
-    .social-btn {
-      background-color: #181924 !important;
-    }
   }
 }
 

@@ -188,6 +188,7 @@
       background: var(--bgDefaultPrimaryHov);
       font-size: 16px;
       color: var(--textDefaultPrimary);
+      transition: all 0.16s ease-in-out;
 
       &:hover {
         background: var(--bgDefaultSecondary);
@@ -217,125 +218,6 @@
     }
 
     /* Customize Dropdown Button */
-
-    /* Wallets Dropdown button */
-
-    .wallet-dropdown {
-      position: relative;
-      max-width: 131px;
-      width: 100%;
-      border: 1px solid var(--borderDefaultPrimary);
-      border-radius: 12px;
-      padding: 6px 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      user-select: none;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      background: var(--bgDefaultPrimaryHov);
-      font-size: 14px;
-      color: var(--textDefaultPrimary);
-      gap: 8px;
-      /* Wallet dropdown hidden for now */
-      display: none;
-
-      &:hover {
-        background: var(--bgDefaultSecondary);
-        border-color: var(--borderDefaultSecondary);
-      }
-
-      .arrow-icon {
-        display: flex;
-      }
-
-      .wallet-icon {
-        display: flex;
-
-        img {
-          width: 18px;
-          aspect-ratio: 1;
-        }
-      }
-
-      .arrow-icon.open {
-        transform: rotate(180deg);
-      }
-
-      .dropdown-options {
-        display: none;
-        position: absolute;
-        top: calc(100% + 4px);
-        left: 0;
-        width: auto;
-        border: 1px solid var(--borderDefaultSecondary);
-        border-radius: 12px;
-        background: var(--bgDefaultSecondary);
-        flex-direction: column;
-      }
-
-      .dropdown-options.show {
-        display: flex;
-      }
-
-      .option {
-        padding: 12px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .wallet-name-address {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .wallet-address {
-        color: var(--textDefaultTertiary);
-      }
-
-      .option input[type="checkbox"] {
-        appearance: none;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #1f3ccd;
-        border-radius: 4px;
-        position: relative;
-        margin-right: 5px;
-        cursor: pointer;
-      }
-
-      .option input[type="checkbox"]:checked {
-        background-color: var(--bgBrandDefault);
-        border: none;
-      }
-
-      .option input[type="checkbox"]:checked::after {
-        content: "";
-        background: url("../public/images/check-mark.svg");
-        background-size: 75%;
-        background-repeat: no-repeat;
-        background-position: center center;
-        font-size: 12px;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-
-      #selected-option {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        flex-grow: 1;
-      }
-
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-
-    /* Wallets Dropdown button */
   }
   .table-search-n-toggle-btn {
     display: flex;
@@ -462,10 +344,6 @@
     .control-button {
       padding: 6px 8px !important;
     }
-
-    .wallet-drop-down-wrapper {
-      height: 40px !important;
-    }
   }
 }
 
@@ -544,7 +422,6 @@
 
   .table-heading {
     display: grid;
-    /* padding: 7.5px calc((100vw - 1420px) / 2); */
     padding: 7.5px 32px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     border-bottom: 0.5px solid var(--borderDefaultPrimary);
@@ -598,9 +475,9 @@
   }
 
   .table-row {
-    /* padding: 9px calc((100% - 1420px) / 2); */
     padding: 9px 32px;
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     height: 60px;
 
@@ -1315,7 +1192,6 @@
 
   .token-n-price-impact {
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
     gap: 2px;
     font-size: 14px;
@@ -1974,115 +1850,6 @@
     }
   }
 
-  .wallet-dropdown {
-    position: relative;
-    height: 40px;
-    width: 100%;
-    border: 1px solid var(--borderDefaultSecondary);
-    border-radius: 12px;
-    padding: 6px 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    user-select: none;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    background: var(--bgDefaultSecondary);
-    font-size: 14px;
-    color: var(--textDefaultPrimary);
-    gap: 8px;
-
-    .wallet-name {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .arrow-icon {
-      display: flex;
-    }
-
-    .wallet-icon {
-      display: flex;
-
-      img {
-        width: 18px;
-        aspect-ratio: 1;
-      }
-    }
-
-    .arrow-icon.open {
-      transform: rotate(180deg);
-    }
-
-    .dropdown-options {
-      display: none;
-      position: absolute;
-      top: calc(100% + 4px);
-      left: 0;
-      width: auto;
-      border: 1px solid var(--borderDefaultSecondary);
-      border-radius: 12px;
-      background: var(--bgDefaultSecondary);
-      flex-direction: column;
-    }
-
-    .dropdown-options.show {
-      display: flex;
-    }
-
-    .option {
-      padding: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .wallet-name-address {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .wallet-address {
-      color: var(--textDefaultTertiary);
-    }
-
-    .option input[type="checkbox"] {
-      appearance: none;
-      width: 16px;
-      height: 16px;
-      border: 1px solid #1f3ccd;
-      border-radius: 4px;
-      position: relative;
-      margin-right: 5px;
-      cursor: pointer;
-    }
-
-    .option input[type="checkbox"]:checked {
-      background-color: var(--bgBrandDefault);
-      border: none;
-    }
-
-    .option input[type="checkbox"]:checked::after {
-      content: "";
-      background: url("../public/images/check-mark.svg");
-      background-size: 75%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      font-size: 12px;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-
-    #selected-option {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      flex-grow: 1;
-    }
-  }
   .close-button,
   .back-button {
     display: flex;
@@ -2533,7 +2300,7 @@
             }
 
             svg path {
-              stroke: #0e0f43;
+              stroke: var(--textOnBrand);
             }
           }
 
@@ -2634,7 +2401,7 @@
             }
 
             svg path {
-              stroke: #0e0f43;
+              stroke: var(--textOnBrand);
             }
           }
 
