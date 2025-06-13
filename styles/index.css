@@ -699,6 +699,7 @@
     width: fit-content;
     display: flex;
     align-items: center;
+    user-select: none;
 
     .down-arrow-icon {
       width: 16px;

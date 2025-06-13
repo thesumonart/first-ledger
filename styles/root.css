@@ -111,6 +111,10 @@ ol {
 
 input {
   font-family: var(--fontInter);
+  color: var(--textDefaultPrimary) !important;
+  &::placeholder {
+    color: var(--textDefaultTertiary);
+  }
 }
 
 /* Reset CSS */
@@ -143,6 +147,9 @@ a {
 .xrp-unique-icon {
   font-family: "FLInterCustom", sans-serif;
   color: inherit !important;
+  line-height: 1.2em;
+  display: flex;
+  height: fit-content;
 }
 
 /* Global styles */

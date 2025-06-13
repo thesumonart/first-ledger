@@ -97,8 +97,8 @@ document.querySelectorAll(".side-quick-trade").forEach((tradeBlock) => {
       mode === "buy" ? "sell-active" : "buy-active"
     );
 
-    const label = quickBuy ? "Review" : "Quick";
-    const icon = quickBuy ? "arrow-icon" : "zap-icon";
+    const label = quickBuy ? "Quick" : "Review";
+    const icon = quickBuy ? "zap-icon" : "arrow-icon";
 
     elements.quickActionBtn.innerHTML = `
       <figure><img src="./public/images/${icon}.svg" alt="icon" /></figure>

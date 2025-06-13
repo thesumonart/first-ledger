@@ -137,14 +137,10 @@
           flex: none;
           white-space: nowrap;
           outline: none;
-          padding-right: 30px;
           background-color: var(--bgUtilitiesHighlight);
-          background-image: url("../public/images/xrp-logo.svg");
-          background-repeat: no-repeat;
-          background-position: 80% center;
-          background-size: 14px;
           font-size: 16px;
           line-height: 1.2em;
+          font-family: "FLInterCustom", sans-serif;
 
           &:focus {
             outline: none;
@@ -787,6 +783,11 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
         align-items: center;
         max-height: 60px;
 
+        span {
+          align-items: center;
+          display: flex;
+        }
+
         @media (max-width: 767px) {
           max-height: 50px;
         }
@@ -839,13 +840,6 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
           align-items: center;
           justify-content: center;
           gap: 4px;
-        }
-        .xrp-logo-wrapper {
-          display: inline-flex;
-          .table-xrp-logo {
-            width: 14px;
-            opacity: 0.5;
-          }
         }
       }
     }
@@ -973,21 +967,6 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
       }
     }
 
-    .multi-wallet {
-      font-size: 16px;
-      color: var(--textBrandDefault);
-      cursor: pointer;
-      width: fit-content;
-      display: flex;
-      align-items: center;
-
-      .down-arrow-icon {
-        width: 16px;
-        aspect-ratio: 1;
-        transition: transform 0.3s ease;
-      }
-    }
-
     .table-xrp-token-wrapper {
       display: flex;
       flex-direction: column;
@@ -998,11 +977,6 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
         &:first-child {
           display: flex;
           gap: 4px;
-
-          .table-xrp-logo {
-            width: 14px;
-            aspect-ratio: 1/1;
-          }
         }
         &:only-child {
           color: var(--textDefaultPrimary);
@@ -1032,11 +1006,6 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
           display: flex;
           align-items: center;
           gap: 6px;
-
-          .table-xrp-logo {
-            width: 14px;
-            aspect-ratio: 1/1;
-          }
         }
       }
 
@@ -1051,11 +1020,6 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
           display: flex;
           align-items: center;
           gap: 6px;
-
-          .table-xrp-logo {
-            width: 14px;
-            aspect-ratio: 1/1;
-          }
         }
       }
 
@@ -1167,7 +1131,7 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
         gap: 4px;
 
         @media (max-width: 767px) {
-          display: none;
+          display: none !important;
         }
       }
 
@@ -1258,18 +1222,6 @@ input[type="checkbox"]:checked + .cust-svg-wrapper svg {
 
     .action-menu a:hover {
       background: rgba(111, 147, 254, 0.2);
-    }
-
-    .wallet-info {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      color: var(--textDefaultPrimary);
-    }
-
-    .wallet-address {
-      color: var(--textOnBrandSecondary);
-      font-size: 14px;
     }
   }
 
