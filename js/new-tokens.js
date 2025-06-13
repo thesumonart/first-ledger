@@ -50,24 +50,49 @@ document.querySelectorAll(".token-cell").forEach((token) => {
   });
 });
 
-
 //new input value
 document.addEventListener("DOMContentLoaded", () => {
-    const input = document.getElementById("quick-buy-btn");
-    const tokenValueSpans = document.querySelectorAll(".quick-buy-token-count .token-value");
+  const input = document.getElementById("quick-buy-btn");
+  const tokenValueSpans = document.querySelectorAll(
+    ".quick-buy-token-count .token-value"
+  );
+  const icon = "\uE001";
 
-    // Update all token value spans
-    const updateTokenValues = (value) => {
-      tokenValueSpans.forEach((span) => {
-        span.textContent = value;
-      });
-    };
+  // Add icon initially if not present
+  if (!input.value.endsWith(icon)) {
+    input.value += " " + icon;
+  }
 
-    // Initial sync
-    updateTokenValues(input.value);
-
-    // On input change
-    input.addEventListener("input", (e) => {
-      updateTokenValues(e.target.value);
-    });
+  input.addEventListener("focus", () => {
+    if (input.value.endsWith(icon)) {
+      input.value = input.value.slice(0, -icon.length).trimEnd();
+    }
   });
+
+  input.addEventListener("blur", () => {
+    if (input.value && !input.value.endsWith(icon)) {
+      input.value += " " + icon;
+    }
+  });
+
+  // Function to get input value without icon
+  const getPureValue = () => {
+    return input.value.endsWith(icon)
+      ? input.value.slice(0, -icon.length).trimEnd()
+      : input.value;
+  };
+
+  // Update all token value spans
+  const updateTokenValues = () => {
+    const pureValue = getPureValue();
+    tokenValueSpans.forEach((span) => {
+      span.textContent = pureValue;
+    });
+  };
+
+  // Initial sync
+  updateTokenValues();
+
+  // On input change
+  input.addEventListener("input", updateTokenValues);
+});

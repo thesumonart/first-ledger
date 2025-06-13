@@ -3,17 +3,11 @@
 .portfolio-header-content-wrapper {
   padding: 42px 32px 42px 32px;
 
-  .name-wallet {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-
-  .user-name {
+  .heading {
     font-size: 48px;
     line-height: 1.2em;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
     font-style: italic;
   }
 
@@ -23,104 +17,18 @@
   }
 }
 
-.balance-changes {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding-right: 50px;
-
-  .multi-wallet-mobile {
-    display: none;
-  }
-
-  .balance {
-    font-size: 48px;
-    line-height: 1.2em;
-    font-weight: 700;
-    color: var(--text-primary);
-  }
-
-  .changes {
-    font-size: 16px;
-    color: var(--bgUtilitiesHighlight3);
-
-    .percentage-change {
-      color: var(--text-primary);
-    }
-  }
-}
-
 @media (max-width: 768px) {
   .portfolio-header-content-wrapper {
-    padding: 12px 16px 4px 16px;
+    padding: 12px 16px;
 
-    .user-name {
-      font-size: 28px !important;
-      line-height: 120% !important;
-      font-weight: 500 !important;
+    .heading {
+      font-size: 28px;
+      line-height: 120%;
+      font-weight: 500;
     }
     .explore-text {
       font-size: 12px;
-      line-height: 120% !important;
-    }
-  }
-}
-
-@media (max-width: 1420px) {
-  section:not(.table-section) {
-    padding: 0 0px;
-  }
-
-  .table {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    border: 0.5px solid var(--borderDefaultPrimary);
-    border-radius: 10px;
-
-    @media (max-width: 768px) {
-      border-radius: 0;
-      border-left: 0;
-      border-right: 0;
-    }
-  }
-  .table-section {
-    tr {
-      padding-left: 12px !important;
-      padding-right: 12px !important;
-    }
-  }
-
-  .balance {
-    font-size: 20px;
-  }
-
-  .balance-changes {
-    padding: 0 !important;
-  }
-}
-
-@media (max-width: 1200px) {
-  .multi-wallet-mobile {
-    display: inline-block !important;
-    font-size: 14px;
-    line-height: 1.4em;
-    color: var(--textNeutralTertiary);
-  }
-}
-
-@media (max-width: 768px) {
-  .name-wallets {
-    .user-name {
-      font-size: 32px;
-      line-height: 32px;
-      font-weight: 600;
-    }
-
-    .wallets {
-      font-size: 14px;
+      line-height: 120%;
     }
   }
 }
@@ -141,113 +49,6 @@
     align-items: center;
     gap: 16px;
 
-    /* Filters Button */
-
-    .filters-button {
-      user-select: none;
-
-      img {
-        width: 20px;
-        aspect-ratio: 1;
-      }
-
-      display: flex;
-      gap: 8px;
-      padding: 10px 8px;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border-primary);
-      border-radius: 10px;
-      font-size: 16px;
-      line-height: 1em;
-      color: var(--text-primary);
-      cursor: pointer;
-      max-height: 40px;
-    }
-
-    /* Filters Button */
-
-    /* Filter Inner buttons */
-
-    .filter-sidebar-overlay {
-      @media (max-width: 767px) {
-        z-index: 1;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-      }
-
-      .filter-sidebar {
-        position: relative;
-        display: flex;
-        gap: 16px;
-
-        @media (max-width: 767px) {
-          flex-direction: column;
-          padding: 64px 16px;
-          top: 0;
-          left: -75vw;
-          /* Sidebar off-screen */
-          width: 75vw;
-          height: 100vh;
-          background: var(--bg-secondary);
-          box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-          transition: left 0.3s ease-in-out;
-
-          .wallet-dropdown {
-            max-width: 155px;
-            width: 100%;
-
-            .dropdown-options {
-              max-width: calc(100vw - 32px);
-              overflow-x: scroll;
-
-              &::-webkit-scrollbar {
-                height: 4px !important;
-              }
-
-              input[type="checkbox"] {
-                flex: none;
-              }
-            }
-          }
-        }
-
-        .close-sidebar-btn {
-          position: absolute;
-          right: 24px;
-          top: 24px;
-          cursor: pointer;
-          border: 1px solid var(--border-primary);
-          height: 36px;
-          width: 36px;
-          border-radius: 8px;
-          display: none;
-          align-items: center;
-          justify-content: center;
-          user-select: none;
-
-          @media (max-width: 767px) {
-            display: flex;
-          }
-        }
-      }
-
-      .filter-sidebar.active {
-        left: 0;
-      }
-    }
-
-    .filter-sidebar-overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
     /* Filter Inner buttons */
 
     .control-button {
@@ -256,11 +57,11 @@
       align-items: center;
       justify-content: center;
       padding: 6.5px 12px;
-      background-color: var(--bg-secondary);
+      background-color: var(--bgDefaultSecondary);
       border-radius: 10px;
-      border: 1px solid var(--border-secondary);
+      border: 1px solid var(--borderDefaultSecondary);
       font-size: 16px;
-      color: var(--text-primary);
+      color: var(--textDefaultPrimary);
       cursor: pointer;
       gap: 4px;
 
@@ -297,10 +98,6 @@
     }
 
     @media (min-width: 768px) {
-      .filters-button {
-        display: none;
-      }
-
       .add-liquidity-button.add-liquidity-button-mobile {
         display: none;
       }
@@ -309,208 +106,6 @@
         display: flex;
       }
     }
-
-    /* Customize Dropdown Button */
-
-    .customize-dropdown {
-      position: relative;
-      max-width: 155px;
-      width: 100%;
-      border: 1px solid var(--border-secondary);
-      border-radius: 12px;
-      padding: 6px 12px;
-      display: flex;
-      gap: 8px;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      user-select: none;
-      white-space: nowrap;
-      background: var(--bg-secondary);
-      font-size: 14px;
-      color: white;
-
-      .arrow-icon {
-        transition: transform 0.3s ease;
-        display: flex;
-      }
-
-      .settings-icon {
-        display: flex;
-
-        img {
-          width: 18px;
-          aspect-ratio: 1;
-        }
-      }
-
-      .dropdown-options {
-        display: none;
-        position: absolute;
-        top: calc(100% + 4px);
-        left: 0;
-        width: auto;
-        border: 1px solid var(--border-secondary);
-        border-radius: 12px;
-        background: var(--bg-secondary);
-        flex-direction: column;
-      }
-
-      .dropdown-options.show {
-        display: flex;
-      }
-
-      .option {
-        padding: 12px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .wallet-name-address {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .wallet-address {
-        color: var(--bgUtilitiesHighlight4);
-      }
-
-      .option input[type="checkbox"] {
-        appearance: none;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #1f3ccd;
-        border-radius: 4px;
-        position: relative;
-        margin-right: 5px;
-        cursor: pointer;
-      }
-
-      .option input[type="checkbox"]:checked {
-        background-color: var(--bgBrandDefault);
-        border: none;
-      }
-
-      .option input[type="checkbox"]:checked::after {
-        content: "";
-        background: url("/public/images/check-mark.svg");
-        background-size: 75%;
-        background-repeat: no-repeat;
-        background-position: center center;
-        font-size: 12px;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    /* Customize Dropdown Button */
-
-    /* Wallets Dropdown button */
-
-    .wallet-dropdown {
-      position: relative;
-      max-width: 131px;
-      width: 100%;
-      border: 1px solid var(--border-secondary);
-      border-radius: 12px;
-      padding: 6px 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      user-select: none;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      background: var(--bg-secondary);
-      font-size: 14px;
-      color: var(--text-primary);
-      gap: 8px;
-
-      .arrow-icon {
-        transition: transform 0.3s ease;
-        display: flex;
-      }
-
-      .wallet-icon {
-        display: flex;
-
-        img {
-          width: 18px;
-          aspect-ratio: 1;
-        }
-      }
-
-      .dropdown-options {
-        display: none;
-        position: absolute;
-        top: calc(100% + 4px);
-        left: 0;
-        width: auto;
-        border: 1px solid var(--border-secondary);
-        border-radius: 12px;
-        background: var(--bg-secondary);
-        flex-direction: column;
-      }
-
-      .dropdown-options.show {
-        display: flex;
-      }
-
-      .option {
-        padding: 12px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .wallet-name-address {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .wallet-address {
-        color: var(--bgUtilitiesHighlight4);
-      }
-
-      .option input[type="checkbox"] {
-        appearance: none;
-        width: 16px;
-        height: 16px;
-        border: 1px solid #1f3ccd;
-        border-radius: 4px;
-        position: relative;
-        margin-right: 5px;
-        cursor: pointer;
-      }
-
-      .option input[type="checkbox"]:checked {
-        background-color: var(--bgBrandDefault);
-        border: none;
-      }
-
-      .option input[type="checkbox"]:checked::after {
-        content: "";
-        background: url("/public/images/check-mark.svg");
-        background-size: 75%;
-        background-repeat: no-repeat;
-        background-position: center center;
-        font-size: 12px;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-
-      #selected-option {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        flex-grow: 1;
-      }
-    }
-
-    /* Wallets Dropdown button */
   }
   @media (max-width: 692px) {
     .controls {
@@ -532,12 +127,11 @@
       border-radius: 10px;
       width: 100%;
       border: 1px solid var(--borderDefaultPrimary);
-      /* background: var(--bgUtilitiesHighlight); */
-      background: #ffffff05;
+      background: var(--bgUtilitiesHighlight);
       outline: none;
       font-size: 16px;
       line-height: 1.2em;
-      color: white;
+      color: var(--textDefaultPrimary);
       height: 32px;
 
       @media (max-width: 767px) {
@@ -594,39 +188,13 @@
   }
 }
 
-/* Portfolio Table Controls CSS ends here */
-
-/* Table section CSS starts here */
-
-/* .tow-table-in-one { */
-/* height: calc(100vh - 252px);
-  overflow-y: auto; */
-/* @media (max-width: 1420px) {
-    height: calc(100vh - 335px);
-
-    .my-pools-table-two {
-      max-height: calc(100vh - 595px);
-      height: 100% !important;
-    }
-  }
-
-  @media (max-width: 1420px) {
-    height: calc(100vh - 270px);
-
-    .my-pools-table-two {
-      max-height: calc(100vh - 530px);
-      height: 100% !important;
-    }
-  } */
-/* } */
-
 .my-pools-main {
   padding: 20px 0px;
-  border-top: 1px solid #3f4258;
+  border-top: 0.5px solid var(--borderDefaultPrimary);
 }
 @media (max-width: 768px) {
   .my-pools-main {
-    padding: 0px 0px !important;
+    padding: 0;
   }
 }
 
@@ -665,7 +233,6 @@
 @media (max-width: 425px) {
   .table-section-title-text p {
     font-size: 14px;
-    /* width: 78px; */
   }
 }
 .table-section-title-text p.active::after {
@@ -687,16 +254,6 @@
   display: flex;
   gap: 20px;
 }
-
-/* .my-pools-table {
-  height: 165px;
-  overflow-y: auto;
-} */
-
-/* .my-pools-table-two {
-  max-height: calc(100vh - 680px);
-  overflow-y: auto;
-} */
 
 .my-pools-table-two .col-span {
   padding: 12px 0px;
@@ -735,7 +292,7 @@
     align-items: stretch;
 
     tr:hover:not(:has(th)) {
-      background: var(--bg-secondary) !important;
+      background: var(--bgDefaultSecondary) !important;
     }
   }
   .table-headingg {
@@ -783,7 +340,7 @@
 
   td {
     vertical-align: text-top;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
     font-size: 16px;
   }
 
@@ -792,7 +349,7 @@
   }
 
   tr {
-    border-bottom: 0.5px solid var(--border-primary);
+    border-bottom: 0.5px solid var(--borderDefaultPrimary);
     padding: 7px calc((100% - 1420px) / 2);
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -829,7 +386,7 @@
     width: 100%;
     font-size: 16px;
     font-weight: 400;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
   }
   @media (max-width: 768px) {
     .token-cell {
@@ -916,7 +473,7 @@
     outline: none;
 
     &:hover {
-      border-color: var(--border-primary);
+      border-color: var(--borderDefaultPrimary);
     }
   }
 
@@ -941,7 +498,7 @@
     position: absolute;
     top: 30px;
     right: 4px;
-    border: 0.5px solid var(--border-primary);
+    border: 0.5px solid var(--borderDefaultPrimary);
     backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 0;
@@ -955,7 +512,7 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
     padding: 8px 16px;
     text-decoration: none;
     font-size: 16px;
@@ -1058,7 +615,7 @@
 }
 
 .table-section-title-text p.active {
-  color: #6f93fe;
+  color: var(--textBrandDefault);
 }
 
 .table-section-title-text p.active::after {
@@ -1068,7 +625,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #6f93fe;
+  background-color: var(--textBrandDefault);
 }
 
 .hidden-section {
@@ -1078,7 +635,7 @@
 /* Open Modal Button for Demo */
 .open-modal-btn {
   background: var(--bgBrandDefault);
-  color: white;
+  color: var(--textDefaultPrimary);
   border: none;
   padding: 12px 24px;
   border-radius: 10px;
@@ -1112,8 +669,8 @@
 }
 
 .token-details-content {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-primary);
+  background: var(--bgDefaultSecondary);
+  border: 1px solid var(--borderDefaultPrimary);
   border-radius: 16px;
   padding: 24px 24px 24px 24px;
   max-width: 500px;
@@ -1163,20 +720,17 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #f97316; /* Orange color from the screenshot */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
 
-/* Creating the token icon design from the screenshot */
 .token-details-icon::before {
   content: "";
   position: absolute;
   width: 24px;
   height: 24px;
-  background-color: white;
   border-radius: 50%;
 }
 
@@ -1189,7 +743,7 @@
 }
 
 .token-details-info h2 {
-  color: var(--text-primary);
+  color: var(--textDefaultPrimary);
   font-size: 20px;
   font-weight: 600;
   margin: 0;
@@ -1200,7 +754,7 @@
   }
 }
 .token-details-info p {
-  color: var(--text-primary);
+  color: var(--textDefaultPrimary);
   font-size: 16px;
   font-weight: 600;
   margin: 4px 0 0 0;
@@ -1215,7 +769,7 @@
   cursor: pointer;
   padding: 8px;
   border-radius: 8px;
-  transition: background 0.2s;
+  transition: all 0.16s ease-in-out;
   z-index: 50;
 }
 @media (max-width: 768px) {
@@ -1227,7 +781,7 @@
 }
 
 .close-token-modal:hover {
-  background: var(--bg-primary);
+  background: var(--bgDefaultPrimary);
 }
 
 .close-token-modal img {
@@ -1278,7 +832,7 @@
 .position-value {
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--textDefaultPrimary);
   margin: 0;
 }
 
@@ -1320,7 +874,7 @@
 
 .token-action-btn.secondary {
   background: #181924;
-  color: var(--text-primary);
+  color: var(--textDefaultPrimary);
 }
 
 .token-action-btn:hover {
@@ -1553,21 +1107,6 @@
         aspect-ratio: 1/1;
         border-radius: 999px;
       }
-    }
-  }
-
-  .multi-wallet {
-    font-size: 16px;
-    color: var(--textBrandDefault);
-    cursor: pointer;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-
-    .down-arrow-icon {
-      width: 16px;
-      aspect-ratio: 1;
-      transition: transform 0.3s ease;
     }
   }
 

@@ -1,15 +1,5 @@
 /* styles/global.css */
 
-:root {
-  --brand: #456eeb;
-  --brand-hover: #456eeb;
-  --text-primary: #f5f5f5;
-  --text-secondary: #757575;
-  --bg-secondary: #242534;
-  --border-primary: #34374a;
-  --brand-success: #85e0a3;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -17,8 +7,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
 
   justify-content: center;
   align-items: center;
@@ -35,8 +25,8 @@
 }
 
 .modal-content {
-  background: var(--bg-secondary);
-  color: var(--text-primary);
+  background: var(--bgDefaultSecondary);
+  color: var(--textDefaultPrimary);
   padding: 16px 16px 24px 16px;
   margin: 16px;
   max-width: 500px;
@@ -61,7 +51,7 @@
 .wallet-name-dropdown {
   flex: 1;
   padding: 7px 12px;
-  border: 1px solid var(--border-primary);
+  border: 1px solid var(--borderDefaultSecondary);
   border-radius: 8px;
   font-size: medium;
   display: flex;
@@ -97,16 +87,16 @@
 }
 
 .close-modal.is-loading {
-  background-color: #34374a;
+  background-color: var(--bgDisabledDefault);
   border-radius: 8px;
-  border-color: var(--border-primary);
+  border-color: var(--borderDefaultSecondary);
 }
 .modal-title {
   margin-bottom: 20px;
   h2 {
     font-size: 20px;
     font-weight: 400;
-    color: #fff;
+    color: var(--textDefaultPrimary);
     opacity: 70%;
   }
 }
@@ -126,7 +116,7 @@
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid var(--border-primary);
+  border: 1px solid var(--borderDefaultSecondary);
   margin-bottom: 16px;
 }
 
@@ -143,13 +133,10 @@
 }
 
 .tab-btn.active {
-  background: #456eeb;
-  color: var(--text-primary);
+  background: var(--bgBrandDefault);
+  color: var(--textDefaultPrimary);
   border-radius: 10px;
 }
-/* .tab-btn.active:hover {
-  background: green;
-} */
 
 .tab-content {
   display: none;
@@ -168,22 +155,16 @@
   margin-bottom: 16px;
 
   .xrp {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px; */
     color: var(--textOnBrandSecondary);
-    /* background-color: #161721; */
-    background-color: #1d1e2a;
+    background-color: var(--bgDefaultPrimary);
     transition: background-color 0.3s ease-in-out;
-    border: 1px solid var(--border-primary);
+    border: 1px solid var(--borderDefaultSecondary);
     border-radius: 10px;
     padding: 12px 16px;
 
     .xrp-btn,
     .token-btn {
       cursor: pointer;
-      /* margin-bottom: 16px; */
     }
     .for-flex-1 {
       min-width: 100px;
@@ -207,7 +188,7 @@
     .xrp-text {
       font-size: 20px;
       font-weight: 400;
-      color: gray;
+      color: var(--textDefaultTertiary);
     }
 
     img {
@@ -229,14 +210,14 @@
   .xrp-top-part .xrp-input-payment {
     font-weight: 500;
     font-size: 24px;
-    color: #f5f5f5;
+    color: var(--textDefaultPrimary);
     background-color: transparent;
     border: none;
     outline: none;
     width: 50%;
   }
   .xrp-input-payment::placeholder {
-    color: #757575;
+    color: var(--textDefaultTertiary);
   }
 
   .xrp-input-part {
@@ -252,7 +233,7 @@
     background: transparent;
     cursor: pointer;
     border: none;
-    color: #757575;
+    color: var(--textDefaultTertiary);
   }
   .wallet-input {
     width: 100%;
@@ -268,7 +249,7 @@
 
 .xrp:hover h3,
 .xrp:hover .xrp-text {
-  color: var(--text-primary);
+  color: var(--textDefaultPrimary);
   transition: 0.3s ease-in-out;
 }
 
@@ -297,26 +278,25 @@
 
   .list-value {
     font-weight: 500;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
   }
 }
 
 .list-item.green {
-  color: var(--brand-success);
+  color: var(--textPositiveSecondary);
 }
 
 .label.checked {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  /* cursor: pointer; */
-  color: var(--brand-success);
+  color: var(--textPositiveSecondary);
 }
 
 .modal-footer .btn {
   padding-top: 16px;
   margin-top: 28px;
-  border-top: 1px solid var(--border-primary);
+  border-top: 1px solid var(--borderDefaultSecondary);
 }
 
 button.review {
@@ -325,14 +305,15 @@ button.review {
   border: none;
   border-radius: 10px;
   background: var(--bgBrandDefault);
-  color: var(--text-primary);
+  color: var(--textDefaultPrimary);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  border: 1px solid #6f93fe;
+  border: 1px solid var(--borderBrandDefault);
+  transition: all 0.16s ease-in-out;
 }
 button.review:hover {
-  background: #0838c9;
+  background: var(--bgBrandHover);
 }
 
 /* step confirm */
@@ -345,10 +326,10 @@ button.review:hover {
   opacity: 70%;
 }
 .is-confirmation {
-  color: var(--text-primary);
+  color: var(--textDefaultPrimary);
   padding: 16px 12px;
   border-radius: 10px;
-  border: 1px solid var(--border-primary);
+  border: 1px solid var(--borderDefaultSecondary);
   margin-bottom: 16px;
 }
 
@@ -393,7 +374,7 @@ button.review:hover {
 .confirm-footer {
   padding-top: 16px;
   margin-top: 64px;
-  border-top: 1px solid var(--border-primary);
+  border-top: 1px solid var(--borderDefaultSecondary);
   display: flex;
   gap: 16px;
 
@@ -403,11 +384,11 @@ button.review:hover {
     padding: 12px;
     border-radius: 10px;
     background: #181924;
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-    border: 1px solid var(--border-primary);
+    border: 1px solid var(--borderDefaultSecondary);
   }
 
   .confirm-btn,
@@ -416,11 +397,11 @@ button.review:hover {
     padding: 12px;
     border-radius: 10px;
     background-color: var(--bgBrandDefault);
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-    border: 1px solid #6f93fe;
+    border: 1px solid var(--borderBrandDefault);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -556,6 +537,7 @@ button.review:hover {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-bottom: 20px;
 }
 .range-slider {
   width: 100%;
@@ -741,7 +723,7 @@ button.review:hover {
   overflow: hidden;
   display: flex;
   border-radius: 12px;
-  border: 1px solid var(--border-primary);
+  border: 1px solid var(--borderDefaultSecondary);
   button {
     background-color: #242534;
     color: #757575;
@@ -753,7 +735,7 @@ button.review:hover {
 
   button.active {
     background-color: var(--bgBrandDefault);
-    color: var(--text-primary);
+    color: var(--textDefaultPrimary);
   }
 }
 
@@ -772,7 +754,7 @@ button.review:hover {
   user-select: none;
   white-space: nowrap;
   text-overflow: ellipsis;
-  background: var(--bg-secondary);
+  background: var(--bgDefaultSecondary);
   font-size: 14px;
   color: white;
   gap: 8px;
@@ -800,7 +782,7 @@ button.review:hover {
   width: 100%;
   border: 1px solid var(--border-secondary);
   border-radius: 12px;
-  background: var(--bg-secondary);
+  background: var(--bgDefaultSecondary);
   flex-direction: column;
 }
 

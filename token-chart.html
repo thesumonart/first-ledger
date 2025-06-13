@@ -129,811 +129,748 @@
 
               <div class="tab-contents-wrapper">
                 <div class="tab-content active">
-                  <div class="tx-history-table-wrapper">
-                    <table class="tx-history-table">
-                      <thead class="tx-table-header">
-                        <tr>
-                          <th style="padding-left: 16px">
-                            <span class="tx-heading-inner">
-                              <p>Age</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Type</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Price</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Amount</p>
-                              <img
-                                src="./public/images/filter-icon.svg"
-                                alt="filter-icon"
-                                class="filter-icon"
-                              />
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Total USD</p>
-                              <img
-                                src="./public/images/filter-icon.svg"
-                                alt="filter-icon"
-                                class="filter-icon"
-                              />
-                            </span>
-                          </th>
-                          <th style="width: 22%; padding-right: 16px">
-                            <span class="tx-heading-inner">
-                              <p>Maker</p>
-                              <img
-                                src="./public/images/filter-icon.svg"
-                                alt="filter-icon"
-                                class="filter-icon"
-                              />
-                              <img
-                                src="./public/images/developer-audit-icon.svg"
-                                alt="developer-audit-icon"
-                                class="developer-audit-icon"
-                              />
-                            </span>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody class="tx-table-body">
-                        <!-- single row -->
-
-                        <tr class="sell-row">
-                          <td style="padding-left: 16px">0 sec</td>
-                          <td>Sell</td>
-                          <td>$0</td>
-                          <td>000K</td>
-                          <td>$0</td>
-                          <td style="width: 22%; padding-right: 16px">
-                            <span class="maker-data-wrapper"
-                              ><span class="icon-n-wallet-address"
-                                >🐋 rLMk...jsQo</span
-                              ><a href="#" class="external-link"
-                                ><img
-                                  src="./public/images/external-link-icon-green.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-green"
-                                />
+                  <div class="traders-table-wrapper all-trades-table">
+                    <div class="table-scroll">
+                      <div class="table">
+                        <div class="table-heading">
+                          <div class="heading-item"><span>Age</span></div>
+                          <div class="heading-item"><span>Type</span></div>
+                          <div class="heading-item"><span>Price</span></div>
+                          <div class="heading-item">
+                            <span
+                              >Amount
+                              <figure class="icon">
                                 <img
-                                  src="./public/images/external-link-icon-red.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-red"
-                                /> </a
+                                  src="./public/images/filter-icon.svg"
+                                  alt="Filter"
+                                /></figure
                             ></span>
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <!-- single row -->
-
-                        <tr class="buy-row">
-                          <td style="padding-left: 16px">0 min</td>
-                          <td>Sell</td>
-                          <td>0 XRP</td>
-                          <td>000K</td>
-                          <td>$0</td>
-                          <td style="width: 22%; padding-right: 16px">
-                            <span class="maker-data-wrapper"
-                              ><span class="icon-n-wallet-address"
-                                >🐬 rLMk...jsQo</span
-                              ><a href="#" class="external-link"
-                                ><img
-                                  src="./public/images/external-link-icon-green.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-green"
-                                />
+                          </div>
+                          <div class="heading-item">
+                            <span
+                              >Total USD
+                              <figure class="icon">
                                 <img
-                                  src="./public/images/external-link-icon-red.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-red"
-                                /> </a
+                                  src="./public/images/filter-icon.svg"
+                                  alt="Filter"
+                                /></figure
                             ></span>
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <!-- single row -->
-
-                        <tr class="sell-row">
-                          <td style="padding-left: 16px">0 hrs</td>
-                          <td>Sell</td>
-                          <td>$0</td>
-                          <td>000K</td>
-                          <td>$0</td>
-                          <td style="width: 22%; padding-right: 16px">
-                            <span class="maker-data-wrapper"
-                              ><span class="icon-n-wallet-address"
-                                >🐟 rLMk...jsQo</span
-                              ><a href="#" class="external-link"
-                                ><img
-                                  src="./public/images/external-link-icon-green.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-green"
-                                />
+                          </div>
+                          <div class="heading-item">
+                            <span
+                              >Maker
+                              <figure class="icon">
                                 <img
-                                  src="./public/images/external-link-icon-red.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-red"
-                                /> </a
-                            ></span>
-                          </td>
-                        </tr>
-                        <!-- single row -->
-
-                        <tr class="sell-row">
-                          <td style="padding-left: 16px">0 hrs</td>
-                          <td>Sell</td>
-                          <td>$0</td>
-                          <td>000K</td>
-                          <td>$0</td>
-                          <td style="width: 22%; padding-right: 16px">
-                            <span class="maker-data-wrapper"
-                              ><span class="icon-n-wallet-address"
-                                >🦐 rLMk...jsQo</span
-                              ><a href="#" class="external-link"
-                                ><img
-                                  src="./public/images/external-link-icon-green.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-green"
+                                  src="./public/images/filter-icon.svg"
+                                  alt="Filter"
                                 />
-                                <img
-                                  src="./public/images/external-link-icon-red.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-red"
-                                /> </a
-                            ></span>
-                          </td>
-                        </tr>
+                              </figure>
+                            </span>
+                          </div>
+                          <div class="heading-item"></div>
+                        </div>
+                        <div class="table-body">
+                          <!-- single row -->
+                          <div class="table-row sell">
+                            <div class="row-data"><span>0 sec</span></div>
+                            <div class="row-data"><span>Sell</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data"><span>000K</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data">
+                              <span>🐋 rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <a href="#">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/external-link-icon-green.svg"
+                                    alt=""
+                                    class="external-icon-green"
+                                  />
+                                  <img
+                                    src="./public/images/external-link-icon-red.svg"
+                                    alt=""
+                                    class="external-icon-red"
+                                  />
+                                </figure>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- single row -->
 
-                        <tr class="buy-row">
-                          <td style="padding-left: 16px">0 hrs</td>
-                          <td>Sell</td>
-                          <td>0 XRP</td>
-                          <td>000K</td>
-                          <td>$0</td>
-                          <td style="width: 22%; padding-right: 16px">
-                            <span class="maker-data-wrapper"
-                              ><span class="icon-n-wallet-address"
-                                >🐬 rLMk...jsQo</span
-                              ><a href="#" class="external-link"
-                                ><img
-                                  src="./public/images/external-link-icon-green.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-green"
-                                />
-                                <img
-                                  src="./public/images/external-link-icon-red.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-red"
-                                /> </a
-                            ></span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                          <!-- single row -->
+
+                          <div class="table-row buy">
+                            <div class="row-data"><span>0 min</span></div>
+                            <div class="row-data"><span>Buy</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data"><span>000K</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data">
+                              <span>🐋 rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <a href="#">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/external-link-icon-green.svg"
+                                    alt=""
+                                    class="external-icon-green"
+                                  />
+                                  <img
+                                    src="./public/images/external-link-icon-red.svg"
+                                    alt=""
+                                    class="external-icon-red"
+                                  />
+                                </figure>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+                          <div class="table-row sell">
+                            <div class="row-data"><span>0 hrs</span></div>
+                            <div class="row-data"><span>Sell</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data"><span>000K</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data">
+                              <span>🐋 rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <a href="#">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/external-link-icon-green.svg"
+                                    alt=""
+                                    class="external-icon-green"
+                                  />
+                                  <img
+                                    src="./public/images/external-link-icon-red.svg"
+                                    alt=""
+                                    class="external-icon-red"
+                                  />
+                                </figure>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+                          <div class="table-row sell">
+                            <div class="row-data"><span>0 hrs</span></div>
+                            <div class="row-data"><span>Sell</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data"><span>000K</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data">
+                              <span>🐋 rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <a href="#">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/external-link-icon-green.svg"
+                                    alt=""
+                                    class="external-icon-green"
+                                  />
+                                  <img
+                                    src="./public/images/external-link-icon-red.svg"
+                                    alt=""
+                                    class="external-icon-red"
+                                  />
+                                </figure>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+
+                          <div class="table-row buy">
+                            <div class="row-data"><span>0 hrs</span></div>
+                            <div class="row-data"><span>Buy</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data"><span>000K</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data">
+                              <span>🐋 rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <a href="#">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/external-link-icon-green.svg"
+                                    alt=""
+                                    class="external-icon-green"
+                                  />
+                                  <img
+                                    src="./public/images/external-link-icon-red.svg"
+                                    alt=""
+                                    class="external-icon-red"
+                                  />
+                                </figure>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- single row -->
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="tab-content">
-                  <div class="tx-history-table-wrapper">
-                    <table class="tx-history-table">
-                      <thead class="tx-table-header">
-                        <tr>
-                          <th style="padding-left: 16px">
-                            <span class="tx-heading-inner">
-                              <p>Time</p>
+                  <div class="traders-table-wrapper my-trades-table">
+                    <div class="table-scroll">
+                      <div class="table">
+                        <div class="table-heading">
+                          <div class="heading-item"><span>Time</span></div>
+                          <div class="heading-item"><span>Type</span></div>
+                          <div class="heading-item"><span>Price</span></div>
+                          <div class="heading-item">
+                            <span
+                              >Amount
+                              <figure class="icon">
+                                <img
+                                  src="./public/images/filter-icon.svg"
+                                  alt="Filter"
+                                /></figure
+                            ></span>
+                          </div>
+                          <div class="heading-item">
+                            <span
+                              >Total USD
+                              <figure class="icon">
+                                <img
+                                  src="./public/images/filter-icon.svg"
+                                  alt="Filter"
+                                /></figure
+                            ></span>
+                          </div>
+                          <div class="heading-item">
+                            <span
+                              >Maker
+                              <figure class="icon">
+                                <img
+                                  src="./public/images/filter-icon.svg"
+                                  alt="Filter"
+                                />
+                              </figure>
                             </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Type</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Price</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Amount</p>
-                              <img
-                                src="./public/images/filter-icon.svg"
-                                alt="filter-icon"
-                                class="filter-icon"
-                              />
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Total USD</p>
-                              <img
-                                src="./public/images/filter-icon.svg"
-                                alt="filter-icon"
-                                class="filter-icon"
-                              />
-                            </span>
-                          </th>
-                          <th style="width: 22%; padding-right: 16px">
-                            <span class="tx-heading-inner">
-                              <p>Maker</p>
-                              <img
-                                src="./public/images/filter-icon.svg"
-                                alt="filter-icon"
-                                class="filter-icon"
-                              />
-                              <img
-                                src="./public/images/developer-audit-icon.svg"
-                                alt="developer-audit-icon"
-                                class="developer-audit-icon"
-                              />
-                            </span>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody class="tx-table-body">
-                        <!-- single row -->
+                          </div>
+                          <div class="heading-item"></div>
+                        </div>
+                        <div class="table-body">
+                          <!-- single row -->
+                          <div class="table-row sell">
+                            <div class="row-data">
+                              <span>Jan 00 00:00</span>
+                            </div>
+                            <div class="row-data"><span>Sell</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data"><span>000K</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data">
+                              <span>rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <a href="#">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/external-link-icon-green.svg"
+                                    alt=""
+                                    class="external-icon-green"
+                                  />
+                                  <img
+                                    src="./public/images/external-link-icon-red.svg"
+                                    alt=""
+                                    class="external-icon-red"
+                                  />
+                                </figure>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- single row -->
 
-                        <tr class="sell-row">
-                          <td style="padding-left: 16px">Jan 00 00:00</td>
-                          <td>Sell</td>
-                          <td>$0</td>
-                          <td>000K</td>
-                          <td>$0</td>
-                          <td style="width: 22%; padding-right: 16px">
-                            <span class="maker-data-wrapper"
-                              ><span class="icon-n-wallet-address"
-                                >rLMk...jsQo</span
-                              ><a href="#" class="external-link"
-                                ><img
-                                  src="./public/images/external-link-icon-green.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-green"
-                                />
-                                <img
-                                  src="./public/images/external-link-icon-red.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-red"
-                                /> </a
-                            ></span>
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <!-- single row -->
-                        <tr class="buy-row">
-                          <td style="padding-left: 16px">Jan 00 00:00</td>
-                          <td>Sell</td>
-                          <td>0 XRP</td>
-                          <td>000K</td>
-                          <td>$0</td>
-                          <td style="width: 22%; padding-right: 16px">
-                            <span class="maker-data-wrapper"
-                              ><span class="icon-n-wallet-address"
-                                >rLMk...jsQo</span
-                              ><a href="#" class="external-link"
-                                ><img
-                                  src="./public/images/external-link-icon-green.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-green"
-                                />
-                                <img
-                                  src="./public/images/external-link-icon-red.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-red"
-                                /> </a
-                            ></span>
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <!-- single row -->
-                        <tr class="sell-row">
-                          <td style="padding-left: 16px">Jan 00 00:00</td>
-                          <td>Sell</td>
-                          <td>$0</td>
-                          <td>000K</td>
-                          <td>$0</td>
-                          <td style="width: 22%; padding-right: 16px">
-                            <span class="maker-data-wrapper"
-                              ><span class="icon-n-wallet-address"
-                                >rLMk...jsQo</span
-                              ><a href="#" class="external-link"
-                                ><img
-                                  src="./public/images/external-link-icon-green.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-green"
-                                />
-                                <img
-                                  src="./public/images/external-link-icon-red.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-red"
-                                /> </a
-                            ></span>
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <tr class="sell-row">
-                          <td style="padding-left: 16px">Jan 00 00:00</td>
-                          <td>Sell</td>
-                          <td>$0</td>
-                          <td>000K</td>
-                          <td>$0</td>
-                          <td style="width: 22%; padding-right: 16px">
-                            <span class="maker-data-wrapper"
-                              ><span class="icon-n-wallet-address"
-                                >rLMk...jsQo</span
-                              ><a href="#" class="external-link"
-                                ><img
-                                  src="./public/images/external-link-icon-green.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-green"
-                                />
-                                <img
-                                  src="./public/images/external-link-icon-red.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-red"
-                                /> </a
-                            ></span>
-                          </td>
-                        </tr>
+                          <!-- single row -->
 
-                        <tr class="buy-row">
-                          <td style="padding-left: 16px">Jan 00 00:00</td>
-                          <td>Sell</td>
-                          <td>0 XRP</td>
-                          <td>000K</td>
-                          <td>$0</td>
-                          <td style="width: 22%; padding-right: 16px">
-                            <span class="maker-data-wrapper"
-                              ><span class="icon-n-wallet-address"
-                                >rLMk...jsQo</span
-                              ><a href="#" class="external-link"
-                                ><img
-                                  src="./public/images/external-link-icon-green.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-green"
-                                />
-                                <img
-                                  src="./public/images/external-link-icon-red.svg"
-                                  alt="External-link-icon"
-                                  class="external-link-icon-red"
-                                /> </a
-                            ></span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                          <div class="table-row buy">
+                            <div class="row-data">
+                              <span>Jan 00 00:00</span>
+                            </div>
+                            <div class="row-data"><span>Buy</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data"><span>000K</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data">
+                              <span>rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <a href="#">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/external-link-icon-green.svg"
+                                    alt=""
+                                    class="external-icon-green"
+                                  />
+                                  <img
+                                    src="./public/images/external-link-icon-red.svg"
+                                    alt=""
+                                    class="external-icon-red"
+                                  />
+                                </figure>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+                          <div class="table-row sell">
+                            <div class="row-data">
+                              <span>Jan 00 00:00</span>
+                            </div>
+                            <div class="row-data"><span>Sell</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data"><span>000K</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data">
+                              <span>rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <a href="#">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/external-link-icon-green.svg"
+                                    alt=""
+                                    class="external-icon-green"
+                                  />
+                                  <img
+                                    src="./public/images/external-link-icon-red.svg"
+                                    alt=""
+                                    class="external-icon-red"
+                                  />
+                                </figure>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+                          <div class="table-row sell">
+                            <div class="row-data">
+                              <span>Jan 00 00:00</span>
+                            </div>
+                            <div class="row-data"><span>Sell</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data"><span>000K</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data">
+                              <span>rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <a href="#">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/external-link-icon-green.svg"
+                                    alt=""
+                                    class="external-icon-green"
+                                  />
+                                  <img
+                                    src="./public/images/external-link-icon-red.svg"
+                                    alt=""
+                                    class="external-icon-red"
+                                  />
+                                </figure>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+
+                          <div class="table-row buy">
+                            <div class="row-data">
+                              <span>Jan 00 00:00</span>
+                            </div>
+                            <div class="row-data"><span>Buy</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data"><span>000K</span></div>
+                            <div class="row-data"><span>$0</span></div>
+                            <div class="row-data">
+                              <span>rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <a href="#">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/external-link-icon-green.svg"
+                                    alt=""
+                                    class="external-icon-green"
+                                  />
+                                  <img
+                                    src="./public/images/external-link-icon-red.svg"
+                                    alt=""
+                                    class="external-icon-red"
+                                  />
+                                </figure>
+                              </a>
+                            </div>
+                          </div>
+                          <!-- single row -->
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="tab-content">
-                  <div class="tx-history-table-wrapper">
-                    <table class="tx-history-table">
-                      <thead class="tx-table-header">
-                        <tr>
-                          <th style="padding-left: 16px">
-                            <span class="tx-heading-inner">
-                              <p>Wallet</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Bought</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Sold</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Remaining</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>PnL</p>
-                            </span>
-                          </th>
-                          <th style="padding-right: 16px">
-                            <span class="tx-heading-inner"> </span>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody class="tx-table-body">
-                        <!-- single row -->
+                  <div class="traders-table-wrapper top-traders-table">
+                    <div class="table-scroll">
+                      <div class="table">
+                        <div class="table-heading">
+                          <div class="heading-item"><span>Wallet</span></div>
+                          <div class="heading-item"><span>Bought</span></div>
+                          <div class="heading-item"><span>Sold</span></div>
+                          <div class="heading-item">
+                            <span>Remaining</span>
+                          </div>
+                          <div class="heading-item">
+                            <span>PnL</span>
+                          </div>
 
-                        <tr>
-                          <td style="padding-left: 16px">rLMk...jsQo</td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td style="color: #a8f0c0">+$0</td>
-                          <td
-                            style="
-                              padding-right: 16px;
-                              text-align: right;
-                              cursor: pointer;
-                            "
-                          >
-                            <img
-                              src="./public/images/filter-button.svg"
-                              alt="filter-button"
-                            />
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <tr style="background-color: #ffffff05">
-                          <td style="padding-left: 16px">rLMk...jsQo</td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td style="color: #fcb3ad">+$0</td>
-                          <td
-                            style="
-                              padding-right: 16px;
-                              text-align: right;
-                              cursor: pointer;
-                            "
-                          >
-                            <img
-                              src="./public/images/filter-button.svg"
-                              alt="filter-button"
-                            />
-                          </td>
-                        </tr>
-                        <!-- single row -->
+                          <div class="heading-item"></div>
+                        </div>
+                        <div class="table-body">
+                          <!-- single row -->
+                          <div class="table-row buy">
+                            <div class="row-data">
+                              <span>rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data pnl"><span>+$0</span></div>
 
-                        <tr>
-                          <td style="padding-left: 16px">rLMk...jsQo</td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td style="color: #a8f0c0">+$0</td>
-                          <td
-                            style="
-                              padding-right: 16px;
-                              text-align: right;
-                              cursor: pointer;
-                            "
-                          >
-                            <img
-                              src="./public/images/filter-button.svg"
-                              alt="filter-button"
-                            />
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <tr style="background-color: #ffffff05">
-                          <td style="padding-left: 16px">rLMk...jsQo</td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td style="color: #a8f0c0">+$0</td>
-                          <td
-                            style="
-                              padding-right: 16px;
-                              text-align: right;
-                              cursor: pointer;
-                            "
-                          >
-                            <img
-                              src="./public/images/filter-button.svg"
-                              alt="filter-button"
-                            />
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <tr>
-                          <td style="padding-left: 16px">rLMk...jsQo</td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td>
-                            <p>$000</p>
-                            <p style="font-size: 14px; color: #d0deff">
-                              0 TOKEN
-                            </p>
-                          </td>
-                          <td style="color: #fcb3ad">+$0</td>
-                          <td
-                            style="
-                              padding-right: 16px;
-                              text-align: right;
-                              cursor: pointer;
-                            "
-                          >
-                            <img
-                              src="./public/images/filter-button.svg"
-                              alt="filter-button"
-                            />
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                            <div class="row-data">
+                              <span class="filter-button">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/filter-button.svg"
+                                    alt="Filter"
+                                  />
+                                </figure>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+                          <div class="table-row sell">
+                            <div class="row-data">
+                              <span>rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data pnl"><span>+$0</span></div>
+
+                            <div class="row-data">
+                              <span class="filter-button">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/filter-button.svg"
+                                    alt="Filter"
+                                  />
+                                </figure>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+                          <div class="table-row buy">
+                            <div class="row-data">
+                              <span>rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data pnl"><span>+$0</span></div>
+
+                            <div class="row-data">
+                              <span class="filter-button">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/filter-button.svg"
+                                    alt="Filter"
+                                  />
+                                </figure>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+                          <div class="table-row buy">
+                            <div class="row-data">
+                              <span>rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data pnl"><span>+$0</span></div>
+
+                            <div class="row-data">
+                              <span class="filter-button">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/filter-button.svg"
+                                    alt="Filter"
+                                  />
+                                </figure>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+                          <div class="table-row sell">
+                            <div class="row-data">
+                              <span>rLMk...jsQo</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data">
+                              <span>$000</span><span>0 TOKEN</span>
+                            </div>
+                            <div class="row-data pnl"><span>+$0</span></div>
+
+                            <div class="row-data">
+                              <span class="filter-button">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/filter-button.svg"
+                                    alt="Filter"
+                                  />
+                                </figure>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- single row -->
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="tab-content">
-                  <div class="tx-history-table-wrapper">
-                    <table class="tx-history-table">
-                      <thead class="tx-table-header">
-                        <tr>
-                          <th style="padding-left: 16px">
-                            <span class="tx-heading-inner">
-                              <p>Wallet</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>% Owned</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Amount</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>Value</p>
-                            </span>
-                          </th>
-                          <th>
-                            <span class="tx-heading-inner">
-                              <p>PnL</p>
-                            </span>
-                          </th>
-                          <th style="padding-right: 16px">
-                            <span class="tx-heading-inner"> </span>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody class="tx-table-body">
-                        <!-- single row -->
+                  <div class="traders-table-wrapper top-holders-table">
+                    <div class="table-scroll">
+                      <div class="table">
+                        <div class="table-heading">
+                          <div class="heading-item"><span>Wallet</span></div>
+                          <div class="heading-item"><span>% Owned</span></div>
+                          <div class="heading-item"><span>Amount</span></div>
+                          <div class="heading-item">
+                            <span>Value</span>
+                          </div>
+                          <div class="heading-item">
+                            <span>PnL</span>
+                          </div>
 
-                        <tr>
-                          <td
-                            style="
-                              padding-left: 16px;
-                              display: flex;
-                              align-items: center;
-                              gap: 6px;
-                            "
-                          >
-                            rLMk...jsQo
-                            <img src="./public/images/water.svg" alt="water" />
-                          </td>
-                          <td>00%</td>
-                          <td>
-                            <p>000M</p>
-                          </td>
-                          <td>
-                            <p>$000K</p>
-                          </td>
-                          <td style="color: #a8f0c0">+$0</td>
-                          <td
-                            style="
-                              padding-right: 16px;
-                              text-align: right;
-                              cursor: pointer;
-                            "
-                          >
-                            <img
-                              src="./public/images/filter-button.svg"
-                              alt="filter-button"
-                            />
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <tr style="background-color: #ffffff05">
-                          <td
-                            style="
-                              padding-left: 16px;
-                              display: flex;
-                              align-items: center;
-                              gap: 6px;
-                            "
-                          >
-                            rLMk...jsQo
-                            <img src="./public/images/spoon.svg" alt="spoon" />
-                          </td>
-                          <td>00%</td>
-                          <td>
-                            <p>000M</p>
-                          </td>
-                          <td>
-                            <p>$000K</p>
-                          </td>
-                          <td style="color: #fcb3ad">+$0</td>
-                          <td
-                            style="
-                              padding-right: 16px;
-                              text-align: right;
-                              cursor: pointer;
-                            "
-                          >
-                            <img
-                              src="./public/images/filter-button.svg"
-                              alt="filter-button"
-                            />
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <tr>
-                          <td
-                            style="
-                              padding-left: 16px;
-                              display: flex;
-                              align-items: center;
-                              gap: 6px;
-                            "
-                          >
-                            rLMk...jsQo
-                          </td>
-                          <td>00%</td>
-                          <td>
-                            <p>000M</p>
-                          </td>
-                          <td>
-                            <p>$000K</p>
-                          </td>
-                          <td style="color: #a8f0c0">+$0</td>
-                          <td
-                            style="
-                              padding-right: 16px;
-                              text-align: right;
-                              cursor: pointer;
-                            "
-                          >
-                            <img
-                              src="./public/images/filter-button.svg"
-                              alt="filter-button"
-                            />
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <tr style="background-color: #ffffff05">
-                          <td
-                            style="
-                              padding-left: 16px;
-                              display: flex;
-                              align-items: center;
-                              gap: 6px;
-                            "
-                          >
-                            rLMk...jsQo
-                          </td>
-                          <td>00%</td>
-                          <td>
-                            <p>000M</p>
-                          </td>
-                          <td>
-                            <p>$000K</p>
-                          </td>
-                          <td style="color: #a8f0c0">+$0</td>
-                          <td
-                            style="
-                              padding-right: 16px;
-                              text-align: right;
-                              cursor: pointer;
-                            "
-                          >
-                            <img
-                              src="./public/images/filter-button.svg"
-                              alt="filter-button"
-                            />
-                          </td>
-                        </tr>
-                        <!-- single row -->
-                        <tr>
-                          <td
-                            style="
-                              padding-left: 16px;
-                              display: flex;
-                              align-items: center;
-                              gap: 6px;
-                            "
-                          >
-                            rLMk...jsQo
-                          </td>
-                          <td>00%</td>
-                          <td>
-                            <p>000M</p>
-                          </td>
-                          <td>
-                            <p>$000K</p>
-                          </td>
-                          <td style="color: #fcb3ad">+$0</td>
-                          <td
-                            style="
-                              padding-right: 16px;
-                              text-align: right;
-                              cursor: pointer;
-                            "
-                          >
-                            <img
-                              src="./public/images/filter-button.svg"
-                              alt="filter-button"
-                            />
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                          <div class="heading-item"></div>
+                        </div>
+                        <div class="table-body">
+                          <!-- single row -->
+                          <div class="table-row buy">
+                            <div class="row-data">
+                              <span
+                                >rLMk...jsQo
+                                <figure>
+                                  <img
+                                    src="./public/images/liquidity-icon.svg"
+                                    alt=""
+                                    class="liquidity-icon"
+                                  /></figure
+                              ></span>
+                            </div>
+                            <div class="row-data">
+                              <span>00%</span>
+                            </div>
+                            <div class="row-data">
+                              <span>000M</span>
+                            </div>
+                            <div class="row-data">
+                              <span>000K</span>
+                            </div>
+                            <div class="row-data pnl"><span>+$0</span></div>
+
+                            <div class="row-data">
+                              <span class="filter-button">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/filter-button.svg"
+                                    alt="Filter"
+                                  />
+                                </figure>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- single row -->
+                          <!-- single row -->
+                          <div class="table-row sell">
+                            <div class="row-data">
+                              <span
+                                >rLMk...jsQo
+                                <figure>
+                                  <img
+                                    src="./public/images/developers-icon.svg"
+                                    alt=""
+                                    class="liquidity-icon"
+                                  /></figure
+                              ></span>
+                            </div>
+                            <div class="row-data">
+                              <span>00%</span>
+                            </div>
+                            <div class="row-data">
+                              <span>000M</span>
+                            </div>
+                            <div class="row-data">
+                              <span>000K</span>
+                            </div>
+                            <div class="row-data pnl"><span>+$0</span></div>
+
+                            <div class="row-data">
+                              <span class="filter-button">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/filter-button.svg"
+                                    alt="Filter"
+                                  />
+                                </figure>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+                          <div class="table-row buy">
+                            <div class="row-data">
+                              <span>rLMk...jsQo </span>
+                            </div>
+                            <div class="row-data">
+                              <span>00%</span>
+                            </div>
+                            <div class="row-data">
+                              <span>000M</span>
+                            </div>
+                            <div class="row-data">
+                              <span>000K</span>
+                            </div>
+                            <div class="row-data pnl"><span>+$0</span></div>
+
+                            <div class="row-data">
+                              <span class="filter-button">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/filter-button.svg"
+                                    alt="Filter"
+                                  />
+                                </figure>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+                          <div class="table-row buy">
+                            <div class="row-data">
+                              <span>rLMk...jsQo </span>
+                            </div>
+                            <div class="row-data">
+                              <span>00%</span>
+                            </div>
+                            <div class="row-data">
+                              <span>000M</span>
+                            </div>
+                            <div class="row-data">
+                              <span>000K</span>
+                            </div>
+                            <div class="row-data pnl"><span>+$0</span></div>
+
+                            <div class="row-data">
+                              <span class="filter-button">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/filter-button.svg"
+                                    alt="Filter"
+                                  />
+                                </figure>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- single row -->
+
+                          <!-- single row -->
+                          <div class="table-row sell">
+                            <div class="row-data">
+                              <span>rLMk...jsQo </span>
+                            </div>
+                            <div class="row-data">
+                              <span>00%</span>
+                            </div>
+                            <div class="row-data">
+                              <span>000M</span>
+                            </div>
+                            <div class="row-data">
+                              <span>000K</span>
+                            </div>
+                            <div class="row-data pnl"><span>+$0</span></div>
+
+                            <div class="row-data">
+                              <span class="filter-button">
+                                <figure class="external-link-icons">
+                                  <img
+                                    src="./public/images/filter-button.svg"
+                                    alt="Filter"
+                                  />
+                                </figure>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- single row -->
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1082,32 +1019,29 @@
             <div class="stats-grid">
               <div class="stat-box">
                 <div class="stat-label">price</div>
-                <div class="stat-xrp">0 XRP</div>
-                <div class="stat-token">0 TOKEN</div>
+                <div class="stat-xrp">$0</div>
               </div>
               <div class="stat-box">
                 <div class="stat-label">liquidity</div>
-                <div class="stat-xrp">0 XRP</div>
-                <div class="stat-token">0 TOKEN</div>
+                <div class="stat-xrp">$0</div>
               </div>
               <div class="stat-box">
                 <div class="stat-label">markee cap</div>
-                <div class="stat-xrp">0 XRP</div>
-                <div class="stat-token">0 TOKEN</div>
+                <div class="stat-xrp">$0</div>
               </div>
               <div class="stat-box">
                 <div class="stat-label">bought</div>
-                <div class="stat-xrp">0 XRP</div>
+                <div class="stat-xrp">$0</div>
                 <div class="stat-token">0 TOKEN</div>
               </div>
               <div class="stat-box">
                 <div class="stat-label">sold</div>
-                <div class="stat-xrp">0 XRP</div>
+                <div class="stat-xrp">$0</div>
                 <div class="stat-token">0 TOKEN</div>
               </div>
               <div class="stat-box">
                 <div class="stat-label">remaining</div>
-                <div class="stat-xrp">0 XRP</div>
+                <div class="stat-xrp">$0</div>
                 <div class="stat-token">0 TOKEN</div>
               </div>
             </div>
@@ -1147,7 +1081,7 @@
                               type="text"
                               placeholder="10"
                               class="preset-btn"
-                            /><span>XRP</span>
+                            /><span class="xrp-unique-icon">&#xE001; </span>
                           </div>
                           <div class="preset-btn-wrapper">
                             <input
@@ -1155,7 +1089,7 @@
                               type="text"
                               placeholder="20"
                               class="preset-btn"
-                            /><span>XRP</span>
+                            /><span class="xrp-unique-icon">&#xE001; </span>
                           </div>
                           <div class="preset-btn-wrapper">
                             <input
@@ -1163,7 +1097,7 @@
                               type="text"
                               placeholder="50"
                               class="preset-btn"
-                            /><span>XRP</span>
+                            /><span class="xrp-unique-icon">&#xE001; </span>
                           </div>
 
                           <button class="preset-customize-btn">
@@ -1616,7 +1550,7 @@
                   <img
                     src="./public/images/token-chart-image.png"
                     alt="chart-ss-sm"
-                    style="width: 100%; height: 240"
+                    style="width: 100%"
                   />
                 </div>
                 <div>
@@ -1818,7 +1752,7 @@
                 </div>
               </div>
               <!-- info content for small screen -->
-              <div style="padding-bottom: 40px">
+              <div>
                 <div class="token-name-n-action-wrapper">
                   <div class="token-name-n-icon-wrapper">
                     <figure class="token-icon-wrapper">
@@ -2392,591 +2326,763 @@
                   </div>
 
                   <div class="tab-contents-wrapper">
-                    <div
-                      class="tab-content active"
-                      style="background-color: #181924"
-                    >
-                      <div class="tx-history-table-wrapper">
-                        <table class="tx-history-table">
-                          <thead class="tx-table-header">
-                            <tr>
-                              <th style="width: 18%; padding-left: 16px">
-                                <span class="tx-heading-inner">
-                                  <p>Age</p>
-                                </span>
-                              </th>
-
-                              <th style="width: 18%">
-                                <span class="tx-heading-inner">
-                                  <p>Price</p>
-                                </span>
-                              </th>
-
-                              <th style="width: 18%">
-                                <span class="tx-heading-inner">
-                                  <p>Total USD</p>
-                                  <img
-                                    src="./public/images/filter-icon.svg"
-                                    alt="filter-icon"
-                                    class="filter-icon"
-                                  />
-                                </span>
-                              </th>
-                              <th style="width: 26%; padding-right: 16px">
+                    <div class="tab-content active">
+                      <div class="traders-table-wrapper all-trades-table">
+                        <div class="table-scroll">
+                          <div class="table">
+                            <div class="table-heading">
+                              <div class="heading-item"><span>Age</span></div>
+                              <div class="heading-item"><span>Type</span></div>
+                              <div class="heading-item"><span>Price</span></div>
+                              <div class="heading-item">
                                 <span
-                                  class="tx-heading-inner"
-                                  style="
-                                    display: flex;
-                                    justify-content: flex-end;
-                                    gap: 4px;
-                                    align-items: center;
-                                  "
-                                >
-                                  <p style="margin: 0">Maker</p>
-                                  <img
-                                    src="./public/images/filter-icon.svg"
-                                    alt="filter-icon"
-                                    class="filter-icon"
-                                  />
-                                  <img
-                                    src="./public/images/developer-audit-icon.svg"
-                                    alt="developer-audit-icon"
-                                    class="developer-audit-icon"
-                                  />
+                                  >Amount
+                                  <figure class="icon">
+                                    <img
+                                      src="./public/images/filter-icon.svg"
+                                      alt="Filter"
+                                    /></figure
+                                ></span>
+                              </div>
+                              <div class="heading-item">
+                                <span
+                                  >Total USD
+                                  <figure class="icon">
+                                    <img
+                                      src="./public/images/filter-icon.svg"
+                                      alt="Filter"
+                                    /></figure
+                                ></span>
+                              </div>
+                              <div class="heading-item">
+                                <span
+                                  >Maker
+                                  <figure class="icon">
+                                    <img
+                                      src="./public/images/filter-icon.svg"
+                                      alt="Filter"
+                                    />
+                                  </figure>
                                 </span>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody class="tx-table-body">
-                            <!-- single row -->
+                              </div>
+                              <div class="heading-item"></div>
+                            </div>
+                            <div class="table-body">
+                              <!-- single row -->
+                              <div class="table-row sell">
+                                <div class="row-data"><span>0 sec</span></div>
+                                <div class="row-data"><span>Sell</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data"><span>000K</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data">
+                                  <span>🐋 rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <a href="#">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/external-link-icon-green.svg"
+                                        alt=""
+                                        class="external-icon-green"
+                                      />
+                                      <img
+                                        src="./public/images/external-link-icon-red.svg"
+                                        alt=""
+                                        class="external-icon-red"
+                                      />
+                                    </figure>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- single row -->
 
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">0 sec</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
+                              <!-- single row -->
 
-                            <tr
-                              class="sell-row"
-                              style="
-                                background-color: #ffffff05;
-                                color: #a8f0c0;
-                              "
-                            >
-                              <td style="padding-left: 16px">0 Min</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐟 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🦐 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <tr
-                              class="sell-row"
-                              style="
-                                background-color: #ffffff05;
-                                color: #a8f0c0;
-                              "
-                            >
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                              <div class="table-row buy">
+                                <div class="row-data"><span>0 min</span></div>
+                                <div class="row-data"><span>Buy</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data"><span>000K</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data">
+                                  <span>🐋 rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <a href="#">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/external-link-icon-green.svg"
+                                        alt=""
+                                        class="external-icon-green"
+                                      />
+                                      <img
+                                        src="./public/images/external-link-icon-red.svg"
+                                        alt=""
+                                        class="external-icon-red"
+                                      />
+                                    </figure>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- single row -->
+
+                              <!-- single row -->
+                              <div class="table-row sell">
+                                <div class="row-data"><span>0 hrs</span></div>
+                                <div class="row-data"><span>Sell</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data"><span>000K</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data">
+                                  <span>🐋 rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <a href="#">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/external-link-icon-green.svg"
+                                        alt=""
+                                        class="external-icon-green"
+                                      />
+                                      <img
+                                        src="./public/images/external-link-icon-red.svg"
+                                        alt=""
+                                        class="external-icon-red"
+                                      />
+                                    </figure>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- single row -->
+
+                              <!-- single row -->
+                              <div class="table-row sell">
+                                <div class="row-data"><span>0 hrs</span></div>
+                                <div class="row-data"><span>Sell</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data"><span>000K</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data">
+                                  <span>🐋 rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <a href="#">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/external-link-icon-green.svg"
+                                        alt=""
+                                        class="external-icon-green"
+                                      />
+                                      <img
+                                        src="./public/images/external-link-icon-red.svg"
+                                        alt=""
+                                        class="external-icon-red"
+                                      />
+                                    </figure>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- single row -->
+
+                              <!-- single row -->
+
+                              <div class="table-row buy">
+                                <div class="row-data"><span>0 hrs</span></div>
+                                <div class="row-data"><span>Buy</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data"><span>000K</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data">
+                                  <span>🐋 rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <a href="#">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/external-link-icon-green.svg"
+                                        alt=""
+                                        class="external-icon-green"
+                                      />
+                                      <img
+                                        src="./public/images/external-link-icon-red.svg"
+                                        alt=""
+                                        class="external-icon-red"
+                                      />
+                                    </figure>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- single row -->
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <!-- 2nd tab  -->
-                    <div class="tab-content" style="background-color: #181924">
-                      <div class="tx-history-table-wrapper">
-                        <table class="tx-history-table">
-                          <thead class="tx-table-header">
-                            <tr>
-                              <th style="width: 18%; padding-left: 16px">
-                                <span class="tx-heading-inner">
-                                  <p>Age</p>
-                                </span>
-                              </th>
-
-                              <th style="width: 18%">
-                                <span class="tx-heading-inner">
-                                  <p>Price</p>
-                                </span>
-                              </th>
-
-                              <th style="width: 18%">
-                                <span class="tx-heading-inner">
-                                  <p>Total USD</p>
-                                  <img
-                                    src="./public/images/filter-icon.svg"
-                                    alt="filter-icon"
-                                    class="filter-icon"
-                                  />
-                                </span>
-                              </th>
-                              <th style="width: 26%; padding-right: 16px">
+                    <div class="tab-content">
+                      <div class="traders-table-wrapper my-trades-table">
+                        <div class="table-scroll">
+                          <div class="table">
+                            <div class="table-heading">
+                              <div class="heading-item"><span>Time</span></div>
+                              <div class="heading-item"><span>Type</span></div>
+                              <div class="heading-item"><span>Price</span></div>
+                              <div class="heading-item">
                                 <span
-                                  class="tx-heading-inner"
-                                  style="
-                                    display: flex;
-                                    justify-content: flex-end;
-                                    gap: 4px;
-                                    align-items: center;
-                                  "
-                                >
-                                  <p style="margin: 0">Maker</p>
-                                  <img
-                                    src="./public/images/filter-icon.svg"
-                                    alt="filter-icon"
-                                    class="filter-icon"
-                                  />
-                                  <img
-                                    src="./public/images/developer-audit-icon.svg"
-                                    alt="developer-audit-icon"
-                                    class="developer-audit-icon"
-                                  />
+                                  >Amount
+                                  <figure class="icon">
+                                    <img
+                                      src="./public/images/filter-icon.svg"
+                                      alt="Filter"
+                                    /></figure
+                                ></span>
+                              </div>
+                              <div class="heading-item">
+                                <span
+                                  >Total USD
+                                  <figure class="icon">
+                                    <img
+                                      src="./public/images/filter-icon.svg"
+                                      alt="Filter"
+                                    /></figure
+                                ></span>
+                              </div>
+                              <div class="heading-item">
+                                <span
+                                  >Maker
+                                  <figure class="icon">
+                                    <img
+                                      src="./public/images/filter-icon.svg"
+                                      alt="Filter"
+                                    />
+                                  </figure>
                                 </span>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody class="tx-table-body">
-                            <!-- single row -->
+                              </div>
+                              <div class="heading-item"></div>
+                            </div>
+                            <div class="table-body">
+                              <!-- single row -->
+                              <div class="table-row sell">
+                                <div class="row-data">
+                                  <span>Jan 00 00:00</span>
+                                </div>
+                                <div class="row-data"><span>Sell</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data"><span>000K</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data">
+                                  <span>rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <a href="#">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/external-link-icon-green.svg"
+                                        alt=""
+                                        class="external-icon-green"
+                                      />
+                                      <img
+                                        src="./public/images/external-link-icon-red.svg"
+                                        alt=""
+                                        class="external-icon-red"
+                                      />
+                                    </figure>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- single row -->
 
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">10 sec</td>
-                              <td>10 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
+                              <!-- single row -->
 
-                            <tr
-                              class="sell-row"
-                              style="
-                                background-color: #ffffff05;
-                                color: #a8f0c0;
-                              "
-                            >
-                              <td style="padding-left: 16px">0 Min</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐟 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🦐 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <tr
-                              class="sell-row"
-                              style="
-                                background-color: #ffffff05;
-                                color: #a8f0c0;
-                              "
-                            >
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                              <div class="table-row buy">
+                                <div class="row-data">
+                                  <span>Jan 00 00:00</span>
+                                </div>
+                                <div class="row-data"><span>Buy</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data"><span>000K</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data">
+                                  <span>rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <a href="#">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/external-link-icon-green.svg"
+                                        alt=""
+                                        class="external-icon-green"
+                                      />
+                                      <img
+                                        src="./public/images/external-link-icon-red.svg"
+                                        alt=""
+                                        class="external-icon-red"
+                                      />
+                                    </figure>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- single row -->
+
+                              <!-- single row -->
+                              <div class="table-row sell">
+                                <div class="row-data">
+                                  <span>Jan 00 00:00</span>
+                                </div>
+                                <div class="row-data"><span>Sell</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data"><span>000K</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data">
+                                  <span>rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <a href="#">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/external-link-icon-green.svg"
+                                        alt=""
+                                        class="external-icon-green"
+                                      />
+                                      <img
+                                        src="./public/images/external-link-icon-red.svg"
+                                        alt=""
+                                        class="external-icon-red"
+                                      />
+                                    </figure>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- single row -->
+
+                              <!-- single row -->
+                              <div class="table-row sell">
+                                <div class="row-data">
+                                  <span>Jan 00 00:00</span>
+                                </div>
+                                <div class="row-data"><span>Sell</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data"><span>000K</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data">
+                                  <span>rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <a href="#">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/external-link-icon-green.svg"
+                                        alt=""
+                                        class="external-icon-green"
+                                      />
+                                      <img
+                                        src="./public/images/external-link-icon-red.svg"
+                                        alt=""
+                                        class="external-icon-red"
+                                      />
+                                    </figure>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- single row -->
+
+                              <!-- single row -->
+
+                              <div class="table-row buy">
+                                <div class="row-data">
+                                  <span>Jan 00 00:00</span>
+                                </div>
+                                <div class="row-data"><span>Buy</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data"><span>000K</span></div>
+                                <div class="row-data"><span>$0</span></div>
+                                <div class="row-data">
+                                  <span>rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <a href="#">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/external-link-icon-green.svg"
+                                        alt=""
+                                        class="external-icon-green"
+                                      />
+                                      <img
+                                        src="./public/images/external-link-icon-red.svg"
+                                        alt=""
+                                        class="external-icon-red"
+                                      />
+                                    </figure>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- single row -->
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <!-- 3rd tab -->
-                    <div class="tab-content" style="background-color: #181924">
-                      <div class="tx-history-table-wrapper">
-                        <table class="tx-history-table">
-                          <thead class="tx-table-header">
-                            <tr>
-                              <th style="width: 18%; padding-left: 16px">
-                                <span class="tx-heading-inner">
-                                  <p>Age</p>
-                                </span>
-                              </th>
+                    <div class="tab-content">
+                      <div class="traders-table-wrapper top-traders-table">
+                        <div class="table-scroll">
+                          <div class="table">
+                            <div class="table-heading">
+                              <div class="heading-item">
+                                <span>Wallet</span>
+                              </div>
+                              <div class="heading-item">
+                                <span>Bought</span>
+                              </div>
+                              <div class="heading-item"><span>Sold</span></div>
+                              <div class="heading-item">
+                                <span>Remaining</span>
+                              </div>
+                              <div class="heading-item">
+                                <span>PnL</span>
+                              </div>
 
-                              <th style="width: 18%">
-                                <span class="tx-heading-inner">
-                                  <p>Price</p>
-                                </span>
-                              </th>
+                              <div class="heading-item"></div>
+                            </div>
+                            <div class="table-body">
+                              <!-- single row -->
+                              <div class="table-row buy">
+                                <div class="row-data">
+                                  <span>rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data pnl"><span>+$0</span></div>
 
-                              <th style="width: 18%">
-                                <span class="tx-heading-inner">
-                                  <p>Total USD</p>
-                                  <img
-                                    src="./public/images/filter-icon.svg"
-                                    alt="filter-icon"
-                                    class="filter-icon"
-                                  />
-                                </span>
-                              </th>
-                              <th style="width: 26%; padding-right: 16px">
-                                <span
-                                  class="tx-heading-inner"
-                                  style="
-                                    display: flex;
-                                    justify-content: flex-end;
-                                    gap: 4px;
-                                    align-items: center;
-                                  "
-                                >
-                                  <p style="margin: 0">Maker</p>
-                                  <img
-                                    src="./public/images/filter-icon.svg"
-                                    alt="filter-icon"
-                                    class="filter-icon"
-                                  />
-                                  <img
-                                    src="./public/images/developer-audit-icon.svg"
-                                    alt="developer-audit-icon"
-                                    class="developer-audit-icon"
-                                  />
-                                </span>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody class="tx-table-body">
-                            <!-- single row -->
+                                <div class="row-data">
+                                  <span class="filter-button">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/filter-button.svg"
+                                        alt="Filter"
+                                      />
+                                    </figure>
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- single row -->
 
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">20 sec</td>
-                              <td>20 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
+                              <!-- single row -->
+                              <div class="table-row sell">
+                                <div class="row-data">
+                                  <span>rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data pnl"><span>+$0</span></div>
 
-                            <tr
-                              class="sell-row"
-                              style="
-                                background-color: #ffffff05;
-                                color: #a8f0c0;
-                              "
-                            >
-                              <td style="padding-left: 16px">0 Min</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐟 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🦐 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <tr
-                              class="sell-row"
-                              style="
-                                background-color: #ffffff05;
-                                color: #a8f0c0;
-                              "
-                            >
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                                <div class="row-data">
+                                  <span class="filter-button">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/filter-button.svg"
+                                        alt="Filter"
+                                      />
+                                    </figure>
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- single row -->
+
+                              <!-- single row -->
+                              <div class="table-row buy">
+                                <div class="row-data">
+                                  <span>rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data pnl"><span>+$0</span></div>
+
+                                <div class="row-data">
+                                  <span class="filter-button">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/filter-button.svg"
+                                        alt="Filter"
+                                      />
+                                    </figure>
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- single row -->
+
+                              <!-- single row -->
+                              <div class="table-row buy">
+                                <div class="row-data">
+                                  <span>rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data pnl"><span>+$0</span></div>
+
+                                <div class="row-data">
+                                  <span class="filter-button">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/filter-button.svg"
+                                        alt="Filter"
+                                      />
+                                    </figure>
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- single row -->
+
+                              <!-- single row -->
+                              <div class="table-row sell">
+                                <div class="row-data">
+                                  <span>rLMk...jsQo</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>$000</span><span>0 TOKEN</span>
+                                </div>
+                                <div class="row-data pnl"><span>+$0</span></div>
+
+                                <div class="row-data">
+                                  <span class="filter-button">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/filter-button.svg"
+                                        alt="Filter"
+                                      />
+                                    </figure>
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- single row -->
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
                     <!-- 4th tab -->
-                    <div class="tab-content" style="background-color: #181924">
-                      <div class="tx-history-table-wrapper">
-                        <table class="tx-history-table">
-                          <thead class="tx-table-header">
-                            <tr>
-                              <th style="width: 18%; padding-left: 16px">
-                                <span class="tx-heading-inner">
-                                  <p>Age</p>
-                                </span>
-                              </th>
+                    <div class="tab-content">
+                      <div class="traders-table-wrapper top-holders-table">
+                        <div class="table-scroll">
+                          <div class="table">
+                            <div class="table-heading">
+                              <div class="heading-item">
+                                <span>Wallet</span>
+                              </div>
+                              <div class="heading-item">
+                                <span>% Owned</span>
+                              </div>
+                              <div class="heading-item">
+                                <span>Amount</span>
+                              </div>
+                              <div class="heading-item">
+                                <span>Value</span>
+                              </div>
+                              <div class="heading-item">
+                                <span>PnL</span>
+                              </div>
 
-                              <th style="width: 18%">
-                                <span class="tx-heading-inner">
-                                  <p>Price</p>
-                                </span>
-                              </th>
+                              <div class="heading-item"></div>
+                            </div>
+                            <div class="table-body">
+                              <!-- single row -->
+                              <div class="table-row buy">
+                                <div class="row-data">
+                                  <span
+                                    >rLMk...jsQo
+                                    <figure>
+                                      <img
+                                        src="./public/images/liquidity-icon.svg"
+                                        alt=""
+                                        class="liquidity-icon"
+                                      /></figure
+                                  ></span>
+                                </div>
+                                <div class="row-data">
+                                  <span>00%</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>000M</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>000K</span>
+                                </div>
+                                <div class="row-data pnl"><span>+$0</span></div>
 
-                              <th style="width: 18%">
-                                <span class="tx-heading-inner">
-                                  <p>Total USD</p>
-                                  <img
-                                    src="./public/images/filter-icon.svg"
-                                    alt="filter-icon"
-                                    class="filter-icon"
-                                  />
-                                </span>
-                              </th>
-                              <th style="width: 26%; padding-right: 16px">
-                                <span
-                                  class="tx-heading-inner"
-                                  style="
-                                    display: flex;
-                                    justify-content: flex-end;
-                                    gap: 4px;
-                                    align-items: center;
-                                  "
-                                >
-                                  <p style="margin: 0">Maker</p>
-                                  <img
-                                    src="./public/images/filter-icon.svg"
-                                    alt="filter-icon"
-                                    class="filter-icon"
-                                  />
-                                  <img
-                                    src="./public/images/developer-audit-icon.svg"
-                                    alt="developer-audit-icon"
-                                    class="developer-audit-icon"
-                                  />
-                                </span>
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody class="tx-table-body">
-                            <!-- single row -->
+                                <div class="row-data">
+                                  <span class="filter-button">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/filter-button.svg"
+                                        alt="Filter"
+                                      />
+                                    </figure>
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- single row -->
+                              <!-- single row -->
+                              <div class="table-row sell">
+                                <div class="row-data">
+                                  <span
+                                    >rLMk...jsQo
+                                    <figure>
+                                      <img
+                                        src="./public/images/developers-icon.svg"
+                                        alt=""
+                                        class="liquidity-icon"
+                                      /></figure
+                                  ></span>
+                                </div>
+                                <div class="row-data">
+                                  <span>00%</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>000M</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>000K</span>
+                                </div>
+                                <div class="row-data pnl"><span>+$0</span></div>
 
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">30 sec</td>
-                              <td>30 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
+                                <div class="row-data">
+                                  <span class="filter-button">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/filter-button.svg"
+                                        alt="Filter"
+                                      />
+                                    </figure>
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- single row -->
 
-                            <tr
-                              class="sell-row"
-                              style="
-                                background-color: #ffffff05;
-                                color: #a8f0c0;
-                              "
-                            >
-                              <td style="padding-left: 16px">0 Min</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐟 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <!-- single row -->
-                            <tr class="sell-row">
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🦐 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                            <tr
-                              class="sell-row"
-                              style="
-                                background-color: #ffffff05;
-                                color: #a8f0c0;
-                              "
-                            >
-                              <td style="padding-left: 16px">0 hr</td>
-                              <td>0 XRP</td>
-                              <td>0 XRP</td>
-                              <td
-                                style="text-align: right; padding-right: 16px"
-                              >
-                                <span class="maker-data-wrapper"
-                                  ><span class="icon-n-wallet-address"
-                                    >🐋 rLMk...jsQo</span
-                                  ></span
-                                >
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                              <!-- single row -->
+                              <div class="table-row buy">
+                                <div class="row-data">
+                                  <span>rLMk...jsQo </span>
+                                </div>
+                                <div class="row-data">
+                                  <span>00%</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>000M</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>000K</span>
+                                </div>
+                                <div class="row-data pnl"><span>+$0</span></div>
+
+                                <div class="row-data">
+                                  <span class="filter-button">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/filter-button.svg"
+                                        alt="Filter"
+                                      />
+                                    </figure>
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- single row -->
+
+                              <!-- single row -->
+                              <div class="table-row buy">
+                                <div class="row-data">
+                                  <span>rLMk...jsQo </span>
+                                </div>
+                                <div class="row-data">
+                                  <span>00%</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>000M</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>000K</span>
+                                </div>
+                                <div class="row-data pnl"><span>+$0</span></div>
+
+                                <div class="row-data">
+                                  <span class="filter-button">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/filter-button.svg"
+                                        alt="Filter"
+                                      />
+                                    </figure>
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- single row -->
+
+                              <!-- single row -->
+                              <div class="table-row sell">
+                                <div class="row-data">
+                                  <span>rLMk...jsQo </span>
+                                </div>
+                                <div class="row-data">
+                                  <span>00%</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>000M</span>
+                                </div>
+                                <div class="row-data">
+                                  <span>000K</span>
+                                </div>
+                                <div class="row-data pnl"><span>+$0</span></div>
+
+                                <div class="row-data">
+                                  <span class="filter-button">
+                                    <figure class="external-link-icons">
+                                      <img
+                                        src="./public/images/filter-button.svg"
+                                        alt="Filter"
+                                      />
+                                    </figure>
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- single row -->
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
