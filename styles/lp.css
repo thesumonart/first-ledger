@@ -1514,21 +1514,6 @@
     }
   }
 
-  .multi-wallet {
-    font-size: 16px;
-    color: var(--textBrandDefault);
-    cursor: pointer;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-
-    .down-arrow-icon {
-      width: 16px;
-      aspect-ratio: 1;
-      transition: transform 0.3s ease;
-    }
-  }
-
   .table-xrp-token-wrapper {
     display: flex;
     flex-direction: column;

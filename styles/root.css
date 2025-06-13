@@ -11,7 +11,9 @@
 
 @font-face {
   font-family: "FLInterCustom";
-  src: url("../public/fonts/FLInterCustom.ttf") format("ttf");
+  src: url("../public/fonts/FLInterCustom.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Root Variables */
@@ -139,7 +141,7 @@ a {
 }
 
 .xrp-unique-icon {
-  font-family: "FLInterCustom";
+  font-family: "FLInterCustom", sans-serif;
   color: inherit !important;
 }
 
