@@ -418,12 +418,23 @@ button.review:hover {
 
   .confirm-btn.is-loading,
   .vote-btn.is-loading {
-    background-color: #6f93fe;
+    background: var(--bgBrandDefault);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: var(--bgUtilitiesHighlight2);
+    }
   }
 
   .cancel-btn.is-loading,
   .done-btn.is-loading {
-    background-color: #34374a;
+    background-color: var(--bgDisabledDefault);
   }
 }
 
@@ -443,7 +454,7 @@ button.review:hover {
 .vote-title {
   font-size: 16px;
   font-weight: 400;
-  color: #d9d9d9;
+  color: var(--textDefaultSecondary);
   margin: 0;
   display: flex;
   align-items: center;
@@ -459,7 +470,7 @@ button.review:hover {
 .your-vote-title {
   font-size: 16px;
   font-weight: 400;
-  color: #85e0a3;
+  color: var(--textPositiveSecondary);
   margin: 0;
   display: flex;
   align-items: center;
@@ -472,7 +483,7 @@ button.review:hover {
 /* table style start */
 .vote-table {
   padding: 16px 12px;
-  border: 1px solid #34374a;
+  border: 1px solid var(--borderDefaultSecondary);
   border-radius: 10px;
   margin-top: 8px;
 }
@@ -484,17 +495,17 @@ button.review:hover {
 .custom-table th {
   font-size: 14px;
   font-weight: 400;
-  color: #757575;
+  color: var(--textDefaultTertiary);
 }
 .custom-tr td {
   font-size: 14px;
   font-weight: 400;
-  color: #f5f5f5;
+  color: var(--textDefaultPrimary);
 }
 .your-custom-tr .your-data {
   font-size: 14px;
   font-weight: 400;
-  color: #85e0a3;
+  color: var(--textPositiveSecondary);
 }
 .your-custom-tr .your-vote-row {
   display: flex;
@@ -515,13 +526,13 @@ button.review:hover {
 .vote-fee-text {
   font-size: 16px;
   font-weight: 400;
-  color: #d9d9d9;
+  color: var(--textDefaultSecondary);
   margin: 0;
 }
 .vote-fee-span {
   font-size: 16px;
   font-weight: 400;
-  color: #757575;
+  color: var(--textDefaultTertiary);
   margin: 0;
 }
 
@@ -529,7 +540,7 @@ button.review:hover {
 .vote-ranger-con {
   padding: 16px 12px;
   border-radius: 10px;
-  border: 1px solid #34374a;
+  border: 1px solid var(--borderDefaultSecondary);
   margin-top: 8px;
 }
 .range-container {
@@ -542,8 +553,7 @@ button.review:hover {
 .range-slider {
   width: 100%;
   height: 8px;
-  background-color: #253bac;
-  /* border-radius: 50%; */
+  background-color: var(--bgBrandSecondary);
   border-radius: 9999px;
   position: relative;
   -webkit-appearance: none;
@@ -554,7 +564,7 @@ button.review:hover {
   -webkit-appearance: none;
   width: 16px;
   height: 16px;
-  background-color: #456eeb;
+  background-color: var(--bgBrandDefault);
   border-radius: 50%;
   cursor: pointer;
   position: relative;
@@ -562,13 +572,13 @@ button.review:hover {
 .range-slider::-moz-range-thumb {
   width: 16px;
   height: 16px;
-  background-color: #456eeb;
+  background-color: var(--bgBrandDefault);
   border-radius: 50%;
   cursor: pointer;
 }
 .fee-percentage {
   font-size: 16px;
-  color: #f5f5f5;
+  color: var(--textDefaultPrimary);
   font-weight: 400;
   margin: 0;
 }
@@ -587,13 +597,13 @@ button.review:hover {
 }
 .pool-fee-text {
   font-size: 16px;
-  color: #757575;
+  color: var(--textDefaultTertiary);
   font-weight: 400;
   margin: 0;
 }
 .pool-fee-value {
   font-size: 16px;
-  color: #f5f5f5;
+  color: var(--textDefaultPrimary);
   font-weight: 400;
   margin: 0;
 }
@@ -601,7 +611,7 @@ button.review:hover {
 /* ------------withdrawal amount-------- */
 .withdrawal-amount-main {
   padding: 16px 12px;
-  border: 1px solid #34374a;
+  border: 1px solid var(--borderDefaultSecondary);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -610,12 +620,12 @@ button.review:hover {
 .withdrawal-text {
   font-size: 16px;
   line-height: 19px;
-  color: #d9d9d9;
+  color: var(--textDefaultSecondary);
   font-weight: 400;
   margin: 0;
 }
 .withdraw-amount-text {
-  color: #757575;
+  color: var(--textDefaultTertiary);
   font-weight: 600;
   font-size: 48px;
   line-height: 57px;
@@ -634,9 +644,9 @@ button.review:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #242534;
-  border: 1px solid #34374a;
-  color: #f5f5f5;
+  background-color: var(--bgDefaultSecondary);
+  border: 1px solid var(--borderDefaultSecondary);
+  color: var(--textDefaultPrimary);
   font-size: 16px;
   font-weight: 400;
   border-radius: 10px;
@@ -663,7 +673,7 @@ button.review:hover {
 .info-subject-text {
   font-size: 16px;
   line-height: 19px;
-  color: #757575;
+  color: var(--textDefaultTertiary);
   font-weight: 400;
   margin: 0;
 }
@@ -680,8 +690,8 @@ button.review:hover {
   left: 50%;
   transform: translateX(-50%);
   margin-bottom: 8px;
-  background: #f5f5f5;
-  color: #757575;
+  background: var(--textDefaultPrimary);
+  color: var(--textDefaultTertiary);
   padding: 10px;
   font-size: 14px;
   border-radius: 4px;
@@ -713,7 +723,7 @@ button.review:hover {
 .info-value-text {
   font-size: 16px;
   line-height: 19px;
-  color: #f5f5f5;
+  color: var(--textDefaultPrimary);
   font-weight: 400;
   margin: 0;
 }
@@ -725,8 +735,8 @@ button.review:hover {
   border-radius: 12px;
   border: 1px solid var(--borderDefaultSecondary);
   button {
-    background-color: #242534;
-    color: #757575;
+    background-color: var(--bgDefaultSecondary);
+    color: var(--textDefaultTertiary);
     border: none;
     padding: 6px;
     width: 100%;
@@ -737,114 +747,6 @@ button.review:hover {
     background-color: var(--bgBrandDefault);
     color: var(--textDefaultPrimary);
   }
-}
-
-/* token modal and dropdown */
-.modal-wallet-dropdown {
-  position: relative;
-  /* max-width: 131px; */
-  width: 100%;
-  border: 1px solid var(--border-secondary);
-  border-radius: 12px;
-  padding: 6px 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  background: var(--bgDefaultSecondary);
-  font-size: 14px;
-  color: white;
-  gap: 8px;
-}
-
-.modal-arrow-icon {
-  transition: transform 0.3s ease;
-  display: flex;
-}
-
-.modal-wallet-icon {
-  display: flex;
-}
-
-.modal-wallet-icon img {
-  width: 18px;
-  aspect-ratio: 1;
-}
-
-.modal-dropdown-options {
-  display: none;
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
-  width: 100%;
-  border: 1px solid var(--border-secondary);
-  border-radius: 12px;
-  background: var(--bgDefaultSecondary);
-  flex-direction: column;
-}
-
-.modal-dropdown-options.show {
-  display: flex;
-}
-
-.modal-option {
-  padding: 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.modal-wallet-name-address {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.modal-wallet-address {
-  color: #f5f5f5;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.modal-option input[type="checkbox"] {
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #1f3ccd;
-  border-radius: 4px;
-  position: relative;
-  margin-right: 5px;
-  cursor: pointer;
-  flex: none;
-}
-
-.modal-option input[type="checkbox"]:checked {
-  background-color: var(--bgBrandDefault);
-  border: none;
-}
-
-.modal-option input[type="checkbox"]:checked::after {
-  content: "";
-  background: url("/public/images/check-mark.svg");
-  background-size: 75%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  font-size: 12px;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-#modal-selected-option {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  flex-grow: 1;
 }
 
 /* Modal */
@@ -861,49 +763,101 @@ button.review:hover {
   justify-content: center;
   z-index: 999;
 
+  @media (max-width: 767px) {
+    align-items: end;
+  }
+
   .select-token-list-modal {
-    background: #242534;
+    background: var(--bgDefaultSecondary);
     max-width: 500px;
     width: 100%;
     height: 100%;
     max-height: 625px;
-    padding: 24px 32px 0 24px;
+    padding: 16px;
     border-radius: 12px;
-    color: #f5f5f5;
+    color: var(--textDefaultPrimary);
     display: flex;
-    gap: 32px;
+    gap: 16px;
     flex-direction: column;
+
+    @media (max-width: 767px) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      max-width: unset;
+    }
   }
 
   .modal-header {
-    gap: 16px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #242534;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    flex-direction: column;
+    gap: 16px;
+
+    .modal-title-n-close-btn {
+      gap: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bgDefaultSecondary);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+
+      .modal-title {
+        margin: 0;
+      }
+    }
+
+    .token-search-input {
+      width: 100%;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .token-search {
+        appearance: none;
+        width: 100%;
+        height: 43px;
+        border-radius: 10px;
+        background: var(--bgUtilitiesHighlight);
+        border: 0.5px var(--borderDefaultPrimary);
+        padding: 0 40px 0 16px;
+        outline: transparent;
+      }
+      .token-search-btn {
+        appearance: none;
+        outline: transparent;
+        border: transparent;
+        background: transparent;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 40px;
+        z-index: 9;
+
+        img {
+          width: 16px;
+          aspect-ratio: 1/1;
+        }
+      }
+    }
   }
 
   .modal-header .modal-title {
     font-size: 20px;
     font-weight: 400;
-    border-bottom: 1px solid #34374a;
     flex: 1;
-    padding: 8px 0;
   }
 
   .modal-header .token-list-modal-close-btn {
     background: none;
     border: none;
-    color: #f5f5f5;
+    color: var(--textDefaultPrimary);
     font-size: 18px;
     cursor: pointer;
-    height: 40px;
-    width: 40px;
-    border: 1px solid #34374a;
-    background: #242534;
+    height: 24px;
+    width: 24px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -923,7 +877,7 @@ button.review:hover {
   }
 
   .list-title {
-    color: #d9d9d9;
+    color: var(--textDefaultSecondary);
     display: flex;
     align-items: center;
     gap: 6px;
@@ -932,7 +886,7 @@ button.review:hover {
     padding-bottom: 4px;
     position: sticky;
     top: 0;
-    background: #242534;
+    background: var(--bgDefaultSecondary);
   }
 
   .token-item {
@@ -959,7 +913,7 @@ button.review:hover {
   .token-name,
   .total-token {
     margin: 0;
-    color: #f5f5f5;
+    color: var(--textDefaultPrimary);
     font-size: 24px;
     line-height: 1em;
   }
@@ -968,7 +922,7 @@ button.review:hover {
   .token-price {
     margin: 0;
     font-size: 14px;
-    color: #757575;
+    color: var(--textDefaultTertiary);
   }
 
   .token-values {
